@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will & Robyn</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            font-family: system-ui, -apple-system, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 40px;
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .welcome {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #e94560;
+            font-weight: 500;
+        }
+        p {
+            font-size: 1.2rem;
+            opacity: 0.85;
+            margin-bottom: 40px;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #e94560;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+            min-width: 220px;
+        }
+        .button:hover {
+            background: #ff6b6b;
+        }
+        .button.secondary {
+            background: transparent;
+            border: 2px solid #e94560;
+        }
+        .button.secondary:hover {
+            background: rgba(233, 69, 96, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will & Robyn</h1>
+        <div class="welcome">Welcome!</div>
+        <p>Family Server</p>
+        <div class="buttons">
+            <a href="letters/" class="button secondary">Austin's WW2 Letters</a>
+            
+            <!-- Link to home movies / video viewer -->
+            <a href="videos/" class="button">Barrett Home Movies</a>
+        </div>
+    </div>
+</body>
+</html>

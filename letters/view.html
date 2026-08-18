@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter – Will Winn</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            font-family: system-ui, -apple-system, sans-serif;
+            color: #e8e8e8;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        a.back {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #e94560;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a.back:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin: 0 0 8px 0;
+            font-weight: 700;
+        }
+        .meta {
+            color: #e94560;
+            margin-bottom: 28px;
+            font-size: 1.05rem;
+        }
+        .letter {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 32px 28px;
+            line-height: 1.7;
+            font-size: 1.15rem;
+            white-space: pre-wrap;          /* keeps the original line breaks */
+            word-wrap: break-word;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 28px;
+            gap: 12px;
+        }
+        .nav a {
+            padding: 10px 18px;
+            background: #e94560;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .nav a:hover {
+            background: #ff6b6b;
+        }
+        .nav a.disabled {
+            opacity: 0.35;
+            pointer-events: none;
+        }
+        .error {
+            color: #ff6b6b;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./" class="back">← All Letters</a>
+
+        <h1 id="title">Loading…</h1>
+        <div class="meta" id="meta"></div>
+
+        <div class="letter" id="content">Loading letter…</div>
+
+        <div class="nav">
+            <a id="prev" href="#">← Previous</a>
+            <a id="next" href="#">Next →</a>
+        </div>
+
+        <div class="error" id="error" style="display:none;"></div>
+    </div>
+
+    <script>
+        // All months in order
+        const months = [
+            "194301","194302","194303","194304","194305","194306",
+            "194307","194308","194309","194310","194311","194312",
+            "194401","194402","194403","194404","194405","194406",
+            "194407","194408","194409","194410","194411","194412",
+            "194501","194502","194503","194504","194505","194506",
+            "194507","194508","194509","194510"
+        ];
+
+        const monthNames = {
+            "01":"January","02":"February","03":"March","04":"April",
+            "05":"May","06":"June","07":"July","08":"August",
+            "09":"September","10":"October","11":"November","12":"December"
+        };
+
+        // Get the requested month from the URL (?m=194301)
+        const params = new URLSearchParams(window.location.search);
+        const current = params.get("m");
+
+        if (!current || !months.includes(current)) {
+            document.getElementById("content").textContent = "Letter not found.";
+            document.getElementById("title").textContent = "Error";
+        } else {
+            const year = current.slice(0, 4);
+            const mon  = current.slice(4, 6);
+            const nice = `${monthNames[mon]} ${year}`;
+
+            document.getElementById("title").textContent = nice;
+            document.getElementById("meta").textContent = current;
+            document.title = `${nice} – Dad's Letters`;
+
+            // Load the text file
+            fetch(`${current}.txt`)
+                .then(r => {
+                    if (!r.ok) throw new Error("File not found or empty");
+                    return r.text();
+                })
+                .then(text => {
+                    // If the file is completely empty, show a message
+                    if (!text.trim()) {
+                        document.getElementById("content").textContent = "(This letter has not been transcribed yet.)";
+                    } else {
+                        document.getElementById("content").textContent = text;
+                    }
+                })
+                .catch(err => {
+                    document.getElementById("content").textContent = "";
+                    document.getElementById("error").style.display = "block";
+                    document.getElementById("error").textContent = "Could not load this letter.";
+                });
+
+            // Previous / Next buttons
+            const idx = months.indexOf(current);
+            const prev = document.getElementById("prev");
+            const next = document.getElementById("next");
+
+            if (idx > 0) {
+                prev.href = `view.html?m=${months[idx-1]}`;
+            } else {
+                prev.classList.add("disabled");
+            }
+
+            if (idx < months.length - 1) {
+                next.href = `view.html?m=${months[idx+1]}`;
+            } else {
+                next.classList.add("disabled");
+            }
+        }
+    </script>
+</body>
+</html>

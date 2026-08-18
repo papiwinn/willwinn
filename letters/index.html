@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad's WW2 Letters – Will Winn</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            font-family: system-ui, -apple-system, sans-serif;
+            color: white;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .subtitle {
+            color: #e94560;
+            font-size: 1.15rem;
+            margin-bottom: 32px;
+        }
+        a.back {
+            display: inline-block;
+            margin-bottom: 28px;
+            color: #e94560;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a.back:hover {
+            text-decoration: underline;
+        }
+        .months {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+        }
+        .month {
+            display: block;
+            padding: 16px 12px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .month:hover {
+            background: rgba(233, 69, 96, 0.2);
+            border-color: #e94560;
+        }
+        .month span {
+            display: block;
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+        .month.disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+            pointer-events: none;
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back">← Home</a>
+        <h1>Dad's WW2 Letters</h1>
+        <div class="subtitle">One letter per month of service</div>
+
+        <div class="months">
+            <a class="month" href="view.html?m=194301">Jan 1943<span>194301</span></a>
+            <a class="month" href="view.html?m=194302">Feb 1943<span>194302</span></a>
+            <a class="month" href="view.html?m=194303">Mar 1943<span>194303</span></a>
+            <a class="month" href="view.html?m=194304">Apr 1943<span>194304</span></a>
+            <a class="month" href="view.html?m=194305">May 1943<span>194305</span></a>
+            <a class="month" href="view.html?m=194306">Jun 1943<span>194306</span></a>
+            <a class="month" href="view.html?m=194307">Jul 1943<span>194307</span></a>
+            <a class="month" href="view.html?m=194308">Aug 1943<span>194308</span></a>
+            <a class="month" href="view.html?m=194309">Sep 1943<span>194309</span></a>
+            <a class="month" href="view.html?m=194310">Oct 1943<span>194310</span></a>
+            <a class="month" href="view.html?m=194311">Nov 1943<span>194311</span></a>
+            <a class="month" href="view.html?m=194312">Dec 1943<span>194312</span></a>
+
+            <a class="month" href="view.html?m=194401">Jan 1944<span>194401</span></a>
+            <a class="month" href="view.html?m=194402">Feb 1944<span>194402</span></a>
+            <a class="month" href="view.html?m=194403">Mar 1944<span>194403</span></a>
+            <a class="month" href="view.html?m=194404">Apr 1944<span>194404</span></a>
+            <a class="month" href="view.html?m=194405">May 1944<span>194405</span></a>
+            <a class="month" href="view.html?m=194406">Jun 1944<span>194406</span></a>
+            <a class="month" href="view.html?m=194407">Jul 1944<span>194407</span></a>
+            <a class="month" href="view.html?m=194408">Aug 1944<span>194408</span></a>
+            <a class="month" href="view.html?m=194409">Sep 1944<span>194409</span></a>
+            <a class="month" href="view.html?m=194410">Oct 1944<span>194410</span></a>
+            <a class="month" href="view.html?m=194411">Nov 1944<span>194411</span></a>
+            <a class="month" href="view.html?m=194412">Dec 1944<span>194412</span></a>
+
+            <a class="month" href="view.html?m=194501">Jan 1945<span>194501</span></a>
+            <a class="month" href="view.html?m=194502">Feb 1945<span>194502</span></a>
+            <a class="month" href="view.html?m=194503">Mar 1945<span>194503</span></a>
+            <a class="month" href="view.html?m=194504">Apr 1945<span>194504</span></a>
+            <a class="month" href="view.html?m=194505">May 1945<span>194505</span></a>
+            <a class="month" href="view.html?m=194506">Jun 1945<span>194506</span></a>
+            <a class="month" href="view.html?m=194507">Jul 1945<span>194507</span></a>
+            <a class="month" href="view.html?m=194508">Aug 1945<span>194508</span></a>
+            <a class="month" href="view.html?m=194509">Sep 1945<span>194509</span></a>
+            <a class="month" href="view.html?m=194510">Oct 1945<span>194510</span></a>
+        </div>
+    </div>
+</body>
+</html>

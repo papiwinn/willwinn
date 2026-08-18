@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter – Austin H. Winn</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            font-family: system-ui, -apple-system, sans-serif;
+            color: #e8e8e8;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        a.back {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: #e94560;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a.back:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin: 0 0 8px 0;
+            font-weight: 700;
+        }
+        .meta {
+            color: #e94560;
+            margin-bottom: 28px;
+            font-size: 1.05rem;
+        }
+        .letter {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 32px 28px;
+            line-height: 1.7;
+            font-size: 1.15rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 28px;
+            gap: 12px;
+        }
+        .nav a {
+            padding: 10px 18px;
+            background: #e94560;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .nav a:hover {
+            background: #ff6b6b;
+        }
+        .nav a.disabled {
+            opacity: 0.35;
+            pointer-events: none;
+        }
+        .error {
+            color: #ff6b6b;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./" class="back">← All Chapters</a>
+        <h1 id="title">Loading…</h1>
+        <div class="meta" id="meta"></div>
+        <div class="letter" id="content">Loading chapter…</div>
+        <div class="nav">
+            <a id="prev" href="#">← Previous</a>
+            <a id="next" href="#">Next →</a>
+        </div>
+        <div class="error" id="error" style="display:none;"></div>
+    </div>
+
+    <script>
+        const chapters = [
+            { num: 1, title: "Leaving Home", dates: "January – March 1943" },
+            { num: 2, title: "Oshkosh by Gosh", dates: "Late March – June 1943" },
+            { num: 3, title: "Classified a Pilot", dates: "July – September 1943" },
+            { num: 4, title: "The Real Thing", dates: "October 1943 – January 1944" },
+            { num: 5, title: "Wings and a Commission", dates: "February – April 1944" },
+            { num: 6, title: "Heavy Iron", dates: "Late April – December 1944" },
+            { num: 7, title: "Over the Empire", dates: "January – August 1945" },
+            { num: 8, title: "Back to the States Again", dates: "September – October 1945" }
+        ];
+
+        const params = new URLSearchParams(window.location.search);
+        const current = parseInt(params.get("c"), 10);
+
+        if (!current || current < 1 || current > 8) {
+            document.getElementById("content").textContent = "Chapter not found.";
+            document.getElementById("title").textContent = "Error";
+        } else {
+            const chapter = chapters[current - 1];
+            document.getElementById("title").textContent = chapter.title;
+            document.getElementById("meta").textContent = `Chapter ${chapter.num}  ·  ${chapter.dates}`;
+            document.title = `${chapter.title} – Austin H. Winn`;
+
+            fetch(`chapter_${current}.txt`)
+                .then(r => {
+                    if (!r.ok) throw new Error("File not found");
+                    return r.text();
+                })
+                .then(text => {
+                    if (!text.trim()) {
+                        document.getElementById("content").textContent = "(This chapter is empty.)";
+                    } else {
+                        document.getElementById("content").textContent = text;
+                    }
+                })
+                .catch(err => {
+                    document.getElementById("content").textContent = "";
+                    document.getElementById("error").style.display = "block";
+                    document.getElementById("error").textContent = "Could not load this chapter.";
+                });
+
+            // Previous / Next
+            const prev = document.getElementById("prev");
+            const next = document.getElementById("next");
+
+            if (current > 1) {
+                prev.href = `view.html?c=${current - 1}`;
+            } else {
+                prev.classList.add("disabled");
+            }
+
+            if (current < 8) {
+                next.href = `view.html?c=${current + 1}`;
+            } else {
+                next.classList.add("disabled");
+            }
+        }
+    </script>
+</body>
+</html>
