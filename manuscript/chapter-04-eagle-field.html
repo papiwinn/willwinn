@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chapter 4 — Eagle Field</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --paper: #faf7f2;
+      --rule: #d6cfc4;
+      --note-bg: #eef3f0;
+      --note-border: #4a6b5c;
+      --note-label: #3d5a4c;
+      --letter-bg: #fffdf8;
+      --letter-border: #c4b8a4;
+      --accent: #e94560;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e8e0d4;
+      color: var(--ink);
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      line-height: 1.65;
+    }
+    .page {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 36px 28px 80px;
+      background: var(--paper);
+      min-height: 100vh;
+    }
+    nav.top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+      padding-bottom: .8rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    nav.top a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    nav.top a:hover { text-decoration: underline; }
+    nav.top .disabled { color: #b0a89c; }
+    header.chapter-open { text-align: center; margin-bottom: 2.2rem; }
+    .chapter-label {
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      color: var(--muted);
+    }
+    h1 {
+      font-size: 2.15rem;
+      font-weight: 700;
+      margin: .35rem 0 .15rem;
+      letter-spacing: .02em;
+    }
+    .date-range {
+      font-style: italic;
+      color: var(--muted);
+      margin: 0 0 1.4rem;
+    }
+    .key {
+      font-size: .88rem;
+      color: var(--muted);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: .85rem 0;
+      margin: 0 0 2rem;
+    }
+    .key strong { color: var(--note-label); }
+    h2 { font-size: 1.28rem; margin: 2.4rem 0 .7rem; font-weight: 700; }
+    h3 { font-size: 1.05rem; margin: 1.8rem 0 .5rem; font-weight: 700; }
+    p { margin: 0 0 1rem; }
+    .narrative p { text-align: justify; hyphens: auto; }
+    blockquote.historical-note {
+      margin: 1.35rem 0 1.5rem;
+      padding: 1rem 1.15rem 1.05rem 1.2rem;
+      background: var(--note-bg);
+      border-left: 5px solid var(--note-border);
+      color: #24332c;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+      line-height: 1.55;
+    }
+    blockquote.historical-note .note-label {
+      display: block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .45rem;
+    }
+    blockquote.historical-note p { margin: 0 0 .65rem; text-align: left; }
+    blockquote.historical-note p:last-child { margin-bottom: 0; }
+    blockquote.historical-note .headline {
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 1.02rem;
+      letter-spacing: .01em;
+      margin: .15rem 0 .35rem;
+    }
+    blockquote.letter {
+      margin: 1.2rem 0 1.35rem;
+      padding: 1.15rem 1.25rem 1.05rem;
+      background: var(--letter-bg);
+      border: 1px solid var(--letter-border);
+      white-space: pre-wrap;
+      font-family: "Courier Prime", "Courier New", Courier, monospace;
+      font-size: .92rem;
+      line-height: 1.55;
+      color: #2a241c;
+    }
+    .letter-meta {
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #7a6d5a;
+      margin-bottom: .55rem;
+    }
+    address.army {
+      font-style: normal;
+      font-family: "Courier New", Courier, monospace;
+      font-size: .95rem;
+      background: #f3eee6;
+      border: 1px dashed #b7aa96;
+      padding: .9rem 1rem;
+      margin: 1rem 0 1.2rem;
+      white-space: pre-wrap;
+    }
+    .end-rule {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 2.4rem 0 1.2rem;
+    }
+    footer.colophon {
+      font-size: .82rem;
+      color: var(--muted);
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    nav.bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 2rem;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+    }
+    nav.bottom a {
+      color: #fff;
+      background: var(--accent);
+      text-decoration: none;
+      padding: .55rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    nav.bottom a:hover { background: #ff6b6b; }
+    nav.bottom span { color: #b0a89c; padding: .55rem 0; }
+    .index-list { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+    .index-list li { margin: 0 0 .85rem; }
+    .index-list a {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      background: #fffdf8;
+      border: 1px solid var(--letter-border);
+      border-left: 5px solid var(--note-border);
+      padding: 1rem 1.15rem;
+    }
+    .index-list a:hover { border-left-color: var(--accent); }
+    .index-list .num {
+      display: block;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .2rem;
+    }
+    .index-list .title { font-size: 1.2rem; font-weight: 700; }
+    .index-list .when { display: block; font-style: italic; color: var(--muted); font-size: .95rem; }
+    @media print {
+      body { background: #fff; }
+      .page { padding: 0; background: #fff; }
+      nav.top, nav.bottom { display: none; }
+      blockquote.historical-note, blockquote.letter { break-inside: avoid; }
+    }
+
+  </style>
+</head>
+<body>
+  <article class="page">
+        <nav class="top">
+      <a href="chapter-03-classification.html">← Chapter 3</a>
+      <a href="index.html">All chapters</a>
+      <span class="disabled">Next →</span>
+    </nav>
+    <header class="chapter-open">
+      <div class="chapter-label">Chapter 4</div>
+      <h1>Eagle Field</h1>
+      <p class="date-range">Dos Palos, California · October 1943</p>
+    </header>
+
+    <div class="narrative">
+      <p>The squadron left Santa Ana at 10:00 a.m. on Friday, 1 October. A layover in Los Angeles that afternoon gave him three hours and a chance to buy the cadet-wing device for his hat. Chair-car seats all night. On Saturday, 2 October, he was at Eagle Field, pulling the tie off and the brass off his collar.</p>
+    </div>
+
+    <blockquote class="letter"><div class="letter-meta">Eagle Field · 2 October 1943</div>Dear Mother and all,
+Well I have finally arrived at my new base and am really delighted with it. We meet our instructors tomorrow (Sunday) and start right in flying Monday. […] The first thing we did when we arrived was pull off our ties and brass off our collars &amp; we are ready for work now instead of so much discipline and neat appearances.
+[…] The planes we fly are Ryan's the fastest Primary trainers the Army has. We land at 70 to 90 mph with flaps. There's about 70 planes here and they all stay busy from daylight till dark. Some fly at night too […] There are girls servicing the planes &amp; doing mechanic work and everything. The population on the post is about 1/3 civilians &amp; 2/3 army. We are quarantined for 2 weeks […]
+Dos Palos is the name of a little town about 3 miles away of about 1000 population. Dos Palos is a Spanish name meaning '2 Trees' don't think there is one in sight of here though (ha ha).</blockquote>
+
+    <address class="army">a/c Austin H. Winn, 14166970
+EA3 - 44D
+Eagle Field
+Dos Palos, Calif.</address>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — Eagle Field and the Ryan PT-22</span>
+      <p>Eagle Field sat on a flat plain about ten miles south of Dos Palos, in western Fresno County. Coast Aviation of Palo Alto built it as a sister school to Mesa Del Rey at King City. The Army activated the field on 24 June 1943. Three turf runways, a ring of auxiliary strips, and a mix of military cadets and civilian employees — including the women Austin watched putting gas and oil in airplanes between sorties — gave it the feel of a factory more than a parade ground. In thirty months the school would graduate about 5,000 primaries and lose three men.</p>
+      <p>The airplane was the Ryan PT-22 Recruit, a low-wing, open-cockpit, two-seat trainer with a Kinner radial engine. It was quicker than the light ships at Oshkosh and landed, as he said, at 70 to 90 miles an hour with flaps. Cadets were expected to solo by about ten hours. Wash out and a man could find himself back in the infantry. <strong>44-D</strong> was the class number: scheduled to win wings in the D class of 1944. <strong>EA3</strong>, later <strong>SB3</strong>, was a room designation and changed when he moved bunks.</p>
+    </blockquote>
+
+    <div class="narrative">
+      <p>He flew on 4 October with an instructor. On Friday morning, 15 October, the instructor got out at an auxiliary field and told him to take it around.</p>
+    </div>
+
+    <blockquote class="letter"><div class="letter-meta">Eagle Field · 15 October 1943</div>Dear Mother,
+Well I took the ship up myself this morning. Went around the field &amp; landed 3 times. Did OK. We're flying alone now most of the time.
+Gee that really was nice going around for the first time alone. He first went over to an auxiliary landing field I practiced a few landing then the instructor said let me out &amp; you take over. You've got to keep your eyes open for other planes all the time.</blockquote>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — first solo, 15 October 1943</span>
+      <p>Primary solo was the first time a man was alone in a military airplane. The usual pattern was a few landings at an auxiliary strip with the instructor, then the instructor over the side and a wave off. Three landings and a taxi-back. After that came supervised solo, a 30-minute flight away from the field, and a check ride. Austin passed a thirteen-hour check on 20 October. His instructor was Jesse Acombs, a former infantry first lieutenant who had served in the Aleutians before transferring to the Air Corps.</p>
+      <p>Ground school filled the other half of the day: theory of flight, engines, weather workbooks. Miss one question in five and the night school got you. Stalls, spins, chandelles, and lazy eights were practiced every flying day, never below 3,000 feet. A parachute was required. On the ground a cadet walked a wingtip to park the ship because the PT-22’s nose hid the taxiway.</p>
+    </blockquote>
+
+    <div class="narrative">
+      <p>Dos Palos itself was, he told them, a little larger than Henning, with one theater and farmers who dressed like cowhands. Duck season opened over the rice fields on the 15th. He wished for a shotgun in the rear cockpit. Class 44-C danced on Saturday the 30th and shipped to basic on Sunday. 44-D would become the upper class. 44-E was already on the road from Santa Ana.</p>
+      <p>The letters of late October still ended the way the first letter on the Dixieland had ended: a promise to write again, and love to Cherry.</p>
+    </div>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — October 1943</span>
+      <p>Naples fell to the Allies on 1 October, the day Austin left Santa Ana. The Third War Loan had just closed, oversubscribed in Lauderdale County and in the country at large. He asked John to keep buying bonds in their mother’s name. He had no radio most weeks and little time for a paper. The war reached him as an instructor who had been in the Aleutians, as P-38s and then P-51s over Santa Ana, and as the simple fact of a Ryan with the instructor standing on the ground.</p>
+      <p>Primary was nine weeks if a man stayed in the airplane. Basic and advanced still lay ahead. Wings, if they came, would come in 1944.</p>
+    </blockquote>
+
+
+    <hr class="end-rule" />
+        <nav class="bottom">
+      <a href="chapter-03-classification.html">← Chapter 3</a>
+      <span></span>
+    </nav>
+    <footer class="colophon">
+      Chapter 4 · October 1943 · Eagle Field, Dos Palos. Austin’s words are in the boxed letters. Added explanation is in the green Historical notes. Home is the community of Cherry; Route 2, Henning appears only on envelopes.
+    </footer>
+  </article>
+</body>
+</html>
