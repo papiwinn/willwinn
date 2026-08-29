@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chapter 3 — Classification</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --paper: #faf7f2;
+      --rule: #d6cfc4;
+      --note-bg: #eef3f0;
+      --note-border: #4a6b5c;
+      --note-label: #3d5a4c;
+      --letter-bg: #fffdf8;
+      --letter-border: #c4b8a4;
+      --accent: #e94560;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e8e0d4;
+      color: var(--ink);
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      line-height: 1.65;
+    }
+    .page {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 36px 28px 80px;
+      background: var(--paper);
+      min-height: 100vh;
+    }
+    nav.top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+      padding-bottom: .8rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    nav.top a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    nav.top a:hover { text-decoration: underline; }
+    nav.top .disabled { color: #b0a89c; }
+    header.chapter-open { text-align: center; margin-bottom: 2.2rem; }
+    .chapter-label {
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      color: var(--muted);
+    }
+    h1 {
+      font-size: 2.15rem;
+      font-weight: 700;
+      margin: .35rem 0 .15rem;
+      letter-spacing: .02em;
+    }
+    .date-range {
+      font-style: italic;
+      color: var(--muted);
+      margin: 0 0 1.4rem;
+    }
+    .key {
+      font-size: .88rem;
+      color: var(--muted);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: .85rem 0;
+      margin: 0 0 2rem;
+    }
+    .key strong { color: var(--note-label); }
+    h2 { font-size: 1.28rem; margin: 2.4rem 0 .7rem; font-weight: 700; }
+    h3 { font-size: 1.05rem; margin: 1.8rem 0 .5rem; font-weight: 700; }
+    p { margin: 0 0 1rem; }
+    .narrative p { text-align: justify; hyphens: auto; }
+    blockquote.historical-note {
+      margin: 1.35rem 0 1.5rem;
+      padding: 1rem 1.15rem 1.05rem 1.2rem;
+      background: var(--note-bg);
+      border-left: 5px solid var(--note-border);
+      color: #24332c;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+      line-height: 1.55;
+    }
+    blockquote.historical-note .note-label {
+      display: block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .45rem;
+    }
+    blockquote.historical-note p { margin: 0 0 .65rem; text-align: left; }
+    blockquote.historical-note p:last-child { margin-bottom: 0; }
+    blockquote.historical-note .headline {
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 1.02rem;
+      letter-spacing: .01em;
+      margin: .15rem 0 .35rem;
+    }
+    blockquote.letter {
+      margin: 1.2rem 0 1.35rem;
+      padding: 1.15rem 1.25rem 1.05rem;
+      background: var(--letter-bg);
+      border: 1px solid var(--letter-border);
+      white-space: pre-wrap;
+      font-family: "Courier Prime", "Courier New", Courier, monospace;
+      font-size: .92rem;
+      line-height: 1.55;
+      color: #2a241c;
+    }
+    .letter-meta {
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #7a6d5a;
+      margin-bottom: .55rem;
+    }
+    address.army {
+      font-style: normal;
+      font-family: "Courier New", Courier, monospace;
+      font-size: .95rem;
+      background: #f3eee6;
+      border: 1px dashed #b7aa96;
+      padding: .9rem 1rem;
+      margin: 1rem 0 1.2rem;
+      white-space: pre-wrap;
+    }
+    .end-rule {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 2.4rem 0 1.2rem;
+    }
+    footer.colophon {
+      font-size: .82rem;
+      color: var(--muted);
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    nav.bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 2rem;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+    }
+    nav.bottom a {
+      color: #fff;
+      background: var(--accent);
+      text-decoration: none;
+      padding: .55rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    nav.bottom a:hover { background: #ff6b6b; }
+    nav.bottom span { color: #b0a89c; padding: .55rem 0; }
+    .index-list { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+    .index-list li { margin: 0 0 .85rem; }
+    .index-list a {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      background: #fffdf8;
+      border: 1px solid var(--letter-border);
+      border-left: 5px solid var(--note-border);
+      padding: 1rem 1.15rem;
+    }
+    .index-list a:hover { border-left-color: var(--accent); }
+    .index-list .num {
+      display: block;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .2rem;
+    }
+    .index-list .title { font-size: 1.2rem; font-weight: 700; }
+    .index-list .when { display: block; font-style: italic; color: var(--muted); font-size: .95rem; }
+    @media print {
+      body { background: #fff; }
+      .page { padding: 0; background: #fff; }
+      nav.top, nav.bottom { display: none; }
+      blockquote.historical-note, blockquote.letter { break-inside: avoid; }
+    }
+
+  </style>
+</head>
+<body>
+  <article class="page">
+        <nav class="top">
+      <a href="chapter-02-college-in-a-dairy-town.html">← Chapter 2</a>
+      <a href="index.html">All chapters</a>
+      <a href="chapter-04-eagle-field.html">Chapter 4 →</a>
+    </nav>
+    <header class="chapter-open">
+      <div class="chapter-label">Chapter 3</div>
+      <h1>Classification</h1>
+      <p class="date-range">Santa Ana, California · July–September 1943</p>
+    </header>
+
+    <div class="narrative">
+      <p>The 96th shipped west on Saturday, 3 July. A troop train: soldiers, sailors, Marines, and a few boys not yet in uniform. Lunch in Milwaukee. Supper in Chicago. Kansas City on the Fourth. Then the long empty run across Kansas and into New Mexico.</p>
+    </div>
+
+    <blockquote class="letter"><div class="letter-meta">“Somewhere in New Mexico” · 5 July 1943</div>Dear Folks,
+It's a pretty day today here and hope you are all OK back at home. I have been riding since 11 o'clock Saturday but am making it fine &amp; enjoying the trip. Boy is this a desolate country right through here. […] Yesterday while in Kansas City I got chance to see the enemy. We were standing in the station &amp; another train stopped beside us loaded with German prisoners. We were in the cars on the next track &amp; could look right in at them. They seemed no different from most of us. Most of them were a little older. There were 400 of them. Were guarded by some tough looking American soldiers. I think they were German Airmen Captured in North Africa.
+[…] We are going to Santa Ana. […] Oshkosh, Milwaukee Wis., Chicago Ill; Kansas City Mo.; Hutchinson Kansas; El Paso Texas-then West to San Diego etc - across Arizona - Sue would hate to live in this part of the country. Tennessee is the best I've seen yet.
+Austin</blockquote>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — 5 July 1943, a troop train and a prison train</span>
+      <p>After the May surrender in Tunisia the United States shipped tens of thousands of Axis prisoners inland to camps in Texas, Oklahoma, Kansas, and the Deep South. A trainload of German airmen on a Kansas City platform in early July was not a rumor. Austin looked across one track and saw the war in uniform.</p>
+      <p>That same Monday, on the Eastern Front, Germany opened the Battle of Kursk, the last great German offensive in Russia. He would not read that in the papers for a day or two. He would read the next headline soon enough. On the night of 9–10 July, while his train was still rolling toward El Paso, Allied troops went ashore in Sicily.</p>
+    </blockquote>
+
+    <div class="narrative">
+      <p>He reached Santa Ana Army Air Base on 7 July. The first letter home was not his. The commanding officer issued a form letter so that no mother would go a week without an address.</p>
+    </div>
+
+    <blockquote class="letter"><div class="letter-meta">Santa Ana Army Air Base · 7 July 1943 · form letter</div>Dear Mother:
+I'm sending this from the Classification Center here at the Santa Ana Army Air Base, where I arrived today. […] I've been registered and assigned to Squadron 18, where I shall remain for about two weeks. During that time I will have my physical examinations and tests which will determine whether I become a Pilot, Bombardier, or Navigator. After being classified, I will be assigned to another squadron here on this post, and then my actual preflight training begins.
+[…]
+Squadron 18 FLIGHT C
+Army Air Base
+Santa Ana, Calif.
+Love
+Austin</blockquote>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — Santa Ana Army Air Base</span>
+      <p>Santa Ana was an air base without runways. The West Coast Training Center used it for classification and preflight only. From 1942 through the transfer of the work in 1944, the classification center received more than 149,000 men and sent 82,000 toward pilot training, 22,000 toward bombardier school, and 14,000 toward navigator school. Psychological Research Unit No. 3 and the flight surgeons ran the batteries: mental alertness, coordination, a “6-4” flight physical, a psychiatrist, X-rays, an altitude chamber. Washouts went back to the Army with a chance at another branch. Austin counted “about 54 different &amp; separate tests.”</p>
+      <p>The place felt like the war again. Barracks of a hundred men. Officers watching how a man walked and spoke. P-38 Lightnings in dogfights over the drill field. “We didn’t know there was a war going on when in OshKosh,” he wrote, “but you can tell it here.” Nights were cold enough for an overcoat on guard. Quarantine on post ran 42 days, then another 42 in preflight.</p>
+    </blockquote>
+
+    <div class="narrative">
+      <p>On 15 July he told the family he had passed what he knew of the exams: 20/15 eyes, second-degree flat feet that still passed, seven teeth to fill. He asked them not to tell anyone he was a cadet yet. Sister had already begun addressing him <strong>A/C</strong>. He corrected her: until appointment it was <strong>A/S</strong>, Aviation Student, so the Army could keep paying $50 instead of $75.</p>
+      <p>On 22 July the board classified him a pilot. Preflight would start the 28th.</p>
+    </div>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — late July 1943</span>
+      <p class="headline">ALLIES INVADE SICILY — “THE BATTLE OF EUROPE”</p>
+      <p>Operation Husky had begun on 10 July. American, British, and Canadian troops were fighting inland. On 19 July American bombers hit Rome. On 24 July Austin sat in a post theater and watched newsreels of the landings, then sang “Comin’ In on a Wing and a Prayer” off the screen. On 25 July, the day after he wrote of Flying Fortresses overhead and a pressure-chamber date, the Fascist Grand Council in Rome moved against Mussolini. Italy was coming apart while he scrubbed barracks and waited for a new squadron number.</p>
+      <p>The altitude chamber took him to 38,000 feet — more than seven miles — on oxygen, after a short run at 18,000 without a mask so the men would feel judgment and vision go. Any flight above 10,000 feet, they were told, required oxygen. He came through it. A filled tooth would hurt him in the same chamber two months later, when trapped air under the filling expanded.</p>
+    </blockquote>
+
+    <address class="army">A/C Austin H. Winn
+Squad 56 Flight A
+S.A.A.B., - A.A.F.P.F.S. (Pilot)
+Santa Ana, Calif.</address>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — reading the preflight address</span>
+      <p><strong>A/C</strong> is Aviation Cadet, the appointment that raised his pay to $75 a month. <strong>S.A.A.B.</strong> is Santa Ana Army Air Base. <strong>A.A.F.P.F.S. (Pilot)</strong> is Army Air Forces Pre-Flight School, pilot course. Squadron 56, Flight A, was his preflight unit. A shorter form he also authorized was “Sqdn. 56 Flight A (SAAAB).” In September the Army added his serial number, <strong>14166970</strong>. The “14” prefix marked a Tennessee enlistment.</p>
+      <p>Preflight at Santa Ana was books and military bearing, not airplanes. Morse code. Aircraft silhouette recognition at a tenth of a second, then a twenty-fifth. Maps and charts. Gunnery on a moving target. Physics, math, military hygiene, chemical warfare, ground-force operations. Instructors included men just back from combat. The course was advertised as nine weeks; some classes were being run in eight, some threatened with four. Austin counted himself lucky to draw eight. Pilot Class 44-D — his class — was the largest preflight class the base put through, and it finished in October 1943.</p>
+    </blockquote>
+
+    <div class="narrative">
+      <p>August was scarlet-fever quarantine in the barracks area, an obstacle course in loose sand, machine-gun practice, and a box of cake from Dolly in Oshkosh that the whole floor ate. He learned the Navy silhouettes first: PB2Y Coronado, PBY Catalina, SBD Dauntless, F4F Wildcat, F4U Corsair. His flight won a parade. A colonel who had been in the Pacific with Eddie Rickenbacker talked to them, and a captain just back from Munda. On 23 August he got a pass to Balboa and swam in the Pacific. On the night of the 28th, sitting in the barracks with a new Eversharp, the chair shook and the light swung.</p>
+    </div>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — August 1943</span>
+      <p>Sicily was finished on 17 August. That same day Eighth Air Force bombers flew the deep raid on Schweinfurt and Regensburg. In the Pacific, Munda airfield on New Georgia had fallen on 5 August. Rickenbacker’s raft ordeal — three weeks in the Pacific in November 1942 — was already a public story; officers who had shared it were on the lecture circuit at training bases.</p>
+      <p>WAAC recruiters had visited Oshkosh in May. On 1 July 1943 the Women’s Army Auxiliary Corps became the Women’s Army Corps, no longer auxiliary. Austin’s May letters still use the older name, which is how the unit was known when the women stood in front of the 96th.</p>
+    </blockquote>
+
+    <div class="narrative">
+      <p>September brought a weekend in Los Angeles with Jack, in from the Marines, and a Sunday parade Jack stayed to watch. New P-51 Mustangs appeared over the base. He sat through Disney’s <em>Victory Through Air Power</em> and wrote home that a B-24’s wingspan was “almost twice as long as our house.” Classes ended about the 24th. Half the squadron expected King City, half Dos Palos — both primary schools southeast of San Francisco. A Pacific Electric strike cancelled weekend passes. He sent a money order home for another war bond and waited for a shipping date on the first of October.</p>
+    </div>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — September 1943</span>
+      <p class="headline">ITALY SURRENDERS — ALLIES LAND AT SALERNO</p>
+      <p>On 3 September the British Eighth Army crossed to the toe of Italy. On 8 September Eisenhower announced the Italian armistice. On the 9th the U.S. Fifth Army went ashore at Salerno. German troops seized Rome and the north. Austin, restricted and studying, wrote that “the news sounds good” and that if Germany and Italy went, Japan would still have to be finished.</p>
+      <p>King City (Mesa Del Rey) and Eagle Field at Dos Palos were sister contract schools run by Coast Aviation. Both taught primary in Ryan trainers. The Third War Loan drive ran from 9 September to 2 October. Lauderdale County, he later read, went over its quota.</p>
+    </blockquote>
+
+
+    <hr class="end-rule" />
+        <nav class="bottom">
+      <a href="chapter-02-college-in-a-dairy-town.html">← Chapter 2</a>
+      <a href="chapter-04-eagle-field.html">Chapter 4 →</a>
+    </nav>
+    <footer class="colophon">
+      Chapter 3 · July–September 1943 · Santa Ana. Austin’s words are in the boxed letters. Added explanation is in the green Historical notes. Home is the community of Cherry; Route 2, Henning appears only on envelopes.
+    </footer>
+  </article>
+</body>
+</html>
