@@ -1,156 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Austin H. Winn – WWII Manuscript</title>
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-            font-family: system-ui, -apple-system, sans-serif;
-            color: #e8e8e8;
-            padding: 40px 20px;
-        }
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-        }
-        a.home {
-            display: inline-block;
-            margin-bottom: 28px;
-            color: #e94560;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        a.home:hover {
-            text-decoration: underline;
-        }
-        h1 {
-            font-size: 1.9rem;
-            margin: 0 0 6px 0;
-            font-weight: 700;
-        }
-        .subtitle {
-            color: #e94560;
-            margin-bottom: 36px;
-            font-size: 1.1rem;
-        }
-        .chapter-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .chapter-list li {
-            margin-bottom: 14px;
-        }
-        .chapter-list a {
-            display: block;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 18px 22px;
-            color: #e8e8e8;
-            text-decoration: none;
-            transition: background 0.2s, border-color 0.2s;
-        }
-        .chapter-list a:hover {
-            background: rgba(233, 69, 96, 0.15);
-            border-color: #e94560;
-        }
-        .chapter-num {
-            color: #e94560;
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 4px;
-        }
-        .chapter-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-        .chapter-dates {
-            font-size: 0.95rem;
-            opacity: 0.75;
-        }
-        .note {
-            margin-top: 40px;
-            font-size: 0.9rem;
-            opacity: 0.6;
-            line-height: 1.5;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Austin H. Winn — Letters, 1943</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --paper: #faf7f2;
+      --rule: #d6cfc4;
+      --note-bg: #eef3f0;
+      --note-border: #4a6b5c;
+      --note-label: #3d5a4c;
+      --letter-bg: #fffdf8;
+      --letter-border: #c4b8a4;
+      --accent: #e94560;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e8e0d4;
+      color: var(--ink);
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      line-height: 1.65;
+    }
+    .page {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 36px 28px 80px;
+      background: var(--paper);
+      min-height: 100vh;
+    }
+    nav.top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+      padding-bottom: .8rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    nav.top a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    nav.top a:hover { text-decoration: underline; }
+    nav.top .disabled { color: #b0a89c; }
+    header.chapter-open { text-align: center; margin-bottom: 2.2rem; }
+    .chapter-label {
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      color: var(--muted);
+    }
+    h1 {
+      font-size: 2.15rem;
+      font-weight: 700;
+      margin: .35rem 0 .15rem;
+      letter-spacing: .02em;
+    }
+    .date-range {
+      font-style: italic;
+      color: var(--muted);
+      margin: 0 0 1.4rem;
+    }
+    .key {
+      font-size: .88rem;
+      color: var(--muted);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: .85rem 0;
+      margin: 0 0 2rem;
+    }
+    .key strong { color: var(--note-label); }
+    h2 { font-size: 1.28rem; margin: 2.4rem 0 .7rem; font-weight: 700; }
+    h3 { font-size: 1.05rem; margin: 1.8rem 0 .5rem; font-weight: 700; }
+    p { margin: 0 0 1rem; }
+    .narrative p { text-align: justify; hyphens: auto; }
+    blockquote.historical-note {
+      margin: 1.35rem 0 1.5rem;
+      padding: 1rem 1.15rem 1.05rem 1.2rem;
+      background: var(--note-bg);
+      border-left: 5px solid var(--note-border);
+      color: #24332c;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+      line-height: 1.55;
+    }
+    blockquote.historical-note .note-label {
+      display: block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .45rem;
+    }
+    blockquote.historical-note p { margin: 0 0 .65rem; text-align: left; }
+    blockquote.historical-note p:last-child { margin-bottom: 0; }
+    blockquote.historical-note .headline {
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 1.02rem;
+      letter-spacing: .01em;
+      margin: .15rem 0 .35rem;
+    }
+    blockquote.letter {
+      margin: 1.2rem 0 1.35rem;
+      padding: 1.15rem 1.25rem 1.05rem;
+      background: var(--letter-bg);
+      border: 1px solid var(--letter-border);
+      white-space: pre-wrap;
+      font-family: "Courier Prime", "Courier New", Courier, monospace;
+      font-size: .92rem;
+      line-height: 1.55;
+      color: #2a241c;
+    }
+    .letter-meta {
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #7a6d5a;
+      margin-bottom: .55rem;
+    }
+    address.army {
+      font-style: normal;
+      font-family: "Courier New", Courier, monospace;
+      font-size: .95rem;
+      background: #f3eee6;
+      border: 1px dashed #b7aa96;
+      padding: .9rem 1rem;
+      margin: 1rem 0 1.2rem;
+      white-space: pre-wrap;
+    }
+    .end-rule {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 2.4rem 0 1.2rem;
+    }
+    footer.colophon {
+      font-size: .82rem;
+      color: var(--muted);
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    nav.bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 2rem;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+    }
+    nav.bottom a {
+      color: #fff;
+      background: var(--accent);
+      text-decoration: none;
+      padding: .55rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    nav.bottom a:hover { background: #ff6b6b; }
+    nav.bottom span { color: #b0a89c; padding: .55rem 0; }
+    .index-list { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+    .index-list li { margin: 0 0 .85rem; }
+    .index-list a {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      background: #fffdf8;
+      border: 1px solid var(--letter-border);
+      border-left: 5px solid var(--note-border);
+      padding: 1rem 1.15rem;
+    }
+    .index-list a:hover { border-left-color: var(--accent); }
+    .index-list .num {
+      display: block;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .2rem;
+    }
+    .index-list .title { font-size: 1.2rem; font-weight: 700; }
+    .index-list .when { display: block; font-style: italic; color: var(--muted); font-size: .95rem; }
+    @media print {
+      body { background: #fff; }
+      .page { padding: 0; background: #fff; }
+      nav.top, nav.bottom { display: none; }
+      blockquote.historical-note, blockquote.letter { break-inside: avoid; }
+    }
+
+  </style>
 </head>
 <body>
-    <div class="container">
-        <a href="../" class="home">← Home</a>
-
-        <h1>Austin H. Winn</h1>
-        <div class="subtitle">World War II Letters – Manuscript Draft</div>
-
-        <ul class="chapter-list">
-            <li>
-                <a href="view.html?c=1">
-                    <div class="chapter-num">Chapter 1</div>
-                    <div class="chapter-title">Leaving Home</div>
-                    <div class="chapter-dates">January – March 1943</div>
-                </a>
-            </li>
-            <li>
-                <a href="view.html?c=2">
-                    <div class="chapter-num">Chapter 2</div>
-                    <div class="chapter-title">Oshkosh by Gosh</div>
-                    <div class="chapter-dates">Late March – June 1943</div>
-                </a>
-            </li>
-            <li>
-                <a href="view.html?c=3">
-                    <div class="chapter-num">Chapter 3</div>
-                    <div class="chapter-title">Classified a Pilot</div>
-                    <div class="chapter-dates">July – September 1943</div>
-                </a>
-            </li>
-            <li>
-                <a href="view.html?c=4">
-                    <div class="chapter-num">Chapter 4</div>
-                    <div class="chapter-title">The Real Thing</div>
-                    <div class="chapter-dates">October 1943 – January 1944</div>
-                </a>
-            </li>
-            <li>
-                <a href="view.html?c=5">
-                    <div class="chapter-num">Chapter 5</div>
-                    <div class="chapter-title">Wings and a Commission</div>
-                    <div class="chapter-dates">February – April 1944</div>
-                </a>
-            </li>
-            <li>
-                <a href="view.html?c=6">
-                    <div class="chapter-num">Chapter 6</div>
-                    <div class="chapter-title">Heavy Iron</div>
-                    <div class="chapter-dates">Late April – December 1944</div>
-                </a>
-            </li>
-            <li>
-                <a href="view.html?c=7">
-                    <div class="chapter-num">Chapter 7</div>
-                    <div class="chapter-title">Over the Empire</div>
-                    <div class="chapter-dates">January – August 1945</div>
-                </a>
-            </li>
-            <li>
-                <a href="view.html?c=8">
-                    <div class="chapter-num">Chapter 8</div>
-                    <div class="chapter-title">Back to the States Again</div>
-                    <div class="chapter-dates">September – October 1945</div>
-                </a>
-            </li>
-        </ul>
-
-        <div class="note">
-            Private draft for family review. Please send comments and corrections.
-        </div>
-    </div>
+  <article class="page">
+    <header class="chapter-open">
+      <div class="chapter-label">The wartime letters of</div>
+      <h1>Austin H. Winn</h1>
+      <p class="date-range">Cherry, Lauderdale County, Tennessee · 1943</p>
+    </header>
+    <p class="key">
+      Austin’s own words stay in the boxed letters, spelled as he wrote them.
+      All added explanation is in green notes labeled <strong>Historical note</strong>.
+      Home is the community of <strong>Cherry</strong>. Route 2, Henning is only the rural mail route on the envelopes.
+    </p>
+    <h2>Chapters</h2>
+    <ul class="index-list">
+      <li>
+        <a href="chapter-01-leaving-home.html">
+          <span class="num">Chapter 1</span>
+          <span class="title">Leaving Home</span>
+          <span class="when">January–March 1943 · train south, Miami Beach, emergency leave, orders to Oshkosh</span>
+        </a>
+      </li>
+      <li>
+        <a href="chapter-02-college-in-a-dairy-town.html">
+          <span class="num">Chapter 2</span>
+          <span class="title">College in a Dairy Town</span>
+          <span class="when">April–June 1943 · 96th College Training Detachment, Oshkosh, first hours in the air</span>
+        </a>
+      </li>
+      <li>
+        <a href="chapter-03-classification.html">
+          <span class="num">Chapter 3</span>
+          <span class="title">Classification</span>
+          <span class="when">July–September 1943 · troop train west, Santa Ana, classified pilot, preflight</span>
+        </a>
+      </li>
+      <li>
+        <a href="chapter-04-eagle-field.html">
+          <span class="num">Chapter 4</span>
+          <span class="title">Eagle Field</span>
+          <span class="when">October 1943 · Dos Palos, Ryan PT-22, first solo</span>
+        </a>
+      </li>
+    </ul>
+    <hr class="end-rule" />
+    <footer class="colophon">
+      Letter texts follow the family transcriptions at willwinn.xyz.
+      Draft manuscript with historical notes, January–October 1943.
+    </footer>
+  </article>
 </body>
 </html>
