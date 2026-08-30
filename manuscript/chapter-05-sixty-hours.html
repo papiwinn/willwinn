@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chapter 5 — Sixty Hours</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --paper: #faf7f2;
+      --rule: #d6cfc4;
+      --note-bg: #eef3f0;
+      --note-border: #4a6b5c;
+      --note-label: #3d5a4c;
+      --letter-bg: #fffdf8;
+      --letter-border: #c4b8a4;
+      --accent: #e94560;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e8e0d4;
+      color: var(--ink);
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      line-height: 1.65;
+    }
+    .page {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 36px 28px 80px;
+      background: var(--paper);
+      min-height: 100vh;
+    }
+    nav.top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+      padding-bottom: .8rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    nav.top a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    nav.top a:hover { text-decoration: underline; }
+    nav.top .disabled { color: #b0a89c; }
+    header.chapter-open { text-align: center; margin-bottom: 2.2rem; }
+    .chapter-label {
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      color: var(--muted);
+    }
+    h1 {
+      font-size: 2.15rem;
+      font-weight: 700;
+      margin: .35rem 0 .15rem;
+      letter-spacing: .02em;
+    }
+    .date-range {
+      font-style: italic;
+      color: var(--muted);
+      margin: 0 0 1.4rem;
+    }
+    .key {
+      font-size: .88rem;
+      color: var(--muted);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: .85rem 0;
+      margin: 0 0 2rem;
+    }
+    .key strong { color: var(--note-label); }
+    h2 { font-size: 1.28rem; margin: 2.4rem 0 .7rem; font-weight: 700; }
+    h3 { font-size: 1.05rem; margin: 1.8rem 0 .5rem; font-weight: 700; }
+    p { margin: 0 0 1rem; }
+    .narrative p { text-align: justify; hyphens: auto; }
+    blockquote.historical-note {
+      margin: 1.35rem 0 1.5rem;
+      padding: 1rem 1.15rem 1.05rem 1.2rem;
+      background: var(--note-bg);
+      border-left: 5px solid var(--note-border);
+      color: #24332c;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+      line-height: 1.55;
+    }
+    blockquote.historical-note .note-label {
+      display: block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .45rem;
+    }
+    blockquote.historical-note p { margin: 0 0 .65rem; text-align: left; }
+    blockquote.historical-note p:last-child { margin-bottom: 0; }
+    blockquote.historical-note .headline {
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 1.02rem;
+      letter-spacing: .01em;
+      margin: .15rem 0 .35rem;
+    }
+    blockquote.letter {
+      margin: 1.2rem 0 1.35rem;
+      padding: 1.15rem 1.25rem 1.05rem;
+      background: var(--letter-bg);
+      border: 1px solid var(--letter-border);
+      white-space: pre-wrap;
+      font-family: "Courier Prime", "Courier New", Courier, monospace;
+      font-size: .92rem;
+      line-height: 1.55;
+      color: #2a241c;
+    }
+    .letter-meta {
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #7a6d5a;
+      margin-bottom: .55rem;
+    }
+    address.army {
+      font-style: normal;
+      font-family: "Courier New", Courier, monospace;
+      font-size: .95rem;
+      background: #f3eee6;
+      border: 1px dashed #b7aa96;
+      padding: .9rem 1rem;
+      margin: 1rem 0 1.2rem;
+      white-space: pre-wrap;
+    }
+    .end-rule {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 2.4rem 0 1.2rem;
+    }
+    footer.colophon {
+      font-size: .82rem;
+      color: var(--muted);
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    nav.bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 2rem;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+    }
+    nav.bottom a {
+      color: #fff;
+      background: var(--accent);
+      text-decoration: none;
+      padding: .55rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    nav.bottom a:hover { background: #ff6b6b; }
+    nav.bottom span { color: #b0a89c; padding: .55rem 0; }
+    .index-list { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+    .index-list li { margin: 0 0 .85rem; }
+    .index-list a {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      background: #fffdf8;
+      border: 1px solid var(--letter-border);
+      border-left: 5px solid var(--note-border);
+      padding: 1rem 1.15rem;
+    }
+    .index-list a:hover { border-left-color: var(--accent); }
+    .index-list .num {
+      display: block;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .2rem;
+    }
+    .index-list .title { font-size: 1.2rem; font-weight: 700; }
+    .index-list .when { display: block; font-style: italic; color: var(--muted); font-size: .95rem; }
+    @media print {
+      body { background: #fff; }
+      .page { padding: 0; background: #fff; }
+      nav.top, nav.bottom { display: none; }
+      blockquote.historical-note, blockquote.letter { break-inside: avoid; }
+    }
+
+  </style>
+</head>
+<body>
+  <article class="page">
+    <nav class="top">
+      <a href="chapter-04-eagle-field.html">← Chapter 4</a>
+      <a href="index.html">All chapters</a>
+      <a href="chapter-06-the-vultee.html">Chapter 6 →</a>
+    </nav>
+    <header class="chapter-open">
+      <div class="chapter-label">Chapter 5</div>
+      <h1>Sixty Hours</h1>
+      <p class="date-range">Eagle Field, Dos Palos · November 1943</p>
+    </header>
+
+    <div class="narrative">
+      <p>By the first week of November Austin had thirty hours in the Ryan. The Army wanted sixty-five before a man left primary. He had already sat two hours under the hood of a Link trainer. A lieutenant gave him a check ride on the 8th and asked where that Southern accent came from. A visiting captain — one of three air inspectors on the field — took him up at random and wrote “straight satisfactory,” the highest mark the sheet allowed. There would be another check at forty-five hours and an Army check at fifty-five.</p>
+    </div>
+
+    <blockquote class="letter"><div class="letter-meta">Eagle Field · 8 November 1943</div>Dear Folks,
+[…] I had my check with a lieutenant this morning passed it O.K. I think he liked my Southern accent (ha ha) He asked where I was from.
+I don't expect I can send a bond home this month. I have to pay $65 per month for my room &amp; board here in this civilian school also pay for laundry but make 122.00 so still get a little over 50. Clear. […]
+We have 3 'air inspectors' here this week. A Colonel &amp; 2 captains. I'll probably give one of them a ride before the week is gone (no kiddin')
+Love &amp; heaps of it
+Austin</blockquote>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — contract primary and the Link trainer</span>
+      <p>Eagle Field was a civilian-contract school. The Army paid the operator; the cadet paid subsistence out of his flying pay. Austin’s $122 and the $65 for room and board were that arrangement. A check ride was a graded flight with someone other than a man’s regular instructor. Inspectors from the Western Flying Training Command sampled cadets at random. The four marks he listed — straight satisfactory, satisfactory, minimal satisfactory, unsatisfactory — decided whether a man stayed in the airplane.</p>
+      <p>The Link trainer was a wooden flight simulator on a base that pitched and turned. Under its hood a cadet flew by instruments only. A recorder traced the course on paper. Austin later drew the box he had been told to fly: two minutes north, a 270-degree turn, two minutes east, and so on, until the ink line closed on itself.</p>
+    </blockquote>
+
+    <div class="narrative">
+      <p>He tried, in one Saturday letter, to explain the rest of the pipeline to Cherry. After primary came basic: bigger ships, radio, instruments instead of the ground. After that, advanced: “regular fighting ships,” formation, gunnery or bombing. Then wings and a commission as second lieutenant — or a Flight Officer rating, same pay, not quite the same rank. Class 44-D, he said, meant they were supposed to finish in the fourth month of 1944, though the schedule was being rushed.</p>
+    </div>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — the pipeline and the class number</span>
+      <p>He had the stages right. Primary, basic, and advanced were each about nine weeks. Wings came at the end of advanced, not before. A Flight Officer was a rated AAF rank created in 1942: pay of a second lieutenant, without a commission. Many graduates received it when the Army needed pilots faster than it needed new officers.</p>
+      <p><strong>44-D</strong> was the class that, on the original calendar, would pin on wings in April 1944. 44-C was the class ahead of him; 44-E the class already arriving from Santa Ana. Weather and the needs of the war moved those dates around. Austin would leave primary in early December with about sixty hours, not sixty-five.</p>
+    </blockquote>
+
+    <div class="narrative">
+      <p>November weather closed the field for the first time on the 16th. He sat on the flight line in mist while a weather ship went up to look. He told his mother that the extra month in Florida — the holdover after his father’s funeral — was why he had been sent to the West Coast Training Command instead of a school in Arkansas or Mississippi. He would change fields just before Christmas. Three days off would not get him home.</p>
+      <p>When the ceiling lifted he took the Ryan to 7,500 feet and came down in loops, a half-roll, and an Immelmann. A B-17 pilot home from fifty missions over Germany talked to the class. On the 21st Austin passed the forty-five-hour check. That same week a rain cloud caught him in the air; he put down at auxiliary field number 9 with twenty-three other planes and waited in a dark house until a truck came at 8:30.</p>
+    </div>
+
+    <blockquote class="letter"><div class="letter-meta">Eagle Field · 21 November 1943</div>Dear Mother,
+How is everyone around home? I'm fine &amp; dandy. We flew all afternoon today. I had 3 planes to fly. I also got my 45 hour check-ride. Made satisfactory on it. Yesterday we had another rain cloud that came up while I was up. I went back to my ole standby &amp; landed our number 9 auxiliary along with 23 other planes. This time though it kept on raining until nite so we stayed over there in a little house without any fire or lights till about 8:30 when they sent a truck out after us. […] I have 49 hours and 132 landings now. We need 65 hrs &amp; 175 landings to leave here around Dec. 5th. We'll have them if we have to fly every Sunday too (haha)
+Goodnight to the Sweetest in the World,
+Bye—Austin</blockquote>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — aerobatics, the Immelmann, and November 1943</span>
+      <p>An Immelmann is a half loop followed by a roll to upright flight — a climbing reversal named for the German pilot Max Immelmann in the First World War. It was standard primary aerobatics, practiced above a minimum altitude. Auxiliary fields around Eagle Field existed for exactly the landing Austin made: get the airplanes down when the home field weather went bad.</p>
+      <p>While he waited on the misty line on 16 November, the RAF was opening the Battle of Berlin. On 20–23 November, Marines took Tarawa in the Gilbert Islands at a cost the country would read about for weeks. On 22 November Roosevelt and Churchill met at Cairo; on the 28th they sat down with Stalin at Tehran. Austin would hear the conference called a success after he reached Lancaster.</p>
+    </blockquote>
+
+    <div class="narrative">
+      <p>The six men in Jesse Acombs’s flight bought their instructor a wristwatch. A hangar dance was set for the 27th, graduation for Sunday the 28th at 2:00. Weather had stolen hours. Austin would finish with sixty. “They picked the ones that needed the most hours to give 65,” his instructor told him.</p>
+    </div>
+
+    <blockquote class="letter"><div class="letter-meta">Eagle Field · 28 November 1943</div>Dear Mother,
+It's 4:30 PM and everyone is leaving the post for a few hours open post. […] We had our Cadet Dance last nite &amp; the graduation exercises today which just ended. We had several nice talks by some high ranking officers &amp; by one Veteran of the Spanish American &amp; World Wars.
+I went to protestant services this morning. It was real nice &amp; we really did have some good singing. Sung songs that we used to sing at Mack Church too.
+We are leaving Dec 5th all right. Most of us are going to Lancaster, Cali., about 70 miles North of Los Angeles. I here its a pretty good place to train too. Some few are going to Arizona &amp; 9 to other schools in Northern Cali.
+[…] The news is just coming on the radio now. There seems to be some big announcement everyone is expecting to hear. A bad earthquake in Turkey we heard. They are really bombing Berlin it seems. Gabriel Heatter is the newscaster.
+Lot of love to all.
+Austin</blockquote>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — 28 November 1943</span>
+      <p>Graduation from primary was not wings. It was a certificate, a class book, and a shipping list. Most of 44-D was bound for War Eagle Field at Lancaster, a basic school in the Antelope Valley. A few would go to Arizona contract fields; a handful to other California schools.</p>
+      <p>Gabriel Heatter was the Mutual network’s evening voice — “There’s good news tonight.” The earthquake was real: a magnitude-7 shock in north-central Turkey on 26 November. The “big announcement” the barracks expected sat in Tehran, where Roosevelt, Churchill, and Stalin were meeting for the first time. Berlin was under RAF night attack. From Cherry, Mack Church was still the measure of a hymn.</p>
+    </blockquote>
+
+    <hr class="end-rule" />
+    <nav class="bottom">
+      <a href="chapter-04-eagle-field.html">← Chapter 4</a>
+      <a href="chapter-06-the-vultee.html">Chapter 6 →</a>
+    </nav>
+    <footer class="colophon">
+      Chapter 5 · November 1943 · Eagle Field, Dos Palos. Austin’s words are in the boxed letters. Added explanation is in the green Historical notes. Home is the community of Cherry; Route 2, Henning appears only on envelopes.
+    </footer>
+  </article>
+</body>
+</html>
