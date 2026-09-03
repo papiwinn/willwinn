@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chapter 9 — Twenty Tons</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --paper: #faf7f2;
+      --rule: #d6cfc4;
+      --note-bg: #eef3f0;
+      --note-border: #4a6b5c;
+      --note-label: #3d5a4c;
+      --letter-bg: #fffdf8;
+      --letter-border: #c4b8a4;
+      --accent: #e94560;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e8e0d4;
+      color: var(--ink);
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      line-height: 1.65;
+    }
+    .page {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 36px 28px 80px;
+      background: var(--paper);
+      min-height: 100vh;
+    }
+    nav.top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+      padding-bottom: .8rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    nav.top a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    nav.top a:hover { text-decoration: underline; }
+    nav.top .disabled { color: #b0a89c; }
+    header.chapter-open { text-align: center; margin-bottom: 2.2rem; }
+    .chapter-label {
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      color: var(--muted);
+    }
+    h1 {
+      font-size: 2.15rem;
+      font-weight: 700;
+      margin: .35rem 0 .15rem;
+      letter-spacing: .02em;
+    }
+    .date-range {
+      font-style: italic;
+      color: var(--muted);
+      margin: 0 0 1.4rem;
+    }
+    .key {
+      font-size: .88rem;
+      color: var(--muted);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: .85rem 0;
+      margin: 0 0 2rem;
+    }
+    .key strong { color: var(--note-label); }
+    h2 { font-size: 1.28rem; margin: 2.4rem 0 .7rem; font-weight: 700; }
+    h3 { font-size: 1.05rem; margin: 1.8rem 0 .5rem; font-weight: 700; }
+    p { margin: 0 0 1rem; }
+    .narrative p { text-align: justify; hyphens: auto; }
+    blockquote.historical-note {
+      margin: 1.35rem 0 1.5rem;
+      padding: 1rem 1.15rem 1.05rem 1.2rem;
+      background: var(--note-bg);
+      border-left: 5px solid var(--note-border);
+      color: #24332c;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+      line-height: 1.55;
+    }
+    blockquote.historical-note .note-label {
+      display: block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .45rem;
+    }
+    blockquote.historical-note p { margin: 0 0 .65rem; text-align: left; }
+    blockquote.historical-note p:last-child { margin-bottom: 0; }
+    blockquote.historical-note .headline {
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 1.02rem;
+      letter-spacing: .01em;
+      margin: .15rem 0 .35rem;
+    }
+    blockquote.letter {
+      margin: 1.2rem 0 1.35rem;
+      padding: 1.15rem 1.25rem 1.05rem;
+      background: var(--letter-bg);
+      border: 1px solid var(--letter-border);
+      white-space: pre-wrap;
+      font-family: "Courier Prime", "Courier New", Courier, monospace;
+      font-size: .92rem;
+      line-height: 1.55;
+      color: #2a241c;
+    }
+    .letter-meta {
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #7a6d5a;
+      margin-bottom: .55rem;
+    }
+    address.army {
+      font-style: normal;
+      font-family: "Courier New", Courier, monospace;
+      font-size: .95rem;
+      background: #f3eee6;
+      border: 1px dashed #b7aa96;
+      padding: .9rem 1rem;
+      margin: 1rem 0 1.2rem;
+      white-space: pre-wrap;
+    }
+    figure.plane-photo {
+      margin: 1.4rem 0 1.6rem;
+      padding: 0;
+    }
+    figure.plane-photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--letter-border);
+      background: #ddd;
+    }
+    figure.plane-photo figcaption {
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .78rem;
+      color: var(--muted);
+      line-height: 1.4;
+      margin-top: .45rem;
+    }
+    figure.plane-photo figcaption a { color: var(--note-label); }
+    .end-rule {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 2.4rem 0 1.2rem;
+    }
+    footer.colophon {
+      font-size: .82rem;
+      color: var(--muted);
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    nav.bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 2rem;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+    }
+    nav.bottom a {
+      color: #fff;
+      background: var(--accent);
+      text-decoration: none;
+      padding: .55rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    nav.bottom a:hover { background: #ff6b6b; }
+    nav.bottom span { color: #b0a89c; padding: .55rem 0; }
+    .index-list { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+    .index-list li { margin: 0 0 .85rem; }
+    .index-list a {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      background: #fffdf8;
+      border: 1px solid var(--letter-border);
+      border-left: 5px solid var(--note-border);
+      padding: 1rem 1.15rem;
+    }
+    .index-list a:hover { border-left-color: var(--accent); }
+    .index-list .num {
+      display: block;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .2rem;
+    }
+    .index-list .title { font-size: 1.2rem; font-weight: 700; }
+    .index-list .when { display: block; font-style: italic; color: var(--muted); font-size: .95rem; }
+    @media print {
+      body { background: #fff; }
+      .page { padding: 0; background: #fff; }
+      nav.top, nav.bottom { display: none; }
+      blockquote.historical-note, blockquote.letter { break-inside: avoid; }
+    }
+
+  </style>
+</head>
+<body>
+  <article class="page">
+    <nav class="top">
+      <a href="chapter-08-two-engines.html">← Chapter 8</a>
+      <a href="index.html">All chapters</a>
+      <a href="chapter-10-the-pool.html">Chapter 10 →</a>
+    </nav>
+    <header class="chapter-open">
+      <div class="chapter-label">Chapter 9</div>
+      <h1>Twenty Tons</h1>
+      <p class="date-range">Roswell Army Air Field, New Mexico · May–June 1944</p>
+    </header>
+
+    <div class="narrative">
+      <p>He reported to Roswell at the end of April, vaccinated again, and moved into Bachelor Officers’ Quarters with Withee, the Oshkosh classmate who had been with him since Wisconsin. They spent the first week on the ground: seven hours a day, even Sunday, learning the B-17 before they sat in one.</p>
+    </div>
+
+    <address class="army">2nd Lt. Austin H. Winn O-774857
+S/O Class 44-D, RAAF
+Roswell, New Mexico</address>
+
+    <blockquote class="letter"><div class="letter-meta">Roswell · 5 May 1944</div>Dear Mother,
+[…] Tomorrow I begin flying the B-17. We've studied all this past week on the operation of the engines &amp; other equipment. These planes are over a 100 ft wide and about 20 ft high. […]
+Talking about how big this plane is, the tire tread is 24 feet around. The plane weighs about 40,000 lbs (20 tons). Will hold over 3000 gallons of gasoline etc. I can't tell the exact amounts &amp; all that I'd like to tell you.
+Love,
+Austin</blockquote>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — Roswell and the B-17</span>
+      <p>Roswell Army Air Field, on the plains of southeastern New Mexico, was a four-engine transition school in 1944. New pilots learned the Boeing B-17 Flying Fortress before they were sent on to a combat-crew field. Wingspan a little over 103 feet; four Wright Cyclone radials; a crew that would later number nine or ten. At Roswell the training crew was pilot, co-pilot, and engineer. Gunnery and a full combat complement waited at the next station.</p>
+      <p>Austin’s first instructor in the Fortress was a captain a month back from England. The ship would fly on three engines or two, “or even one engine in some cases.” They practiced those landings at dawn. He flew a veteran named <em>Hells Angels</em>, covered in names of men who had already been over Germany. By mid-May he had forty hours; the course wanted 105.</p>
+    </blockquote>
+
+    <div class="narrative">
+      <p>Sister asked what “D-Day” meant. He told her D did not stand for a word — it was Army slang, like an H-Hour on a cross-country. He was writing that on 16 May, three weeks before the name would mean the Normandy beaches to everyone in Lauderdale County.</p>
+    </div>
+
+    <blockquote class="letter"><div class="letter-meta">Roswell · 5 June 1944</div>Hello folks,
+[…] I flew last nite till 2:00 AM. Went on a little cross-country to Big Springs, Amarilla Texas and back to Roswell around 600 miles - Did you know that I burn over 800 gal o gasoline every day that I fly here - I listened to the radios last nite &amp; heard the news that Rome had been entered by American Soldiers. […] I have 102 hours now
+Love to all, Austin</blockquote>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — Rome, and the next morning</span>
+      <p>American troops entered Rome on 4 June 1944. Austin heard it on one of the five radios in the B-17 — Tokyo on one set, San Francisco on another, Carlsbad local, the tower on the last. The next morning, 6 June, Allied armies crossed the Channel into Normandy. That was the D-Day he had tried to explain as slang. The letters from the days just after the landing are thinner; he was finishing the 105 hours, dropping practice bombs, and closing out Link time at Roswell. He passed an instrument card that let him fly legally in cloud.</p>
+      <p>Dust and Thursday gas-mask drills marked the field. He signed a $100 bond allotment to his mother beginning with the June check. Withee, not flying, came by the room. A three-ship flight was headed for Dyersburg, the heavy-bomber school in West Tennessee he had once named as a possible next stop. He could not get on it. The next orders would not be for home.</p>
+    </blockquote>
+
+    <hr class="end-rule" />
+    <nav class="bottom">
+      <a href="chapter-08-two-engines.html">← Chapter 8</a>
+      <a href="chapter-10-the-pool.html">Chapter 10 →</a>
+    </nav>
+    <footer class="colophon">
+      Chapter 9 · May–June 1944 · Roswell. Austin’s words are in the boxed letters. Added explanation is in the green Historical notes. Home is the community of Cherry; Route 2, Henning appears only on envelopes.
+    </footer>
+  </article>
+</body>
+</html>
