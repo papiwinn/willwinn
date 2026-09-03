@@ -1,122 +1,380 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dad's WW2 Letters – Will Winn</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Austin H. Winn — Letters, 1943</title>
     <style>
+      :root {
+        --ink: #1c1917;
+        --muted: #57534e;
+        --paper: #faf7f2;
+        --rule: #d6cfc4;
+        --note-bg: #eef3f0;
+        --note-border: #4a6b5c;
+        --note-label: #3d5a4c;
+        --letter-bg: #fffdf8;
+        --letter-border: #c4b8a4;
+        --accent: #e94560;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8e0d4;
+        color: var(--ink);
+        font-family:
+          "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+        line-height: 1.65;
+      }
+      .page {
+        max-width: 740px;
+        margin: 0 auto;
+        padding: 36px 28px 80px;
+        background: var(--paper);
+        min-height: 100vh;
+      }
+      nav.top {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 1.8rem;
+        padding-bottom: 0.8rem;
+        border-bottom: 1px solid var(--rule);
+      }
+      nav.top a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      nav.top a:hover {
+        text-decoration: underline;
+      }
+      nav.top .disabled {
+        color: #b0a89c;
+      }
+      header.chapter-open {
+        text-align: center;
+        margin-bottom: 2.2rem;
+      }
+      .chapter-label {
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+      h1 {
+        font-size: 2.15rem;
+        font-weight: 700;
+        margin: 0.35rem 0 0.15rem;
+        letter-spacing: 0.02em;
+      }
+      .date-range {
+        font-style: italic;
+        color: var(--muted);
+        margin: 0 0 1.4rem;
+      }
+      .key {
+        font-size: 0.88rem;
+        color: var(--muted);
+        border-top: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
+        padding: 0.85rem 0;
+        margin: 0 0 2rem;
+      }
+      .key strong {
+        color: var(--note-label);
+      }
+      h2 {
+        font-size: 1.28rem;
+        margin: 2.4rem 0 0.7rem;
+        font-weight: 700;
+      }
+      h3 {
+        font-size: 1.05rem;
+        margin: 1.8rem 0 0.5rem;
+        font-weight: 700;
+      }
+      p {
+        margin: 0 0 1rem;
+      }
+      .narrative p {
+        text-align: justify;
+        hyphens: auto;
+      }
+      blockquote.historical-note {
+        margin: 1.35rem 0 1.5rem;
+        padding: 1rem 1.15rem 1.05rem 1.2rem;
+        background: var(--note-bg);
+        border-left: 5px solid var(--note-border);
+        color: #24332c;
+        font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 0.95rem;
+        line-height: 1.55;
+      }
+      blockquote.historical-note .note-label {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--note-label);
+        margin-bottom: 0.45rem;
+      }
+      blockquote.historical-note p {
+        margin: 0 0 0.65rem;
+        text-align: left;
+      }
+      blockquote.historical-note p:last-child {
+        margin-bottom: 0;
+      }
+      blockquote.historical-note .headline {
+        font-family: "Times New Roman", Times, serif;
+        font-weight: 700;
+        font-size: 1.02rem;
+        letter-spacing: 0.01em;
+        margin: 0.15rem 0 0.35rem;
+      }
+      blockquote.letter {
+        margin: 1.2rem 0 1.35rem;
+        padding: 1.15rem 1.25rem 1.05rem;
+        background: var(--letter-bg);
+        border: 1px solid var(--letter-border);
+        white-space: pre-wrap;
+        font-family: "Courier Prime", "Courier New", Courier, monospace;
+        font-size: 0.92rem;
+        line-height: 1.55;
+        color: #2a241c;
+      }
+      .letter-meta {
+        font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #7a6d5a;
+        margin-bottom: 0.55rem;
+      }
+      address.army {
+        font-style: normal;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.95rem;
+        background: #f3eee6;
+        border: 1px dashed #b7aa96;
+        padding: 0.9rem 1rem;
+        margin: 1rem 0 1.2rem;
+        white-space: pre-wrap;
+      }
+      .end-rule {
+        border: 0;
+        border-top: 1px solid var(--rule);
+        margin: 2.4rem 0 1.2rem;
+      }
+      footer.colophon {
+        font-size: 0.82rem;
+        color: var(--muted);
+        font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      }
+      nav.bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 2rem;
+        font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 0.95rem;
+      }
+      nav.bottom a {
+        color: #fff;
+        background: var(--accent);
+        text-decoration: none;
+        padding: 0.55rem 1rem;
+        border-radius: 6px;
+        font-weight: 600;
+      }
+      nav.bottom a:hover {
+        background: #ff6b6b;
+      }
+      nav.bottom span {
+        color: #b0a89c;
+        padding: 0.55rem 0;
+      }
+      .index-list {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0 2rem;
+      }
+      .index-list li {
+        margin: 0 0 0.85rem;
+      }
+      .index-list a {
+        display: block;
+        text-decoration: none;
+        color: var(--ink);
+        background: #fffdf8;
+        border: 1px solid var(--letter-border);
+        border-left: 5px solid var(--note-border);
+        padding: 1rem 1.15rem;
+      }
+      .index-list a:hover {
+        border-left-color: var(--accent);
+      }
+      .index-list .num {
+        display: block;
+        font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--note-label);
+        margin-bottom: 0.2rem;
+      }
+      .index-list .title {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+      .index-list .when {
+        display: block;
+        font-style: italic;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      @media print {
         body {
-            margin: 0;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-            font-family: system-ui, -apple-system, sans-serif;
-            color: white;
-            padding: 40px 20px;
+          background: #fff;
         }
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
+        .page {
+          padding: 0;
+          background: #fff;
         }
-        h1 {
-            font-size: 2.4rem;
-            margin-bottom: 8px;
-            font-weight: 700;
+        nav.top,
+        nav.bottom {
+          display: none;
         }
-        .subtitle {
-            color: #e94560;
-            font-size: 1.15rem;
-            margin-bottom: 32px;
+        blockquote.historical-note,
+        blockquote.letter {
+          break-inside: avoid;
         }
-        a.back {
-            display: inline-block;
-            margin-bottom: 28px;
-            color: #e94560;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        a.back:hover {
-            text-decoration: underline;
-        }
-        .months {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 12px;
-        }
-        .month {
-            display: block;
-            padding: 16px 12px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 8px;
-            text-align: center;
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            transition: background 0.2s, border-color 0.2s;
-        }
-        .month:hover {
-            background: rgba(233, 69, 96, 0.2);
-            border-color: #e94560;
-        }
-        .month span {
-            display: block;
-            font-size: 0.85rem;
-            opacity: 0.7;
-            margin-top: 4px;
-        }
-        .month.disabled {
-            opacity: 0.35;
-            cursor: not-allowed;
-            pointer-events: none;
-            background: rgba(255, 255, 255, 0.03);
-            border-color: rgba(255, 255, 255, 0.06);
-        }
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <a href="../" class="back">← Home</a>
-        <h1>Dad's WW2 Letters</h1>
-        <div class="subtitle">One letter per month of service</div>
-
-        <div class="months">
-            <a class="month" href="view.html?m=194301">Jan 1943<span>194301</span></a>
-            <a class="month" href="view.html?m=194302">Feb 1943<span>194302</span></a>
-            <a class="month" href="view.html?m=194303">Mar 1943<span>194303</span></a>
-            <a class="month" href="view.html?m=194304">Apr 1943<span>194304</span></a>
-            <a class="month" href="view.html?m=194305">May 1943<span>194305</span></a>
-            <a class="month" href="view.html?m=194306">Jun 1943<span>194306</span></a>
-            <a class="month" href="view.html?m=194307">Jul 1943<span>194307</span></a>
-            <a class="month" href="view.html?m=194308">Aug 1943<span>194308</span></a>
-            <a class="month" href="view.html?m=194309">Sep 1943<span>194309</span></a>
-            <a class="month" href="view.html?m=194310">Oct 1943<span>194310</span></a>
-            <a class="month" href="view.html?m=194311">Nov 1943<span>194311</span></a>
-            <a class="month" href="view.html?m=194312">Dec 1943<span>194312</span></a>
-
-            <a class="month" href="view.html?m=194401">Jan 1944<span>194401</span></a>
-            <a class="month" href="view.html?m=194402">Feb 1944<span>194402</span></a>
-            <a class="month" href="view.html?m=194403">Mar 1944<span>194403</span></a>
-            <a class="month" href="view.html?m=194404">Apr 1944<span>194404</span></a>
-            <a class="month" href="view.html?m=194405">May 1944<span>194405</span></a>
-            <a class="month" href="view.html?m=194406">Jun 1944<span>194406</span></a>
-            <a class="month" href="view.html?m=194407">Jul 1944<span>194407</span></a>
-            <a class="month" href="view.html?m=194408">Aug 1944<span>194408</span></a>
-            <a class="month" href="view.html?m=194409">Sep 1944<span>194409</span></a>
-            <a class="month" href="view.html?m=194410">Oct 1944<span>194410</span></a>
-            <a class="month" href="view.html?m=194411">Nov 1944<span>194411</span></a>
-            <a class="month" href="view.html?m=194412">Dec 1944<span>194412</span></a>
-
-            <a class="month" href="view.html?m=194501">Jan 1945<span>194501</span></a>
-            <a class="month" href="view.html?m=194502">Feb 1945<span>194502</span></a>
-            <a class="month" href="view.html?m=194503">Mar 1945<span>194503</span></a>
-            <a class="month" href="view.html?m=194504">Apr 1945<span>194504</span></a>
-            <a class="month" href="view.html?m=194505">May 1945<span>194505</span></a>
-            <a class="month" href="view.html?m=194506">Jun 1945<span>194506</span></a>
-            <a class="month" href="view.html?m=194507">Jul 1945<span>194507</span></a>
-            <a class="month" href="view.html?m=194508">Aug 1945<span>194508</span></a>
-            <a class="month" href="view.html?m=194509">Sep 1945<span>194509</span></a>
-            <a class="month" href="view.html?m=194510">Oct 1945<span>194510</span></a>
-        </div>
-    </div>
-</body>
+  </head>
+  <body>
+    <article class="page">
+      <header class="chapter-open">
+        <div class="chapter-label">The wartime letters of</div>
+        <h1>Austin H. Winn</h1>
+        <p class="date-range">Cherry, Lauderdale County, Tennessee · 1943</p>
+      </header>
+      <p class="key">
+        Austin’s own words stay in the boxed letters, spelled as he wrote them.
+        All added explanation is in green notes labeled
+        <strong>Historical note</strong>. Home is the community of
+        <strong>Cherry</strong>. Route 2, Henning is only the rural mail route
+        on the envelopes.
+      </p>
+      <h2>Chapters</h2>
+      <ul class="index-list">
+        <li>
+          <a href="chapter-01-leaving-home.html">
+            <span class="num">Chapter 1</span>
+            <span class="title">Leaving Home</span>
+            <span class="when"
+              >January–March 1943 · train south, Miami Beach, emergency leave,
+              orders to Oshkosh</span
+            >
+          </a>
+        </li>
+        <li>
+          <a href="chapter-02-college-in-a-dairy-town.html">
+            <span class="num">Chapter 2</span>
+            <span class="title">College in a Dairy Town</span>
+            <span class="when"
+              >April–June 1943 · 96th College Training Detachment, Oshkosh,
+              first hours in the air</span
+            >
+          </a>
+        </li>
+        <li>
+          <a href="chapter-03-classification.html">
+            <span class="num">Chapter 3</span>
+            <span class="title">Classification</span>
+            <span class="when"
+              >July–September 1943 · troop train west, Santa Ana, classified
+              pilot, preflight</span
+            >
+          </a>
+        </li>
+        <li>
+          <a href="chapter-04-eagle-field.html">
+            <span class="num">Chapter 4</span>
+            <span class="title">Eagle Field</span>
+            <span class="when"
+              >October 1943 · Dos Palos, Ryan PT-22, first solo</span
+            >
+          </a>
+        </li>
+        <li>
+          <a href="chapter-05-sixty-hours.html">
+            <span class="num">Chapter 5</span>
+            <span class="title">Sixty Hours</span>
+            <span class="when"
+              >November 1943 · Eagle Field, check rides, primary
+              graduation</span
+            >
+          </a>
+        </li>
+        <li>
+          <a href="chapter-06-the-vultee.html">
+            <span class="num">Chapter 6</span>
+            <span class="title">The Vultee</span>
+            <span class="when"
+              >December 1943 · War Eagle Field, Lancaster, BT-13 basic</span
+            >
+          </a>
+        </li>
+        <li>
+          <a href="chapter-07-under-the-hood.html">
+            <span class="num">Chapter 7</span>
+            <span class="title">Under the Hood</span>
+            <span class="when"
+              >January 1944 · War Eagle Field, night flying, the Link
+              trainer</span
+            >
+          </a>
+        </li>
+        <li>
+          <a href="chapter-08-two-engines.html">
+            <span class="num">Chapter 8</span>
+            <span class="title">Two Engines</span>
+            <span class="when"
+              >February–April 1944 · Marfa, AT-17, wings and bars</span
+            >
+          </a>
+        </li>
+        <li>
+          <a href="chapter-09-twenty-tons.html">
+            <span class="num">Chapter 9</span>
+            <span class="title">Twenty Tons</span>
+            <span class="when">May–June 1944 · Roswell, B-17 transition</span>
+          </a>
+        </li>
+        <li>
+          <a href="chapter-10-the-pool.html">
+            <span class="num">Chapter 10</span>
+            <span class="title">The Pool</span>
+            <span class="when"
+              >July 1944 · Lincoln routing pool, Alamogordo crew school</span
+            >
+          </a>
+        </li>
+      </ul>
+      <hr class="end-rule" />
+      <footer class="colophon">
+        Letter texts follow the family transcriptions at willwinn.xyz. Draft
+        manuscript with historical notes, January 1943–July 1944.
+      </footer>
+    </article>
+  </body>
 </html>
