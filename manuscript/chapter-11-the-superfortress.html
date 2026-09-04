@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chapter 11 — The Superfortress</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --paper: #faf7f2;
+      --rule: #d6cfc4;
+      --note-bg: #eef3f0;
+      --note-border: #4a6b5c;
+      --note-label: #3d5a4c;
+      --letter-bg: #fffdf8;
+      --letter-border: #c4b8a4;
+      --accent: #e94560;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e8e0d4;
+      color: var(--ink);
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      line-height: 1.65;
+    }
+    .page {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 36px 28px 80px;
+      background: var(--paper);
+      min-height: 100vh;
+    }
+    nav.top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+      padding-bottom: .8rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    nav.top a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    nav.top a:hover { text-decoration: underline; }
+    nav.top .disabled { color: #b0a89c; }
+    header.chapter-open { text-align: center; margin-bottom: 2.2rem; }
+    .chapter-label {
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      color: var(--muted);
+    }
+    h1 {
+      font-size: 2.15rem;
+      font-weight: 700;
+      margin: .35rem 0 .15rem;
+      letter-spacing: .02em;
+    }
+    .date-range {
+      font-style: italic;
+      color: var(--muted);
+      margin: 0 0 1.4rem;
+    }
+    .key {
+      font-size: .88rem;
+      color: var(--muted);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: .85rem 0;
+      margin: 0 0 2rem;
+    }
+    .key strong { color: var(--note-label); }
+    h2 { font-size: 1.28rem; margin: 2.4rem 0 .7rem; font-weight: 700; }
+    h3 { font-size: 1.05rem; margin: 1.8rem 0 .5rem; font-weight: 700; }
+    p { margin: 0 0 1rem; }
+    .narrative p { text-align: justify; hyphens: auto; }
+    blockquote.historical-note {
+      margin: 1.35rem 0 1.5rem;
+      padding: 1rem 1.15rem 1.05rem 1.2rem;
+      background: var(--note-bg);
+      border-left: 5px solid var(--note-border);
+      color: #24332c;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+      line-height: 1.55;
+    }
+    blockquote.historical-note .note-label {
+      display: block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .45rem;
+    }
+    blockquote.historical-note p { margin: 0 0 .65rem; text-align: left; }
+    blockquote.historical-note p:last-child { margin-bottom: 0; }
+    blockquote.historical-note .headline {
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 1.02rem;
+      letter-spacing: .01em;
+      margin: .15rem 0 .35rem;
+    }
+    blockquote.letter {
+      margin: 1.2rem 0 1.35rem;
+      padding: 1.15rem 1.25rem 1.05rem;
+      background: var(--letter-bg);
+      border: 1px solid var(--letter-border);
+      white-space: pre-wrap;
+      font-family: "Courier Prime", "Courier New", Courier, monospace;
+      font-size: .92rem;
+      line-height: 1.55;
+      color: #2a241c;
+    }
+    .letter-meta {
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #7a6d5a;
+      margin-bottom: .55rem;
+    }
+    address.army {
+      font-style: normal;
+      font-family: "Courier New", Courier, monospace;
+      font-size: .95rem;
+      background: #f3eee6;
+      border: 1px dashed #b7aa96;
+      padding: .9rem 1rem;
+      margin: 1rem 0 1.2rem;
+      white-space: pre-wrap;
+    }
+    figure.plane-photo {
+      margin: 1.4rem 0 1.6rem;
+      padding: 0;
+    }
+    figure.plane-photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--letter-border);
+      background: #ddd;
+    }
+    figure.plane-photo figcaption {
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .78rem;
+      color: var(--muted);
+      line-height: 1.4;
+      margin-top: .45rem;
+    }
+    figure.plane-photo figcaption a { color: var(--note-label); }
+    .end-rule {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 2.4rem 0 1.2rem;
+    }
+    footer.colophon {
+      font-size: .82rem;
+      color: var(--muted);
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    nav.bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 2rem;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+    }
+    nav.bottom a {
+      color: #fff;
+      background: var(--accent);
+      text-decoration: none;
+      padding: .55rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    nav.bottom a:hover { background: #ff6b6b; }
+    nav.bottom span { color: #b0a89c; padding: .55rem 0; }
+    .index-list { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+    .index-list li { margin: 0 0 .85rem; }
+    .index-list a {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      background: #fffdf8;
+      border: 1px solid var(--letter-border);
+      border-left: 5px solid var(--note-border);
+      padding: 1rem 1.15rem;
+    }
+    .index-list a:hover { border-left-color: var(--accent); }
+    .index-list .num {
+      display: block;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .2rem;
+    }
+    .index-list .title { font-size: 1.2rem; font-weight: 700; }
+    .index-list .when { display: block; font-style: italic; color: var(--muted); font-size: .95rem; }
+    @media print {
+      body { background: #fff; }
+      .page { padding: 0; background: #fff; }
+      nav.top, nav.bottom { display: none; }
+      blockquote.historical-note, blockquote.letter { break-inside: avoid; }
+    }
+
+  </style>
+</head>
+<body>
+  <article class="page">
+    <nav class="top">
+      <a href="chapter-10-the-pool.html">← Chapter 10</a>
+      <a href="index.html">All chapters</a>
+      <a href="chapter-12-the-nineteenth.html">Chapter 12 →</a>
+    </nav>
+    <header class="chapter-open">
+      <div class="chapter-label">Chapter 11</div>
+      <h1>The Superfortress</h1>
+      <p class="date-range">Alamogordo Army Air Field · August 1944</p>
+    </header>
+
+    <div class="narrative">
+      <p>August opened on the Tularosa Basin with bonds going home, typhus and yellow-fever shots, and a magazine he sent to Cherry so they could see the airplane the field had become. Alamogordo was no longer only a B-17 school. He drew the crew stations as he learned them and told his mother the difference in two lines: this is a B-17 Fortress; the B-29 is a Superfortress.</p>
+    </div>
+
+    <blockquote class="letter"><div class="letter-meta">Alamogordo · 2 August 1944</div>Dear Folks,
+I sent Mother a magazine this morning that has pictures and a story of the B-29. Read the story and you'll know a little about the plane.
+[…]
+This is A B-17 Fortress
+The B-29 is a Super Fortress
+Love to all
+Austin</blockquote>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — the B-29 and Alamogordo</span>
+      <p>The Boeing B-29 Superfortress was the Army Air Forces’ new very heavy bomber: pressurized cabins, remote-controlled guns, a range that could reach Japan from island bases still being taken. In 1944 Second Air Force converted several southwestern fields, including Alamogordo, from Fortress transition to Superfortress crew work. A training mission might carry extra men. On 9 August Austin’s ship went up with thirteen crew and twenty bombs, above a deck of cloud at 3:30 in the morning.</p>
+      <p>A B-29 crew in combat would settle near eleven: airplane commander, pilot, navigator, bombardier, flight engineer, radio operator, radar operator, and gunners. At Alamogordo he still had only part of that list — four gunners and a radio man, all just made corporal. “We’ll get the balance of the crew at the next field.”</p>
+    </blockquote>
+
+    <div class="narrative">
+      <p>On the 15th the intelligence office had to put up another map. Southern France had been invaded that morning. He qualified Marksman with the .45, sat through physical-fitness tests, and watched the European lines crawl across the wall chart after the breakout in Normandy. Leave was the talk of the barracks for three weeks. Headquarters tried. The airplanes at the next station would not wait.</p>
+    </div>
+
+    <blockquote class="letter"><div class="letter-meta">Alamogordo · 31 August 1944</div>Hello folks,
+It looks like I'm not going to get any leave this time. We've been sweating it out now and we are to leave here tonite I guess, I'm going to Great Bend, Kansas
+[…] The Headquarters have tried to get us a few days delay but I think the planes are just waiting up at Great Bend for us to come fly them
+With love,
+Austin</blockquote>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — August 1944</span>
+      <p>Operation Dragoon, the invasion of southern France, began on 15 August. Paris was liberated on the 25th. On the Eastern Front the Red Army was driving through Poland and the Balkans. Austin read the arrows on the Alamogordo map and wrote that the European theater looked close to an end. The Pacific, and the airplane built for it, were what Great Bend was for.</p>
+    </blockquote>
+
+    <hr class="end-rule" />
+    <nav class="bottom">
+      <a href="chapter-10-the-pool.html">← Chapter 10</a>
+      <a href="chapter-12-the-nineteenth.html">Chapter 12 →</a>
+    </nav>
+    <footer class="colophon">
+      Chapter 11 · August 1944 · Alamogordo. Austin’s words are in the boxed letters. Added explanation is in the green Historical notes. Home is the community of Cherry; Route 2, Henning appears only on envelopes.
+    </footer>
+  </article>
+</body>
+</html>
