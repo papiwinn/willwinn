@@ -1,1 +1,63 @@
+Images for the manuscript, named from the letter that mentions the place or plane.
+When one letter needs more than one picture, a letter is appended (19431002a, 19431002b).
+These are period photographs of the place or the type of airplane he flew. They are not photos of him or of his own airplane unless the caption says so.
 
+19430312.jpg  letter 19430312  Sea Isle Hotel and the Miami Beach ocean-front hotel barracks, AAF basic training
+  Public domain. Curt Teich & Co., Chicago (publisher).
+  https://commons.wikimedia.org/wiki/File:Miami_Beach_-_Ocean_front_hotel_barracks.jpg
+
+19430707.jpg  letter 19430707  Santa Ana Army Air Base main gate
+  Public domain. United States Army Air Forces.
+  https://commons.wikimedia.org/wiki/File:Gate_-_Santa_Ana_Army_Air_Base_California_1943_Classbook_(page_38_crop).jpg
+
+19431002a.jpg  letter 19431002  Eagle Field, Dos Palos, California
+  Public domain (PD-USGov). United States Army Air Forces.
+  https://commons.wikimedia.org/wiki/File:CA_-_Dos_Palos_Airport.jpg
+
+19431002b.jpg  letter 19431002  Ryan PT-22, the primary trainer he flew at Eagle Field
+  Public domain (PD-USGov). United States Army Air Forces.
+  https://commons.wikimedia.org/wiki/File:Sequoia_Field_-_Ryan_PT-22_in_flight.jpg
+
+19431205.jpg  letter 19431205  War Eagle Field, Lancaster, California
+  Public domain. United States Army Air Forces.
+  https://commons.wikimedia.org/wiki/File:CA_-_War_Eagle_Field.jpg
+
+19431213.jpg  letter 19431213  Vultee BT-13 Valiant, the basic trainer he flew at War Eagle Field
+  Public domain (PD-USGov-Military-Air Force). U.S. Air Force photo 020903-o-9999j-001.
+  https://commons.wikimedia.org/wiki/File:BT-13_Valiant.jpg
+
+19440212a.jpg  letter 19440212  Marfa Army Air Field, Texas
+  Public domain. United States Army Air Forces.
+  https://commons.wikimedia.org/wiki/File:Marfaaaf-1943.jpg
+
+19440212b.jpg  letter 19440212  Cessna AT-17 Bobcat, the advanced twin he flew at Marfa
+  Public domain (PD-USGov). United States Army Air Forces.
+  https://commons.wikimedia.org/wiki/File:Turner_Army_Airfield_-_Cessna_AT-17_Bobcat_in_Flight.jpg
+
+19440427.jpg  letter 19440427  Boeing B-17 Flying Fortress, the type he trained on at Roswell
+  Public domain (PD-USGov-Military-Air Force). U.S. Air Force; National Museum of the U.S. Air Force photo 060517-F-1234S-032.
+  https://commons.wikimedia.org/wiki/File:B-17G_formation_on_bomb_run.jpg
+
+19440714.jpg  letter 19440714  Lincoln Army Air Field, Nebraska
+  Public domain. United States Army Air Forces.
+  https://commons.wikimedia.org/wiki/File:Lincoln_Army_Airfield_-_26_September_1943.jpg
+
+19440724.jpg  letter 19440724  Alamogordo Army Air Field base headquarters
+  Public domain. United States Army Air Forces.
+  https://commons.wikimedia.org/wiki/File:Alamogordo_Army_Airfield_New_Mexico_photo_pictorial.pdf
+
+19440728.jpg  letter 19440728  Boeing B-29 Superfortress, the type he flew from Alamogordo onward
+  Public domain (PD-USGov-Military-Air Force). U.S. Army Air Corps / U.S. Air Force photo 020903-O-9999B-042.
+  https://commons.wikimedia.org/wiki/File:Olive-drab_painted_B-29_superfortress.jpg
+
+19440901.jpg  letter 19440901  Great Bend Army Air Field, Kansas
+  Public domain. United States Army Air Forces.
+  https://commons.wikimedia.org/wiki/File:Great_Bend_Army_Airfield_KS_1943.jpg
+
+19450414.jpg  letter 19450414  B-29 on Motoyama Airfield, Iwo Jima, 1945
+  CC BY 2.0. Archives Branch, USMC History Division.
+  https://commons.wikimedia.org/wiki/File:Arrival_of_B-29_bomber_on_Iwo_Jima,_Motoyama_Airfield,_1945.jpg
+
+19450616.jpg  letter 19450616  North Field, Guam, with B-29s of the 29th Bomb Group
+  Public domain. U.S. Navy photo 80-G-331916.
+  https://commons.wikimedia.org/wiki/File:Aerial_view_of_North_Field,_Guam,_on_1_August_1945_(80-G-331916).jpg
