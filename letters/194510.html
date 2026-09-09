@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>October 1945 – Dad&#x27;s Letters</title>
+  <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: system-ui, -apple-system, sans-serif;
+        color: #e8e8e8;
+        padding: 30px 20px;
+      }
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      a.back {
+        display: inline-block;
+        margin-bottom: 24px;
+        color: #e94560;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      a.back:hover { text-decoration: underline; }
+      h1 {
+        font-size: 1.8rem;
+        margin: 0 0 8px 0;
+        font-weight: 700;
+        color: white;
+      }
+      .meta {
+        color: #e94560;
+        margin-bottom: 28px;
+        font-size: 1.05rem;
+      }
+      .letter-block {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 28px 24px;
+        margin-bottom: 20px;
+        line-height: 1.7;
+        font-size: 1.15rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+      .letter-block h2 {
+        font-size: 1.05rem;
+        color: #e94560;
+        margin: 0 0 14px 0;
+        font-weight: 600;
+        white-space: normal;
+      }
+      span.mention {
+        background: rgba(233, 69, 96, 0.18);
+        border-radius: 3px;
+        padding: 0 2px;
+        scroll-margin-top: 72px;
+      }
+      span.mention:target,
+      .letter-block:target {
+        animation: flash 2.2s ease;
+      }
+      @keyframes flash {
+        0%, 100% { background: rgba(233, 69, 96, 0.18); }
+        20%, 60% { background: rgba(233, 69, 96, 0.55); }
+      }
+      .letter-block:target {
+        outline: 2px solid #e94560;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 28px;
+        gap: 12px;
+      }
+      .nav a {
+        padding: 10px 18px;
+        background: #e94560;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      .nav a:hover { background: #ff6b6b; }
+      .nav a.disabled {
+        opacity: 0.35;
+        pointer-events: none;
+      }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back">← All Letters</a>
+    <h1>October 1945</h1>
+    <div class="meta">194510</div>
+      <section id="letter-19451002" class="letter-block">
+        <h2>October 2, 1945</h2>
+October 2, 1945
+
+Hello Folks,
+
+Still in San Francisco.
+
+Having a pretty fair time.
+Getting used to the States again. Have my clothes cleaned &amp; pressed before I get home if they aren&#x27;t already &#x27;clean.&#x27;
+
+How&#x27;s <span id="m-john-winn-19451002" class="mention">Johnie Cake</span>?
+
+Well we stop for now. Just a hello note.
+How&#x27;s your throat, <span id="m-fannie-winn-19451002" class="mention">Mother</span>?
+Love to all,
+Austin
+      </section>
+      <section id="letter-19451004" class="letter-block">
+        <h2>OCT 4, 1945</h2>
+OCT 4, 1945
+
+Hello, I&#x27;m leaving S.F. tonite to go to Camp Chaffey, Ark. By TRAIN. I Report there Oct
+8th - See you soon!
+Love Austin
+      </section>
+      <section id="letter-19451005" class="letter-block">
+        <h2>en route, Tucson</h2>
+LT. Austin H. Winn O-774857
+100 TROOPS IN CHANG&#x27;T DOUNGE
+APO-337 907M S.F.
+TUCSON, ARIZONA
+
+Hello Folks,
+Traveling thru Tuscon Ariz. Its 12:30 &amp; I&#x27;m Eating Chow now&#x27;
+Best Wishes to all
+Love Austin
+      </section>
+    <div class="nav">
+      <a href="194509.html">← Previous</a>
+      <a class="disabled" href="#">Next →</a>
+    </div>
+  </div>
+
+    <script>
+      (function () {
+        function scrollToHash() {
+          if (!location.hash) return;
+          var id = location.hash.slice(1);
+          var el = document.getElementById(id);
+          if (!el) return;
+          var top = el.getBoundingClientRect().top + window.pageYOffset - 64;
+          window.scrollTo({ top: top, behavior: "smooth" });
+        }
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", scrollToHash);
+        } else {
+          scrollToHash();
+        }
+        window.addEventListener("hashchange", scrollToHash);
+      })();
+    </script>
+
+</body>
+</html>

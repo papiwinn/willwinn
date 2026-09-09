@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>January 1943 – Dad&#x27;s Letters</title>
+  <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: system-ui, -apple-system, sans-serif;
+        color: #e8e8e8;
+        padding: 30px 20px;
+      }
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      a.back {
+        display: inline-block;
+        margin-bottom: 24px;
+        color: #e94560;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      a.back:hover { text-decoration: underline; }
+      h1 {
+        font-size: 1.8rem;
+        margin: 0 0 8px 0;
+        font-weight: 700;
+        color: white;
+      }
+      .meta {
+        color: #e94560;
+        margin-bottom: 28px;
+        font-size: 1.05rem;
+      }
+      .letter-block {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 28px 24px;
+        margin-bottom: 20px;
+        line-height: 1.7;
+        font-size: 1.15rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+      .letter-block h2 {
+        font-size: 1.05rem;
+        color: #e94560;
+        margin: 0 0 14px 0;
+        font-weight: 600;
+        white-space: normal;
+      }
+      span.mention {
+        background: rgba(233, 69, 96, 0.18);
+        border-radius: 3px;
+        padding: 0 2px;
+        scroll-margin-top: 72px;
+      }
+      span.mention:target,
+      .letter-block:target {
+        animation: flash 2.2s ease;
+      }
+      @keyframes flash {
+        0%, 100% { background: rgba(233, 69, 96, 0.18); }
+        20%, 60% { background: rgba(233, 69, 96, 0.55); }
+      }
+      .letter-block:target {
+        outline: 2px solid #e94560;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 28px;
+        gap: 12px;
+      }
+      .nav a {
+        padding: 10px 18px;
+        background: #e94560;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      .nav a:hover { background: #ff6b6b; }
+      .nav a.disabled {
+        opacity: 0.35;
+        pointer-events: none;
+      }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back">← All Letters</a>
+    <h1>January 1943</h1>
+    <div class="meta">194301</div>
+      <section id="letter-19430131" class="letter-block">
+        <h2>The Dixieland</h2>
+The Dixieland
+Jan 31, 1943
+
+Hello Everybody,
+
+It&#x27;s now 1 o&#x27;clock P.M. Sunday afternoon. I am on the train about Waycross Ga. Had a good nite sleep last nite. The train is stopped rite now but if my handwriting gets to jumping you&#x27;ll know we&#x27;ve started again. This sure is a nice trip. There are about 10 boys on here going to the same place I am. They all seem to be nice boys. (We&#x27;re moving) I have eaten breakfast and intend to eat lunch in a few minutes.
+Well hope <span id="m-w-h-winn-19430131" class="mention">Daddy</span> is feeling O.K.
+This train ride like an aeroplane I suppose. We&#x27;re bouncing around and up and down. It felt kinda funny about 12 o&#x27;clock the first nite. I&#x27;m use to it now.
+We are cutting the Dining Car off in about 30 minutes so I had better eat lunch first. We pick up another about 4 this afternoon.
+Will write more as soon as I reach Miami if I have time.
+Love Austin
+      </section>
+      <section id="letter-19430131-2" class="letter-block">
+        <h2>The Dixieland</h2>
+The Dixieland
+Jan 31, 1943
+
+10 minutes till 9:00 o&#x27;clock and lights go out at 9 o&#x27;clock. I don&#x27;t have time for anything but my address which is on the outside.
+
+Will write as soon as possible.
+How is everyone?
+Love to all,
+Austin
+      </section>
+      <section id="letter-19430131-3" class="letter-block">
+        <h2>2:30 P.M.</h2>
+2:30 P.M.
+
+I&#x27;m in Jacksonville, Fla., now.
+The scenery sure is beautiful.
+Every thing looks fine &amp; dandy. I have a seat with an Ensign of the Navy.
+The Negroes are washing the windows of the car now. It sure is hot! Will get to Miami tonight about 10:20 I think!
+
+By By
+      </section>
+      <section id="letter-19430100" class="letter-block">
+        <h2>19430100</h2>
+(addressed envelope)
+Pvt. Austin H Winn
+1128 T.S.S.
+Flight 388 - B.T.C.
+Miami Beach, Fla.
+
+Mr &amp; Mrs W.H. Winn
+Route 2
+Henning, Tennessee
+      </section>
+    <div class="nav">
+      <a class="disabled" href="#">← Previous</a>
+      <a href="194302.html">Next →</a>
+    </div>
+  </div>
+
+    <script>
+      (function () {
+        function scrollToHash() {
+          if (!location.hash) return;
+          var id = location.hash.slice(1);
+          var el = document.getElementById(id);
+          if (!el) return;
+          var top = el.getBoundingClientRect().top + window.pageYOffset - 64;
+          window.scrollTo({ top: top, behavior: "smooth" });
+        }
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", scrollToHash);
+        } else {
+          scrollToHash();
+        }
+        window.addEventListener("hashchange", scrollToHash);
+      })();
+    </script>
+
+</body>
+</html>
