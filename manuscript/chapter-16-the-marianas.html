@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chapter 16 — The Marianas</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --paper: #faf7f2;
+      --rule: #d6cfc4;
+      --note-bg: #eef3f0;
+      --note-border: #4a6b5c;
+      --note-label: #3d5a4c;
+      --letter-bg: #fffdf8;
+      --letter-border: #c4b8a4;
+      --accent: #e94560;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e8e0d4;
+      color: var(--ink);
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      line-height: 1.65;
+    }
+    .page {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 36px 28px 80px;
+      background: var(--paper);
+      min-height: 100vh;
+    }
+    nav.top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+      padding-bottom: .8rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    nav.top a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    nav.top a:hover { text-decoration: underline; }
+    nav.top .disabled { color: #b0a89c; }
+    header.chapter-open { text-align: center; margin-bottom: 2.2rem; }
+    .chapter-label {
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      color: var(--muted);
+    }
+    h1 {
+      font-size: 2.15rem;
+      font-weight: 700;
+      margin: .35rem 0 .15rem;
+      letter-spacing: .02em;
+    }
+    .date-range {
+      font-style: italic;
+      color: var(--muted);
+      margin: 0 0 1.4rem;
+    }
+    .key {
+      font-size: .88rem;
+      color: var(--muted);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: .85rem 0;
+      margin: 0 0 2rem;
+    }
+    .key strong { color: var(--note-label); }
+    h2 { font-size: 1.28rem; margin: 2.4rem 0 .7rem; font-weight: 700; }
+    h3 { font-size: 1.05rem; margin: 1.8rem 0 .5rem; font-weight: 700; }
+    p { margin: 0 0 1rem; }
+    .narrative p { text-align: justify; hyphens: auto; }
+    blockquote.historical-note {
+      margin: 1.35rem 0 1.5rem;
+      padding: 1rem 1.15rem 1.05rem 1.2rem;
+      background: var(--note-bg);
+      border-left: 5px solid var(--note-border);
+      color: #24332c;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+      line-height: 1.55;
+    }
+    blockquote.historical-note .note-label {
+      display: block;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .45rem;
+    }
+    blockquote.historical-note p { margin: 0 0 .65rem; text-align: left; }
+    blockquote.historical-note p:last-child { margin-bottom: 0; }
+    blockquote.historical-note .headline {
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 1.02rem;
+      letter-spacing: .01em;
+      margin: .15rem 0 .35rem;
+    }
+    blockquote.letter {
+      margin: 1.2rem 0 1.35rem;
+      padding: 1.15rem 1.25rem 1.05rem;
+      background: var(--letter-bg);
+      border: 1px solid var(--letter-border);
+      white-space: pre-wrap;
+      font-family: "Courier Prime", "Courier New", Courier, monospace;
+      font-size: .92rem;
+      line-height: 1.55;
+      color: #2a241c;
+    }
+    .letter-meta {
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #7a6d5a;
+      margin-bottom: .55rem;
+    }
+    address.army {
+      font-style: normal;
+      font-family: "Courier New", Courier, monospace;
+      font-size: .95rem;
+      background: #f3eee6;
+      border: 1px dashed #b7aa96;
+      padding: .9rem 1rem;
+      margin: 1rem 0 1.2rem;
+      white-space: pre-wrap;
+    }
+    figure.plane-photo {
+      margin: 1.4rem 0 1.6rem;
+      padding: 0;
+    }
+    figure.plane-photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--letter-border);
+      background: #ddd;
+    }
+    figure.plane-photo figcaption {
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .78rem;
+      color: var(--muted);
+      line-height: 1.4;
+      margin-top: .45rem;
+    }
+    figure.plane-photo figcaption a { color: var(--note-label); }
+    .end-rule {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 2.4rem 0 1.2rem;
+    }
+    footer.colophon {
+      font-size: .82rem;
+      color: var(--muted);
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    nav.bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 2rem;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .95rem;
+    }
+    nav.bottom a {
+      color: #fff;
+      background: var(--accent);
+      text-decoration: none;
+      padding: .55rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    nav.bottom a:hover { background: #ff6b6b; }
+    nav.bottom span { color: #b0a89c; padding: .55rem 0; }
+    .index-list { list-style: none; padding: 0; margin: 1.5rem 0 2rem; }
+    .index-list li { margin: 0 0 .85rem; }
+    .index-list a {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      background: #fffdf8;
+      border: 1px solid var(--letter-border);
+      border-left: 5px solid var(--note-border);
+      padding: 1rem 1.15rem;
+    }
+    .index-list a:hover { border-left-color: var(--accent); }
+    .index-list .num {
+      display: block;
+      font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--note-label);
+      margin-bottom: .2rem;
+    }
+    .index-list .title { font-size: 1.2rem; font-weight: 700; }
+    .index-list .when { display: block; font-style: italic; color: var(--muted); font-size: .95rem; }
+    @media print {
+      body { background: #fff; }
+      .page { padding: 0; background: #fff; }
+      nav.top, nav.bottom { display: none; }
+      blockquote.historical-note, blockquote.letter { break-inside: avoid; }
+    }
+
+  </style>
+</head>
+<body>
+  <article class="page">
+    <nav class="top">
+      <a href="chapter-15-kearney-staging.html">← Chapter 15</a>
+      <a href="index.html">All chapters</a>
+      <a href="chapter-17-spring-missions.html">Chapter 17 →</a>
+    </nav>
+    <header class="chapter-open">
+      <div class="chapter-label">Chapter 16</div>
+      <h1>The Marianas</h1>
+      <p class="date-range">Guam · mid-February–March 1945</p>
+    </header>
+
+
+    <div class="narrative">
+      <p>He reached the Marianas on 15 February and wrote the next day. Tents and cots, one blanket, no sheets; shaving and bathing from a steel helmet; a runway already built and a bivouac area that had been jungle a few days before. Cook had not yet arrived. Austin was in the 21st Bomber Command, 19th Bomb Group, 93rd Squadron, APO 246 Unit 2, San Francisco — and he told them not to forget the unit number, which marked which part of the island he was on.</p>
+    </div>
+
+    <blockquote class="letter"><div class="letter-meta">Somewhere in the Marianas · 16 February 1945</div>Dear Mother and All,
+Well I have finally reached my destination. Got here yesterday but didn't have time to write. We had a very interesting trip over &amp; everything went O-KAY. Cook isn't here yet until I want to see the C.O. &amp; he said I would get back on that crew. […]
+This is really out-door life. We live in tents &amp; sleep on cots with nothing but one blanket. No sheets.(HA) Shave, Bathe, Wash our cloths out of a steel helmet. We have a nice runway but the biovac area was jungle 3 or 4 days ago.
+[…]
+Tell John this place looks something like that clearing down in the Miss. Bottoms where we hauled so much wood from except the dirt is red &amp; its covered with tents. The jungles are so thick I don't see how anyone can even walk through them.
+We aren't allowed to leave the camp clearing. They will cost material you if you go into the jungles because there are still Japs around. And Marine patrols that shoot anything they see.
+[…]
+I'm in the 21st Bomber Command. We are at a brand new field just hacked out of the jungle. The food is swell.
+Love to All,
+Austin
+
+Lt Austin H Winn O-774857
+19th Bomb Group, 93rd Sqdn.
+A.P.O # 246 , Unit 2
+c/o Postmaster
+San Francisco, Calif.</blockquote>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — the Marianas and the 19th Bomb Group</span>
+      <p>APO 246 served Guam. The 19th Bombardment Group (Very Heavy) flew B-29s from North Field, Guam, in XXI Bomber Command. By mid-February 1945 Saipan and Tinian were already launching long missions against Japan; Guam’s North Field was still being carved out of the jungle for the arriving groups. Isolated Japanese soldiers remained in the bush. Marine patrols treated movement outside the cleared camp as hostile. Austin’s first letters stay inside that clearing.</p>
+    </blockquote>
+
+    <div class="narrative">
+      <p>Cook came in on the 24th. Austin turned twenty-four on the 27th without time to write. By early March he was in ground school again — learning the latest from crews already over Japan — and reporting three bombing missions so far, none yet against the home islands themselves. The group’s airplanes had been in on the big Tokyo burn; his ship had not, because Cook arrived late. They were a lead crew: navigation and bombing for the formation hung on the lead ship.</p>
+    </div>
+
+    <blockquote class="letter"><div class="letter-meta">Marianas · 3 March 1945</div>Dear Mother &amp; Sister,
+Will have time for only a few little lines this morning. Guess you've missed a few days hearing from me. Well I've really been busy &amp; doing a lot of flying.
+Today we're going to ground school. Yes, we still have to study up on this flying &amp; bombing. Learn the latest stuff from other crews etc. that have been over Japan recently. Guess you read where we bombed 240 city blocks in Tokyo the other day. Well our planes from this group were in on that raid. Our ship wasn't tho. Cook got here too late as I've said before. I've been on 3 bombing missions so far but not on any over Japan itself. Soon tho I will. We've been up around where Jack is.
+[…]
+We are one of the lead crews in this group. It's a pretty important job. All the navigation &amp; bombing is dependent on the lead ship since all the others follow along in formation.
+[…]
+Love,
+Austin</blockquote>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — March 1945 fire raids</span>
+      <p>On the night of 9–10 March 1945, XXI Bomber Command flew a low-level incendiary attack on Tokyo that burned a large swath of the city — the “240 city blocks” Austin’s letters echo from the news. Further fire raids followed on Nagoya, Osaka, and Kobe. Lead crews flew at the head of formations so trailing airplanes could drop on the lead bombardier’s release. Austin’s early credited missions over Japan would come in that same mid-March week.</p>
+    </blockquote>
+
+    <div class="narrative">
+      <p>On 12 March they moved into a Quonset hut whose previous crew had been lost on a first mission — men Austin knew, including someone who had ridden with him from the States. Three days later he wrote of Nagoya and Osaka: searchlights holding them on the bomb run, flak bursting around the airplane, names written on bombs for Cherry. Jack, he had just learned, was a casualty in the base hospital about twenty-five miles away. By month’s end the mission count in the letters had climbed past five, with hours in the air climbing with it.</p>
+    </div>
+
+    <blockquote class="letter"><div class="letter-meta">Marianas · 15 March 1945</div>Dear Mother &amp; all,
+How is everyone today? Guess you've seen where I've been pretty busy lately. I went to Nagoya the other nite. Then to Osaka on the next raid. I listened to the news broadcasts &amp; Washington announced that B-29s hit Osaka Wednesday morning. I was still flying &amp; not even half way back to my base. We encountered no trouble on either raid. We did get pretty scared once or twice but thats just natural. The big search light shooting up through the nite looking for your plane. They caught us once and followed us right over the targes. […] As soon as we dropped our bombs tho we were weaving around and lost the lights. The Auto Aircraft guns on the ground were throwing big exploding shells up at us &amp; they burst all around the plane. We call that "Flack"-
+[…]
+Here's a bit of information you've been waiting for. Jack is here on this island, a casualty in the Base Hospital. I just got word last nite about him but couldn't go down there at the time. If at all possible I'll see him today. […] He's about 25 miles away
+[…]
+I wrote Sister's name on one of the bombs I dropped. Also several other names. […] The radio announced we dropped our 2000 Tons on OSAKA.
+[…]
+Love to all
+Austin
+[…]
+3 missions
+Nogoya, Osaka, Kobe</blockquote>
+
+    <blockquote class="historical-note">
+      <span class="note-label">Historical note — flak, Quonsets, and March losses</span>
+      <p>“Flack” in the letters is flak — exploding anti-aircraft shells. Searchlights and flak were the night defenses over Japan’s cities during the March fire campaign. Quonset huts replaced tents as the field matured; some huts came empty because the previous crews did not return. Austin’s note that the crew he rode over with had been lost sits beside the same letter’s report of an accurate bomb run and promotions for three gunners. By late March the letters tally missions and flying hours in the heading as carefully as news from home.</p>
+    </blockquote>
+
+    <hr class="end-rule" />
+    <nav class="bottom">
+      <a href="chapter-15-kearney-staging.html">← Chapter 15</a>
+      <a href="chapter-17-spring-missions.html">Chapter 17 →</a>
+    </nav>
+    <footer class="colophon">
+      Chapter 16 · mid-February–March 1945 · Marianas arrival and early combat. Austin’s words are in the boxed letters. Added explanation is in the green Historical notes.
+    </footer>
+  </article>
+</body>
+</html>
