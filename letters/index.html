@@ -69,6 +69,21 @@
         opacity: 0.7;
         margin-top: 4px;
       }
+      a.people-link {
+        display: block;
+        margin: 0 0 24px 0;
+        padding: 14px 16px;
+        background: rgba(233, 69, 96, 0.15);
+        border: 1px solid #e94560;
+        border-radius: 8px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+      }
+      a.people-link:hover {
+        background: rgba(233, 69, 96, 0.3);
+      }
       .month.disabled {
         opacity: 0.35;
         cursor: not-allowed;
@@ -81,9 +96,10 @@
   <body>
     <div class="container">
       <a href="../" class="back">← Home</a>
-      <a href="people.html" class="back" style="margin-left: 18px">People</a>
       <h1>Dad's WW2 Letters</h1>
       <div class="subtitle">One letter per month of service</div>
+
+      <a class="people-link" href="people.html">People Mentioned in Letters</a>
 
       <div class="months">
         <a class="month" href="view.html?m=194301"
