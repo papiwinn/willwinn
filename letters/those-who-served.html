@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Those Who Served with Dad</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: system-ui, -apple-system, sans-serif;
+        color: white;
+        padding: 40px 20px;
+      }
+      .container { max-width: 720px; margin: 0 auto; }
+      h1 { font-size: 2.4rem; margin-bottom: 8px; font-weight: 700; }
+      .subtitle { color: #e94560; font-size: 1.15rem; margin-bottom: 20px; }
+      .intro {
+        color: rgba(255,255,255,0.85);
+        line-height: 1.55;
+        margin-bottom: 28px;
+        font-size: 0.98rem;
+      }
+      .backs { margin-bottom: 24px; }
+      a.back {
+        display: inline-block;
+        margin: 0 16px 8px 0;
+        color: #e94560;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      a.back:hover { text-decoration: underline; }
+      .count {
+        color: #e94560;
+        font-weight: 600;
+        margin-left: 8px;
+        font-variant-numeric: tabular-nums;
+        font-size: 0.9em;
+      }
+      nav.toc {
+        margin: 0 0 36px 0;
+        padding: 16px 18px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 8px;
+      }
+      nav.toc h2 {
+        font-size: 1rem;
+        color: #e94560;
+        margin: 0 0 12px 0;
+        font-weight: 600;
+      }
+      nav.toc ol {
+        margin: 0;
+        padding-left: 1.25em;
+        columns: 2;
+        column-gap: 24px;
+      }
+      nav.toc li { margin: 4px 0; break-inside: avoid; font-size: 0.92rem; }
+      nav.toc a { color: #e8e8e8; text-decoration: none; }
+      nav.toc a:hover { color: #e94560; }
+      article.person {
+        padding: 22px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      article.person h2 {
+        font-size: 1.35rem;
+        margin: 0 0 6px 0;
+        font-weight: 700;
+      }
+      .list-name {
+        font-size: 0.85rem;
+        color: rgba(255,255,255,0.55);
+        margin: 0 0 14px 0;
+      }
+      .from-letters, .researched {
+        margin: 10px 0;
+        padding: 12px 14px;
+        border-radius: 8px;
+      }
+      .from-letters {
+        background: rgba(255,255,255,0.06);
+        border-left: 3px solid #e94560;
+      }
+      .researched {
+        background: rgba(15,52,96,0.45);
+        border-left: 3px solid rgba(233,69,96,0.45);
+      }
+      .from-letters h3, .researched h3 {
+        margin: 0 0 8px 0;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #e94560;
+        font-weight: 600;
+      }
+      .from-letters p, .researched .res-body, .researched p {
+        margin: 0;
+        line-height: 1.55;
+        color: rgba(255,255,255,0.9);
+        font-size: 0.98rem;
+      }
+      .researched .res-body p { margin: 8px 0 0 0; }
+      .plaque-fields {
+        margin: 8px 0 12px 1.1em;
+        padding: 0;
+        line-height: 1.5;
+      }
+      .plaque-fields li { margin: 4px 0; }
+      a.ext { color: #e94560; }
+      a.ext:hover { text-decoration: underline; }
+      .note {
+        margin-top: 10px !important;
+        font-size: 0.9rem !important;
+        color: rgba(255,255,255,0.7) !important;
+      }
+      .footnote {
+        margin-top: 36px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        font-size: 0.88rem;
+        color: rgba(255,255,255,0.65);
+        line-height: 1.5;
+      }
+      @media (max-width: 560px) {
+        nav.toc ol { columns: 1; }
+        h1 { font-size: 1.9rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="backs">
+        <a href="../" class="back">← Home</a>
+        <a href="index.html" class="back">← All Letters</a>
+        <a href="people.html" class="back">People Mentioned</a>
+      </div>
+      <h1>Those Who Served with Dad</h1>
+      <div class="subtitle">Military men in Austin H. Winn’s letters</div>
+      <p class="intro">
+        Shipmates, crewmates, training classmates, relatives and friends in service,
+        and named officers he flew with or tracked as fellow servicemen.
+        Home civilians, celebrities, and enemy leaders are omitted.
+        Counts are letter mention totals from the transcriptions.
+        Each entry separates what the letters say from outside research.
+      </p>
+      <nav class="toc" aria-label="Alphabetical list">
+        <h2>55 men · alphabetical by last name</h2>
+        <ol>
+        <li><a href="#jesse-acombs">Jesse Acombs</a> <span class="count">1</span></li>
+        <li><a href="#alexander-alexion">Alexander Alexion</a> <span class="count">1</span></li>
+        <li><a href="#armstrong">Armstrong</a> <span class="count">2</span></li>
+        <li><a href="#beattie">Beattie</a> <span class="count">1</span></li>
+        <li><a href="#l-e-binder">L. E. Binder</a> <span class="count">4</span></li>
+        <li><a href="#john-bishop">John Bishop</a> <span class="count">16</span></li>
+        <li><a href="#boley">Boley</a> <span class="count">1</span></li>
+        <li><a href="#frank-bonds-s-boy">Frank Bonds&#x27;s boy</a> <span class="count">3</span></li>
+        <li><a href="#p-f-butler">P. F. Butler</a> <span class="count">1</span></li>
+        <li><a href="#caunce">Caunce</a> <span class="count">1</span></li>
+        <li><a href="#clifford">Clifford</a> <span class="count">13</span></li>
+        <li><a href="#e-a-cook">E. A. Cook</a> <span class="count">48</span></li>
+        <li><a href="#couell">Couell</a> <span class="count">1</span></li>
+        <li><a href="#ira-cutrell">Ira Cutrell</a> <span class="count">1</span></li>
+        <li><a href="#w-e-cutrer">W. E. Cutrer</a> <span class="count">1</span></li>
+        <li><a href="#czajkoski">Czajkoski</a> <span class="count">1</span></li>
+        <li><a href="#t-n-daniels">T. N. Daniels</a> <span class="count">1</span></li>
+        <li><a href="#johnny-doganges">Johnny Doganges</a> <span class="count">1</span></li>
+        <li><a href="#sgt-dyckl">Sgt. Dyckl</a> <span class="count">1</span></li>
+        <li><a href="#ferdman">Ferdman</a> <span class="count">1</span></li>
+        <li><a href="#g-j-fiegel">G. J. Fiegel</a> <span class="count">2</span></li>
+        <li><a href="#lieutenant-finnigan">Lieutenant Finnigan</a> <span class="count">1</span></li>
+        <li><a href="#st-john-handwerker">St. John Handwerker (John J. “Jim” Handwerker)</a> <span class="count">11</span></li>
+        <li><a href="#lt-hicks">Lt. Hicks</a> <span class="count">1</span></li>
+        <li><a href="#mr-albert-hutchinson">Mr. Albert Hutchinson</a> <span class="count">1</span></li>
+        <li><a href="#william-hutchinson">William Hutchinson</a> <span class="count">7</span></li>
+        <li><a href="#w-f-jones">W. F. Jones</a> <span class="count">1</span></li>
+        <li><a href="#harvey-kinney">Harvey Kinney</a> <span class="count">8</span></li>
+        <li><a href="#leon-l-lowry">Leon L. Lowry</a> <span class="count">5</span></li>
+        <li><a href="#lucas">Lucas</a> <span class="count">16</span></li>
+        <li><a href="#major-maley">Major Maley</a> <span class="count">1</span></li>
+        <li><a href="#paul-s-mcbride">Paul S. McBride</a> <span class="count">11</span></li>
+        <li><a href="#mcknight">McKnight</a> <span class="count">1</span></li>
+        <li><a href="#meszaros">Meszaros (George)</a> <span class="count">2</span></li>
+        <li><a href="#mieler">Mieler</a> <span class="count">1</span></li>
+        <li><a href="#morey">Morey</a> <span class="count">1</span></li>
+        <li><a href="#munoz">Munoz</a> <span class="count">1</span></li>
+        <li><a href="#parry">Parry</a> <span class="count">1</span></li>
+        <li><a href="#george-phillips">George Phillips</a> <span class="count">5</span></li>
+        <li><a href="#philly">Philly</a> <span class="count">1</span></li>
+        <li><a href="#col-roberts">Col. Roberts</a> <span class="count">1</span></li>
+        <li><a href="#c-a-rowe">C. A. Rowe</a> <span class="count">1</span></li>
+        <li><a href="#waits-sampson">Waits Sampson</a> <span class="count">40</span></li>
+        <li><a href="#jack-sides">Jack Sides</a> <span class="count">131</span></li>
+        <li><a href="#k-g-smith">K. G. Smith</a> <span class="count">4</span></li>
+        <li><a href="#sgt-smith">Sgt. Smith</a> <span class="count">1</span></li>
+        <li><a href="#turner">Turner</a> <span class="count">7</span></li>
+        <li><a href="#wagaman">Wagaman</a> <span class="count">1</span></li>
+        <li><a href="#weinrich">Weinrich</a> <span class="count">1</span></li>
+        <li><a href="#a-v-winn">A. V. Winn (Alden Vernon Winn)</a> <span class="count">28</span></li>
+        <li><a href="#robert-winn">Robert Winn</a> <span class="count">8</span></li>
+        <li><a href="#winzer">Winzer</a> <span class="count">2</span></li>
+        <li><a href="#warren-d-withee">Warren D. Withee</a> <span class="count">30</span></li>
+        <li><a href="#woolson">Woolson</a> <span class="count">1</span></li>
+        <li><a href="#john-d-wynne">John D. Wynne</a> <span class="count">2</span></li>
+        </ol>
+      </nav>
+
+      <article class="person" id="jesse-acombs">
+        <h2>Jesse Acombs <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Jesse Acombs</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Primary flight instructor Austin named after a lesson that included acrobatics.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="alexander-alexion">
+        <h2>Alexander Alexion <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Alexander Alexion</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Named once among the officers on Austin’s new B-29 crew in July 1945 (with K. G. Smith, Doganges, and Butler).</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="armstrong">
+        <h2>Armstrong <span class="count">2</span></h2>
+        <p class="list-name">Mentioned in letters as: Armstrong</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Original bombardier on Austin’s crew; left sick in California (Mather Field) before combat. Appears with Cook and Phillips in the Great Bend crew photo.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="beattie">
+        <h2>Beattie <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Beattie</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Listed as a gunner on the Lucas crew roster Austin wrote out in July 1945 (City of Charlottesville period).</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="l-e-binder">
+        <h2>L. E. Binder <span class="count">4</span></h2>
+        <p class="list-name">Mentioned in letters as: L. E. Binder</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Navigator on Austin’s earlier crew (also written BINONER / Bindue). His father died while they were overseas; Austin later reported Bindue’s plane was shot down off Japan with four parachutes seen.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="john-bishop">
+        <h2>John Bishop <span class="count">16</span></h2>
+        <p class="list-name">Mentioned in letters as: John Bishop</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Hometown friend Austin tracked through the war: Ft. Meade, then overseas, then reported a German POW. By mid-1945 Austin asked how John and A.V. looked after return to the States.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="boley">
+        <h2>Boley <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Boley</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Bombardier on the Lucas crew list Austin recorded in July 1945.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="frank-bonds-s-boy">
+        <h2>Frank Bonds&#x27;s boy <span class="count">3</span></h2>
+        <p class="list-name">Mentioned in letters as: Frank Bonds&#x27;s boy</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Son of Frank Bonds; Austin asked whether anyone had heard from him after the North Africa campaign and later noted he still had no word.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Given name never stated in the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="p-f-butler">
+        <h2>P. F. Butler <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: P. F. Butler</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Named once among the officers on Austin’s new July 1945 crew.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="caunce">
+        <h2>Caunce <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Caunce</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>When Capt. Cook became operations officer (March 1945), Austin wrote that their new airplane commander was “a nice fellow Caunce.” Lucas soon appears as A/C in later letters.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Full name and rank unknown.</div>
+        </div>
+      </article>
+      <article class="person" id="clifford">
+        <h2>Clifford <span class="count">13</span></h2>
+        <p class="list-name">Mentioned in letters as: Clifford</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Relative/friend Austin wrote V-mail throughout training and combat. Letters place him on desert maneuvers, then New Guinea; by July 1945 he had enough points to leave the Army but expected to stay overseas longer.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Surname only in the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="e-a-cook">
+        <h2>E. A. Cook <span class="count">48</span></h2>
+        <p class="list-name">Mentioned in letters as: E. A. Cook</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Airplane commander of Austin’s early B-29 crew (Capt., later Major); roommate at Great Bend; wife Betty; plane nicknamed Battling/Battin Betsy. Later operations officer in the 19th Bomb Group. Austin often flew and roomed with him.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Address line in one letter: Capt. E.A. Cook, 19th Bomb Group.</div>
+        </div>
+      </article>
+      <article class="person" id="couell">
+        <h2>Couell <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Couell</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Tail gunner on the Lucas crew roster of July 1945.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="ira-cutrell">
+        <h2>Ira Cutrell <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Ira Cutrell</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Enlisted man on Austin’s new July 1945 crew list.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="w-e-cutrer">
+        <h2>W. E. Cutrer <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: W. E. Cutrer</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Enlisted man on Austin’s new July 1945 crew list.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="czajkoski">
+        <h2>Czajkoski <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Czajkoski</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Gunner on the Lucas crew roster Austin wrote in July 1945.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="t-n-daniels">
+        <h2>T. N. Daniels <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: T. N. Daniels</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Enlisted man on Austin’s new July 1945 crew list.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="johnny-doganges">
+        <h2>Johnny Doganges <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Johnny Doganges</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Named once among the officers on Austin’s new July 1945 crew.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="sgt-dyckl">
+        <h2>Sgt. Dyckl <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Sgt. Dyckl</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Austin called him a kind of mascot of the crew—always seeing them off and meeting them on return; flew two missions with them; formerly a school principal.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="ferdman">
+        <h2>Ferdman <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Ferdman</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Radio man on the Lucas crew roster of July 1945.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="g-j-fiegel">
+        <h2>G. J. Fiegel <span class="count">2</span></h2>
+        <p class="list-name">Mentioned in letters as: G. J. Fiegel</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Master Sergeant engineer on Austin’s new July 1945 crew; Austin noted Fiegel had about 22 missions when he took the crew.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="lieutenant-finnigan">
+        <h2>Lieutenant Finnigan <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Lieutenant Finnigan</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Officer at Miami Beach early in Austin’s training who told him the other boys had already shipped out.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="st-john-handwerker">
+        <h2>St. John Handwerker (John J. “Jim” Handwerker) <span class="count">11</span></h2>
+        <p class="list-name">Mentioned in letters as: St. John Handwerker</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Fellow B-29 airplane commander from Memphis; Austin wrote about the City of Memphis on their field, asked his mother about newspaper clippings, and arranged for Handwerker to carry film/pictures home.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Public plaque and nose-art records identify B-29A 42-93917 “City of Memphis” (also “Nipp On Ese Nipper”), 19th Bomb Group, 93rd Squadron. A Memphis plaque dedicated by the B-29 Club of Memphis (1998) lists John J. “Jim” Handwerker as pilot and Austin H. Winn among the other pilots/crews associated with the ship. Sources: <a href="https://readtheplaque.com/plaque/city-of-memphis-b-29">readtheplaque.com</a>; <a href="https://usaaf-noseart.co.uk/plane.php?plane=city-of-memphis-42-93917">usaaf-noseart.co.uk</a>.</div>
+        </div>
+      </article>
+      <article class="person" id="lt-hicks">
+        <h2>Lt. Hicks <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Lt. Hicks</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Bombardier from Kentucky who joined Austin’s crew in training; later flew with another crew that force-landed at Iwo Jima.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="mr-albert-hutchinson">
+        <h2>Mr. Albert Hutchinson <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Mr. Albert Hutchinson</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Austin asked which Seabee (CB) outfit Mr. Albert Hutchinson was in—distinct from cousin William.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="william-hutchinson">
+        <h2>William Hutchinson <span class="count">7</span></h2>
+        <p class="list-name">Mentioned in letters as: William Hutchinson</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Cousin William (also Hutch / Hutcherson). Major/Col. Lowry, who had been at Dyersburg, knew him and asked after him; Lowry later said William had written and that William’s brother on Guam had visited.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Service branch/unit not stated clearly in Austin’s letters.</div>
+        </div>
+      </article>
+      <article class="person" id="w-f-jones">
+        <h2>W. F. Jones <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: W. F. Jones</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Enlisted man on Austin’s new July 1945 crew list.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="harvey-kinney">
+        <h2>Harvey Kinney <span class="count">8</span></h2>
+        <p class="list-name">Mentioned in letters as: Harvey Kinney</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Correspondent Austin wrote through training and overseas (sometimes Harve). Letters place him on furlough, then transferred to Seattle; Austin kept exchanging letters into 1945.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Exact unit not given in Austin’s letters.</div>
+        </div>
+      </article>
+      <article class="person" id="leon-l-lowry">
+        <h2>Leon L. Lowry <span class="count">5</span></h2>
+        <p class="list-name">Mentioned in letters as: Leon L. Lowry</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Squadron/commanding officer Austin slept near and flew under (Major Lowery, later Lt. Col./Col. Lowry). Formerly at Dyersburg; knew cousin William Hutchinson and asked Austin to pass hellos.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Do not confuse with similarly named veterans in public records without matching unit/context.</div>
+        </div>
+      </article>
+      <article class="person" id="lucas">
+        <h2>Lucas <span class="count">16</span></h2>
+        <p class="list-name">Mentioned in letters as: Lucas</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Airplane commander (1st Lt.) from Charlottesville, Virginia; flew with Austin on “City of Charlottesville.” Austin later became an A/C himself while Lucas continued with the old crew.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Given name not stated.</div>
+        </div>
+      </article>
+      <article class="person" id="major-maley">
+        <h2>Major Maley <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Major Maley</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Assistant operations officer; when another pilot broke a leg, Maley took that crew and Austin got his overseas chance with the group.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="paul-s-mcbride">
+        <h2>Paul S. McBride <span class="count">11</span></h2>
+        <p class="list-name">Mentioned in letters as: Paul S. McBride</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Hometown friend Austin also called Paul Sales/Sale. Austin copied his Navy address: Paul S McBride, S 2/C, Radar Operations School, Class 1-B, San Diego, Calif.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">A published obituary for Paul S. McBride (b. Covington, TN, 1924–2014) matches the letter world: Navy veteran, Pacific theater, Radar Operator School at Point Loma, CA, discharged as radarman second class. Source: <a href="https://www.memorialfuneralhome.com/obituaries/paul-s-mcbride">Memorial Funeral Homes obituary</a>.</div>
+        </div>
+      </article>
+      <article class="person" id="mcknight">
+        <h2>McKnight <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: McKnight</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Radio operator from Tennessee whom Austin met; kin to families around Nankipoo.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="meszaros">
+        <h2>Meszaros (George) <span class="count">2</span></h2>
+        <p class="list-name">Mentioned in letters as: Meszaros</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Special Instrument Operator on the Lucas crew; Austin also called him George / George Mezzaro and mentioned his pet turtles.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="mieler">
+        <h2>Mieler <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Mieler</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>CFC gunner on the Lucas crew roster of July 1945.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="morey">
+        <h2>Morey <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Morey</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Primary training classmate Austin flew with under instructor Mr. Cattron (described as Scotch/Irish).</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="munoz">
+        <h2>Munoz <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Munoz</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Primary training classmate in the same student flight as Morey and Weinrich.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="parry">
+        <h2>Parry <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Parry</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Navigator on the Lucas crew roster of July 1945.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="george-phillips">
+        <h2>George Phillips <span class="count">5</span></h2>
+        <p class="list-name">Mentioned in letters as: George Phillips</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Engineer on Austin’s crew; later moved to Ground Training with Cook and was promoted to 1st Lt., ending his combat missions. Also on the Great Bend crew photo.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Distinct from Colonel Phillips on training memos.</div>
+        </div>
+      </article>
+      <article class="person" id="philly">
+        <h2>Philly <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Philly</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Crewmate whose hair George (SIO) was cutting in an April 1945 letter; full name not given.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="col-roberts">
+        <h2>Col. Roberts <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Col. Roberts</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Commanding officer promoted from Lt. Col. to full Colonel; Austin wrote he had been with the 19th Bomb Group in the Philippines when Japan invaded.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Unit history confirms Col. John A. Roberts Jr. commanded the 19th Bomb Group (VH) in this period; identity beyond Austin’s mention is consistent but not fully cross-checked here.</div>
+        </div>
+      </article>
+      <article class="person" id="c-a-rowe">
+        <h2>C. A. Rowe <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: C. A. Rowe</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Enlisted man on Austin’s new July 1945 crew list.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="waits-sampson">
+        <h2>Waits Sampson <span class="count">40</span></h2>
+        <p class="list-name">Mentioned in letters as: Waits Sampson</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Hometown friend Austin wrote throughout the war (often with Jack). Letters mention Waits finishing schooling and long gaps with no word; Austin treated him as a fellow serviceman to track.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Branch/unit not clearly stated.</div>
+        </div>
+      </article>
+      <article class="person" id="jack-sides">
+        <h2>Jack Sides <span class="count">131</span></h2>
+        <p class="list-name">Mentioned in letters as: Jack Sides</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Close hometown friend. Austin followed him overseas (suspected Saipan), later found him as a casualty in the base hospital on the same Marianas island, saw him evacuated, then heard of rest leave at home.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="k-g-smith">
+        <h2>K. G. Smith <span class="count">4</span></h2>
+        <p class="list-name">Mentioned in letters as: K. G. Smith</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Co-pilot on Austin’s new July 1945 crew; Austin noted Smith had fewer missions than most of the enlisted men.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Distinct from Sgt. Smith and from Kate Smith.</div>
+        </div>
+      </article>
+      <article class="person" id="sgt-smith">
+        <h2>Sgt. Smith <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Sgt. Smith</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>At Marfa, Austin rode under the hood in Sgt. Smith’s cockpit as observer during instrument work.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="turner">
+        <h2>Turner <span class="count">7</span></h2>
+        <p class="list-name">Mentioned in letters as: Turner</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Cadet who shared a Los Angeles pass/suite with Austin. Distinct in the notes from Gene, Helen, John, and Grace Turner.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Given name not given for the cadet.</div>
+        </div>
+      </article>
+      <article class="person" id="wagaman">
+        <h2>Wagaman <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Wagaman</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Training mate Austin planned to go into town with for a show.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="weinrich">
+        <h2>Weinrich <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Weinrich</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Primary training classmate in Austin’s student flight under Mr. Cattron.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="a-v-winn">
+        <h2>A. V. Winn (Alden Vernon Winn) <span class="count">28</span></h2>
+        <p class="list-name">Mentioned in letters as: A. V. Winn</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Fellow cadet/airman Austin first met as A.V. Winn from Washington state (also Alden / Alvin in the letters). They trained in the same world, kept writing, and later met on Guam—A.V. in B-24s with missions in, then on Okinawa. Austin asked how John and A.V. looked after returning to the States.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">WWII Memorial Registry honoree plaque (model entry for this page):
+<ul class="plaque-fields">
+<li><strong>Name:</strong> Alden Vernon Winn</li>
+<li><strong>Branch of Service:</strong> U.S. Army Air Force</li>
+<li><strong>Hometown:</strong> Wallula, Washington</li>
+<li><strong>Honored By:</strong> Brad Winn (Grandson)</li>
+<li><strong>Activity During WWII:</strong> Co-pilot, B-24 aircraft, 494th Bomb Group (H), 7th Air Force, 1945. Group stationed in Anguar Island, Palau Islands, and Okinawa. Missions include Philippine Islands, Japan, China, and certain Pacific islands.</li>
+</ul>
+<a class="ext" href="https://wwiiregistry.abmc.gov/honoree-plaque/?honoree_id=2199814">ABMC WWII Registry plaque (honoree_id=2199814)</a>
+<p class="note">Letters say Walla Walla; the plaque lists Wallula, Washington (nearby). No other public bio page was required beyond this registry plaque.</p></div>
+        </div>
+      </article>
+      <article class="person" id="robert-winn">
+        <h2>Robert Winn <span class="count">8</span></h2>
+        <p class="list-name">Mentioned in letters as: Robert Winn</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Los Angeles classmate and later roommate (same class/section); wife joined him and he moved to town. Austin later noted Robert was in another bomb group on the same Pacific field and flew his first mission.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Not the same man as A.V. or Austin.</div>
+        </div>
+      </article>
+      <article class="person" id="winzer">
+        <h2>Winzer <span class="count">2</span></h2>
+        <p class="list-name">Mentioned in letters as: Winzer</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Pilot Austin flew with at Roswell; they had more time than others in the group. Later sent to Pratt, Kansas.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="warren-d-withee">
+        <h2>Warren D. Withee <span class="count">30</span></h2>
+        <p class="list-name">Mentioned in letters as: Warren D. Withee</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Oshkosh roommate from early cadet days through Roswell (Withee / Wither / Withie). Austin saw him off by train, later heard he became a co-pilot for a hometown friend, and still wrote him from Guam.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters. Public Withee pilots found online are different men.</div>
+        </div>
+      </article>
+      <article class="person" id="woolson">
+        <h2>Woolson <span class="count">1</span></h2>
+        <p class="list-name">Mentioned in letters as: Woolson</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Training pilot Austin still had to ride for as co-pilot because Woolson was behind on flying time.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters.</div>
+        </div>
+      </article>
+      <article class="person" id="john-d-wynne">
+        <h2>John D. Wynne <span class="count">2</span></h2>
+        <p class="list-name">Mentioned in letters as: John D. Wynne</p>
+        <div class="from-letters">
+          <h3>In the letters</h3>
+          <p>Colonel Wynne, director of training; Austin told his family the class book would show the officers’ pictures.</p>
+        </div>
+        <div class="researched">
+          <h3>Researched note</h3>
+          <div class="res-body">Not independently verified beyond the letters beyond the training-memo name match.</div>
+        </div>
+      </article>
+      <p class="footnote">
+        Hap Arnold, MacArthur, and similar public commanders appear in the letters only in passing
+        and are omitted here in favor of men Austin trained, flew, or corresponded with as fellow servicemen.
+        Research prefers ABMC WWII Registry plaques and similar verified sources when found;
+        otherwise entries stay letter-only.
+      </p>
+    </div>
+  </body>
+</html>
