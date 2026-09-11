@@ -22,7 +22,7 @@
  *   formEndpoint. See proxy-worker.js in this folder.
  */
 window.CORRECTIONS_CONFIG = {
-  formEndpoint: "",
+  formEndpoint: "https://formspree.io/f/mljezzvr",
   web3formsKey: "",
   ownerEmail: ""
 };
