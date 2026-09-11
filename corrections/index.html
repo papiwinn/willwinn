@@ -198,7 +198,7 @@
 (function () {
   var COOKIE_DAYS = 180;
   var STORAGE_KEY = "willwinn_reviewer";
-  var cfg = window.CORRECTIONS_CONFIG || { repo: "papiwinn/willwinn", label: "correction", githubToken: "" };
+  var cfg = window.CORRECTIONS_CONFIG || { formEndpoint: "", web3formsKey: "", ownerEmail: "" };
   var mem = null; // in-memory session (primary for this page load)
 
   function cookiePaths() {
@@ -364,42 +364,18 @@
     paint();
   });
 
-  function buildBody(payload) {
-    return [
-      "<!-- uid -->" + payload.uid + "<!-- /uid -->",
-      "<!-- submitted_at -->" + payload.submitted_at + "<!-- /submitted_at -->",
-      "<!-- user_id -->" + payload.user_id + "<!-- /user_id -->",
-      "<!-- name -->" + payload.name + "<!-- /name -->",
-      "<!-- email -->" + payload.email + "<!-- /email -->",
-      "<!-- mistake -->" + payload.mistake + "<!-- /mistake -->",
-      "<!-- where -->" + payload.where + "<!-- /where -->",
-      "<!-- corrections -->" + payload.corrections + "<!-- /corrections -->",
-      "",
-      "### Submission uid",
-      payload.uid,
-      "",
-      "### Submitted at",
-      payload.submitted_at,
-      "",
-      "### Reviewer user id",
-      payload.user_id,
-      "",
-      "### Reviewer name",
-      payload.name,
-      "",
-      "### Reviewer email",
-      payload.email,
-      "",
-      "### Describe Mistake",
-      payload.mistake,
-      "",
-      "### Where it is",
-      payload.where,
-      "",
-      "### Corrections",
-      payload.corrections,
-      ""
-    ].join("\n");
+  function configuredEndpoint() {
+    if (cfg.formEndpoint && String(cfg.formEndpoint).trim()) {
+      return { type: "endpoint", url: String(cfg.formEndpoint).trim() };
+    }
+    if (cfg.web3formsKey && String(cfg.web3formsKey).trim()) {
+      return { type: "web3forms", key: String(cfg.web3formsKey).trim() };
+    }
+    if (cfg.ownerEmail && String(cfg.ownerEmail).trim()) {
+      var em = String(cfg.ownerEmail).trim();
+      return { type: "formsubmit", url: "https://formsubmit.co/ajax/" + encodeURIComponent(em) };
+    }
+    return null;
   }
 
   function showThanks() {
@@ -408,13 +384,14 @@
     show(thanksPanel);
   }
 
-  function openIssueHandOff(title, body) {
-    var url =
-      "https://github.com/" + cfg.repo + "/issues/new" +
-      "?labels=" + encodeURIComponent(cfg.label || "correction") +
-      "&title=" + encodeURIComponent(title) +
-      "&body=" + encodeURIComponent(body);
-    window.open(url, "_blank", "noopener");
+  function appendOutbox(payload) {
+    try {
+      var key = "willwinn_corrections_outbox";
+      var list = JSON.parse(localStorage.getItem(key) || "[]");
+      if (!Array.isArray(list)) list = [];
+      list.push(payload);
+      localStorage.setItem(key, JSON.stringify(list));
+    } catch (e) {}
   }
 
   document.getElementById("correction-form").addEventListener("submit", function (e) {
@@ -436,6 +413,13 @@
       return;
     }
 
+    var dest = configuredEndpoint();
+    if (!dest) {
+      err.className = "msg error";
+      err.textContent = "Corrections inbox is not connected yet. The site owner needs to set formEndpoint (or web3formsKey / ownerEmail) in corrections/config.js — see corrections/README.md.";
+      return;
+    }
+
     var payload = {
       uid: uuid(),
       submitted_at: new Date().toISOString(),
@@ -446,8 +430,7 @@
       where: where,
       corrections: corrections
     };
-    var title = "[correction] " + where.slice(0, 72) + (where.length > 72 ? "…" : "");
-    var body = buildBody(payload);
+
     var btn = document.getElementById("submit-btn");
     btn.disabled = true;
 
@@ -457,37 +440,73 @@
       err.textContent = msg;
     }
 
-    if (cfg.githubToken) {
-      fetch("https://api.github.com/repos/" + cfg.repo + "/issues", {
-        method: "POST",
-        headers: {
-          Accept: "application/vnd.github+json",
-          Authorization: "Bearer " + cfg.githubToken,
-          "Content-Type": "application/json",
-          "X-GitHub-Api-Version": "2022-11-28"
-        },
-        body: JSON.stringify({ title: title, body: body, labels: [cfg.label || "correction"] })
-      })
-        .then(function (res) {
-          if (!res.ok) throw new Error("GitHub " + res.status);
-          return res.json();
-        })
-        .then(function () {
-          showThanks();
-        })
-        .catch(function () {
-          openIssueHandOff(title, body);
-          showThanks();
-        });
-      return;
+    var body;
+    var url;
+    var headers = { Accept: "application/json" };
+
+    if (dest.type === "web3forms") {
+      url = "https://api.web3forms.com/submit";
+      body = JSON.stringify({
+        access_key: dest.key,
+        subject: "[willwinn correction] " + where.slice(0, 72),
+        from_name: payload.name,
+        email: payload.email,
+        uid: payload.uid,
+        submitted_at: payload.submitted_at,
+        user_id: payload.user_id,
+        mistake: payload.mistake,
+        where: payload.where,
+        corrections: payload.corrections
+      });
+      headers["Content-Type"] = "application/json";
+    } else if (dest.type === "formsubmit") {
+      url = dest.url;
+      body = JSON.stringify({
+        _subject: "[willwinn correction] " + where.slice(0, 72),
+        name: payload.name,
+        email: payload.email,
+        uid: payload.uid,
+        submitted_at: payload.submitted_at,
+        user_id: payload.user_id,
+        mistake: payload.mistake,
+        where: payload.where,
+        corrections: payload.corrections
+      });
+      headers["Content-Type"] = "application/json";
+    } else {
+      // Formspree / Getform / custom proxy — JSON
+      url = dest.url;
+      body = JSON.stringify(payload);
+      headers["Content-Type"] = "application/json";
     }
 
-    openIssueHandOff(title, body);
-    showThanks();
+    fetch(url, { method: "POST", headers: headers, body: body })
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        // Some endpoints return 200 with ok:false
+        var ct = res.headers.get("content-type") || "";
+        if (ct.indexOf("application/json") >= 0) {
+          return res.json().then(function (j) {
+            if (j && (j.ok === false || j.success === false)) {
+              throw new Error(j.message || j.error || "Submit rejected");
+            }
+            return j;
+          });
+        }
+        return null;
+      })
+      .then(function () {
+        appendOutbox(payload);
+        showThanks();
+      })
+      .catch(function (ex) {
+        fail("Could not send your correction (" + (ex && ex.message ? ex.message : "network") + "). Please try again in a moment.");
+      });
   });
 
   paint();
 })();
+
     </script>
   </body>
 </html>
