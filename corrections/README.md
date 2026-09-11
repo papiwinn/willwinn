@@ -22,6 +22,14 @@ Sign in with **name** and **email** before the form unlocks.
 
 Each submission sends: `uid`, `submitted_at` (ISO UTC), `user_id`, `name`, `email`, plus the three fields.
 
+## Active inbox (FormSubmit)
+
+Both **corrections** and **Add to the Story** load this `config.js`.
+
+- `ownerEmail`: `papiwinn@gmail.com`
+- `formEndpoint` and `web3formsKey` are empty so FormSubmit is used
+- **First submission** sends a confirmation link to that Gmail — click it once to activate. Later submissions arrive as email.
+
 ## Connect the inbox (required — no secrets in the browser)
 
 Edit [`config.js`](./config.js). Pick **one** option. Do **not** put a GitHub PAT in `config.js`.

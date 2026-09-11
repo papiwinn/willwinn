@@ -1,28 +1,20 @@
-/* Corrections form config (GitHub Pages — no secrets in this file).
+/* Corrections + stories form config (GitHub Pages — no secrets in this file).
  *
- * Pick ONE of the options below. The browser only ever sees a public
- * form endpoint or Web3Forms access key — never a GitHub PAT.
+ * Active setup: FormSubmit → ownerEmail below.
+ * Leave formEndpoint and web3formsKey empty so FormSubmit is used.
  *
- * Option A (recommended): Formspree — https://formspree.io
- *   1. Create a form, copy the endpoint: https://formspree.io/f/xxxxxxxx
- *   2. Paste it into formEndpoint below.
+ * First submission to a new ownerEmail sends a confirmation link to that
+ * address — open the email and click Activate once. After that, corrections
+ * and “Add to the Story” both arrive as email (and in FormSubmit’s log if
+ * you create an account).
  *
- * Option B: Getform — https://getform.io
- *   Paste https://getform.io/f/xxxxxxxx into formEndpoint.
- *
- * Option C: Web3Forms — https://web3forms.com
- *   Paste your public access key into web3formsKey (leave formEndpoint "").
- *
- * Option D: FormSubmit — https://formsubmit.co
- *   Set ownerEmail to the inbox that should receive corrections.
- *   (First submission sends a confirmation link to that address.)
- *
- * Option E: Own proxy (Cloudflare Worker / similar) that holds a repo
- *   secret and writes GitHub Issues or JSON. Paste the worker URL into
- *   formEndpoint. See proxy-worker.js in this folder.
+ * Other options (only one path should be filled):
+ *   formEndpoint  — Formspree / Getform / Worker URL
+ *   web3formsKey  — Web3Forms public access key
+ *   ownerEmail    — FormSubmit (https://formsubmit.co)
  */
 window.CORRECTIONS_CONFIG = {
-  formEndpoint: "https://formspree.io/f/mljezzvr",
+  formEndpoint: "",
   web3formsKey: "",
-  ownerEmail: ""
+  ownerEmail: "papiwinn@gmail.com"
 };
