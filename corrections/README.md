@@ -3,11 +3,13 @@
 Reader-facing form: [`index.html`](./index.html)  
 Live URL (GitHub Pages): https://papiwinn.github.io/willwinn/corrections/
 
-## Auth (cookies)
+## Auth (session)
 
 Reviewers sign in with **name** and **email** before the form unlocks.
 
-Cookies (path `/willwinn/`, 180 days):
+**Primary:** in-memory session for the current visit, plus `localStorage` key `willwinn_reviewer` (`{uid,name,email}`) so Continue always advances even if cookies are blocked.
+
+**Mirror cookies** (best-effort, 180 days; Path derived from the real page URL, including `/willwinn/` when present):
 
 | Cookie | Purpose |
 |--------|---------|
@@ -15,7 +17,7 @@ Cookies (path `/willwinn/`, 180 days):
 | `ww_name` | Display name |
 | `ww_email` | Email |
 
-Returning visitors with those cookies skip the login screen (“Welcome back”). **Sign out** clears the cookies.
+Returning visitors with localStorage or cookies skip the login screen. **Sign out** clears memory, localStorage, and cookies.
 
 This is lightweight identity for the family site, not password security.
 

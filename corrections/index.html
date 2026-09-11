@@ -197,14 +197,33 @@
     <script>
 (function () {
   var COOKIE_DAYS = 180;
-  var BASE = "/willwinn";
+  var STORAGE_KEY = "willwinn_reviewer";
   var cfg = window.CORRECTIONS_CONFIG || { repo: "papiwinn/willwinn", label: "correction", githubToken: "" };
+  var mem = null; // in-memory session (primary for this page load)
 
-  function cookiePath() { return BASE + "/"; }
+  function cookiePaths() {
+    // Try site root and every parent of the current path (covers /willwinn/ and custom domains)
+    var paths = ["/"];
+    var parts = location.pathname.replace(/\/+$/, "").split("/");
+    var acc = "";
+    for (var i = 1; i < parts.length; i++) {
+      acc += "/" + parts[i];
+      if (paths.indexOf(acc + "/") === -1) paths.push(acc + "/");
+      if (paths.indexOf(acc) === -1) paths.push(acc);
+    }
+    // Prefer project base when present
+    if (location.pathname.indexOf("/willwinn") === 0 && paths.indexOf("/willwinn/") === -1) {
+      paths.unshift("/willwinn/");
+    }
+    return paths;
+  }
 
   function setCookie(name, value, days) {
     var max = days ? "; Max-Age=" + (days * 86400) : "";
-    document.cookie = name + "=" + encodeURIComponent(value) + max + "; Path=" + cookiePath() + "; SameSite=Lax";
+    var paths = cookiePaths();
+    for (var i = 0; i < paths.length; i++) {
+      document.cookie = name + "=" + encodeURIComponent(value) + max + "; Path=" + paths[i] + "; SameSite=Lax";
+    }
   }
   function getCookie(name) {
     var parts = document.cookie.split("; ");
@@ -215,27 +234,80 @@
     return "";
   }
   function clearCookie(name) {
-    document.cookie = name + "=; Max-Age=0; Path=" + cookiePath() + "; SameSite=Lax";
+    var paths = cookiePaths();
+    for (var i = 0; i < paths.length; i++) {
+      document.cookie = name + "=; Max-Age=0; Path=" + paths[i] + "; SameSite=Lax";
+    }
   }
   function uuid() {
-    if (crypto && crypto.randomUUID) return crypto.randomUUID();
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
       var r = (Math.random() * 16) | 0;
       var v = c === "x" ? r : (r & 0x3) | 0x8;
       return v.toString(16);
     });
   }
+
+  function readStorage() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      var o = JSON.parse(raw);
+      if (o && o.uid && o.name && o.email) return o;
+    } catch (e) {}
+    return null;
+  }
+  function writeStorage(s) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+  function clearStorage() {
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+  }
+
   function session() {
-    return {
+    if (mem && mem.uid && mem.name && mem.email) return mem;
+    var ls = readStorage();
+    if (ls) { mem = ls; return mem; }
+    var c = {
       uid: getCookie("ww_uid"),
       name: getCookie("ww_name"),
       email: getCookie("ww_email")
     };
+    if (c.uid && c.name && c.email) {
+      mem = c;
+      writeStorage(c); // upgrade cookies → localStorage when possible
+      return mem;
+    }
+    return { uid: "", name: "", email: "" };
   }
   function signedIn() {
     var s = session();
     return !!(s.uid && s.name && s.email);
   }
+  function persist(s) {
+    mem = s;
+    var lsOk = writeStorage(s);
+    try {
+      setCookie("ww_uid", s.uid, COOKIE_DAYS);
+      setCookie("ww_name", s.name, COOKIE_DAYS);
+      setCookie("ww_email", s.email, COOKIE_DAYS);
+    } catch (e) {}
+    // Success if memory is set; localStorage preferred for return visits
+    return { ok: true, durable: lsOk || !!(getCookie("ww_uid") && getCookie("ww_name") && getCookie("ww_email")) };
+  }
+  function clearSession() {
+    mem = null;
+    clearStorage();
+    clearCookie("ww_uid");
+    clearCookie("ww_name");
+    clearCookie("ww_email");
+  }
+
   function show(el) { el.classList.remove("hidden"); }
   function hide(el) { el.classList.add("hidden"); }
 
@@ -248,7 +320,8 @@
     if (signedIn()) {
       hide(authPanel);
       show(formPanel);
-      document.getElementById("who").textContent = getCookie("ww_name") + " · " + getCookie("ww_email");
+      var s = session();
+      document.getElementById("who").textContent = s.name + " · " + s.email;
     } else {
       hide(formPanel);
       show(authPanel);
@@ -267,18 +340,27 @@
       err.textContent = "Please enter your name and a valid email.";
       return;
     }
-    var uid = getCookie("ww_uid") || uuid();
-    setCookie("ww_uid", uid, COOKIE_DAYS);
-    setCookie("ww_name", name, COOKIE_DAYS);
-    setCookie("ww_email", email, COOKIE_DAYS);
+    var prev = session();
+    var uid = (prev && prev.uid) || uuid();
+    var result = persist({ uid: uid, name: name, email: email });
+    // Always advance on valid input — memory holds the session for this visit
     paint();
+    if (!result.durable) {
+      err.className = "msg error";
+      // Still on form panel; show note under form welcome area via auth error only if auth still visible
+      var note = document.getElementById("form-error");
+      if (note) {
+        note.className = "msg error";
+        note.textContent = "Signed in for this visit, but this browser blocked saving your name/email for next time.";
+      }
+    }
   });
 
   document.getElementById("sign-out").addEventListener("click", function () {
-    clearCookie("ww_uid");
-    clearCookie("ww_name");
-    clearCookie("ww_email");
+    clearSession();
     document.getElementById("correction-form").reset();
+    var note = document.getElementById("form-error");
+    if (note) { note.className = "msg"; note.textContent = ""; }
     paint();
   });
 
