@@ -16,6 +16,5 @@ window.CORRECTIONS_CONFIG = {
   formEndpoint: "",
   web3formsKey: "",
   ownerEmail: "papiwinn@gmail.com",
-  /* Paste Worker URL after deploy, e.g. "https://willwinn-photos.your-subdomain.workers.dev" */
-  photoEndpoint: ""
+  photoEndpoint: "https://icy-dust-9cb5.papiwinn.workers.dev"
 };
