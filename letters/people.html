@@ -102,6 +102,29 @@
         color: #e94560;
         text-decoration: underline;
       }
+
+      .story-block {
+        margin: 0 0 28px 0;
+        text-align: center;
+      }
+      .story-prompt {
+        margin: 0 0 10px;
+        font-size: 0.98rem;
+        opacity: 0.9;
+        line-height: 1.45;
+      }
+      a.story-btn {
+        display: inline-block;
+        min-width: 200px;
+        padding: 14px 18px;
+        background: #e94560;
+        border: 1px solid #e94560;
+        border-radius: 8px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      a.story-btn:hover { background: #ff6b6b; }
     </style>
   </head>
   <body>
@@ -109,6 +132,10 @@
       <a href="index.html" class="back">← All Letters</a>
       <h1>People in the letters</h1>
       <div class="subtitle">mention counts from the transcriptions</div>
+      <div class="story-block">
+        <p class="story-prompt">If you know a person in this list, you can add their story to this site.</p>
+        <a class="story-btn" href="../stories/?from=/willwinn/letters/people.html">Add to the Story</a>
+      </div>
       <ul class="people">
         <li class="person">
           <details class="person-details">

@@ -64,3 +64,7 @@ After a successful submit:
 ## Local outbox
 
 Successful submits are also appended to `localStorage` key `willwinn_corrections_outbox` on the reviewer’s browser (backup only — not visible to the owner).
+
+## Shared with “Add to the Story”
+
+The stories form at [`../stories/`](../stories/) loads this same `config.js`, so one Formspree endpoint receives both corrections and story submissions (`form_type` distinguishes them).
