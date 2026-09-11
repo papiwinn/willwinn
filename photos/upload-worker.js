@@ -81,7 +81,7 @@ export default {
     }
 
     const bytes = new Uint8Array(await file.arrayBuffer());
-    const contentB64 = btoa(String.fromCharCode(...chunk(bytes)));
+    const contentB64 = btoa(chunk(bytes)); // chunk() already returns a binary string
 
     const commitMessage =
       "Add photo: " + person + " (" + photoDate + ")\n\n" +
