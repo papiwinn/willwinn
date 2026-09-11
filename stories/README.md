@@ -23,3 +23,4 @@ Current Formspree endpoint (if set there): `formEndpoint` in that file.
 
 Uses FormSubmit via `ownerEmail` in [`../corrections/config.js`](../corrections/config.js) (`papiwinn@gmail.com`). First site submission to that address requires clicking FormSubmit’s confirmation link in Gmail once.
 
+Related: [Add a Photo](../photos/) (same auth/inbox; files emailed then filed under `letters/images/`).

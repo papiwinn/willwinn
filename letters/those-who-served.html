@@ -150,6 +150,17 @@
         font-weight: 600;
       }
       a.story-btn:hover { background: #ff6b6b; }
+
+      a.story-btn.secondary {
+        display: inline-block;
+        margin-top: 10px;
+        background: transparent;
+        border: 2px solid #e94560;
+      }
+      a.story-btn.secondary:hover {
+        background: rgba(233, 69, 96, 0.15);
+      }
+
     </style>
   </head>
   <body>
@@ -171,6 +182,7 @@
             <div class="story-block">
         <p class="story-prompt">If you know a person in this list, you can add their story to this site.</p>
         <a class="story-btn" href="../stories/?from=those-who-served.html">Add to the Story</a>
+        <a class="story-btn secondary" href="../photos/?from=those-who-served.html">Add a Photo</a>
       </div>
       <nav class="toc" aria-label="Alphabetical list">
         <h2>55 men · alphabetical by last name</h2>

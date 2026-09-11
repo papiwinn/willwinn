@@ -75,4 +75,4 @@ Successful submits are also appended to `localStorage` key `willwinn_corrections
 
 ## Shared with “Add to the Story”
 
-The stories form at [`../stories/`](../stories/) loads this same `config.js`, so one Formspree endpoint receives both corrections and story submissions (`form_type` distinguishes them).
+The stories form at [`../stories/`](../stories/) and the photo form at [`../photos/`](../photos/) load this same `config.js`, so one Formspree endpoint receives both corrections and story submissions (`form_type` distinguishes them).

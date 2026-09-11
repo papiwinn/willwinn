@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a Photo – Will Winn</title>
+    <script src="../corrections/config.js"></script>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: system-ui, -apple-system, sans-serif;
+        color: white;
+        padding: 40px 20px;
+      }
+      .container { max-width: 560px; margin: 0 auto; }
+      h1 { font-size: 2rem; margin: 0 0 8px; font-weight: 700; }
+      .subtitle { color: #e94560; font-size: 1.05rem; margin-bottom: 28px; }
+      a.back {
+        display: inline-block;
+        margin-bottom: 28px;
+        color: #e94560;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      a.back:hover { text-decoration: underline; }
+      .card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 22px 20px 20px;
+      }
+      label {
+        display: block;
+        font-size: 0.92rem;
+        font-weight: 600;
+        margin: 0 0 6px;
+      }
+      .hint {
+        font-size: 0.82rem;
+        opacity: 0.7;
+        margin: -2px 0 8px;
+        font-weight: 400;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="date"],
+      input[type="file"],
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 14px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(0, 0, 0, 0.25);
+        color: white;
+        font: inherit;
+        margin-bottom: 16px;
+      }
+      input[type="file"] {
+        padding: 10px;
+        cursor: pointer;
+      }
+      input[type="date"] { color-scheme: dark; }
+      input:focus, textarea:focus {
+        outline: none;
+        border-color: #e94560;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        background: #e94560;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .btn:hover { background: #ff6b6b; }
+      .btn.secondary {
+        background: transparent;
+        border: 2px solid #e94560;
+        margin-left: 10px;
+      }
+      .btn.secondary:hover { background: rgba(233, 69, 96, 0.15); }
+      .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+      .welcome {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 18px;
+        padding: 12px 14px;
+        background: rgba(233, 69, 96, 0.12);
+        border: 1px solid rgba(233, 69, 96, 0.45);
+        border-radius: 8px;
+        font-size: 0.95rem;
+      }
+      .msg { margin-top: 14px; padding: 12px 14px; border-radius: 8px; display: none; }
+      .msg.error {
+        display: block;
+        background: rgba(233, 69, 96, 0.2);
+        border: 1px solid #e94560;
+      }
+      .hidden { display: none !important; }
+      .nav-links { margin-top: 28px; font-size: 0.95rem; }
+      .nav-links a { color: #e94560; }
+      #thanks-panel p {
+        font-size: 1.1rem;
+        line-height: 1.55;
+        margin: 0 0 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a class="back" id="top-back" href="../letters/">← Back</a>
+      <h1>Add a Photo</h1>
+      <div class="subtitle">Share a picture of someone from the letters</div>
+
+      <div id="auth-panel" class="card">
+        <p style="margin-top:0;opacity:.85">Sign in once so we know who sent the photo. Same login as corrections and stories.</p>
+        <form id="auth-form" autocomplete="on">
+          <label for="auth-name">Name</label>
+          <input id="auth-name" name="name" type="text" required maxlength="120" autocomplete="name" />
+          <label for="auth-email">Email</label>
+          <input id="auth-email" name="email" type="email" required maxlength="200" autocomplete="email" />
+          <button class="btn" type="submit">Continue</button>
+          <div id="auth-error" class="msg"></div>
+        </form>
+      </div>
+
+      <div id="form-panel" class="hidden">
+        <div class="welcome">
+          <span>Signed in as <strong id="who"></strong></span>
+          <button type="button" class="btn secondary" id="sign-out" style="margin:0;padding:8px 14px;font-size:.9rem">Sign out</button>
+        </div>
+        <div class="card">
+          <form id="photo-form">
+            <label for="person-name">Name of person</label>
+            <p class="hint">Who is in the photo?</p>
+            <input id="person-name" name="person_name" type="text" required maxlength="200" />
+
+            <label for="photo-date">Date</label>
+            <p class="hint">When was it taken? (best guess is fine)</p>
+            <input id="photo-date" name="photo_date" type="text" required maxlength="120" placeholder="e.g. June 1944 or 1944-06" />
+
+            <label for="photo-location">Location where taken</label>
+            <p class="hint">Place, base, town, or “unknown”</p>
+            <input id="photo-location" name="photo_location" type="text" required maxlength="200" />
+
+            <label for="photo-file">Photo</label>
+            <p class="hint">JPEG or PNG, ideally under 5&nbsp;MB</p>
+            <input id="photo-file" name="attachment" type="file" accept="image/*" required />
+
+            <button class="btn" type="submit" id="submit-btn">Submit</button>
+            <div id="form-error" class="msg"></div>
+          </form>
+        </div>
+      </div>
+
+      <div id="thanks-panel" class="card hidden">
+        <p>Thank you for the photo. We’ll review it before adding it to the site, and we’ll be in touch if we need anything else.</p>
+        <a class="btn" id="return-btn" href="../letters/">Return</a>
+      </div>
+
+      <div class="nav-links">
+        <a href="../letters/">Letters</a> ·
+        <a href="../stories/">Add to the Story</a> ·
+        <a href="../">Home</a>
+      </div>
+    </div>
+
+    <script>
+(function () {
+  var COOKIE_DAYS = 180;
+  var STORAGE_KEY = "willwinn_reviewer";
+  var cfg = window.CORRECTIONS_CONFIG || { formEndpoint: "", web3formsKey: "", ownerEmail: "" };
+  var mem = null;
+  var MAX_BYTES = 5 * 1024 * 1024;
+
+  function safeReturnUrl() {
+    var params = new URLSearchParams(location.search);
+    var from = params.get("from") || "";
+    var lettersBase = "../letters/";
+
+    function sitePrefix() {
+      if (location.pathname === "/willwinn" || location.pathname.indexOf("/willwinn/") === 0) {
+        return "/willwinn";
+      }
+      return "";
+    }
+
+    function allowPath(path) {
+      if (!path) return "";
+      try {
+        if (/^https?:\/\//i.test(path)) {
+          var u = new URL(path);
+          if (u.origin !== location.origin) return "";
+          path = u.pathname + u.search + u.hash;
+        }
+      } catch (e) {
+        return "";
+      }
+      if (path.indexOf("://") >= 0) return "";
+      if (path.split("/").indexOf("..") >= 0) return "";
+      if (path.charAt(0) === "/") {
+        var prefix = sitePrefix();
+        if (prefix && path.indexOf(prefix + "/") !== 0 && path.indexOf("/letters/") === 0) {
+          path = prefix + path;
+        }
+        return path;
+      }
+      path = path.replace(/^\.\//, "").replace(/^letters\//, "");
+      return lettersBase + path;
+    }
+
+    var resolved = allowPath(from);
+    if (resolved) return resolved;
+    try {
+      if (document.referrer) {
+        var r = new URL(document.referrer);
+        if (r.origin === location.origin) {
+          var refPath = r.pathname + r.search + r.hash;
+          if (refPath.indexOf("/photos") === -1 && refPath.indexOf("/stories") === -1) return refPath;
+        }
+      }
+    } catch (e2) {}
+    return lettersBase;
+  }
+
+  var returnUrl = safeReturnUrl();
+  document.getElementById("top-back").href = returnUrl;
+  document.getElementById("return-btn").href = returnUrl;
+
+  function cookiePaths() {
+    var paths = ["/"];
+    var parts = location.pathname.replace(/\/+$/, "").split("/");
+    var acc = "";
+    for (var i = 1; i < parts.length; i++) {
+      acc += "/" + parts[i];
+      if (paths.indexOf(acc + "/") === -1) paths.push(acc + "/");
+      if (paths.indexOf(acc) === -1) paths.push(acc);
+    }
+    if (location.pathname.indexOf("/willwinn") === 0 && paths.indexOf("/willwinn/") === -1) {
+      paths.unshift("/willwinn/");
+    }
+    return paths;
+  }
+  function setCookie(name, value, days) {
+    var max = days ? "; Max-Age=" + (days * 86400) : "";
+    var paths = cookiePaths();
+    for (var i = 0; i < paths.length; i++) {
+      document.cookie = name + "=" + encodeURIComponent(value) + max + "; Path=" + paths[i] + "; SameSite=Lax";
+    }
+  }
+  function getCookie(name) {
+    var parts = document.cookie.split("; ");
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i];
+      if (p.indexOf(name + "=") === 0) return decodeURIComponent(p.slice(name.length + 1));
+    }
+    return "";
+  }
+  function clearCookie(name) {
+    var paths = cookiePaths();
+    for (var i = 0; i < paths.length; i++) {
+      document.cookie = name + "=; Max-Age=0; Path=" + paths[i] + "; SameSite=Lax";
+    }
+  }
+  function uuid() {
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+      var r = (Math.random() * 16) | 0;
+      var v = c === "x" ? r : (r & 0x3) | 0x8;
+      return v.toString(16);
+    });
+  }
+  function readStorage() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      var o = JSON.parse(raw);
+      if (o && o.uid && o.name && o.email) return o;
+    } catch (e) {}
+    return null;
+  }
+  function writeStorage(s) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(s));
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+  function clearStorage() {
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+  }
+  function session() {
+    if (mem && mem.uid && mem.name && mem.email) return mem;
+    var ls = readStorage();
+    if (ls) { mem = ls; return mem; }
+    var c = { uid: getCookie("ww_uid"), name: getCookie("ww_name"), email: getCookie("ww_email") };
+    if (c.uid && c.name && c.email) {
+      mem = c;
+      writeStorage(c);
+      return mem;
+    }
+    return { uid: "", name: "", email: "" };
+  }
+  function signedIn() {
+    var s = session();
+    return !!(s.uid && s.name && s.email);
+  }
+  function persist(s) {
+    mem = s;
+    writeStorage(s);
+    try {
+      setCookie("ww_uid", s.uid, COOKIE_DAYS);
+      setCookie("ww_name", s.name, COOKIE_DAYS);
+      setCookie("ww_email", s.email, COOKIE_DAYS);
+    } catch (e) {}
+  }
+  function clearSession() {
+    mem = null;
+    clearStorage();
+    clearCookie("ww_uid");
+    clearCookie("ww_name");
+    clearCookie("ww_email");
+  }
+  function show(el) { el.classList.remove("hidden"); }
+  function hide(el) { el.classList.add("hidden"); }
+
+  var authPanel = document.getElementById("auth-panel");
+  var formPanel = document.getElementById("form-panel");
+  var thanksPanel = document.getElementById("thanks-panel");
+
+  function paint() {
+    hide(thanksPanel);
+    if (signedIn()) {
+      hide(authPanel);
+      show(formPanel);
+      var s = session();
+      document.getElementById("who").textContent = s.name + " · " + s.email;
+    } else {
+      hide(formPanel);
+      show(authPanel);
+    }
+  }
+
+  (function () {
+    var person = new URLSearchParams(location.search).get("person");
+    if (person) document.getElementById("person-name").value = person;
+  })();
+
+  document.getElementById("auth-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("auth-name").value.trim();
+    var email = document.getElementById("auth-email").value.trim();
+    var err = document.getElementById("auth-error");
+    err.className = "msg";
+    err.textContent = "";
+    if (!name || !email || email.indexOf("@") < 1) {
+      err.className = "msg error";
+      err.textContent = "Please enter your name and a valid email.";
+      return;
+    }
+    var prev = session();
+    persist({ uid: (prev && prev.uid) || uuid(), name: name, email: email });
+    paint();
+  });
+
+  document.getElementById("sign-out").addEventListener("click", function () {
+    clearSession();
+    document.getElementById("photo-form").reset();
+    paint();
+  });
+
+  function configuredEndpoint() {
+    if (cfg.formEndpoint && String(cfg.formEndpoint).trim()) {
+      return { type: "endpoint", url: String(cfg.formEndpoint).trim() };
+    }
+    if (cfg.web3formsKey && String(cfg.web3formsKey).trim()) {
+      return { type: "web3forms", key: String(cfg.web3formsKey).trim() };
+    }
+    if (cfg.ownerEmail && String(cfg.ownerEmail).trim()) {
+      return { type: "formsubmit", url: "https://formsubmit.co/ajax/" + encodeURIComponent(String(cfg.ownerEmail).trim()) };
+    }
+    return null;
+  }
+
+  function showThanks() {
+    hide(authPanel);
+    hide(formPanel);
+    show(thanksPanel);
+    setTimeout(function () {
+      location.href = returnUrl;
+    }, 4500);
+  }
+
+  document.getElementById("photo-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!signedIn()) { paint(); return; }
+    var s = session();
+    var personName = document.getElementById("person-name").value.trim();
+    var photoDate = document.getElementById("photo-date").value.trim();
+    var photoLocation = document.getElementById("photo-location").value.trim();
+    var fileInput = document.getElementById("photo-file");
+    var file = fileInput.files && fileInput.files[0];
+    var err = document.getElementById("form-error");
+    err.className = "msg";
+    err.textContent = "";
+
+    if (!personName || !photoDate || !photoLocation || !file) {
+      err.className = "msg error";
+      err.textContent = "Please fill in all fields and choose a photo.";
+      return;
+    }
+    if (file.size > MAX_BYTES) {
+      err.className = "msg error";
+      err.textContent = "That photo is larger than 5 MB. Please choose a smaller file.";
+      return;
+    }
+    if (file.type && file.type.indexOf("image/") !== 0) {
+      err.className = "msg error";
+      err.textContent = "Please upload an image file (JPEG, PNG, etc.).";
+      return;
+    }
+
+    var dest = configuredEndpoint();
+    if (!dest) {
+      err.className = "msg error";
+      err.textContent = "Photo inbox is not connected yet. Set ownerEmail in corrections/config.js.";
+      return;
+    }
+
+    var btn = document.getElementById("submit-btn");
+    btn.disabled = true;
+    function fail(msg) {
+      btn.disabled = false;
+      err.className = "msg error";
+      err.textContent = msg;
+    }
+
+    var fd = new FormData();
+    fd.append("form_type", "add_a_photo");
+    fd.append("uid", uuid());
+    fd.append("submitted_at", new Date().toISOString());
+    fd.append("user_id", s.uid);
+    fd.append("name", s.name);
+    fd.append("email", s.email);
+    fd.append("person_name", personName);
+    fd.append("photo_date", photoDate);
+    fd.append("photo_location", photoLocation);
+    fd.append("attachment", file, file.name);
+
+    var url;
+    if (dest.type === "web3forms") {
+      url = "https://api.web3forms.com/submit";
+      fd.append("access_key", dest.key);
+      fd.append("subject", "[willwinn photo] " + personName.slice(0, 72));
+      fd.append("from_name", s.name);
+    } else if (dest.type === "formsubmit") {
+      url = dest.url;
+      fd.append("_subject", "[willwinn photo] " + personName.slice(0, 72));
+    } else {
+      url = dest.url;
+      fd.append("_subject", "[willwinn photo] " + personName.slice(0, 72));
+    }
+
+    // Do not set Content-Type — browser adds multipart boundary
+    fetch(url, { method: "POST", body: fd, headers: { Accept: "application/json" } })
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        var ct = res.headers.get("content-type") || "";
+        if (ct.indexOf("application/json") >= 0) {
+          return res.json().then(function (j) {
+            if (j && (j.ok === false || j.success === false)) {
+              throw new Error(j.message || j.error || "Submit rejected");
+            }
+            return j;
+          });
+        }
+        return null;
+      })
+      .then(function () { showThanks(); })
+      .catch(function (ex) {
+        fail("Could not send your photo (" + (ex && ex.message ? ex.message : "network") + "). Please try again.");
+      });
+  });
+
+  paint();
+})();
+    </script>
+  </body>
+</html>
