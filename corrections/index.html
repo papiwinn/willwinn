@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Corrections – Will Winn</title>
+    <script src="config.js"></script>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: system-ui, -apple-system, sans-serif;
+        color: white;
+        padding: 40px 20px;
+      }
+      .container {
+        max-width: 560px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 2rem;
+        margin: 0 0 8px;
+        font-weight: 700;
+      }
+      .subtitle {
+        color: #e94560;
+        font-size: 1.05rem;
+        margin-bottom: 28px;
+      }
+      a.back {
+        display: inline-block;
+        margin-bottom: 28px;
+        color: #e94560;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      a.back:hover { text-decoration: underline; }
+      .card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 22px 20px 20px;
+      }
+      label {
+        display: block;
+        font-size: 0.92rem;
+        font-weight: 600;
+        margin: 0 0 6px;
+      }
+      .hint {
+        font-size: 0.82rem;
+        opacity: 0.7;
+        margin: -2px 0 8px;
+        font-weight: 400;
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 14px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(0, 0, 0, 0.25);
+        color: white;
+        font: inherit;
+        margin-bottom: 16px;
+      }
+      textarea { min-height: 110px; resize: vertical; }
+      input:focus, textarea:focus {
+        outline: none;
+        border-color: #e94560;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        background: #e94560;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .btn:hover { background: #ff6b6b; }
+      .btn.secondary {
+        background: transparent;
+        border: 2px solid #e94560;
+        margin-left: 10px;
+      }
+      .btn.secondary:hover { background: rgba(233, 69, 96, 0.15); }
+      .btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      .welcome {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 18px;
+        padding: 12px 14px;
+        background: rgba(233, 69, 96, 0.12);
+        border: 1px solid rgba(233, 69, 96, 0.45);
+        border-radius: 8px;
+        font-size: 0.95rem;
+      }
+      .msg {
+        margin-top: 14px;
+        padding: 12px 14px;
+        border-radius: 8px;
+        display: none;
+      }
+      .msg.error {
+        display: block;
+        background: rgba(233, 69, 96, 0.2);
+        border: 1px solid #e94560;
+      }
+      .msg.ok {
+        display: block;
+        background: rgba(74, 222, 128, 0.12);
+        border: 1px solid #4ade80;
+      }
+      .hidden { display: none !important; }
+      .nav-links {
+        margin-top: 28px;
+        font-size: 0.95rem;
+      }
+      .nav-links a { color: #e94560; }
+      #thanks-panel p {
+        font-size: 1.15rem;
+        line-height: 1.55;
+        margin: 0 0 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a class="back" href="../">← Home</a>
+      <h1>Enter Corrections</h1>
+      <div class="subtitle">Help us fix mistakes in the letters and manuscript</div>
+
+      <div id="auth-panel" class="card">
+        <p style="margin-top:0;opacity:.85">Sign in once so we know who sent the note. We’ll remember you on this browser.</p>
+        <form id="auth-form" autocomplete="on">
+          <label for="auth-name">Name</label>
+          <input id="auth-name" name="name" type="text" required maxlength="120" autocomplete="name" />
+          <label for="auth-email">Email</label>
+          <input id="auth-email" name="email" type="email" required maxlength="200" autocomplete="email" />
+          <button class="btn" type="submit">Continue</button>
+          <div id="auth-error" class="msg"></div>
+        </form>
+      </div>
+
+      <div id="form-panel" class="hidden">
+        <div class="welcome">
+          <span>Signed in as <strong id="who"></strong></span>
+          <button type="button" class="btn secondary" id="sign-out" style="margin:0;padding:8px 14px;font-size:.9rem">Sign out</button>
+        </div>
+        <div class="card">
+          <form id="correction-form">
+            <label for="mistake">Describe Mistake</label>
+            <p class="hint">What looks wrong?</p>
+            <textarea id="mistake" name="mistake" required maxlength="8000"></textarea>
+
+            <label for="where">Where it is</label>
+            <p class="hint">Page, chapter, letter date, or quote so we can find it</p>
+            <textarea id="where" name="where" required maxlength="4000"></textarea>
+
+            <label for="corrections">Corrections</label>
+            <p class="hint">What should it say instead?</p>
+            <textarea id="corrections" name="corrections" required maxlength="8000"></textarea>
+
+            <button class="btn" type="submit" id="submit-btn">Submit</button>
+            <div id="form-error" class="msg"></div>
+          </form>
+        </div>
+      </div>
+
+      <div id="thanks-panel" class="card hidden">
+        <p>We will review your information and let you know when corrections are made.  Thank you.</p>
+        <a class="btn" href="./">Send another</a>
+        <a class="btn secondary" href="../letters/">Letters</a>
+        <a class="btn secondary" href="../manuscript/">Manuscript</a>
+      </div>
+
+      <div class="nav-links">
+        <a href="../letters/">Letters</a> ·
+        <a href="../manuscript/">Manuscript</a> ·
+        <a href="../">Home</a>
+      </div>
+    </div>
+
+    <script>
+(function () {
+  var COOKIE_DAYS = 180;
+  var BASE = "/willwinn";
+  var cfg = window.CORRECTIONS_CONFIG || { repo: "papiwinn/willwinn", label: "correction", githubToken: "" };
+
+  function cookiePath() { return BASE + "/"; }
+
+  function setCookie(name, value, days) {
+    var max = days ? "; Max-Age=" + (days * 86400) : "";
+    document.cookie = name + "=" + encodeURIComponent(value) + max + "; Path=" + cookiePath() + "; SameSite=Lax";
+  }
+  function getCookie(name) {
+    var parts = document.cookie.split("; ");
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i];
+      if (p.indexOf(name + "=") === 0) return decodeURIComponent(p.slice(name.length + 1));
+    }
+    return "";
+  }
+  function clearCookie(name) {
+    document.cookie = name + "=; Max-Age=0; Path=" + cookiePath() + "; SameSite=Lax";
+  }
+  function uuid() {
+    if (crypto && crypto.randomUUID) return crypto.randomUUID();
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+      var r = (Math.random() * 16) | 0;
+      var v = c === "x" ? r : (r & 0x3) | 0x8;
+      return v.toString(16);
+    });
+  }
+  function session() {
+    return {
+      uid: getCookie("ww_uid"),
+      name: getCookie("ww_name"),
+      email: getCookie("ww_email")
+    };
+  }
+  function signedIn() {
+    var s = session();
+    return !!(s.uid && s.name && s.email);
+  }
+  function show(el) { el.classList.remove("hidden"); }
+  function hide(el) { el.classList.add("hidden"); }
+
+  var authPanel = document.getElementById("auth-panel");
+  var formPanel = document.getElementById("form-panel");
+  var thanksPanel = document.getElementById("thanks-panel");
+
+  function paint() {
+    hide(thanksPanel);
+    if (signedIn()) {
+      hide(authPanel);
+      show(formPanel);
+      document.getElementById("who").textContent = getCookie("ww_name") + " · " + getCookie("ww_email");
+    } else {
+      hide(formPanel);
+      show(authPanel);
+    }
+  }
+
+  document.getElementById("auth-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("auth-name").value.trim();
+    var email = document.getElementById("auth-email").value.trim();
+    var err = document.getElementById("auth-error");
+    err.className = "msg";
+    err.textContent = "";
+    if (!name || !email || email.indexOf("@") < 1) {
+      err.className = "msg error";
+      err.textContent = "Please enter your name and a valid email.";
+      return;
+    }
+    var uid = getCookie("ww_uid") || uuid();
+    setCookie("ww_uid", uid, COOKIE_DAYS);
+    setCookie("ww_name", name, COOKIE_DAYS);
+    setCookie("ww_email", email, COOKIE_DAYS);
+    paint();
+  });
+
+  document.getElementById("sign-out").addEventListener("click", function () {
+    clearCookie("ww_uid");
+    clearCookie("ww_name");
+    clearCookie("ww_email");
+    document.getElementById("correction-form").reset();
+    paint();
+  });
+
+  function buildBody(payload) {
+    return [
+      "<!-- uid -->" + payload.uid + "<!-- /uid -->",
+      "<!-- submitted_at -->" + payload.submitted_at + "<!-- /submitted_at -->",
+      "<!-- user_id -->" + payload.user_id + "<!-- /user_id -->",
+      "<!-- name -->" + payload.name + "<!-- /name -->",
+      "<!-- email -->" + payload.email + "<!-- /email -->",
+      "<!-- mistake -->" + payload.mistake + "<!-- /mistake -->",
+      "<!-- where -->" + payload.where + "<!-- /where -->",
+      "<!-- corrections -->" + payload.corrections + "<!-- /corrections -->",
+      "",
+      "### Submission uid",
+      payload.uid,
+      "",
+      "### Submitted at",
+      payload.submitted_at,
+      "",
+      "### Reviewer user id",
+      payload.user_id,
+      "",
+      "### Reviewer name",
+      payload.name,
+      "",
+      "### Reviewer email",
+      payload.email,
+      "",
+      "### Describe Mistake",
+      payload.mistake,
+      "",
+      "### Where it is",
+      payload.where,
+      "",
+      "### Corrections",
+      payload.corrections,
+      ""
+    ].join("\n");
+  }
+
+  function showThanks() {
+    hide(authPanel);
+    hide(formPanel);
+    show(thanksPanel);
+  }
+
+  function openIssueHandOff(title, body) {
+    var url =
+      "https://github.com/" + cfg.repo + "/issues/new" +
+      "?labels=" + encodeURIComponent(cfg.label || "correction") +
+      "&title=" + encodeURIComponent(title) +
+      "&body=" + encodeURIComponent(body);
+    window.open(url, "_blank", "noopener");
+  }
+
+  document.getElementById("correction-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!signedIn()) {
+      paint();
+      return;
+    }
+    var s = session();
+    var mistake = document.getElementById("mistake").value.trim();
+    var where = document.getElementById("where").value.trim();
+    var corrections = document.getElementById("corrections").value.trim();
+    var err = document.getElementById("form-error");
+    err.className = "msg";
+    err.textContent = "";
+    if (!mistake || !where || !corrections) {
+      err.className = "msg error";
+      err.textContent = "Please fill in all three fields.";
+      return;
+    }
+
+    var payload = {
+      uid: uuid(),
+      submitted_at: new Date().toISOString(),
+      user_id: s.uid,
+      name: s.name,
+      email: s.email,
+      mistake: mistake,
+      where: where,
+      corrections: corrections
+    };
+    var title = "[correction] " + where.slice(0, 72) + (where.length > 72 ? "…" : "");
+    var body = buildBody(payload);
+    var btn = document.getElementById("submit-btn");
+    btn.disabled = true;
+
+    function fail(msg) {
+      btn.disabled = false;
+      err.className = "msg error";
+      err.textContent = msg;
+    }
+
+    if (cfg.githubToken) {
+      fetch("https://api.github.com/repos/" + cfg.repo + "/issues", {
+        method: "POST",
+        headers: {
+          Accept: "application/vnd.github+json",
+          Authorization: "Bearer " + cfg.githubToken,
+          "Content-Type": "application/json",
+          "X-GitHub-Api-Version": "2022-11-28"
+        },
+        body: JSON.stringify({ title: title, body: body, labels: [cfg.label || "correction"] })
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("GitHub " + res.status);
+          return res.json();
+        })
+        .then(function () {
+          showThanks();
+        })
+        .catch(function () {
+          openIssueHandOff(title, body);
+          showThanks();
+        });
+      return;
+    }
+
+    openIssueHandOff(title, body);
+    showThanks();
+  });
+
+  paint();
+})();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+name: Archive site correction
+
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  archive:
+    if: contains(join(github.event.issue.labels.*.name, ','), 'correction')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write inbox JSON from issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const issue = context.payload.issue;
+            const body = issue.body || '';
+
+            function block(name) {
+              const re = new RegExp('<!--\\s*' + name + '\\s*-->([\\s\\S]*?)<!--\\s*/' + name + '\\s*-->', 'i');
+              const m = body.match(re);
+              return m ? m[1].trim() : '';
+            }
+            function heading(label) {
+              const re = new RegExp('###\\s*' + label + '\\s*\\n([\\s\\S]*?)(?=\\n###|\\n##|$)', 'i');
+              const m = body.match(re);
+              return m ? m[1].trim() : '';
+            }
+
+            const dir = 'corrections/inbox';
+            fs.mkdirSync(dir, { recursive: true });
+            const file = path.join(dir, `${issue.number}.json`);
+            const record = {
+              uid: block('uid') || heading('Submission uid') || `issue-${issue.number}`,
+              submitted_at: block('submitted_at') || heading('Submitted at') || issue.created_at,
+              user_id: block('user_id') || heading('Reviewer user id') || '',
+              name: block('name') || heading('Reviewer name') || issue.user.login,
+              email: block('email') || heading('Reviewer email') || '',
+              mistake: block('mistake') || heading('Describe Mistake') || '',
+              where: block('where') || heading('Where it is') || '',
+              corrections: block('corrections') || heading('Corrections') || '',
+              issue_number: issue.number,
+              issue_url: issue.html_url,
+              issue_title: issue.title,
+            };
+            fs.writeFileSync(file, JSON.stringify(record, null, 2) + '\n');
+            console.log('Wrote', file);
+
+      - name: Commit inbox file
+        run: |
+          git config user.name "corrections-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add corrections/inbox/
+          if git diff --staged --quiet; then
+            echo "No inbox change"
+            exit 0
+          fi
+          git commit -m "Archive correction #${{ github.event.issue.number }}"
+          git push

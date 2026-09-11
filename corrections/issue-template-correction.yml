@@ -1,0 +1,56 @@
+name: Site correction
+description: Reader correction from the letters / manuscript form
+title: "[correction] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: "Structured fields from the site form (or fill in manually)."
+  - type: input
+    id: uid
+    attributes:
+      label: Submission uid
+    validations:
+      required: false
+  - type: input
+    id: submitted_at
+    attributes:
+      label: Submitted at (UTC)
+    validations:
+      required: false
+  - type: input
+    id: user_id
+    attributes:
+      label: Reviewer user id (cookie)
+    validations:
+      required: false
+  - type: input
+    id: name
+    attributes:
+      label: Reviewer name
+    validations:
+      required: true
+  - type: input
+    id: email
+    attributes:
+      label: Reviewer email
+    validations:
+      required: true
+  - type: textarea
+    id: mistake
+    attributes:
+      label: Describe Mistake
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where it is
+    validations:
+      required: true
+  - type: textarea
+    id: corrections
+    attributes:
+      label: Corrections
+    validations:
+      required: true
