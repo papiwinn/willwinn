@@ -172,19 +172,59 @@
   function safeReturnUrl() {
     var params = new URLSearchParams(location.search);
     var from = params.get("from") || "";
-    if (!from) return "../letters/";
-    try {
-      if (/^https?:\/\//i.test(from)) {
-        var u = new URL(from);
-        if (u.origin !== location.origin) return "../letters/";
-        return u.pathname + u.search + u.hash;
+    var lettersBase = "../letters/";
+
+    function sitePrefix() {
+      // Custom domain or GitHub Pages project path: /willwinn/...
+      if (location.pathname === "/willwinn" || location.pathname.indexOf("/willwinn/") === 0) {
+        return "/willwinn";
       }
-    } catch (e) {
-      return "../letters/";
+      return "";
     }
-    if (from.indexOf("://") >= 0 || from.indexOf("..") >= 0) return "../letters/";
-    if (from.charAt(0) === "/") return from;
-    return "../letters/" + from.replace(/^\.\//, "");
+
+    function allowPath(path) {
+      if (!path) return "";
+      try {
+        if (/^https?:\/\//i.test(path)) {
+          var u = new URL(path);
+          if (u.origin !== location.origin) return "";
+          path = u.pathname + u.search + u.hash;
+        }
+      } catch (e) {
+        return "";
+      }
+      if (path.indexOf("://") >= 0) return "";
+      if (path.split("/").indexOf("..") >= 0) return "";
+
+      // Absolute path on this host
+      if (path.charAt(0) === "/") {
+        var prefix = sitePrefix();
+        // /letters/... on a /willwinn site → /willwinn/letters/...
+        if (prefix && path.indexOf(prefix + "/") !== 0 && path.indexOf("/letters/") === 0) {
+          path = prefix + path;
+        }
+        return path;
+      }
+
+      // Bare filename from list pages: people.html, those-who-served.html, index.html
+      path = path.replace(/^\.\//, "").replace(/^letters\//, "");
+      return lettersBase + path;
+    }
+
+    var resolved = allowPath(from);
+    if (resolved) return resolved;
+
+    try {
+      if (document.referrer) {
+        var r = new URL(document.referrer);
+        if (r.origin === location.origin) {
+          var refPath = r.pathname + r.search + r.hash;
+          if (refPath.indexOf("/stories") === -1) return refPath;
+        }
+      }
+    } catch (e2) {}
+
+    return lettersBase;
   }
 
   var returnUrl = safeReturnUrl();
