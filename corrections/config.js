@@ -1,20 +1,21 @@
-/* Corrections + stories form config (GitHub Pages — no secrets in this file).
+/* Corrections + stories + photos config (GitHub Pages — no secrets here).
  *
- * Active setup: FormSubmit → ownerEmail below.
- * Leave formEndpoint and web3formsKey empty so FormSubmit is used.
+ * Corrections / stories (text):
+ *   ownerEmail → FormSubmit email inbox (works for text fields).
  *
- * First submission to a new ownerEmail sends a confirmation link to that
- * address — open the email and click Activate once. After that, corrections
- * and “Add to the Story” both arrive as email (and in FormSubmit’s log if
- * you create an account).
+ * Photos (files must not use FormSubmit AJAX — it drops attachments):
+ *   photoEndpoint → Cloudflare Worker URL (photos/upload-worker.js)
+ *   that commits the image into letters/images/ using a server-side
+ *   GITHUB_TOKEN secret.
  *
- * Other options (only one path should be filled):
- *   formEndpoint  — Formspree / Getform / Worker URL
- *   web3formsKey  — Web3Forms public access key
- *   ownerEmail    — FormSubmit (https://formsubmit.co)
+ * Until photoEndpoint is set, the photo form falls back to a non-AJAX
+ * FormSubmit POST (files can attach to email) but will NOT write into
+ * the repo automatically.
  */
 window.CORRECTIONS_CONFIG = {
   formEndpoint: "",
   web3formsKey: "",
-  ownerEmail: "papiwinn@gmail.com"
+  ownerEmail: "papiwinn@gmail.com",
+  /* Paste Worker URL after deploy, e.g. "https://willwinn-photos.your-subdomain.workers.dev" */
+  photoEndpoint: ""
 };

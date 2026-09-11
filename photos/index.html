@@ -179,7 +179,7 @@
 (function () {
   var COOKIE_DAYS = 180;
   var STORAGE_KEY = "willwinn_reviewer";
-  var cfg = window.CORRECTIONS_CONFIG || { formEndpoint: "", web3formsKey: "", ownerEmail: "" };
+  var cfg = window.CORRECTIONS_CONFIG || { formEndpoint: "", web3formsKey: "", ownerEmail: "", photoEndpoint: "" };
   var mem = null;
   var MAX_BYTES = 5 * 1024 * 1024;
 
@@ -380,15 +380,18 @@
     paint();
   });
 
-  function configuredEndpoint() {
-    if (cfg.formEndpoint && String(cfg.formEndpoint).trim()) {
-      return { type: "endpoint", url: String(cfg.formEndpoint).trim() };
-    }
-    if (cfg.web3formsKey && String(cfg.web3formsKey).trim()) {
-      return { type: "web3forms", key: String(cfg.web3formsKey).trim() };
+  function photoDest() {
+    // Only photoEndpoint (Worker) reliably commits files into letters/images/.
+    // Do not reuse formEndpoint — that is for text forms and often strips files.
+    if (cfg.photoEndpoint && String(cfg.photoEndpoint).trim()) {
+      return { type: "worker", url: String(cfg.photoEndpoint).trim() };
     }
     if (cfg.ownerEmail && String(cfg.ownerEmail).trim()) {
-      return { type: "formsubmit", url: "https://formsubmit.co/ajax/" + encodeURIComponent(String(cfg.ownerEmail).trim()) };
+      // Non-AJAX FormSubmit — AJAX drops file attachments
+      return {
+        type: "formsubmit_form",
+        url: "https://formsubmit.co/" + encodeURIComponent(String(cfg.ownerEmail).trim())
+      };
     }
     return null;
   }
@@ -400,6 +403,21 @@
     setTimeout(function () {
       location.href = returnUrl;
     }, 4500);
+  }
+
+  function thanksPageUrl() {
+    // Land on this page's thank-you state via hash, then JS can show panel + return
+    var u = new URL(location.href);
+    u.searchParams.set("from", new URLSearchParams(location.search).get("from") || "");
+    u.hash = "thanks";
+    return u.pathname + u.search + u.hash;
+  }
+
+  var skipPaintForThanks = false;
+  // If FormSubmit redirected back with #thanks, show confirmation
+  if (location.hash === "#thanks") {
+    skipPaintForThanks = true;
+    showThanks();
   }
 
   document.getElementById("photo-form").addEventListener("submit", function (e) {
@@ -431,10 +449,10 @@
       return;
     }
 
-    var dest = configuredEndpoint();
+    var dest = photoDest();
     if (!dest) {
       err.className = "msg error";
-      err.textContent = "Photo inbox is not connected yet. Set ownerEmail in corrections/config.js.";
+      err.textContent = "Photo upload is not connected yet. Set photoEndpoint in corrections/config.js (see photos/README.md).";
       return;
     }
 
@@ -446,55 +464,93 @@
       err.textContent = msg;
     }
 
-    var fd = new FormData();
-    fd.append("form_type", "add_a_photo");
-    fd.append("uid", uuid());
-    fd.append("submitted_at", new Date().toISOString());
-    fd.append("user_id", s.uid);
-    fd.append("name", s.name);
-    fd.append("email", s.email);
-    fd.append("person_name", personName);
-    fd.append("photo_date", photoDate);
-    fd.append("photo_location", photoLocation);
-    fd.append("attachment", file, file.name);
+    var uid = uuid();
+    var submittedAt = new Date().toISOString();
 
-    var url;
-    if (dest.type === "web3forms") {
-      url = "https://api.web3forms.com/submit";
-      fd.append("access_key", dest.key);
-      fd.append("subject", "[willwinn photo] " + personName.slice(0, 72));
-      fd.append("from_name", s.name);
-    } else if (dest.type === "formsubmit") {
-      url = dest.url;
-      fd.append("_subject", "[willwinn photo] " + personName.slice(0, 72));
-    } else {
-      url = dest.url;
-      fd.append("_subject", "[willwinn photo] " + personName.slice(0, 72));
+    // Preferred: Worker commits file into letters/images/ on main
+    if (dest.type === "worker") {
+      var fd = new FormData();
+      fd.append("form_type", "add_a_photo");
+      fd.append("uid", uid);
+      fd.append("submitted_at", submittedAt);
+      fd.append("user_id", s.uid);
+      fd.append("name", s.name);
+      fd.append("email", s.email);
+      fd.append("person_name", personName);
+      fd.append("photo_date", photoDate);
+      fd.append("photo_location", photoLocation);
+      fd.append("attachment", file, file.name);
+
+      fetch(dest.url, { method: "POST", body: fd, headers: { Accept: "application/json" } })
+        .then(function (res) {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          var ct = res.headers.get("content-type") || "";
+          if (ct.indexOf("application/json") >= 0) {
+            return res.json().then(function (j) {
+              if (j && (j.ok === false || j.success === false)) {
+                throw new Error(j.message || j.error || "Submit rejected");
+              }
+              return j;
+            });
+          }
+          return null;
+        })
+        .then(function () { showThanks(); })
+        .catch(function (ex) {
+          fail("Could not upload your photo (" + (ex && ex.message ? ex.message : "network") + "). Please try again.");
+        });
+      return;
     }
 
-    // Do not set Content-Type — browser adds multipart boundary
-    fetch(url, { method: "POST", body: fd, headers: { Accept: "application/json" } })
-      .then(function (res) {
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        var ct = res.headers.get("content-type") || "";
-        if (ct.indexOf("application/json") >= 0) {
-          return res.json().then(function (j) {
-            if (j && (j.ok === false || j.success === false)) {
-              throw new Error(j.message || j.error || "Submit rejected");
-            }
-            return j;
-          });
-        }
-        return null;
-      })
-      .then(function () { showThanks(); })
-      .catch(function (ex) {
-        fail("Could not send your photo (" + (ex && ex.message ? ex.message : "network") + "). Please try again.");
-      });
+    // Fallback: classic FormSubmit POST (NOT /ajax/) so the file can attach to email.
+    // Browser navigates away; _next brings them back to #thanks on this page.
+    var form = document.createElement("form");
+    form.method = "POST";
+    form.action = dest.url;
+    form.enctype = "multipart/form-data";
+    form.style.display = "none";
+
+    function add(name, value) {
+      var input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      form.appendChild(input);
+    }
+    add("_subject", "[willwinn photo] " + personName.slice(0, 72));
+    add("_next", location.origin + thanksPageUrl());
+    add("_captcha", "false");
+    add("form_type", "add_a_photo");
+    add("uid", uid);
+    add("submitted_at", submittedAt);
+    add("user_id", s.uid);
+    add("name", s.name);
+    add("email", s.email);
+    add("person_name", personName);
+    add("photo_date", photoDate);
+    add("photo_location", photoLocation);
+
+    // Move the file input into the temp form (clone + reassign files via DataTransfer)
+    var fileField = document.createElement("input");
+    fileField.type = "file";
+    fileField.name = "attachment";
+    fileField.required = true;
+    try {
+      var dt = new DataTransfer();
+      dt.items.add(file);
+      fileField.files = dt.files;
+    } catch (err2) {
+      fail("This browser could not attach the file for email upload. Please use a current Chrome/Firefox/Safari, or ask the site owner to set photoEndpoint.");
+      return;
+    }
+    form.appendChild(fileField);
+    document.body.appendChild(form);
+    form.submit();
   });
 
-  paint();
+  if (!skipPaintForThanks) paint();
 })();
+
     </script>
   </body>
 </html>

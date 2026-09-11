@@ -1,13 +1,24 @@
 # Letter / story photos
 
-Reader-submitted photos arrive by **email** (FormSubmit → `papiwinn@gmail.com`) from the [Add a Photo](../../photos/) form. They are **not** written into this folder automatically.
+Reader photos from [Add a Photo](../../photos/).
 
-## How to get a photo into the site
+## Automatic path (preferred)
 
-1. Open the FormSubmit email (attachment included).
-2. Save the image file into this directory (`letters/images/`).
-3. Suggested filename: `yyyymmdd-short-name.jpg` (use the photo date from the form when known; otherwise the submission date). Append `a`, `b`, `c` if needed.
-4. Commit/push the file on `main` so it appears on https://willwinn.xyz/willwinn/
-5. Link it from the manuscript, people page, or Those Who Served entry as appropriate.
+When `photoEndpoint` in `corrections/config.js` points at the Cloudflare Worker (`photos/upload-worker.js`), uploads are committed here on `main` as:
 
-Keep originals; prefer JPEG or PNG under ~5 MB when possible (FormSubmit free tier has attachment limits).
+`yyyymmdd-person-location.jpg` (or `.png` / `.webp` / `.gif`)
+
+Collision suffixes: `a`, `b`, `c`, … then a short uid.  
+A log line is appended to `submissions.jsonl` (best-effort).
+
+Link images from the manuscript, people page, or Those Who Served as you review them.
+
+## Manual path (FormSubmit email fallback)
+
+Until the Worker is configured, FormSubmit may email the file to `papiwinn@gmail.com` (non-AJAX only). Then:
+
+1. Save the attachment into this folder
+2. Use the same naming convention
+3. Commit on `main`
+
+Do **not** rely on FormSubmit AJAX for files — it strips attachments.

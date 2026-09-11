@@ -73,6 +73,9 @@ After a successful submit:
 
 Successful submits are also appended to `localStorage` key `willwinn_corrections_outbox` on the reviewer’s browser (backup only — not visible to the owner).
 
-## Shared with “Add to the Story”
+## Shared with stories and photos
 
-The stories form at [`../stories/`](../stories/) and the photo form at [`../photos/`](../photos/) load this same `config.js`, so one Formspree endpoint receives both corrections and story submissions (`form_type` distinguishes them).
+[`../stories/`](../stories/) and [`../photos/`](../photos/) load this same `config.js`.
+
+- **Corrections / stories (text):** `ownerEmail` / `formEndpoint` / `web3formsKey` as above.
+- **Photos (files):** set **`photoEndpoint`** to the Cloudflare Worker URL from [`../photos/upload-worker.js`](../photos/upload-worker.js). That Worker holds `GITHUB_TOKEN` and commits into `letters/images/`. Do **not** use FormSubmit AJAX for photo files (attachments are dropped). See [`../photos/README.md`](../photos/README.md).
