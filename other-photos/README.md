@@ -10,46 +10,41 @@ This page is **not** linked from home, letters, manuscript, or public nav. Famil
 
 ## Hosting note
 
-- **willwinn.xyz** is a Cloudflare Worker () with static assets at the **site root** (not ).
-- **papiwinn.github.io/willwinn/** is GitHub Pages from the same  branch (path prefix ).
-- Large photo trees (, ) are listed in repo-root  so Worker deploys stay under Cloudflare’s free size limit. The album loads those JPGs from jsDelivr ().
+- **willwinn.xyz** is a Cloudflare Worker (`willwinn`) with static assets at the **site root** (not under `/willwinn/`).
+- **papiwinn.github.io/willwinn/** is GitHub Pages from the same `main` branch (URL path prefix `/willwinn/`).
+- Large photo trees (`other-photos/images/`, `manuscript/images/scans-cleaned/`) are listed in repo-root `.assetsignore` so Worker deploys stay under Cloudflare’s free size limit. The album loads those JPGs from jsDelivr (`cdn.jsdelivr.net/gh/papiwinn/willwinn@main/...`).
 
-If  404s, Cloudflare Workers Builds is failing or stale — check the **Workers Builds: willwinn** check on GitHub, then Retry deployment in the Cloudflare dashboard. Until then, share the github.io URL.
+If https://willwinn.xyz/other-photos/ returns 404, Cloudflare Workers Builds is failing or stale — check the **Workers Builds: willwinn** check on the latest GitHub commit, then use Retry deployment in the Cloudflare dashboard. Until then, share the github.io URL above.
 
 ## Auth
 
 Same reviewer session as corrections / stories / photos:
 
--  key 
-- cookies , , 
-- loads 
+- `localStorage` key `willwinn_reviewer`
+- cookies `ww_uid`, `ww_name`, `ww_email`
+- loads `../corrections/config.js`
 
 ## Files
 
 | Path | Role |
 |------|------|
-|  | Gallery + notes UI |
-|  | Photo list (id, file, title) |
-|  | JPG files (CDN on xyz; also on GitHub Pages) |
-|  | All family notes (array); Worker appends |
-|  | Standalone Worker recipe (also merged into  at ) |
+| `index.html` | Gallery + notes UI |
+| `catalog.json` | Photo list (id, file, title) |
+| `images/` | JPG files (CDN on xyz; also on GitHub Pages) |
+| `notes.json` | All family notes (array); Worker appends |
+| `notes-worker.js` | Standalone Worker recipe (also in `photos/upload-worker.js` at `/notes`) |
 
 ## Notes persistence (required)
 
 FormSubmit cannot show notes on the page. Notes need the Cloudflare Worker:
 
-1. Re-paste **** into Worker **icy-dust-9cb5** (includes  route).
-2. Same secret:  (Contents Read/Write on ).
-3. In  set:
-   - : 
-   - (optional) leave  as the Worker root URL
+1. Re-paste **`photos/upload-worker.js`** into Worker **icy-dust-9cb5** (includes `/notes` route).
+2. Same secret: `GITHUB_TOKEN` (Contents Read/Write on `papiwinn/willwinn`).
+3. In `corrections/config.js` set:
+   - `albumNotesEndpoint`: `https://icy-dust-9cb5.papiwinn.workers.dev/notes`
 
-Until step 1–3, the album still shows photos, but saving notes will fail.
+Until that redeploy, the album can show photos, but saving notes will fail.
 
 ## Adding photos
 
-Add JPG files under  (they stay on GitHub; Worker deploy ignores that folder), then append an entry to :
-
-
-
-uid=1000(box) gid=1000(box) groups=1000(box) should match the filename stem (no extension) so notes stay tied to the picture.
+Add JPG files under `images/` (they stay on GitHub; Worker deploy ignores that folder via `.assetsignore`), then append an entry to `catalog.json` with `id` matching the filename stem.
