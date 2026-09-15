@@ -18,11 +18,30 @@
       .container { max-width: 1100px; margin: 0 auto; }
       h1 { font-size: 2rem; margin: 0 0 8px; font-weight: 700; }
       .subtitle { color: #e94560; font-size: 1.05rem; margin-bottom: 12px; }
-      .private-hint {
-        font-size: 0.88rem;
-        opacity: 0.75;
+      .how-to {
+        font-size: 0.95rem;
         margin: 0 0 28px;
-        line-height: 1.45;
+        padding: 16px 18px 14px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        line-height: 1.5;
+      }
+      .how-to h2 {
+        font-size: 1.05rem;
+        margin: 0 0 10px;
+        color: #e94560;
+        font-weight: 700;
+      }
+      .how-to ol {
+        margin: 0;
+        padding-left: 1.25rem;
+      }
+      .how-to li {
+        margin: 0 0 8px;
+      }
+      .how-to li:last-child {
+        margin-bottom: 0;
       }
       .card {
         background: rgba(255, 255, 255, 0.06);
@@ -186,7 +205,16 @@
     <div class="container">
       <h1>Family photos</h1>
       <div class="subtitle">Private album</div>
-      <p class="private-hint">Shared by link only — not linked from the public site. Sign in with your name and email to view pictures and add what you know.</p>
+      <div class="how-to">
+        <h2>How to use this album</h2>
+        <ol>
+          <li><strong>First Time Here:</strong> Enter email and name (this is just so I can keep up with who is adding comments).</li>
+          <li>Browse the photos to see if you recognize the people. If you do, click on the picture.</li>
+          <li>Add your comments.</li>
+          <li>Click <strong>Save note</strong>.</li>
+          <li>Click <strong>All photos</strong> to continue browsing.</li>
+        </ol>
+      </div>
 
       <div id="auth-panel" class="card">
         <form id="auth-form">
@@ -209,7 +237,7 @@
           <div id="grid" class="grid"></div>
         </div>
         <div id="detail-view" class="detail hidden">
-          <button type="button" class="btn secondary" id="back-to-grid" style="margin: 0 0 16px; margin-left: 0;">← All photos</button>
+          <button type="button" class="btn secondary" id="back-to-grid" style="margin: 0 0 16px; margin-left: 0;">All photos</button>
           <img id="detail-img" alt="" />
           <h2 id="detail-title"></h2>
           <h3 style="font-size:1rem;margin:18px 0 10px;color:#e94560;">What people know</h3>
@@ -218,7 +246,7 @@
           <form id="note-form" class="card" style="margin-top:8px;">
             <label for="note-text">Add what you know about this picture</label>
             <textarea id="note-text" required maxlength="4000" placeholder="Who is in it, when it was taken, where, or any story you remember…"></textarea>
-            <button class="btn" type="submit" id="note-btn">Save note</button>
+            <button class="btn" type="submit" id="note-btn">Save Note</button>
             <div id="note-msg" class="msg"></div>
           </form>
         </div>
