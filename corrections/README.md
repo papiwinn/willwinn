@@ -79,3 +79,7 @@ Successful submits are also appended to `localStorage` key `willwinn_corrections
 
 - **Corrections / stories (text):** `ownerEmail` / `formEndpoint` / `web3formsKey` as above.
 - **Photos (files):** set **`photoEndpoint`** to the Cloudflare Worker URL from [`../photos/upload-worker.js`](../photos/upload-worker.js). That Worker holds `GITHUB_TOKEN` and commits into `letters/images/`. Do **not** use FormSubmit AJAX for photo files (attachments are dropped). See [`../photos/README.md`](../photos/README.md).
+
+## Private family album (`other-photos/`)
+
+Not linked from the public site. Uses `albumNotesEndpoint` in this `config.js` (Worker `/notes` on icy-dust). See [`../other-photos/README.md`](../other-photos/README.md).

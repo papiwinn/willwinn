@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Family photos – Will Winn</title>
+    <script src="../corrections/config.js"></script>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: system-ui, -apple-system, sans-serif;
+        color: white;
+        padding: 40px 20px;
+      }
+      .container { max-width: 1100px; margin: 0 auto; }
+      h1 { font-size: 2rem; margin: 0 0 8px; font-weight: 700; }
+      .subtitle { color: #e94560; font-size: 1.05rem; margin-bottom: 12px; }
+      .private-hint {
+        font-size: 0.88rem;
+        opacity: 0.75;
+        margin: 0 0 28px;
+        line-height: 1.45;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 22px 20px 20px;
+      }
+      label {
+        display: block;
+        font-size: 0.92rem;
+        font-weight: 600;
+        margin: 0 0 6px;
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 14px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(0, 0, 0, 0.25);
+        color: white;
+        font: inherit;
+        margin-bottom: 16px;
+      }
+      textarea { min-height: 90px; resize: vertical; }
+      input:focus, textarea:focus {
+        outline: none;
+        border-color: #e94560;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 22px;
+        background: #e94560;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .btn:hover { background: #ff6b6b; }
+      .btn.secondary {
+        background: transparent;
+        border: 2px solid #e94560;
+        margin-left: 10px;
+      }
+      .btn.secondary:hover { background: rgba(233, 69, 96, 0.15); }
+      .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+      .welcome {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 18px;
+        padding: 12px 14px;
+        background: rgba(233, 69, 96, 0.12);
+        border: 1px solid rgba(233, 69, 96, 0.45);
+        border-radius: 8px;
+        font-size: 0.95rem;
+      }
+      .msg { margin-top: 14px; padding: 12px 14px; border-radius: 8px; display: none; }
+      .msg.error {
+        display: block;
+        background: rgba(233, 69, 96, 0.2);
+        border: 1px solid #e94560;
+      }
+      .msg.ok {
+        display: block;
+        background: rgba(46, 204, 113, 0.15);
+        border: 1px solid rgba(46, 204, 113, 0.5);
+      }
+      .hidden { display: none !important; }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 14px;
+      }
+      .thumb {
+        background: rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        padding: 0;
+        text-align: left;
+        color: inherit;
+        font: inherit;
+      }
+      .thumb:hover { border-color: #e94560; }
+      .thumb img {
+        display: block;
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        background: #111;
+      }
+      .thumb .cap {
+        padding: 8px 10px 10px;
+        font-size: 0.78rem;
+        line-height: 1.35;
+        opacity: 0.9;
+      }
+      .thumb .note-count {
+        color: #e94560;
+        font-size: 0.72rem;
+        margin-top: 4px;
+      }
+      .detail {
+        margin-top: 8px;
+      }
+      .detail img {
+        display: block;
+        width: 100%;
+        max-height: 70vh;
+        object-fit: contain;
+        background: #111;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .detail h2 {
+        font-size: 1.25rem;
+        margin: 16px 0 8px;
+      }
+      .notes-list {
+        list-style: none;
+        margin: 0 0 18px;
+        padding: 0;
+      }
+      .notes-list li {
+        background: rgba(0, 0, 0, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin-bottom: 10px;
+      }
+      .notes-list .who {
+        font-size: 0.82rem;
+        color: #e94560;
+        margin-bottom: 6px;
+      }
+      .notes-list .when {
+        opacity: 0.55;
+        font-size: 0.75rem;
+        margin-left: 8px;
+        font-weight: 400;
+        color: white;
+      }
+      .notes-list .body {
+        white-space: pre-wrap;
+        line-height: 1.45;
+        font-size: 0.95rem;
+      }
+      .empty-notes { opacity: 0.65; font-size: 0.92rem; margin: 0 0 16px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Family photos</h1>
+      <div class="subtitle">Private album</div>
+      <p class="private-hint">Shared by link only — not linked from the public site. Sign in with your name and email to view pictures and add what you know.</p>
+
+      <div id="auth-panel" class="card">
+        <form id="auth-form">
+          <label for="auth-name">Your name</label>
+          <input id="auth-name" type="text" autocomplete="name" required />
+          <label for="auth-email">Email</label>
+          <input id="auth-email" type="email" autocomplete="email" required />
+          <button class="btn" type="submit">Sign in</button>
+          <div id="auth-error" class="msg"></div>
+        </form>
+      </div>
+
+      <div id="gallery-panel" class="hidden">
+        <div class="welcome">
+          <span id="who"></span>
+          <button type="button" class="btn secondary" id="sign-out">Sign out</button>
+        </div>
+        <div id="load-error" class="msg"></div>
+        <div id="grid-view">
+          <div id="grid" class="grid"></div>
+        </div>
+        <div id="detail-view" class="detail hidden">
+          <button type="button" class="btn secondary" id="back-to-grid" style="margin: 0 0 16px; margin-left: 0;">← All photos</button>
+          <img id="detail-img" alt="" />
+          <h2 id="detail-title"></h2>
+          <h3 style="font-size:1rem;margin:18px 0 10px;color:#e94560;">What people know</h3>
+          <p id="empty-notes" class="empty-notes hidden">No notes yet — be the first to add what you remember.</p>
+          <ul id="notes-list" class="notes-list"></ul>
+          <form id="note-form" class="card" style="margin-top:8px;">
+            <label for="note-text">Add what you know about this picture</label>
+            <textarea id="note-text" required maxlength="4000" placeholder="Who is in it, when it was taken, where, or any story you remember…"></textarea>
+            <button class="btn" type="submit" id="note-btn">Save note</button>
+            <div id="note-msg" class="msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+(function () {
+  var COOKIE_DAYS = 180;
+  var STORAGE_KEY = "willwinn_reviewer";
+  var cfg = window.CORRECTIONS_CONFIG || {
+    formEndpoint: "", web3formsKey: "", ownerEmail: "", photoEndpoint: "", albumNotesEndpoint: ""
+  };
+  var mem = null;
+  var catalog = [];
+  var notes = [];
+  var currentId = null;
+
+  function uuid() {
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+      var r = (Math.random() * 16) | 0;
+      return (c === "x" ? r : (r & 0x3) | 0x8).toString(16);
+    });
+  }
+  function cookiePath() {
+    var p = location.pathname || "/";
+    if (p.indexOf("/willwinn/") === 0) return "/willwinn";
+    if (p === "/willwinn") return "/willwinn";
+    return "/";
+  }
+  function setCookie(name, value, days) {
+    var max = days * 24 * 60 * 60;
+    document.cookie = name + "=" + encodeURIComponent(value) + ";path=" + cookiePath() + ";max-age=" + max + ";SameSite=Lax";
+  }
+  function getCookie(name) {
+    var m = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([.$?*|{}()[\]\\/+^])/g, "\\$1") + "=([^;]*)"));
+    return m ? decodeURIComponent(m[1]) : "";
+  }
+  function clearCookie(name) {
+    document.cookie = name + "=;path=" + cookiePath() + ";max-age=0;SameSite=Lax";
+  }
+  function readStorage() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      var o = JSON.parse(raw);
+      if (o && o.uid && o.name && o.email) return o;
+    } catch (e) {}
+    return null;
+  }
+  function writeStorage(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); } catch (e) {}
+  }
+  function clearStorage() {
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+  }
+  function session() {
+    if (mem && mem.uid && mem.name && mem.email) return mem;
+    var ls = readStorage();
+    if (ls) { mem = ls; return mem; }
+    var c = { uid: getCookie("ww_uid"), name: getCookie("ww_name"), email: getCookie("ww_email") };
+    if (c.uid && c.name && c.email) {
+      mem = c;
+      writeStorage(c);
+      return mem;
+    }
+    return { uid: "", name: "", email: "" };
+  }
+  function signedIn() {
+    var s = session();
+    return !!(s.uid && s.name && s.email);
+  }
+  function persist(s) {
+    mem = s;
+    writeStorage(s);
+    try {
+      setCookie("ww_uid", s.uid, COOKIE_DAYS);
+      setCookie("ww_name", s.name, COOKIE_DAYS);
+      setCookie("ww_email", s.email, COOKIE_DAYS);
+    } catch (e) {}
+  }
+  function clearSession() {
+    mem = null;
+    clearStorage();
+    clearCookie("ww_uid");
+    clearCookie("ww_name");
+    clearCookie("ww_email");
+  }
+  function show(el) { el.classList.remove("hidden"); }
+  function hide(el) { el.classList.add("hidden"); }
+
+  function notesEndpoint() {
+    if (cfg.albumNotesEndpoint && String(cfg.albumNotesEndpoint).trim()) {
+      return String(cfg.albumNotesEndpoint).trim().replace(/\/$/, "");
+    }
+    if (cfg.photoEndpoint && String(cfg.photoEndpoint).trim()) {
+      return String(cfg.photoEndpoint).trim().replace(/\/$/, "") + "/notes";
+    }
+    return "";
+  }
+
+  function notesFor(photoId) {
+    return notes.filter(function (n) { return n.photo_id === photoId; });
+  }
+
+  function formatWhen(iso) {
+    if (!iso) return "";
+    try {
+      var d = new Date(iso);
+      if (isNaN(d.getTime())) return iso;
+      return d.toLocaleString();
+    } catch (e) {
+      return iso;
+    }
+  }
+
+  function renderGrid() {
+    var grid = document.getElementById("grid");
+    grid.innerHTML = "";
+    catalog.forEach(function (item) {
+      var n = notesFor(item.id).length;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "thumb";
+      btn.setAttribute("data-id", item.id);
+      btn.innerHTML =
+        '<img src="images/' + encodeURIComponent(item.file) + '" alt="" loading="lazy" />' +
+        '<div class="cap">' + escapeHtml(item.title) +
+        (n ? '<div class="note-count">' + n + " note" + (n === 1 ? "" : "s") + "</div>" : "") +
+        "</div>";
+      btn.addEventListener("click", function () { openDetail(item.id); });
+      grid.appendChild(btn);
+    });
+  }
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function openDetail(id) {
+    var item = null;
+    for (var i = 0; i < catalog.length; i++) {
+      if (catalog[i].id === id) { item = catalog[i]; break; }
+    }
+    if (!item) return;
+    currentId = id;
+    document.getElementById("detail-img").src = "images/" + item.file;
+    document.getElementById("detail-img").alt = item.title;
+    document.getElementById("detail-title").textContent = item.title;
+    renderNotesList(id);
+    document.getElementById("note-text").value = "";
+    var msg = document.getElementById("note-msg");
+    msg.className = "msg";
+    msg.textContent = "";
+    hide(document.getElementById("grid-view"));
+    show(document.getElementById("detail-view"));
+    window.scrollTo(0, 0);
+  }
+
+  function renderNotesList(photoId) {
+    var list = document.getElementById("notes-list");
+    var empty = document.getElementById("empty-notes");
+    var items = notesFor(photoId).slice().sort(function (a, b) {
+      return String(a.submitted_at || "").localeCompare(String(b.submitted_at || ""));
+    });
+    list.innerHTML = "";
+    if (!items.length) {
+      show(empty);
+      return;
+    }
+    hide(empty);
+    items.forEach(function (n) {
+      var li = document.createElement("li");
+      li.innerHTML =
+        '<div class="who">' + escapeHtml(n.name || "Someone") +
+        '<span class="when">' + escapeHtml(formatWhen(n.submitted_at)) + "</span></div>" +
+        '<div class="body">' + escapeHtml(n.text || "") + "</div>";
+      list.appendChild(li);
+    });
+  }
+
+  function loadCatalog() {
+    return fetch("catalog.json", { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("catalog " + r.status);
+        return r.json();
+      })
+      .then(function (data) {
+        catalog = Array.isArray(data) ? data : [];
+      });
+  }
+
+  function loadNotes() {
+    var ep = notesEndpoint();
+    if (ep) {
+      return fetch(ep, { headers: { Accept: "application/json" }, cache: "no-store" })
+        .then(function (r) {
+          if (!r.ok) throw new Error("notes " + r.status);
+          return r.json();
+        })
+        .then(function (data) {
+          notes = (data && data.notes) ? data.notes : (Array.isArray(data) ? data : []);
+        })
+        .catch(function () {
+          // Fall back to static file if Worker not redeployed yet
+          return fetch("notes.json", { cache: "no-store" })
+            .then(function (r) { return r.ok ? r.json() : []; })
+            .then(function (data) { notes = Array.isArray(data) ? data : []; });
+        });
+    }
+    return fetch("notes.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (data) { notes = Array.isArray(data) ? data : []; });
+  }
+
+  function paint() {
+    var authPanel = document.getElementById("auth-panel");
+    var galleryPanel = document.getElementById("gallery-panel");
+    if (signedIn()) {
+      hide(authPanel);
+      show(galleryPanel);
+      var s = session();
+      document.getElementById("who").textContent = s.name + " · " + s.email;
+      var err = document.getElementById("load-error");
+      err.className = "msg";
+      err.textContent = "";
+      Promise.all([loadCatalog(), loadNotes()])
+        .then(function () {
+          renderGrid();
+          if (currentId) {
+            renderNotesList(currentId);
+            renderGrid();
+          }
+        })
+        .catch(function (ex) {
+          err.className = "msg error";
+          err.textContent = "Could not load the album (" + (ex && ex.message ? ex.message : "error") + ").";
+        });
+    } else {
+      hide(galleryPanel);
+      show(authPanel);
+    }
+  }
+
+  document.getElementById("auth-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("auth-name").value.trim();
+    var email = document.getElementById("auth-email").value.trim();
+    var err = document.getElementById("auth-error");
+    err.className = "msg";
+    err.textContent = "";
+    if (!name || !email || email.indexOf("@") < 1) {
+      err.className = "msg error";
+      err.textContent = "Please enter your name and a valid email.";
+      return;
+    }
+    var prev = session();
+    persist({ uid: (prev && prev.uid) || uuid(), name: name, email: email });
+    paint();
+  });
+
+  document.getElementById("sign-out").addEventListener("click", function () {
+    clearSession();
+    currentId = null;
+    hide(document.getElementById("detail-view"));
+    show(document.getElementById("grid-view"));
+    paint();
+  });
+
+  document.getElementById("back-to-grid").addEventListener("click", function () {
+    currentId = null;
+    hide(document.getElementById("detail-view"));
+    show(document.getElementById("grid-view"));
+    renderGrid();
+  });
+
+  document.getElementById("note-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!signedIn() || !currentId) return;
+    var ep = notesEndpoint();
+    var msg = document.getElementById("note-msg");
+    var btn = document.getElementById("note-btn");
+    var text = document.getElementById("note-text").value.trim();
+    msg.className = "msg";
+    msg.textContent = "";
+    if (!text) {
+      msg.className = "msg error";
+      msg.textContent = "Please write a note first.";
+      return;
+    }
+    if (!ep) {
+      msg.className = "msg error";
+      msg.textContent = "Notes are not connected yet. The site owner needs to redeploy the Worker with /notes support and set albumNotesEndpoint (see other-photos/README.md).";
+      return;
+    }
+    var s = session();
+    btn.disabled = true;
+    fetch(ep, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        photo_id: currentId,
+        text: text,
+        uid: s.uid,
+        name: s.name,
+        email: s.email,
+        submitted_at: new Date().toISOString()
+      })
+    })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then(function (data) {
+        if (data && data.ok === false) throw new Error(data.error || "rejected");
+        if (data && Array.isArray(data.notes)) {
+          notes = data.notes;
+        } else if (data && data.note) {
+          notes = notes.concat([data.note]);
+        }
+        document.getElementById("note-text").value = "";
+        renderNotesList(currentId);
+        renderGrid();
+        msg.className = "msg ok";
+        msg.textContent = "Saved — thank you.";
+      })
+      .catch(function (ex) {
+        msg.className = "msg error";
+        msg.textContent = "Could not save (" + (ex && ex.message ? ex.message : "error") + "). If the Worker was not redeployed yet, ask William to paste the updated photos/upload-worker.js into icy-dust-9cb5.";
+      })
+      .then(function () { btn.disabled = false; });
+  });
+
+  paint();
+})();
+    </script>
+  </body>
+</html>
