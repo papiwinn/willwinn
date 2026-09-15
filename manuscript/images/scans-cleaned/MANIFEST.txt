@@ -119,3 +119,9 @@ PATHS ON BOX
   cleaned:   /workspace/scanclean/cleaned/
   manifest:  /workspace/scanclean/MANIFEST.txt
 Dad&Crew.jpg  |  1XLoxiOORyowZ5U1CWQxVpJ1jqyIhU5ID  |  manuscript/images/scans-cleaned/Dad-and-Crew.jpg  |  draft-downsample; size:3000x2346
+Family1.jpg  |  (crop of DadAndOtherFamily.jpg)  |  manuscript/images/scans-cleaned/Family1.jpg  |  from composite DadAndOtherFamily
+Family2.jpg  |  (crop of DadAndOtherFamily.jpg)  |  manuscript/images/scans-cleaned/Family2.jpg  |  from composite DadAndOtherFamily
+Family3.jpg  |  (crop of DadAndOtherFamily.jpg)  |  manuscript/images/scans-cleaned/Family3.jpg  |  from composite DadAndOtherFamily
+Family4.jpg  |  (crop of DadAndOtherFamily.jpg)  |  manuscript/images/scans-cleaned/Family4.jpg  |  from composite DadAndOtherFamily
+Family5.jpg  |  (crop of DadAndOtherFamily.jpg)  |  manuscript/images/scans-cleaned/Family5.jpg  |  from composite DadAndOtherFamily
+Family6.jpg  |  (crop of DadAndOtherFamily.jpg)  |  manuscript/images/scans-cleaned/Family6.jpg  |  from composite DadAndOtherFamily
