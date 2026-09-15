@@ -1,0 +1,5 @@
+# Cloudflare Workers static assets — free plans cap total upload size (~25 MiB).
+# Keep pages/config on the Worker; serve large photo trees from jsDelivr/GitHub.
+manuscript/images/scans-cleaned/**
+other-photos/images/**
+.git/**

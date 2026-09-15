@@ -236,6 +236,8 @@
   var catalog = [];
   var notes = [];
   var currentId = null;
+  // Images excluded from Cloudflare Worker upload (.assetsignore); load from GitHub CDN
+  var IMG_CDN = "https://cdn.jsdelivr.net/gh/papiwinn/willwinn@main/other-photos/images/";
 
   function uuid() {
     if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
@@ -346,7 +348,7 @@
       btn.className = "thumb";
       btn.setAttribute("data-id", item.id);
       btn.innerHTML =
-        '<img src="images/' + encodeURIComponent(item.file) + '" alt="" loading="lazy" />' +
+        '<img src="' + IMG_CDN + encodeURIComponent(item.file) + '" alt="" loading="lazy" />' +
         '<div class="cap">' + escapeHtml(item.title) +
         (n ? '<div class="note-count">' + n + " note" + (n === 1 ? "" : "s") + "</div>" : "") +
         "</div>";
@@ -370,7 +372,7 @@
     }
     if (!item) return;
     currentId = id;
-    document.getElementById("detail-img").src = "images/" + item.file;
+    document.getElementById("detail-img").src = IMG_CDN + item.file;
     document.getElementById("detail-img").alt = item.title;
     document.getElementById("detail-title").textContent = item.title;
     renderNotesList(id);
