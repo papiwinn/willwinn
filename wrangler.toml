@@ -1,9 +1,0 @@
-# Cloudflare Workers (static assets) for willwinn.xyz
-# Heavy image folders are listed in .assetsignore and loaded via jsDelivr in pages.
-name = "willwinn"
-compatibility_date = "2025-09-15"
-
-[assets]
-directory = "."
-binding = "ASSETS"
-not_found_handling = "404-page"
