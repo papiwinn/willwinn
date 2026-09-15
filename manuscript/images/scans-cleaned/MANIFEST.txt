@@ -1,0 +1,121 @@
+ScanClean MANIFEST
+Generated: 2026-09-15 (America/New_York)
+Source Drive folder id: 1Ccvmo3pyQWUj8WeEfWvZfsJSFaakIKqO
+Target staging path prefix: manuscript/images/scans-cleaned/
+
+SUMMARY
+  Total listed in Drive folder: 89
+  Downloaded to originals/:     89
+  Cleaned to cleaned/:          89
+  Failed/skipped:               0
+
+FORMAT: Drive title  |  Drive file id  |  cleaned relative path  |  notes
+----------------------------------------------------------------------------------------------------
+2GirlsFall42.jpg  |  1covPVQ3WJSkywz9zd5qJ42UEpmOn9vrf  |  manuscript/images/scans-cleaned/2GirlsFall42.jpg  |  size:1381x1980
+2GirlsWinter4243.jpg  |  19pEDXZqhoOPnlZU_jXmidGIcmxJztYiC  |  manuscript/images/scans-cleaned/2GirlsWinter4243.jpg  |  size:1392x1959
+3Kids.jpg  |  1ya1V_i0VKG7SO86InPwIX2H8Ln37Y8IJ  |  manuscript/images/scans-cleaned/3Kids.jpg  |  size:2550x1531
+52Seals.jpg  |  1u98kaabRny3SY0lEHBuCYCoCY5PWvCkO  |  manuscript/images/scans-cleaned/52Seals.jpg  |  crop-border; resize:3357x1838->3000x1642
+6Girls.jpg  |  13Bn10-rGGuPMVrznfOg7W0fVTMbGSy1s  |  manuscript/images/scans-cleaned/6Girls.jpg  |  crop-border; size:2496x1640
+Anthony_Czajkoski.jpg  |  1V_NoKc_Z9BlDioshnfUBQ_q9WsMqYxg3  |  manuscript/images/scans-cleaned/Anthony_Czajkoski.jpg  |  size:2558x1523
+B29_FlyingClose.jpg  |  1h7GpWXi699aGcikJrqBGnR7YCOgp5QhG  |  manuscript/images/scans-cleaned/B29_FlyingClose.jpg  |  size:2233x1408
+B29_FlyingClose2.jpg  |  1C3zWxlsx-cky4v-Gii4kY4qo_yTzejOB  |  manuscript/images/scans-cleaned/B29_FlyingClose2.jpg  |  size:2404x1457
+B29_on_Field.jpg  |  1q9Y-5RW38y_S0zrTLaNVDIg0RZKjsTf7  |  manuscript/images/scans-cleaned/B29_on_Field.jpg  |  resize:3316x1924->3000x1740
+B29_OnTheField.jpg  |  1s4EThGepGUmgafFC0pkenmcR5D7VPZcF  |  manuscript/images/scans-cleaned/B29_OnTheField.jpg  |  size:2485x1465
+B29_Squadron_above.jpg  |  15BBF_eEnMV4nfckPRlhRUow3Je9bi9o8  |  manuscript/images/scans-cleaned/B29_Squadron_above.jpg  |  resize:3309x1941->3000x1759
+B29_Squadron_Above2.jpg  |  1Y1vm7nU-joCX04MjzV3-_FlqGFsSvzX2  |  manuscript/images/scans-cleaned/B29_Squadron_Above2.jpg  |  crop-border; resize:3930x2810->3000x2145
+B29_Squadron_below.jpg  |  1SrjDu1uEcwVATZPTvDRKUvOeADziU9bm  |  manuscript/images/scans-cleaned/B29_Squadron_below.jpg  |  crop-border; resize:4027x2851->3000x2123
+B29_Squadron_UpClose.jpg  |  12dA2l4RqqOLl4JcSpmpSUaniu1PJJVcB  |  manuscript/images/scans-cleaned/B29_Squadron_UpClose.jpg  |  crop-border; resize:4034x3016->3000x2242
+B29Fying.jpg  |  1UijG7JG0YH1EZOVWrosIy2gUWO0TjX_A  |  manuscript/images/scans-cleaned/B29Fying.jpg  |  resize:3341x1900->3000x1706
+B29s_5.jpg  |  1JPeWnegkQNQruxECs_f00eRtedXeLwkx  |  manuscript/images/scans-cleaned/B29s_5.jpg  |  resize:3284x1941->3000x1773
+B29Taxi.jpg  |  1_sYKKuBqzdHrKD-WAK-X8rtLhA5-rpwb  |  manuscript/images/scans-cleaned/B29Taxi.jpg  |  size:2709x2097
+B2?.jpg  |  1udKIVxF2LOFs4IDtnAGLxcJKC-qrUHhr  |  manuscript/images/scans-cleaned/B2.jpg  |  renamed->B2.jpg; resize:3332x1916->3000x1725
+Bill_LaVaughan_ArmyUniforms.jpg  |  1rkrV-Ln1dtF1swNKDQDTpif5Rgz52Qi3  |  manuscript/images/scans-cleaned/Bill_LaVaughan_ArmyUniforms.jpg  |  size:1617x2574
+Bill_Willis_Auntie_Store.jpg  |  1yk21WZKFeq8u3STO935XkAuX422or3sp  |  manuscript/images/scans-cleaned/Bill_Willis_Auntie_Store.jpg  |  resize:2291x3550->1936x3000
+BillInez.jpg  |  1k4zFscZmDZ48pTjlqTf8EdbyMkpUG1pn  |  manuscript/images/scans-cleaned/BillInez.jpg  |  crop-border; resize:4883x5400->2712x3000
+CarrieLove.jpg  |  1wa7Uu8CdzbR7dXFZLtax6LVh5yNunWuK  |  manuscript/images/scans-cleaned/CarrieLove.jpg  |  resize:10208x14032->2182x3000
+ChickensWinter1942-43.jpg  |  1lm292_Iy-_b5-c1MIN_B-SjV5mHEb8B0  |  manuscript/images/scans-cleaned/ChickensWinter1942-43.jpg  |  size:2607x1531
+CityOfCharlottesville.jpg  |  1XVqey6bzta9n84HYcR7nMV9tg3WyorfR  |  manuscript/images/scans-cleaned/CityOfCharlottesville.jpg  |  resize:3341x1957->3000x1757
+CoolOldDude.jpg  |  15QNRBBDJjT84b_Intb0FDIqKSr79N7O7  |  manuscript/images/scans-cleaned/CoolOldDude.jpg  |  deskew:-1.03deg; size:2070x1613
+Dad332.jpg  |  1guO0hIhWW0D1_nZEb9TuRhD7p7lEb5Pf  |  manuscript/images/scans-cleaned/Dad332.jpg  |  size:1971x2924
+Dad_KentSmith.jpg  |  1Cv8hVyYhX_VcMWVqAvH1qXsl5P7bwIK8  |  manuscript/images/scans-cleaned/Dad_KentSmith.jpg  |  size:1509x2457
+Dad_Sis.jpg  |  1-EzkQ_hrjn6WT_q5FcjHeF1gnTrv0Y7e  |  manuscript/images/scans-cleaned/Dad_Sis.jpg  |  crop-border; size:1541x2540
+Dad_Suit.jpg  |  10Ce89lL1HZVPh8STa7KUaaD2aCDucABC  |  manuscript/images/scans-cleaned/Dad_Suit.jpg  |  size:2046x2860
+DadAndOtherFamily.jpg  |  1HRKQSz-tZL8IunTb-wZp39NbeHSCi1lC  |  manuscript/images/scans-cleaned/DadAndOtherFamily.jpg  |  resize:5076x10351->1471x3000
+DadCat.jpg  |  1ZxCFCzHkt2EELAw5pscqW3fJZRmGIK4F  |  manuscript/images/scans-cleaned/DadCat.jpg  |  crop-border; resize:3334x1949->3000x1753
+DadCoconutBananas.jpg  |  14zWqz7VACBXx3B0xU05CfDAv_gc13tgG  |  manuscript/images/scans-cleaned/DadCoconutBananas.jpg  |  resize:3324x1949->3000x1759
+DadGardenGuam.jpg  |  1AOeNwQASmgCbyvrJMbSTp2EyZp70nxun  |  manuscript/images/scans-cleaned/DadGardenGuam.jpg  |  size:1574x2564
+DadGuamTents.jpg  |  1ZAyZEtS8wzecvchetXB_-aSHLxiKAc5v  |  manuscript/images/scans-cleaned/DadGuamTents.jpg  |  resize:1927x3348->1726x3000
+DadLeaningOnCar.jpg  |  18rZgu8l1bTTBJOeJvyVx6uGetVPe25zh  |  manuscript/images/scans-cleaned/DadLeaningOnCar.jpg  |  resize:3911x2638->3000x2023
+DadLeavingForArmy.jpg  |  1G_muUNwSMzRQqX6VLqT-GnLVdSEZSlPn  |  manuscript/images/scans-cleaned/DadLeavingForArmy.jpg  |  crop-border; resize:1809x3188->1702x3000
+DadOnBumperHome.jpg  |  17eajTE3p17vadQnLP7eZR49TAejnOISm  |  manuscript/images/scans-cleaned/DadOnBumperHome.jpg  |  size:1638x2659
+DadOshkoshMay43.jpg  |  1ypw-38fFEbyBfqjArwWVFwJdb0pSnTh2  |  manuscript/images/scans-cleaned/DadOshkoshMay43.jpg  |  size:2706x1948
+DadPalmTrees.jpg  |  1lx3rBZBn86vuKV_F5aia2f14f3XXjsI8  |  manuscript/images/scans-cleaned/DadPalmTrees.jpg  |  deskew:-1.97deg; size:2746x1703
+DadQuanset.jpg  |  13mECgsp21wtHBuXXUC6ffE1WeibfUXhS  |  manuscript/images/scans-cleaned/DadQuanset.jpg  |  deskew:1.00deg; size:2721x1654
+DadRockyCoast.jpg  |  1xhJTbGg5wR49gZPphF4sLLOVGYZJSsS8  |  manuscript/images/scans-cleaned/DadRockyCoast.jpg  |  crop-border; resize:2000x3328->1802x3000
+DadSuit.jpg  |  1-WBesjaGZSHEjTfPtP-emUNilm59OIuQ  |  manuscript/images/scans-cleaned/DadSuit.jpg  |  size:1959x2839
+DadSuit2.jpg  |  18bzxw9y6D-SmwRtcTe3mkX7gSODxob3Q  |  manuscript/images/scans-cleaned/DadSuit2.jpg  |  deskew:1.98deg; size:1970x2829
+DadSuit3.jpg  |  17IcjRd3toV_XqqZkT4jso-aaRyTGhb3L  |  manuscript/images/scans-cleaned/DadSuit3.jpg  |  crop-border; size:1493x2544
+DadSummer42.jpg  |  1guo-6XstcSye71pZ8wGQ0jDNgijd673h  |  manuscript/images/scans-cleaned/DadSummer42.jpg  |  deskew:1.01deg; size:1274x1916
+DadUniform3.jpg  |  1Ly7Gx_NbQh4i4mEzhNHLtJrG_RVD1POx  |  manuscript/images/scans-cleaned/DadUniform3.jpg  |  size:1531x2564
+DadUniformHome.jpg  |  1Rtvyc8b_3K6PWtNixWDHfEgWwZv_kHDQ  |  manuscript/images/scans-cleaned/DadUniformHome.jpg  |  size:1520x2564
+DadUniformHome2.jpg.jpg  |  1rUYF-GHwnwEJjY9RcGFcUEu04Uifsujp  |  manuscript/images/scans-cleaned/DadUniformHome2.jpg  |  renamed->DadUniformHome2.jpg; crop-border; size:1531x2542
+Edna44.jpg  |  1xYdBbxBahqQHwHOQ_7ZjZ1AWrk0kkrYU  |  manuscript/images/scans-cleaned/Edna44.jpg  |  size:1916x2892
+Fannie_Willis_Wedding.jpg  |  1lu4Vejvc5e0DQeuQOq58_nulmRRKSEgl  |  manuscript/images/scans-cleaned/Fannie_Willis_Wedding.jpg  |  size:2259x2882
+GirlOnStump.jpg  |  1PHaaqgVlSKMnAvlEQoy7IKiUoLLUKlge  |  manuscript/images/scans-cleaned/GirlOnStump.jpg  |  size:1402x1970
+GirlPostSummer42.jpg  |  1AtYOq1fOnAExgyJ8x1azYSPm5Z9rqz8O  |  manuscript/images/scans-cleaned/GirlPostSummer42.jpg  |  size:1434x2022
+GirlPostSummer42b.jpg  |  1d6qOkJEsSj5Gx8PBthBWAlcXt4zo6ynZ  |  manuscript/images/scans-cleaned/GirlPostSummer42b.jpg  |  size:1467x2001
+GuamGuardDuty.jpg  |  1DG81i4P0bUkSLpQJOWbXupHTB63t5uSv  |  manuscript/images/scans-cleaned/GuamGuardDuty.jpg  |  resize:1895x3339->1702x3000
+GuamHut.jpg  |  1gp4C0oU3glu1KbaNu3C68FebHvFleadd  |  manuscript/images/scans-cleaned/GuamHut.jpg  |  resize:3292x1892->3000x1724
+InsideRoom.jpg  |  14yRO3qNRRGoEbyL6ZpkWI5qKTRmy7H6t  |  manuscript/images/scans-cleaned/InsideRoom.jpg  |  deskew:7.02deg; size:2005x1416
+InsideRoom204.jpg  |  1-IEyzAgAxJOn6Om-tgJiyFryVzP5xBf4  |  manuscript/images/scans-cleaned/InsideRoom204.jpg  |  size:1510x2500
+InstrumentFlightBack.jpg  |  114VY_JAMgyNHaMBP5O3KqugP3xOtBQQu  |  manuscript/images/scans-cleaned/InstrumentFlightBack.jpg  |  deskew:-1.95deg; crop-border; size:1531x2395
+InstrumentFlightCertApr151944.jpg  |  13QDTst2BN5X7CY3HfyMuRtqO6QT0wEvB  |  manuscript/images/scans-cleaned/InstrumentFlightCertApr151944.jpg  |  deskew:-0.93deg; size:1584x2319
+Jan44Lancaster.jpg  |  1l5Z9Fu2MbUoZPk5IAUIheTdjv6MP8qbY  |  manuscript/images/scans-cleaned/Jan44Lancaster.jpg  |  crop-border; size:2898x2309
+JohnSisDad.jpg  |  16HK-JTwTYpFo0ku0z1ZKmH9fPcidynaq  |  manuscript/images/scans-cleaned/JohnSisDad.jpg  |  crop-border; resize:3228x1810->3000x1682
+JohnSisJune39.jpg  |  1lIfzipoUCpZ1llHrYVQu9d6aqFE0mM5X  |  manuscript/images/scans-cleaned/JohnSisJune39.jpg  |  size:2428x1621
+MarfaNameSN_trainingPhoto.jpg  |  1g7S17MHaEJhneL1I9XiPF9G90S-QBNf1  |  manuscript/images/scans-cleaned/MarfaNameSN_trainingPhoto.jpg  |  size:2313x2819
+MawmawCatChickens1942.jpg  |  1NWjyvMiwnulgnRldtxfkWpIlUstoKNgZ  |  manuscript/images/scans-cleaned/MawmawCatChickens1942.jpg  |  size:2550x1580
+MawmawTruck.jpg  |  14sP9p0x-rWboBzyaKrrz1AKpPV2vZCnw  |  manuscript/images/scans-cleaned/MawmawTruck.jpg  |  resize:1991x3307->1806x3000
+MawmawTruckCatWinn4243.jpg  |  1zw62eF36Ol-TsRsbt_SaVuuFHefZuRSh  |  manuscript/images/scans-cleaned/MawmawTruckCatWinn4243.jpg  |  crop-border; size:2642x1511
+Miama2.jpg  |  1Qrn7ZWgl9NrqFZlKfb1sm5WD9mpBN_LV  |  manuscript/images/scans-cleaned/Miama2.jpg  |  size:2634x1567
+Miami.jpg  |  1Z4AZF9RvCaG_lIvlTQYq8sIy2twFhR9P  |  manuscript/images/scans-cleaned/Miami.jpg  |  crop-border; resize:3371x1875->3000x1668
+MilitaryGuy.jpg  |  1nEiMbsnqNV2s7Q8-nKuaRqfP8HoSL9J3  |  manuscript/images/scans-cleaned/MilitaryGuy.jpg  |  crop-border; size:1595x2615
+MtFuji.jpg  |  1ZBDgEfIj7yyR8EltleNswrbmwF1G_TJE  |  manuscript/images/scans-cleaned/MtFuji.jpg  |  resize:4083x2851->3000x2094
+Nipper.jpg  |  1r45KZ8_ql1eMVyze5OIvX_Jd8rRoJjWw  |  manuscript/images/scans-cleaned/Nipper.jpg  |  resize:3308x1883->3000x1707
+NotSure.jpg  |  14vTYLsZvx6Fp8xIZO2xrEQnDdp7KY0Bg  |  manuscript/images/scans-cleaned/NotSure.jpg  |  crop-border; resize:5394x4655->3000x2588
+OldGuyBeard.jpg  |  1r_pCpy9zU-X00y8vq49-Bx5KYVOHKTpa  |  manuscript/images/scans-cleaned/OldGuyBeard.jpg  |  size:1564x2531
+OldGuyBeard2.jpg  |  1ik8XKqgt2V1IROXHvZ1hL05l-KRa8HZ5  |  manuscript/images/scans-cleaned/OldGuyBeard2.jpg  |  size:1563x2521
+OshKosh.jpg  |  13l0qwhlAxPENt7Kl5fa2rKLjwQWvQxXg  |  manuscript/images/scans-cleaned/OshKosh.jpg  |  deskew:-1.97deg; crop-border; size:2419x1660
+PlaneInField.jpg  |  16_lLg6vVUwTg22QrjDeCafVdZLrYbCME  |  manuscript/images/scans-cleaned/PlaneInField.jpg  |  crop-border; resize:3263x1588->3000x1460
+PolarisField.jpg  |  11xZ25hJkHhOpx8mX4jE0rtFk5GJncbyz  |  manuscript/images/scans-cleaned/PolarisField.jpg  |  crop-border; resize:3086x1901->3000x1848
+PolarisField1944Winter.jpg  |  1v4uE07ThHxCkfIZ98DEa_U3eTc4dsxUl  |  manuscript/images/scans-cleaned/PolarisField1944Winter.jpg  |  size:2902x2171
+PT-21?.jpg  |  1rkfv1JlDdkATJ2jzCUIucs8EU5KM2dHG  |  manuscript/images/scans-cleaned/PT-21.jpg  |  renamed->PT-21.jpg; size:2913x2352
+QuansentHut.jpg  |  13e36r3ndvwv60hf1PN8x0ATYHHY8AA41  |  manuscript/images/scans-cleaned/QuansentHut.jpg  |  resize:3332x1891->3000x1702
+QuansetHut.jpg  |  13xwtH_XMt9Wrxg8EKHF18zwr3VpOOUzA  |  manuscript/images/scans-cleaned/QuansetHut.jpg  |  deskew:6.06deg; size:2583x1588
+SisDad.jpg  |  1wjjCxUztTqRfOmwA4beep7LGAof1iNOY  |  manuscript/images/scans-cleaned/SisDad.jpg  |  resize:2366x3593->1975x3000
+Tents.jpg  |  1bJymlyLsVANVE7b9Vi4CGfiRU9_qQ583  |  manuscript/images/scans-cleaned/Tents.jpg  |  deskew:-2.03deg; crop-border; size:1874x2479
+WarEaglePlanes.jpg  |  1hV3VymD5DqdbYX1nWrzQwRUtqf3-m_Ii  |  manuscript/images/scans-cleaned/WarEaglePlanes.jpg  |  crop-border; size:1948x1336
+WarEagleTower.jpg  |  1MzOJlFcyqc3hODWQmkJOOrY0NzJAb2hR  |  manuscript/images/scans-cleaned/WarEagleTower.jpg  |  crop-border; size:1905x1273
+WarrantOfficerLaVaughan1942.jpg  |  1HRtbgom1FBA_KF7jLGX_-q7R-FgDqosu  |  manuscript/images/scans-cleaned/WarrantOfficerLaVaughan1942.jpg  |  resize:1938x3423->1698x3000
+Willis.jpg  |  1bghNL8MUAqgpzcnJ4P2ec8i8kc0Apy2g  |  manuscript/images/scans-cleaned/Willis.jpg  |  crop-border; size:1778x2835
+WomanAccordian.jpg  |  1bVXgvWuYLlR-nPQ0hG-iQsJNyyllbKMY  |  manuscript/images/scans-cleaned/WomanAccordian.jpg  |  crop-border; size:1438x2556
+
+FAILURES DETAIL
+    Reason: Google Drive MCP download_file_content hard limit of 10 MB.
+    Retry attempted once; same error. Manual Drive download or API needed.
+
+FILENAME SANITIZATION
+  'PT-21?.jpg' -> 'PT-21.jpg'
+  'DadUniformHome2.jpg.jpg' -> 'DadUniformHome2.jpg'
+  'B2?.jpg' -> 'B2.jpg'
+
+CLEANING PIPELINE (conservative, non-generative)
+  auto-orient; mild deskew if detectable; crop dark/light scanner borders if obvious;
+  mild percentile autolevel; +5% contrast / +2% color; light despeckle only if dust dense;
+  JPEG q90; long-edge max 3000px when larger.
+
+PATHS ON BOX
+  originals: /workspace/scanclean/originals/
+  cleaned:   /workspace/scanclean/cleaned/
+  manifest:  /workspace/scanclean/MANIFEST.txt
+Dad&Crew.jpg  |  1XLoxiOORyowZ5U1CWQxVpJ1jqyIhU5ID  |  manuscript/images/scans-cleaned/Dad-and-Crew.jpg  |  draft-downsample; size:3000x2346
