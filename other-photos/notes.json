@@ -308,10 +308,19 @@
   {
     "id": "bf3e3e0d-ec6e-4f13-8295-785184c8e522",
     "photo_id": "JohnWinnOnHoney",
-    "text": "❤️",
+    "text": "â¤ï¸",
     "name": "Mary Love Piercey",
     "email": "merluv@aol.com",
     "uid": "8e7341ba-b9f3-426e-b9a9-910fb7321201",
     "submitted_at": "2026-09-16T13:21:35.954Z"
+  },
+  {
+    "id": "f1e3c9a1-f51c-411e-8437-5fc3a66d2869",
+    "photo_id": "JohnWinnJoanMaybe",
+    "text": "Yes, Joan, John Winn",
+    "name": "Mary Love Piercey",
+    "email": "merluv@aol.com",
+    "uid": "8e7341ba-b9f3-426e-b9a9-910fb7321201",
+    "submitted_at": "2026-09-16T13:25:08.353Z"
   }
 ]
