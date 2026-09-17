@@ -241,18 +241,8 @@ async function handleAlbumNotes(request, env) {
   };
 
   const existing = await githubGet(repo, notesPath, token);
-  let notes = [];
-  let sha;
-  if (existing && existing.content) {
-    try {
-      const raw = atob(existing.content.replace(/\n/g, ""));
-      notes = JSON.parse(raw || "[]");
-      if (!Array.isArray(notes)) notes = [];
-    } catch {
-      notes = [];
-    }
-    sha = existing.sha;
-  }
+  let notes = await decodeNotesPayload(existing, token);
+  const sha = existing && existing.sha ? existing.sha : null;
   notes.push(note);
 
   const contentB64 = btoa(unescape(encodeURIComponent(JSON.stringify(notes, null, 2) + "\n")));
@@ -286,16 +276,39 @@ async function handleAlbumNotes(request, env) {
   return json({ ok: true, note, notes }, 200);
 }
 
-async function readNotes(repo, path, token) {
-  const existing = await githubGet(repo, path, token);
-  if (!existing || !existing.content) return [];
+async function decodeNotesPayload(existing, token) {
+  if (!existing) return [];
+  let raw = "";
+  if (existing.content && existing.encoding === "base64") {
+    try {
+      raw = atob(existing.content.replace(/\n/g, ""));
+    } catch {
+      raw = "";
+    }
+  } else if (existing.download_url) {
+    const res = await fetch(existing.download_url, {
+      headers: {
+        Authorization: "Bearer " + token,
+        "User-Agent": "willwinn-album-notes",
+        Accept: "application/vnd.github.raw",
+      },
+    });
+    if (!res.ok) return [];
+    raw = await res.text();
+  } else {
+    return [];
+  }
   try {
-    const raw = atob(existing.content.replace(/\n/g, ""));
     const notes = JSON.parse(raw || "[]");
     return Array.isArray(notes) ? notes : [];
   } catch {
     return [];
   }
+}
+
+async function readNotes(repo, path, token) {
+  const existing = await githubGet(repo, path, token);
+  return decodeNotesPayload(existing, token);
 }
 
 function cors() {
