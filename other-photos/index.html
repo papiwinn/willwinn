@@ -199,6 +199,34 @@
         font-size: 0.95rem;
       }
       .empty-notes { opacity: 0.65; font-size: 0.92rem; margin: 0 0 16px; }
+
+      .pager-info {
+        font-size: 0.92rem;
+        opacity: 0.9;
+        margin: 0 0 14px;
+      }
+      .pager {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin: 22px 0 4px;
+      }
+      .pager .btn.secondary {
+        margin-left: 0;
+        padding: 8px 14px;
+        font-size: 0.9rem;
+      }
+      .pager .btn.secondary.current {
+        background: rgba(233, 69, 96, 0.25);
+        border-color: #e94560;
+        cursor: default;
+      }
+      .pager .btn:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
     </style>
   </head>
   <body>
@@ -234,7 +262,9 @@
         </div>
         <div id="load-error" class="msg"></div>
         <div id="grid-view">
+          <div id="pager-info" class="pager-info" aria-live="polite"></div>
           <div id="grid" class="grid"></div>
+          <nav id="pager" class="pager" aria-label="Photo pages"></nav>
         </div>
         <div id="detail-view" class="detail hidden">
           <button type="button" class="btn secondary" id="back-to-grid" style="margin: 0 0 16px; margin-left: 0;">All photos</button>
@@ -264,6 +294,8 @@
   var catalog = [];
   var notes = [];
   var currentId = null;
+  var PER_PAGE = 50;
+  var currentPage = 1;
   // Images excluded from Cloudflare Worker upload (.assetsignore); load from GitHub CDN
   var IMG_CDN = "https://cdn.jsdelivr.net/gh/papiwinn/willwinn@main/other-photos/images/";
 
@@ -366,10 +398,95 @@
     }
   }
 
+  function pageFromUrl() {
+    try {
+      var p = parseInt(new URLSearchParams(location.search).get("page"), 10);
+      if (p >= 1) return p;
+    } catch (e) {}
+    return 1;
+  }
+
+  function totalPages() {
+    return Math.max(1, Math.ceil((catalog.length || 0) / PER_PAGE));
+  }
+
+  function clampPage() {
+    var tp = totalPages();
+    if (currentPage > tp) currentPage = tp;
+    if (currentPage < 1) currentPage = 1;
+  }
+
+  function setPageInUrl(page) {
+    try {
+      var u = new URL(location.href);
+      if (page <= 1) u.searchParams.delete("page");
+      else u.searchParams.set("page", String(page));
+      history.replaceState(null, "", u.pathname + u.search + u.hash);
+    } catch (e) {}
+  }
+
+  function goToPage(page) {
+    currentPage = page;
+    clampPage();
+    setPageInUrl(currentPage);
+    renderGrid();
+    window.scrollTo(0, 0);
+  }
+
+  function renderPager(start, end) {
+    var info = document.getElementById("pager-info");
+    var pager = document.getElementById("pager");
+    var n = catalog.length;
+    var tp = totalPages();
+    if (!info || !pager) return;
+    if (!n) {
+      info.textContent = "";
+      pager.innerHTML = "";
+      return;
+    }
+    info.textContent = "Showing " + (start + 1) + "–" + end + " of " + n + " · Page " + currentPage + " of " + tp;
+    pager.innerHTML = "";
+
+    var prev = document.createElement("button");
+    prev.type = "button";
+    prev.className = "btn secondary";
+    prev.textContent = "Previous";
+    prev.disabled = currentPage <= 1;
+    prev.addEventListener("click", function () { goToPage(currentPage - 1); });
+    pager.appendChild(prev);
+
+    for (var i = 1; i <= tp; i++) {
+      var pb = document.createElement("button");
+      pb.type = "button";
+      pb.className = "btn secondary" + (i === currentPage ? " current" : "");
+      pb.textContent = String(i);
+      pb.setAttribute("aria-label", "Page " + i);
+      if (i === currentPage) pb.setAttribute("aria-current", "page");
+      (function (p) {
+        pb.addEventListener("click", function () {
+          if (p !== currentPage) goToPage(p);
+        });
+      })(i);
+      pager.appendChild(pb);
+    }
+
+    var next = document.createElement("button");
+    next.type = "button";
+    next.className = "btn secondary";
+    next.textContent = "Next";
+    next.disabled = currentPage >= tp;
+    next.addEventListener("click", function () { goToPage(currentPage + 1); });
+    pager.appendChild(next);
+  }
+
   function renderGrid() {
+    clampPage();
+    setPageInUrl(currentPage);
     var grid = document.getElementById("grid");
     grid.innerHTML = "";
-    catalog.forEach(function (item) {
+    var start = (currentPage - 1) * PER_PAGE;
+    var end = Math.min(start + PER_PAGE, catalog.length);
+    catalog.slice(start, end).forEach(function (item) {
       var n = notesFor(item.id).length;
       var btn = document.createElement("button");
       btn.type = "button";
@@ -383,6 +500,7 @@
       btn.addEventListener("click", function () { openDetail(item.id); });
       grid.appendChild(btn);
     });
+    renderPager(start, end);
   }
 
   function escapeHtml(s) {
@@ -587,6 +705,7 @@
       .then(function () { btn.disabled = false; });
   });
 
+  currentPage = pageFromUrl();
   paint();
 })();
     </script>

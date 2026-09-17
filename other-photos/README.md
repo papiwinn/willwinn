@@ -28,7 +28,7 @@ Same reviewer session as corrections / stories / photos:
 
 | Path | Role |
 |------|------|
-| `index.html` | Gallery + notes UI |
+| `index.html` | Gallery + notes UI (paginated, 50 photos per page) |
 | `catalog.json` | Photo list (id, file, title) |
 | `images/` | JPG files (CDN on xyz; also on GitHub Pages) |
 | `notes.json` | All family notes (array); Worker appends |
@@ -44,6 +44,11 @@ FormSubmit cannot show notes on the page. Notes need the Cloudflare Worker:
    - `albumNotesEndpoint`: `https://icy-dust-9cb5.papiwinn.workers.dev/notes`
 
 Until that redeploy, the album can show photos, but saving notes will fail.
+
+
+## Pagination
+
+The gallery shows **50 photos per page**, with Previous / Next and page-number controls. Status text looks like “Showing 1–50 of N · Page X of Y”. Optional bookmarkable query: `?page=2` (default page 1). Returning from a photo detail view keeps you on the same page.
 
 ## Adding photos
 
