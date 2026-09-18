@@ -307,13 +307,13 @@
   },
   {
     "id": "josie-belle-sides",
-    "name": "Josie Belle Waits Sides",
+    "name": "Josie Belle (Waits) Sides",
     "short_name": "Josie Belle Sides",
-    "lifespan": "1906 – 2001 (FaG listing)",
+    "lifespan": "1906 – 2001",
     "rel": "FACT (William): Mrs. Alec/Alex Sides of Henning — same as “Mrs. Alec Sides” in Linnie sister list. Born Waits.",
     "bio_or_step": "need",
-    "blurb": "Josie Belle Waits Sides of Henning (Mrs. Alec/Alex / Marion Alex). Double stone 1906–2001 / 1895–1970, Ripley Memorial Gardens.",
-    "narrative": "Mrs. Alec/Alex Sides of Henning (William); husband Marion Alex Sides. Double stone FaG listing + USGWArchives: Josie Waite Sides 1906–2001; Marion Alex Sides 1895–1970; Ripley Memorial Gardens cem. 15589. Numeric FaG IDs still open. Maternity HYPOTHESIS (strong) if b. 1906 before Rhoda d. 1908.",
+    "blurb": "Mrs. Alec/Alex/Marion Alex Sides of Henning. Ripley Memorial Gardens double stone. Maternity HYPOTHESIS (strong) Rhoda’s.",
+    "narrative": "Filled Crystal batch 2. Double stone with Marion Alex 1895–1970. Numeric FaG IDs open.",
     "timeline": [
       {
         "t": "Born",
@@ -366,13 +366,13 @@
   },
   {
     "id": "marion-alex-sides",
-    "name": "Marion Alex Sides",
+    "name": "Marion Alex (Alec / Alex) Sides",
     "short_name": "Marion Alex Sides",
-    "lifespan": "1895 – 1970 (stone / FaG listing)",
+    "lifespan": "1895 – 1970",
     "rel": "Husband of Josie Belle Waits Sides of Henning. Also called Alec / Alex (William).",
     "bio_or_step": "need",
-    "blurb": "Husband of Josie Belle (Alec/Alex). Double stone, Ripley Memorial Gardens. Stub — Crystal paste pending.",
-    "narrative": "Scaffold from stone facts. Double stone with Josie at Ripley Memorial Gardens cem. 15589. Numeric FaG IDs open.",
+    "blurb": "Husband of Josie Belle of Henning. Double stone Ripley Memorial Gardens.",
+    "narrative": "Filled Crystal batch 2. Numeric FaG ID open.",
     "timeline": [
       {
         "t": "Stone / FaG listing",
@@ -402,11 +402,11 @@
     "id": "giles-rexford-simpson",
     "name": "Giles Rexford Simpson",
     "short_name": "Giles Rexford Simpson",
-    "lifespan": "1899 – 1944",
+    "lifespan": "22 Jun 1889/1899 – 9 Apr 1944",
     "rel": "Husband of Carrie Love “Lovy” Waits Simpson. William’s grandfather on the Simpson line.",
     "bio_or_step": "need",
-    "blurb": "Husband of Lovy. FaG spouse link Rexford; Maley FH “Prexford.” Stub — Crystal paste pending.",
-    "narrative": "FaG #55032391 links Giles Rexford Simpson 1899–1944. Maley FH spells Prexford. Child Oletta Simpson Winn linked on Carrie FaG.",
+    "blurb": "Husband of Lovy. Rexford title; Prexford FH. Asbury stone vs FaG birth-year conflict.",
+    "narrative": "Asbury stone Giles R. 22 Jun 1889–9 Apr 1944; Carrie FaG spouse 1899–1944. Prefer Rexford.",
     "timeline": [
       {
         "t": "Name",
@@ -451,8 +451,8 @@
     "lifespan": "13 Feb 1924 – 2017",
     "rel": "William’s mother. Daughter of Carrie Love “Lovy” Waits Simpson and Giles Rexford Simpson.",
     "bio_or_step": "need",
-    "blurb": "William’s mother. Full name per William; birth 13 Feb 1924. Carrie FaG child link.",
-    "narrative": "Mary Oletta Littleheart Simpson Winn. FACT birth 13 February 1924 (William). FaG #55032391 links Oletta Simpson Winn 1924–2017. Married Austin Hunley Winn.",
+    "blurb": "William’s mother. Birth 13 Feb 1924 (William); FaG death year 2017. Spouse Austin Hunley Winn.",
+    "narrative": "Slug oletta-simpson-winn.html. Crystal batch 2 merged with William FACTS.",
     "timeline": [
       {
         "t": "Born",
@@ -516,6 +516,66 @@
         "status": "fact",
         "href": "../letters/",
         "note": ""
+      }
+    ]
+  },
+  {
+    "id": "virginia-elleene-chaney",
+    "name": "Virginia Elleene (Waits) Chaney",
+    "short_name": "Virginia Elleene Chaney",
+    "lifespan": "27 Nov 1900 – 15 Aug 1972",
+    "bio_or_step": "bio",
+    "rel": "Daughter of James C. Waits and Rosa Milburn; sister of Lovy.",
+    "blurb": "Lovy’s sister. Garner FH; Memorial Park Memphis. Stub.",
+    "narrative": "Garner FH stub from Crystal batch 2 intro.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "27 Nov 1900",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "15 Aug 1972 Memorial Park Memphis",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Garner FH 1971–1980",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1971-1980-garner-funeral-home-records/",
+        "note": "Elleene Chaney; Rosa Milburn"
+      }
+    ]
+  },
+  {
+    "id": "mary-almenuia-williams",
+    "name": "Mary Almenuia (Waits) Williams",
+    "short_name": "Mary Almenuia Williams",
+    "lifespan": "8 Apr 1899 – 5 Jul 1978",
+    "bio_or_step": "bio",
+    "rel": "Daughter of Claiborn Waits and Rhonda Milburn; sister of Lovy.",
+    "blurb": "Lovy’s sister. Garner FH; Asbury. Stub.",
+    "narrative": "Garner FH stub from Crystal batch 2 intro.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "8 Apr 1899",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "5 Jul 1978 Asbury",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Garner FH 1971–1980",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1971-1980-garner-funeral-home-records/",
+        "note": "Mary Williams; Rhonda Milburn"
       }
     ]
   }
