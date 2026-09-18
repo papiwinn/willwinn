@@ -446,17 +446,17 @@
   },
   {
     "id": "oletta-simpson-winn",
-    "name": "Oletta Simpson Winn",
-    "short_name": "Oletta Simpson Winn",
-    "lifespan": "1924 – 2017",
-    "rel": "Daughter of Carrie Love “Lovy” Waits Simpson and Giles Rexford Simpson.",
+    "name": "Mary Oletta Littleheart Simpson Winn",
+    "short_name": "Mary Oletta Simpson Winn",
+    "lifespan": "13 Feb 1924 – 2017",
+    "rel": "William’s mother. Daughter of Carrie Love “Lovy” Waits Simpson and Giles Rexford Simpson.",
     "bio_or_step": "need",
-    "blurb": "Daughter of Lovy & Giles (Carrie FaG #55032391 child link). Stub — Crystal paste pending.",
-    "narrative": "Linked on Carrie Love FaG #55032391 as Oletta Simpson Winn 1924–2017. William’s mother line.",
+    "blurb": "William’s mother. Full name per William; birth 13 Feb 1924. Carrie FaG child link.",
+    "narrative": "Mary Oletta Littleheart Simpson Winn. FACT birth 13 February 1924 (William). FaG #55032391 links Oletta Simpson Winn 1924–2017. Married Austin Hunley Winn.",
     "timeline": [
       {
-        "t": "Lifespan",
-        "d": "1924–2017 (Carrie FaG child link)",
+        "t": "Born",
+        "d": "13 February 1924 (William); death year 2017 linked on Carrie FaG",
         "status": "fact"
       },
       {
@@ -467,10 +467,55 @@
     ],
     "sources": [
       {
+        "label": "William",
+        "status": "fact",
+        "note": "Full name Mary Oletta Littleheart Simpson Winn; birth 13 February 1924"
+      },
+      {
         "label": "Find a Grave #55032391 Carrie Love Simpson",
         "status": "fact",
         "href": "https://www.findagrave.com/memorial/55032391/carrie_love-simpson",
         "note": "Child Oletta Simpson Winn 1924–2017"
+      }
+    ]
+  },
+  {
+    "id": "austin-hunley-winn",
+    "name": "Austin Hunley Winn",
+    "short_name": "Austin Hunley Winn",
+    "lifespan": "b. February 1921",
+    "rel": "William’s father. Subject of the WWII letters and manuscript.",
+    "bio_or_step": "need",
+    "blurb": "William’s father. WWII letters/manuscript subject. Stub — Crystal paste pending.",
+    "narrative": "FACT born February 1921 (William). Married Mary Oletta Littleheart Simpson Winn. Paternal Winn line stub.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "February 1921 (William — day open)",
+        "status": "fact"
+      },
+      {
+        "t": "Spouse",
+        "d": "Mary Oletta Littleheart Simpson Winn",
+        "status": "fact"
+      },
+      {
+        "t": "WWII",
+        "d": "Letters and manuscript on willwinn.xyz",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact",
+        "note": "Name; birth February 1921; letters subject"
+      },
+      {
+        "label": "Site letters & manuscript",
+        "status": "fact",
+        "href": "../letters/",
+        "note": ""
       }
     ]
   }
