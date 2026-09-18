@@ -406,7 +406,7 @@
     "rel": "Husband of Carrie Love “Lovy” Waits Simpson. William’s grandfather on the Simpson line.",
     "bio_or_step": "need",
     "blurb": "Husband of Lovy. Rexford title; Prexford FH. Asbury stone vs FaG birth-year conflict.",
-    "narrative": "Asbury stone Giles R. 22 Jun 1889–9 Apr 1944; Carrie FaG spouse 1899–1944. Prefer Rexford.",
+    "narrative": "Asbury stone Giles R. 22 Jun 1889–9 Apr 1944; Carrie FaG spouse 1899–1944. Prefer Rexford. Waits Andrew FaG #76666074; Gonnsen obit youngest of six / Rexford.",
     "timeline": [
       {
         "t": "Name",
@@ -451,8 +451,8 @@
     "lifespan": "13 Feb 1924 – 2017",
     "rel": "William’s mother. Daughter of Carrie Love “Lovy” Waits Simpson and Giles Rexford Simpson.",
     "bio_or_step": "need",
-    "blurb": "William’s mother. Birth 13 Feb 1924 (William); FaG death year 2017. Spouse Austin Hunley Winn.",
-    "narrative": "Slug oletta-simpson-winn.html. Crystal batch 2 merged with William FACTS.",
+    "blurb": "William’s mother. Full legal name; 13 Feb 1924; spouse Austin Hunley Winn FACT.",
+    "narrative": "William override locked. FaG child label “Oletta Simpson Winn” 1924–2017 kept as source wording only.",
     "timeline": [
       {
         "t": "Born",
@@ -483,11 +483,11 @@
     "id": "austin-hunley-winn",
     "name": "Austin Hunley Winn",
     "short_name": "Austin Hunley Winn",
-    "lifespan": "b. February 1921",
+    "lifespan": "27 Feb 1921 – 16 Nov 1996",
     "rel": "William’s father. Subject of the WWII letters and manuscript.",
     "bio_or_step": "need",
-    "blurb": "William’s father. WWII letters/manuscript subject. Stub — Crystal paste pending.",
-    "narrative": "FACT born February 1921 (William). Married Mary Oletta Littleheart Simpson Winn. Paternal Winn line stub.",
+    "blurb": "William’s father. 1st Lt US Army Air Corps WWII. Marker 27 Feb 1921 – 16 Nov 1996.",
+    "narrative": "Grave marker FACT. Spouse Mary Oletta. Letters: father Mr. W. H. Winn Henning. Photo-label parents John & Martha remain HYPOTHESIS.",
     "timeline": [
       {
         "t": "Born",
@@ -526,8 +526,8 @@
     "lifespan": "27 Nov 1900 – 15 Aug 1972",
     "bio_or_step": "bio",
     "rel": "Daughter of James C. Waits and Rosa Milburn; sister of Lovy.",
-    "blurb": "Lovy’s sister. Garner FH; Memorial Park Memphis. Stub.",
-    "narrative": "Garner FH stub from Crystal batch 2 intro.",
+    "blurb": "Lovy’s sister. Widow of Wm. S. Chaney. Garner FH; Memorial Park Memphis.",
+    "narrative": "Garner: widow of Wm.S.CHANEY; f. James C. Waits m. Rosa Milburn.",
     "timeline": [
       {
         "t": "Born",
@@ -556,8 +556,8 @@
     "lifespan": "8 Apr 1899 – 5 Jul 1978",
     "bio_or_step": "bio",
     "rel": "Daughter of Claiborn Waits and Rhonda Milburn; sister of Lovy.",
-    "blurb": "Lovy’s sister. Garner FH; Asbury. Stub.",
-    "narrative": "Garner FH stub from Crystal batch 2 intro.",
+    "blurb": "Lovy’s sister. Widow of Leanord/Leonard Williams. Garner FH; Asbury.",
+    "narrative": "Garner: widow of Leanord WILLIAMS; f. Claiborn Waits m. Rhonda Milburn.",
     "timeline": [
       {
         "t": "Born",
