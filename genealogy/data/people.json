@@ -643,7 +643,7 @@
     "bio_or_step": "need",
     "rel": "Mother of Austin Hunley Winn.",
     "blurb": "Austin’s mother. Fannie Lee McBride Winn; b. 1894 Tipton (William FACT).",
-    "narrative": "Maiden McBride; married Willis Hunley Winn; mother of Austin.",
+    "narrative": "Fannie Lee McBride Winn; brother Melvin McBride FACT (William). Parents still open via Melvin line.",
     "timeline": [],
     "sources": [
       {
@@ -721,6 +721,40 @@
         "label": "William",
         "status": "fact",
         "note": "birth order"
+      }
+    ]
+  },
+  {
+    "id": "melvin-mcbride",
+    "name": "Melvin E. McBride",
+    "short_name": "Melvin E. McBride",
+    "lifespan": "dates open",
+    "rel": "Fannie’s brother (William FACT). Letters’ Uncle Melvin.",
+    "bio_or_step": "need",
+    "blurb": "Fannie’s brother (William FACT). Letters’ Uncle Melvin.",
+    "narrative": "Fannie’s brother (William FACT). Letters’ Uncle Melvin.",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "virgie-lee-mcbride",
+    "name": "Virgie Lee (Goode) McBride",
+    "short_name": "Virgie Lee (Goode) McBride",
+    "lifespan": "dates open",
+    "rel": "Aunt Virgie. Wife of Melvin McBride; maiden Goode.",
+    "bio_or_step": "need",
+    "blurb": "Aunt Virgie. Wife of Melvin McBride; maiden Goode.",
+    "narrative": "Aunt Virgie. Wife of Melvin McBride; maiden Goode.",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact"
       }
     ]
   }
