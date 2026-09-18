@@ -3,55 +3,61 @@
     "id": "lovy-waits-simpson",
     "name": "Carrie Love \u201cLovy\u201d Waits Simpson",
     "short_name": "Lovy Waits Simpson",
-    "lifespan": "dates need-more",
-    "rel": "William\u2019s grandmother (maternal line through the Waits / Simpson family \u2014 confirm exact path)",
-    "role_in_household": "Daughter of James Clayborn Waits & Rhoda Milburn",
+    "lifespan": "11 Jul 1892 \u2013 26 Aug 1985",
+    "rel": "Daughter of James C. Waits and Phobe (Rhoda) Milburn; stepdaughter of Gabie Pilkington Waits; widow of Giles Prexford Simpson. William\u2019s grandmother line (Waits \u2192 Simpson).",
     "bio_or_step": "bio",
-    "blurb": "Carrie Love Waits \u2014 called Lovy \u2014 is a central figure in the Lauderdale\u2013Tipton County family story. Crystal is locking vital dates and marriage details.",
-    "narrative": "Lovy appears throughout family memory and the private photo album. This page holds the outline while Crystal fills censuses, vital records, and obituaries.",
+    "blurb": "Carrie Love Waits \u2014 Lovy \u2014 of Lauderdale County. Born 1892, died 1985; buried Asbury Church Cemetery.",
+    "narrative": "Funeral-home and family sources name Carrie Love (Lovy/Lovey) Waits Simpson as daughter of James C. Waits and Phobe Milburn, later with stepmother Mrs. Gaby/Gabie Waits. She was the widow of Giles Prexford Simpson.",
     "timeline": [
       {
         "t": "Born",
-        "d": "need-more \u2014 place likely Lauderdale or Tipton County, Tennessee",
-        "status": "need"
-      },
-      {
-        "t": "Parents",
-        "d": "FACT (family structure): James Clayborn Waits and Rhoda Milburn Waits",
+        "d": "11 Jul 1892",
         "status": "fact"
       },
       {
-        "t": "Stepmother after Rhoda",
-        "d": "Gabie Pilkington Hopper Waits (2nd wife of James Clayborn) \u2014 timing need-more",
-        "status": "need"
+        "t": "Parents",
+        "d": "Father James C. Waits; mother Phobe Milburn (Maley\u2013Yarbrough FH). Spellings of mother\u2019s given name vary across sources (see Rhoda\u2019s page).",
+        "status": "fact"
       },
       {
-        "t": "Marriage / Simpson surname",
-        "d": "need-more \u2014 husband, date, place",
-        "status": "need"
+        "t": "Stepmother",
+        "d": "Mrs. Gaby/Gabie Waits (Linnie Chapman Drive clipping)",
+        "status": "fact"
       },
       {
-        "t": "Death / burial",
-        "d": "need-more \u2014 obituary scan when available",
-        "status": "need"
+        "t": "Marriage",
+        "d": "Widow of Giles Prexford Simpson (Maley FH)",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "26 Aug 1985; buried Asbury Church Cemetery, Lauderdale Co., TN",
+        "status": "fact"
       }
     ],
     "sources": [
       {
-        "label": "Family oral history / William",
+        "label": "Maley\u2013Yarbrough Funeral Home records (TNGenWeb)",
         "status": "fact",
-        "note": "Name form Carrie Love \u201cLovy\u201d; Waits \u2192 Simpson"
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/maley-yarbrough-funeral-home/",
+        "note": "Carrie Love / parents / widow of Giles Prexford Simpson"
       },
       {
-        "label": "Census / vital records",
-        "status": "need",
-        "note": "Crystal to cite"
+        "label": "USGenWeb Maley deaths file",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/lauderdale/vitals/deaths/maley.txt",
+        "note": ""
+      },
+      {
+        "label": "Linnie Chapman Drive clipping",
+        "status": "fact",
+        "note": "Names stepmother Mrs. Gaby/Gabie Waits"
       },
       {
         "label": "Private album",
         "status": "fact",
-        "href": "../other-photos/",
-        "note": "Family photos (shared URL)"
+        "href": "../../other-photos/",
+        "note": "Family photos"
       }
     ]
   },
@@ -59,100 +65,117 @@
     "id": "james-clayborn-waits",
     "name": "James Clayborn Waits",
     "short_name": "James Clayborn Waits",
-    "lifespan": "dates need-more",
-    "rel": "Lovy\u2019s father; William\u2019s great-grandfather (maternal Waits line \u2014 confirm)",
-    "role_in_household": "Husband; household head",
+    "lifespan": "c. 1864 \u2013 1944",
+    "rel": "Father of Carrie Love \u201cLovy\u201d Waits Simpson; husband of Rhoda/Phobe Milburn (1st) and Gabie Pilkington Waits (2nd).",
     "bio_or_step": "bio",
-    "blurb": "Head of the Waits household in the Lauderdale\u2013Tipton area. Married Rhoda Milburn, then Gabie Pilkington Hopper.",
-    "narrative": "James Clayborn Waits anchors the \u201cStart here\u201d household diagram. Exact birth, death, and marriage dates are marked need-more until Crystal posts citations.",
+    "blurb": "James C. / Clayborn / Claiborn Waits (c. 1864\u20131944), Lauderdale County household head.",
+    "narrative": "Linked on Gabie\u2019s Find a Grave memorial as James Clayborn Waits, 1864\u20131944. Maley and Garner funeral-home records name him father of Carrie Love Simpson, Virginia Elleene Chaney, and Mary Almenuia Williams. A 1910 Ancestry index places James Waits Jr (b. 1864) with Gabie in Lauderdale County (image paywalled \u2014 citation incomplete until screenshot/export).",
     "timeline": [
       {
         "t": "Born",
-        "d": "need-more",
-        "status": "need"
+        "d": "c. 1864 (FaG Gabie memorial; 1910 index)",
+        "status": "fact"
       },
       {
         "t": "Marriage 1",
-        "d": "Rhoda Milburn \u2014 date/place need-more",
+        "d": "Rhoda / Phobe Milburn \u2014 exact date need-more (Crystal still hunting)",
         "status": "need"
       },
       {
-        "t": "Children with Rhoda",
-        "d": "Including Carrie Love \u201cLovy\u201d \u2014 full sibling list need-more",
-        "status": "need"
+        "t": "Children with first wife",
+        "d": "Includes Carrie Love Simpson; Mary Almenuia Williams; Virginia Elleene Chaney (Garner/Maley). Josie Belle and others \u2014 see maternity hypothesis on hub.",
+        "status": "fact"
       },
       {
         "t": "Marriage 2",
-        "d": "Gabie Pilkington Hopper Waits (stepmother to Rhoda\u2019s children) \u2014 date need-more",
+        "d": "Gabie Pilkington (Hopper) Waits \u2014 exact date need-more; together by 1910 index",
         "status": "need"
       },
       {
-        "t": "Death / burial",
-        "d": "need-more",
-        "status": "need"
+        "t": "Died",
+        "d": "1944 (per Gabie FaG spouse link)",
+        "status": "fact"
       }
     ],
     "sources": [
       {
-        "label": "Family structure (William / hybrid outline)",
+        "label": "Find a Grave \u2014 Gabie Waits #116840553 (spouse link)",
         "status": "fact",
-        "note": "Two marriages; Lovy among children of first marriage"
+        "href": "https://www.findagrave.com/memorial/116840553/gabie-waits",
+        "note": "Do NOT use FaG #200804333 (wrong person)"
       },
       {
-        "label": "Census / vital / Find a Grave",
+        "label": "Maley\u2013Yarbrough FH",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/maley-yarbrough-funeral-home/",
+        "note": "Father of Carrie Love"
+      },
+      {
+        "label": "Garner Funeral Home records 1971\u20131980",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1971-1980-garner-funeral-home-records/",
+        "note": "Father of Virginia Elleene Chaney & Mary Almenuia Williams"
+      },
+      {
+        "label": "1910 census (Ancestry index)",
         "status": "need",
-        "note": "Crystal"
+        "note": "James Waits Jr b. 1864 + Gabie, Lauderdale \u2014 image paywalled"
       }
     ]
   },
   {
     "id": "rhoda-milburn-waits",
     "name": "Rhoda Milburn Waits",
-    "short_name": "Rhoda Milburn Waits",
-    "lifespan": "dates need-more",
-    "rel": "Lovy\u2019s mother; first wife of James Clayborn Waits",
-    "role_in_household": "1st wife \u00b7 biological mother of Lovy",
+    "short_name": "Rhoda / Phobe Milburn Waits",
+    "lifespan": "d. 14 May 1908",
+    "rel": "First wife of James C. Waits; biological mother of Carrie Love \u201cLovy\u201d Waits Simpson (and other daughters named in funeral-home records).",
     "bio_or_step": "bio",
-    "blurb": "First wife of James Clayborn Waits and Lovy\u2019s mother. A Rhoda portrait may already sit in the private album.",
-    "narrative": "Keep Rhoda clearly labeled as the biological mother in the household diagram so Gabie\u2019s stepmother role stays distinct.",
+    "blurb": "First wife of James C. Waits. Died 14 May 1908. Given-name spellings vary widely in the records.",
+    "narrative": "Keep all spelling variants visible: Rhoda (family), Phobe (Maley), Rosa (Garner / Elleene), Rhonda (Garner / Mary), Phoebe/Rhonda/Rosa as encountered. Baseline death date 14 May 1908 \u2014 death certificate still desirable. Named mother of Carrie Love Simpson, Mary Almenuia Williams (8 Apr 1899\u20135 Jul 1978), and Virginia Elleene Chaney (27 Nov 1900\u201315 Aug 1972).",
     "timeline": [
       {
-        "t": "Born (Milburn)",
-        "d": "need-more",
+        "t": "Marriage to James C. Waits",
+        "d": "Date/place need-more",
         "status": "need"
       },
       {
-        "t": "Marriage to James Clayborn Waits",
-        "d": "need-more",
-        "status": "need"
+        "t": "Daughter Carrie Love",
+        "d": "b. 11 Jul 1892 (Maley FH)",
+        "status": "fact"
       },
       {
-        "t": "Children",
-        "d": "Including Lovy \u2014 full list need-more",
-        "status": "need"
+        "t": "Daughter Mary Almenuia Williams",
+        "d": "8 Apr 1899 \u2013 5 Jul 1978 (Garner FH); mother listed as Rhonda/Rosa variants",
+        "status": "fact"
       },
       {
-        "t": "Death",
-        "d": "need-more \u2014 before or prompting James\u2019s remarriage",
-        "status": "need"
+        "t": "Daughter Virginia Elleene Chaney",
+        "d": "27 Nov 1900 \u2013 15 Aug 1972 (Garner FH); mother Rosa",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "14 May 1908 (baseline; cert still desirable)",
+        "status": "fact"
       }
     ],
     "sources": [
       {
-        "label": "Family structure",
+        "label": "Garner FH records",
         "status": "fact",
-        "note": "1st wife; Lovy\u2019s mother"
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1971-1980-garner-funeral-home-records/",
+        "note": "Daughters Mary & Elleene; mother name variants"
       },
       {
-        "label": "Album photo \u201cRhoda\u201d",
-        "status": "need",
-        "href": "../other-photos/",
-        "note": "Confirm identity on album notes"
+        "label": "Maley\u2013Yarbrough FH",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/maley-yarbrough-funeral-home/",
+        "note": "Phobe Milburn as mother of Carrie Love"
       },
       {
-        "label": "Vital / cemetery records",
+        "label": "Death certificate",
         "status": "need",
-        "note": "Crystal"
+        "note": "Confirm 14 May 1908"
       }
     ]
   },
@@ -160,99 +183,120 @@
     "id": "gabie-pilkington-waits",
     "name": "Gabie Pilkington Hopper Waits",
     "short_name": "Gabie Pilkington Waits",
-    "lifespan": "dates need-more",
-    "rel": "Stepmother to Lovy; 2nd wife of James Clayborn Waits",
-    "role_in_household": "2nd wife \u00b7 stepmother",
+    "lifespan": "28 May 1883 \u2013 24 May 1966",
+    "rel": "Second wife of James Clayborn Waits; stepmother to Lovy and Rhoda\u2019s other daughters. Biological mother of Hopper children (not of Lovy).",
     "bio_or_step": "step",
-    "blurb": "Second wife of James Clayborn Waits (also known with Hopper). Stepmother in Lovy\u2019s household \u2014 not Lovy\u2019s biological mother.",
-    "narrative": "Label step relationships plainly on this site so readers don\u2019t conflate Gabie with Rhoda.",
+    "blurb": "Stepmother in Lovy\u2019s household. Buried Memorial Park, Memphis. Find a Grave #116840553.",
+    "narrative": "Gabie Pilkington married into the Waits household after Rhoda\u2019s death. She is named stepmother in the Linnie Chapman Drive clipping. Her biological children are on the Hopper line (son Eddie Lee Hopper; daughter Lillie May Hopper Ray; Iantha Beasley is a likely further child \u2014 keep as hypothesis until locked). Do not list Lovy, Josie Belle, Laura Clemmons, or Katherine Waits as Gabie\u2019s biological Waits children.",
     "timeline": [
       {
-        "t": "Born (Pilkington)",
-        "d": "need-more",
-        "status": "need"
-      },
-      {
-        "t": "Hopper marriage / widowhood",
-        "d": "need-more \u2014 surname Hopper before Waits",
-        "status": "need"
-      },
-      {
-        "t": "Marriage to James Clayborn Waits",
-        "d": "need-more",
-        "status": "need"
-      },
-      {
-        "t": "Role in household",
-        "d": "FACT (structure): stepmother to Rhoda\u2019s children including Lovy",
+        "t": "Born",
+        "d": "28 May 1883",
         "status": "fact"
       },
       {
-        "t": "Death / burial",
-        "d": "need-more",
+        "t": "Son Eddie Lee Hopper",
+        "d": "29 Sep 1898 \u2013 24 Jan 1972; Green\u2019s Chapel; FaG #197620283; Garner: f. Ferrell Hopper, m. Gabie Pilkington",
+        "status": "fact"
+      },
+      {
+        "t": "Daughter Lillie May Hopper",
+        "d": "m. Wesley Ray 10 Dec 1916 Lauderdale (mother\u2019s order)",
+        "status": "fact"
+      },
+      {
+        "t": "Marriage to James Clayborn Waits",
+        "d": "Exact date need-more; spouse link 1864\u20131944 on FaG; together by 1910 index",
         "status": "need"
+      },
+      {
+        "t": "Named stepmother",
+        "d": "Linnie Chapman Drive clipping (Mrs. Gaby/Gabie Waits)",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "24 May 1966; Memorial Park Cemetery, Memphis (Hillside); FaG #116840553",
+        "status": "fact"
       }
     ],
     "sources": [
       {
-        "label": "Family structure",
+        "label": "Find a Grave #116840553 Gabie Waits",
         "status": "fact",
-        "note": "2nd wife / stepmother"
+        "href": "https://www.findagrave.com/memorial/116840553/gabie-waits",
+        "note": ""
       },
       {
-        "label": "Records for Pilkington / Hopper / Waits",
-        "status": "need",
-        "note": "Crystal"
+        "label": "Find a Grave #197620283 Eddie Lee Hopper",
+        "status": "fact",
+        "href": "https://www.findagrave.com/memorial/197620283/eddie-lee-hopper",
+        "note": ""
+      },
+      {
+        "label": "Garner FH",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1971-1980-garner-funeral-home-records/",
+        "note": "Eddie: parents Ferrell Hopper & Gabie Pilkington"
+      },
+      {
+        "label": "Linnie Chapman Drive clipping",
+        "status": "fact",
+        "note": "Stepmother naming"
       }
     ]
   },
   {
     "id": "josie-belle-sides",
-    "name": "Josie Belle Sides",
+    "name": "Josie Belle Waits Sides",
     "short_name": "Josie Belle Sides",
-    "lifespan": "dates need-more",
-    "rel": "need-more \u2014 Sides line ties to Cherry / family circle (see Jack Sides in letters); exact link to Lovy/Waits TBD",
-    "role_in_household": "Featured relative (placement need-more)",
+    "lifespan": "1906 \u2013 2001 (FaG listing)",
+    "rel": "FACT (William): Mrs. Alec/Alex Sides of Henning \u2014 same as \u201cMrs. Alec Sides\u201d in Linnie sister list. Born Waits.",
     "bio_or_step": "need",
-    "blurb": "Included in the first person set at William\u2019s request. Relationship to the Waits/Simpson household is still being locked by Crystal.",
-    "narrative": "Do not invent a parent/child link to Lovy. Use this page as a stub with Sources ready for citations. Cross-check Those Who Served / letters for Jack Sides context without forcing Josie into that story.",
+    "blurb": "Josie Belle Waits Sides of Henning (Mrs. Alec/Alex Sides). FaG listing 1906\u20132001, Ripley Memorial Gardens.",
+    "narrative": "William identifies Josie Belle with Mrs. Alec/Alex Sides of Henning in the Linnie sister list. Find a Grave listing (full memorial capture still pending): Josie Waite Sides, 1906\u20132001, Ripley Memorial Gardens (cemetery 15589). Maternity: if born 1906, before Rhoda\u2019s death 14 May 1908, she is almost certainly Rhoda\u2019s daughter and Gabie\u2019s stepdaughter \u2014 label that HYPOTHESIS (strong) until a birth record locks it.",
     "timeline": [
       {
         "t": "Born",
-        "d": "need-more",
+        "d": "1906 (FaG listing \u2014 confirm with vital record)",
         "status": "need"
       },
       {
-        "t": "Relationship to William / Lovy",
-        "d": "need-more",
+        "t": "Identity",
+        "d": "FACT (William): Mrs. Alec/Alex Sides of Henning; \u201cMrs. Alec Sides\u201d in Linnie sister list",
+        "status": "fact"
+      },
+      {
+        "t": "Maternity",
+        "d": "HYPOTHESIS (strong): Rhoda\u2019s daughter / Gabie\u2019s stepdaughter if b. 1906 before Rhoda d. 14 May 1908",
         "status": "need"
       },
       {
-        "t": "Connection to Sides family at Cherry",
-        "d": "need-more \u2014 may relate to Jack Sides circle",
-        "status": "need"
-      },
-      {
-        "t": "Death / burial",
-        "d": "need-more",
+        "t": "Died",
+        "d": "2001; Ripley Memorial Gardens (FaG listing)",
         "status": "need"
       }
     ],
     "sources": [
       {
-        "label": "Owner request to include page",
+        "label": "William \u2014 identity as Mrs. Alec/Alex Sides of Henning",
         "status": "fact",
-        "note": "Name on first person set"
+        "note": ""
       },
       {
-        "label": "Relationship proof",
-        "status": "need",
-        "note": "Crystal"
+        "label": "Linnie Chapman sister list",
+        "status": "fact",
+        "note": "\u201cMrs. Alec Sides\u201d"
       },
       {
-        "label": "Letters / Those Who Served (Jack Sides)",
+        "label": "Find a Grave listing Josie Waite Sides 1906\u20132001",
         "status": "need",
-        "note": "Contextual only until linked"
+        "note": "Ripley Memorial Gardens cem. 15589 \u2014 full memorial capture pending"
+      },
+      {
+        "label": "Maternity vs Gabie",
+        "status": "need",
+        "note": "Hypothesis only until birth proof"
       }
     ]
   }
