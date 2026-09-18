@@ -486,8 +486,8 @@
     "lifespan": "27 Feb 1921 – 16 Nov 1996",
     "rel": "William’s father. Subject of the WWII letters and manuscript.",
     "bio_or_step": "need",
-    "blurb": "William’s father. 1st Lt US Army Air Corps WWII. Marker 27 Feb 1921 – 16 Nov 1996.",
-    "narrative": "Grave marker FACT. Spouse Mary Oletta. Letters: father Mr. W. H. Winn Henning. Photo-label parents John & Martha remain HYPOTHESIS.",
+    "blurb": "William’s father. 1st Lt AAC WWII. Father: Mr. W. H. Winn (d. Mar 1943).",
+    "narrative": "Father FACT Mr. W. H. Winn Henning d. Mar 1943. Mother Mrs. W. H. Winn (given name open). Nephew John Winn ≠ father. Photo John+Martha PARKED.",
     "timeline": [
       {
         "t": "Born",
@@ -576,6 +576,35 @@
         "status": "fact",
         "href": "https://tngenweb.org/lauderdale/2022/02/01/1971-1980-garner-funeral-home-records/",
         "note": "Mary Williams; Rhonda Milburn"
+      }
+    ]
+  },
+  {
+    "id": "w-h-winn",
+    "name": "Mr. W. H. Winn",
+    "short_name": "W. H. Winn",
+    "lifespan": "d. March 1943",
+    "rel": "Father of Austin Hunley Winn. Route 2, Henning, TN.",
+    "bio_or_step": "need",
+    "blurb": "Austin’s father. Letters FACT; d. Mar 1943; initials still open.",
+    "narrative": "Envelopes Mr. / Mr & Mrs W. H. Winn. Died Mar 1943. Widow Mrs. W. H. Winn.",
+    "timeline": [
+      {
+        "t": "Residence",
+        "d": "Route 2, Henning, TN",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "March 1943",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Letters 194301–194303",
+        "status": "fact",
+        "note": "willwinn.xyz archive"
       }
     ]
   }
