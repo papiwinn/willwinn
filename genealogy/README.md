@@ -29,3 +29,10 @@ Person pages tag items:
 
 - Link this section from the public site chrome
 - Invent relationships; leave Josie Belle Sides (and others) as need-more until proven
+
+## Corrections / comments
+
+Each person page (and the hub) has a floating **✎** button. Reviewers sign in with the same name + email session as letters corrections (`willwinn_reviewer` / `ww_*` cookies) and submit a free-text note plus optional “where on this page.”
+
+Submissions go through `corrections/config.js` (FormSubmit to `ownerEmail`, or `formEndpoint` / Web3Forms if set). William receives email and edits pages himself — public submits never rewrite HTML. Pending notes are not shown on the page.
+
