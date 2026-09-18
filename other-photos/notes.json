@@ -533,7 +533,7 @@
   {
     "id": "a86cd5ec-4278-419a-81c4-50df233d5702",
     "photo_id": "Austin5YO",
-    "text": "IÃ¢ÂÂm not sure thatÃ¢ÂÂs me. Did it have info on back?",
+    "text": "IÃÂ¢ÃÂÃÂm not sure thatÃÂ¢ÃÂÃÂs me. Did it have info on back?",
     "name": "Austin H Winn",
     "email": "ahwinn@gmail.com",
     "uid": "db6eac32-595e-410b-bea0-18be3a74bc1a",
@@ -556,5 +556,14 @@
     "email": "ahwinn@gmail.com",
     "uid": "db6eac32-595e-410b-bea0-18be3a74bc1a",
     "submitted_at": "2026-09-18T14:30:12.910Z"
+  },
+  {
+    "id": "f139fa41-0983-40aa-b676-108054976c43",
+    "photo_id": "09152026_011",
+    "text": "Mary, Joan and Austin in our backyard",
+    "name": "Austin H Winn",
+    "email": "ahwinn@gmail.com",
+    "uid": "db6eac32-595e-410b-bea0-18be3a74bc1a",
+    "submitted_at": "2026-09-18T14:31:41.829Z"
   }
 ]
