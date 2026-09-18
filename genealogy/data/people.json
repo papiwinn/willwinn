@@ -86,15 +86,20 @@
     "id": "james-clayborn-waits",
     "name": "James Clayborn Waits",
     "short_name": "James Clayborn Waits",
-    "lifespan": "c. 1863/1864 – 20 Dec 1944",
+    "lifespan": "Apr 1864 – 20 Dec 1944",
     "rel": "Father of Carrie Love “Lovy” Waits Simpson; husband of Rhoda/Phobe Milburn (1st) and Gabie Pilkington Waits (2nd).",
     "bio_or_step": "bio",
-    "blurb": "James C. / Clayborn / Claiborn Waits (c. 1863/1864–20 Dec 1944 per Carrie FaG bio), Lauderdale County household head.",
-    "narrative": "Gabie FaG spouse link 1864–1944; Carrie FaG #55032391 bio gives b. 1863 SC d. 20 Dec 1944 TN (secondary — pending cert). Father of Lovy, Elleene, Mary. Marriage to Gabie: free Lauderdale/Shelby/Tipton indexes empty.",
+    "blurb": "James Clayborn Waits (Apr 1864–20 Dec 1944), Maplewood Cemetery Ripley; FaG #200803433.",
+    "narrative": "FaG #200803433: b. Apr 1864 Newberry SC; d. 20 Dec 1944 Memphis; Maplewood Ripley; parents James Samuel Waits & Almenia Earhart (FACT); spouse Gabie. Prefer stone/FaG 1864 over Carrie bio 1863. Do not cite #200804333.",
     "timeline": [
       {
         "t": "Born",
-        "d": "c. 1863 (Carrie FaG bio) / c. 1864 (Gabie FaG; 1910 index)",
+        "d": "Apr 1864 Newberry, SC (FaG #200803433 / stone). Carrie bio 1863 = variant.",
+        "status": "fact"
+      },
+      {
+        "t": "Parents",
+        "d": "James Samuel Waits 1830–1910; Almenia Earhart Waits 1831–1908 (Maplewood; FaG #200803433)",
         "status": "fact"
       },
       {
@@ -114,22 +119,27 @@
       },
       {
         "t": "Died",
-        "d": "20 Dec 1944 TN (Carrie FaG #55032391 bio — secondary/strong HYPOTHESIS pending cert); year 1944 on Gabie spouse link",
-        "status": "need"
+        "d": "20 Dec 1944 Memphis, Shelby Co., TN; buried Maplewood Cemetery, Ripley (FaG #200803433)",
+        "status": "fact"
+      },
+      {
+        "t": "Burial",
+        "d": "Maplewood Cemetery, Ripley — James C. Waits 1864–1944",
+        "status": "fact"
       }
     ],
     "sources": [
       {
+        "label": "Find a Grave #200803433 James Clayborn Waits",
+        "status": "fact",
+        "href": "https://www.findagrave.com/memorial/200803433/james_clayborn-waits",
+        "note": "Do NOT use #200804333 (wrong person). Parents, burial Maplewood, spouse Gabie."
+      },
+      {
         "label": "Find a Grave #55032391 Carrie Love (memorial bio)",
         "status": "need",
         "href": "https://www.findagrave.com/memorial/55032391/carrie_love-simpson",
-        "note": "James b. 1863 SC d. 20 Dec 1944 TN — secondary; pending cert"
-      },
-      {
-        "label": "Find a Grave — Gabie Waits #116840553 (spouse link)",
-        "status": "fact",
-        "href": "https://www.findagrave.com/memorial/116840553/gabie-waits",
-        "note": "Do NOT use FaG #200804333 (wrong person)"
+        "note": "Secondary: birth year 1863 (prefer stone/FaG Apr 1864); Rhoda dates"
       },
       {
         "label": "Maley–Yarbrough FH",
@@ -302,8 +312,8 @@
     "lifespan": "1906 – 2001 (FaG listing)",
     "rel": "FACT (William): Mrs. Alec/Alex Sides of Henning — same as “Mrs. Alec Sides” in Linnie sister list. Born Waits.",
     "bio_or_step": "need",
-    "blurb": "Josie Belle Waits Sides of Henning (Mrs. Alec/Alex Sides). FaG listing 1906–2001, Ripley Memorial Gardens.",
-    "narrative": "William identifies Josie Belle with Mrs. Alec/Alex Sides of Henning in the Linnie sister list. Find a Grave listing (full memorial capture still pending): Josie Waite Sides, 1906–2001, Ripley Memorial Gardens (cemetery 15589). Maternity: if born 1906, before Rhoda’s death 14 May 1908, she is almost certainly Rhoda’s daughter and Gabie’s stepdaughter — label that HYPOTHESIS (strong) until a birth record locks it.",
+    "blurb": "Josie Belle Waits Sides of Henning (Mrs. Alec/Alex / Marion Alex). Double stone 1906–2001 / 1895–1970, Ripley Memorial Gardens.",
+    "narrative": "Mrs. Alec/Alex Sides of Henning (William); husband Marion Alex Sides. Double stone FaG listing + USGWArchives: Josie Waite Sides 1906–2001; Marion Alex Sides 1895–1970; Ripley Memorial Gardens cem. 15589. Numeric FaG IDs still open. Maternity HYPOTHESIS (strong) if b. 1906 before Rhoda d. 1908.",
     "timeline": [
       {
         "t": "Born",
@@ -312,7 +322,7 @@
       },
       {
         "t": "Identity",
-        "d": "FACT (William): Mrs. Alec/Alex Sides of Henning; “Mrs. Alec Sides” in Linnie sister list",
+        "d": "Mrs. Alec/Alex Sides of Henning; husband Marion Alex Sides (Alec/Alex)",
         "status": "fact"
       },
       {
@@ -324,6 +334,11 @@
         "t": "Died",
         "d": "2001; Ripley Memorial Gardens (FaG listing)",
         "status": "need"
+      },
+      {
+        "t": "Stone / FaG listing",
+        "d": "Josie Waite Sides 1906–2001; Marion Alex Sides 1895–1970; Ripley Memorial Gardens cem. 15589. Numeric FaG IDs open.",
+        "status": "fact"
       }
     ],
     "sources": [
