@@ -483,11 +483,11 @@
     "id": "austin-hunley-winn",
     "name": "Austin Hunley Winn",
     "short_name": "Austin Hunley Winn",
-    "lifespan": "27 Feb 1921 – 16 Nov 1996",
+    "lifespan": "24/27 Feb 1921 – 16 Nov 1996",
     "rel": "William’s father. Subject of the WWII letters and manuscript.",
     "bio_or_step": "need",
-    "blurb": "William’s father. 1st Lt AAC WWII. Father: Mr. W. H. Winn (d. Mar 1943).",
-    "narrative": "Letters father W. H. Winn d. Mar 1943. Parker 1978: son of Willis & Fannie; sister Mrs. John Peyton. Strong hyp W.H.=Willis H.; mother=Fannie. Photo John+Martha PARKED.",
+    "blurb": "William’s father. Parents Willis Hunley & Fannie Winn. Birth 24 Feb (William) / 27 Feb (stone).",
+    "narrative": "William FACT parents Willis Hunley Winn & Fannie Winn. Birth-day conflict 24 vs 27 Feb. Spouse Mary Oletta. Not mother.",
     "timeline": [
       {
         "t": "Born",
@@ -586,8 +586,8 @@
     "lifespan": "d. March 1943",
     "rel": "Father of Austin Hunley Winn. Route 2, Henning, TN.",
     "bio_or_step": "need",
-    "blurb": "Austin’s father. Letters W. H.; strong hyp Willis H. / Fannie (Parker 1978).",
-    "narrative": "Strong hyp Willis H. Winn from Parker; 1932 Leader Willis of Cherry as place lead. Mar 1943 FH negative.",
+    "blurb": "Legacy slug → Willis Hunley Winn.",
+    "narrative": "Letter initials W. H.; full name Willis Hunley Winn (William).",
     "timeline": [
       {
         "t": "Residence",
@@ -605,6 +605,50 @@
         "label": "Letters 194301–194303",
         "status": "fact",
         "note": "willwinn.xyz archive"
+      }
+    ]
+  },
+  {
+    "id": "willis-hunley-winn",
+    "name": "Willis Hunley Winn",
+    "short_name": "Willis Hunley Winn",
+    "lifespan": "d. March 1943",
+    "bio_or_step": "need",
+    "rel": "Father of Austin Hunley Winn.",
+    "blurb": "Austin’s father (William FACT). Letter form Mr. W. H. Winn, Henning.",
+    "narrative": "Willis Hunley Winn; d. Mar 1943; spouse Fannie Winn.",
+    "timeline": [
+      {
+        "t": "Died",
+        "d": "March 1943",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact"
+      },
+      {
+        "label": "Letters 194301–194303",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "fannie-winn",
+    "name": "Fannie Winn",
+    "short_name": "Fannie Winn",
+    "lifespan": "dates open",
+    "bio_or_step": "need",
+    "rel": "Mother of Austin Hunley Winn.",
+    "blurb": "Austin’s mother (William FACT). Maiden name open.",
+    "narrative": "Fannie Winn; spouse Willis Hunley Winn. Not Mary Oletta.",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact"
       }
     ]
   }
