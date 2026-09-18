@@ -643,7 +643,7 @@
     "bio_or_step": "need",
     "rel": "Mother of Austin Hunley Winn.",
     "blurb": "Austin’s mother. Fannie Lee McBride Winn; b. 1894 Tipton (William FACT).",
-    "narrative": "Fannie Lee McBride Winn; brother Melvin McBride FACT (William). Parents still open via Melvin line.",
+    "narrative": "Brother Melvin Eugene McBride FACT/ID locked. Parents JP/Mary Ann Fulce HYPOTHESIS only.",
     "timeline": [],
     "sources": [
       {
@@ -726,13 +726,13 @@
   },
   {
     "id": "melvin-mcbride",
-    "name": "Melvin E. McBride",
+    "name": "Melvin Eugene McBride",
     "short_name": "Melvin E. McBride",
     "lifespan": "dates open",
     "rel": "Fannie’s brother (William FACT). Letters’ Uncle Melvin.",
     "bio_or_step": "need",
-    "blurb": "Fannie’s brother (William FACT). Letters’ Uncle Melvin.",
-    "narrative": "Fannie’s brother (William FACT). Letters’ Uncle Melvin.",
+    "blurb": "Fannie’s brother. Letter Uncle Melvin = Melvin E. of Covington (ID locked). FaG #211916714.",
+    "narrative": "FACT ID. Parents JP McBride & Mary Ann Fulce are HYPOTHESIS only (FaG links).",
     "timeline": [],
     "sources": [
       {
@@ -748,8 +748,8 @@
     "lifespan": "dates open",
     "rel": "Aunt Virgie. Wife of Melvin McBride; maiden Goode.",
     "bio_or_step": "need",
-    "blurb": "Aunt Virgie. Wife of Melvin McBride; maiden Goode.",
-    "narrative": "Aunt Virgie. Wife of Melvin McBride; maiden Goode.",
+    "blurb": "Aunt Virgie. Virgie Lee (Goode) McBride; ID locked. FaG #211916863.",
+    "narrative": "FACT ID with letter Aunt Virgie.",
     "timeline": [],
     "sources": [
       {
