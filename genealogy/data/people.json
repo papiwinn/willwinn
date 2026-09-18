@@ -651,5 +651,77 @@
         "status": "fact"
       }
     ]
+  },
+  {
+    "id": "martha-jean-winn",
+    "name": "Martha Jean Winn",
+    "short_name": "Martha Jean Winn",
+    "lifespan": "dates open",
+    "rel": "Child of Austin Hunley Winn and Mary Oletta Littleheart Simpson Winn.",
+    "bio_or_step": "need",
+    "blurb": "Eldest child of Austin × Oletta (William FACT).",
+    "narrative": "Eldest child of Austin × Oletta (William FACT).",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact",
+        "note": "birth order"
+      }
+    ]
+  },
+  {
+    "id": "mary-love-winn",
+    "name": "Mary Love Winn",
+    "short_name": "Mary Love Winn",
+    "lifespan": "dates open",
+    "rel": "Child of Austin Hunley Winn and Mary Oletta Littleheart Simpson Winn.",
+    "bio_or_step": "need",
+    "blurb": "Second child of Austin × Oletta (William FACT).",
+    "narrative": "Second child of Austin × Oletta (William FACT).",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact",
+        "note": "birth order"
+      }
+    ]
+  },
+  {
+    "id": "austin-hunley-winn-jr",
+    "name": "Austin Hunley Winn (Jr.)",
+    "short_name": "Austin Hunley Winn (Jr.)",
+    "lifespan": "dates open",
+    "rel": "Child of Austin Hunley Winn and Mary Oletta Littleheart Simpson Winn.",
+    "bio_or_step": "need",
+    "blurb": "Third child of Austin × Oletta (William FACT).",
+    "narrative": "Third child of Austin × Oletta (William FACT).",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact",
+        "note": "birth order"
+      }
+    ]
+  },
+  {
+    "id": "william-lavaughan-winn",
+    "name": "William LaVaughan Winn",
+    "short_name": "William LaVaughan Winn",
+    "lifespan": "living",
+    "rel": "Child of Austin Hunley Winn and Mary Oletta Littleheart Simpson Winn.",
+    "bio_or_step": "need",
+    "blurb": "Youngest child of Austin × Oletta; site owner.",
+    "narrative": "Youngest child of Austin × Oletta; site owner.",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact",
+        "note": "birth order"
+      }
+    ]
   }
 ]
