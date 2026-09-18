@@ -33,6 +33,11 @@
         "t": "Died",
         "d": "26 Aug 1985; buried Asbury Church Cemetery, Lauderdale Co., TN",
         "status": "fact"
+      },
+      {
+        "t": "Half-siblings (Gabie\u2019s Hopper children)",
+        "d": "Eddie Lee Hopper; Lillie May Ray; Iantha (Aintha) Beasley",
+        "status": "fact"
       }
     ],
     "sources": [
@@ -88,7 +93,7 @@
       },
       {
         "t": "Marriage 2",
-        "d": "Gabie Pilkington (Hopper) Waits \u2014 exact date need-more; together by 1910 index",
+        "d": "Gabie Pilkington (Hopper) Waits \u2014 date/place open. FACT (negative): not in Lauderdale marriage books Jul 1902\u2013Oct 1918; try Tipton/Shelby. Together by 1910 index.",
         "status": "need"
       },
       {
@@ -120,6 +125,11 @@
         "label": "1910 census (Ancestry index)",
         "status": "need",
         "note": "James Waits Jr b. 1864 + Gabie, Lauderdale \u2014 image paywalled"
+      },
+      {
+        "label": "Negative: Lauderdale marriage books Jul 1902\u2013Oct 1918",
+        "status": "fact",
+        "note": "No James \u00d7 Gabie/Hopper/Pilkington (TNGenWeb)"
       }
     ]
   },
@@ -186,7 +196,7 @@
     "lifespan": "28 May 1883 \u2013 24 May 1966",
     "rel": "Second wife of James Clayborn Waits; stepmother to Lovy and Rhoda\u2019s other daughters. Biological mother of Hopper children (not of Lovy).",
     "bio_or_step": "step",
-    "blurb": "Stepmother in Lovy\u2019s household. Buried Memorial Park, Memphis. Find a Grave #116840553.",
+    "blurb": "Stepmother in Lovy\u2019s household. Hopper children: Eddie, Lillie May Ray, Iantha Beasley. FaG #116840553.",
     "narrative": "Gabie Pilkington married into the Waits household after Rhoda\u2019s death. She is named stepmother in the Linnie Chapman Drive clipping. Her biological children are on the Hopper line (son Eddie Lee Hopper; daughter Lillie May Hopper Ray; Iantha Beasley is a likely further child \u2014 keep as hypothesis until locked). Do not list Lovy, Josie Belle, Laura Clemmons, or Katherine Waits as Gabie\u2019s biological Waits children.",
     "timeline": [
       {
@@ -243,6 +253,12 @@
         "label": "Linnie Chapman Drive clipping",
         "status": "fact",
         "note": "Stepmother naming"
+      },
+      {
+        "label": "Brough ONS \u2014 Iantha Bethel Hopper Beasley",
+        "status": "fact",
+        "href": "https://brough.one-name.net/getperson.php?personID=I28316&tree=Brough",
+        "note": ""
       }
     ]
   },
