@@ -363,5 +363,115 @@
         "note": "Hypothesis only until birth proof"
       }
     ]
+  },
+  {
+    "id": "marion-alex-sides",
+    "name": "Marion Alex Sides",
+    "short_name": "Marion Alex Sides",
+    "lifespan": "1895 – 1970 (stone / FaG listing)",
+    "rel": "Husband of Josie Belle Waits Sides of Henning. Also called Alec / Alex (William).",
+    "bio_or_step": "need",
+    "blurb": "Husband of Josie Belle (Alec/Alex). Double stone, Ripley Memorial Gardens. Stub — Crystal paste pending.",
+    "narrative": "Scaffold from stone facts. Double stone with Josie at Ripley Memorial Gardens cem. 15589. Numeric FaG IDs open.",
+    "timeline": [
+      {
+        "t": "Stone / FaG listing",
+        "d": "Marion Alex Sides 1895–1970; double stone with Josie Waite Sides 1906–2001; Ripley Memorial Gardens cem. 15589",
+        "status": "fact"
+      },
+      {
+        "t": "Spouse",
+        "d": "Josie Belle Waits Sides",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "FaG search listing + USGWArchives stone",
+        "status": "fact",
+        "note": "Ripley Memorial Gardens cem. 15589"
+      },
+      {
+        "label": "William",
+        "status": "fact",
+        "note": "Alec/Alex Sides of Henning"
+      }
+    ]
+  },
+  {
+    "id": "giles-rexford-simpson",
+    "name": "Giles Rexford Simpson",
+    "short_name": "Giles Rexford Simpson",
+    "lifespan": "1899 – 1944",
+    "rel": "Husband of Carrie Love “Lovy” Waits Simpson. William’s grandfather on the Simpson line.",
+    "bio_or_step": "need",
+    "blurb": "Husband of Lovy. FaG spouse link Rexford; Maley FH “Prexford.” Stub — Crystal paste pending.",
+    "narrative": "FaG #55032391 links Giles Rexford Simpson 1899–1944. Maley FH spells Prexford. Child Oletta Simpson Winn linked on Carrie FaG.",
+    "timeline": [
+      {
+        "t": "Name",
+        "d": "Giles Rexford (FaG); Prexford (Maley FH variant)",
+        "status": "fact"
+      },
+      {
+        "t": "Lifespan",
+        "d": "1899–1944 (Carrie FaG spouse link)",
+        "status": "fact"
+      },
+      {
+        "t": "Spouse",
+        "d": "Carrie Love Waits Simpson",
+        "status": "fact"
+      },
+      {
+        "t": "Child",
+        "d": "Oletta Simpson Winn 1924–2017",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Find a Grave #55032391 Carrie Love Simpson",
+        "status": "fact",
+        "href": "https://www.findagrave.com/memorial/55032391/carrie_love-simpson",
+        "note": "Spouse Giles Rexford 1899–1944"
+      },
+      {
+        "label": "Maley–Yarbrough FH",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/maley-yarbrough-funeral-home/",
+        "note": "Prexford spelling"
+      }
+    ]
+  },
+  {
+    "id": "oletta-simpson-winn",
+    "name": "Oletta Simpson Winn",
+    "short_name": "Oletta Simpson Winn",
+    "lifespan": "1924 – 2017",
+    "rel": "Daughter of Carrie Love “Lovy” Waits Simpson and Giles Rexford Simpson.",
+    "bio_or_step": "need",
+    "blurb": "Daughter of Lovy & Giles (Carrie FaG #55032391 child link). Stub — Crystal paste pending.",
+    "narrative": "Linked on Carrie Love FaG #55032391 as Oletta Simpson Winn 1924–2017. William’s mother line.",
+    "timeline": [
+      {
+        "t": "Lifespan",
+        "d": "1924–2017 (Carrie FaG child link)",
+        "status": "fact"
+      },
+      {
+        "t": "Parents",
+        "d": "Carrie Love Waits Simpson; Giles Rexford Simpson",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Find a Grave #55032391 Carrie Love Simpson",
+        "status": "fact",
+        "href": "https://www.findagrave.com/memorial/55032391/carrie_love-simpson",
+        "note": "Child Oletta Simpson Winn 1924–2017"
+      }
+    ]
   }
 ]
