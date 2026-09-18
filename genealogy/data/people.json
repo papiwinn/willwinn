@@ -1,0 +1,259 @@
+[
+  {
+    "id": "lovy-waits-simpson",
+    "name": "Carrie Love \u201cLovy\u201d Waits Simpson",
+    "short_name": "Lovy Waits Simpson",
+    "lifespan": "dates need-more",
+    "rel": "William\u2019s grandmother (maternal line through the Waits / Simpson family \u2014 confirm exact path)",
+    "role_in_household": "Daughter of James Clayborn Waits & Rhoda Milburn",
+    "bio_or_step": "bio",
+    "blurb": "Carrie Love Waits \u2014 called Lovy \u2014 is a central figure in the Lauderdale\u2013Tipton County family story. Crystal is locking vital dates and marriage details.",
+    "narrative": "Lovy appears throughout family memory and the private photo album. This page holds the outline while Crystal fills censuses, vital records, and obituaries.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "need-more \u2014 place likely Lauderdale or Tipton County, Tennessee",
+        "status": "need"
+      },
+      {
+        "t": "Parents",
+        "d": "FACT (family structure): James Clayborn Waits and Rhoda Milburn Waits",
+        "status": "fact"
+      },
+      {
+        "t": "Stepmother after Rhoda",
+        "d": "Gabie Pilkington Hopper Waits (2nd wife of James Clayborn) \u2014 timing need-more",
+        "status": "need"
+      },
+      {
+        "t": "Marriage / Simpson surname",
+        "d": "need-more \u2014 husband, date, place",
+        "status": "need"
+      },
+      {
+        "t": "Death / burial",
+        "d": "need-more \u2014 obituary scan when available",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Family oral history / William",
+        "status": "fact",
+        "note": "Name form Carrie Love \u201cLovy\u201d; Waits \u2192 Simpson"
+      },
+      {
+        "label": "Census / vital records",
+        "status": "need",
+        "note": "Crystal to cite"
+      },
+      {
+        "label": "Private album",
+        "status": "fact",
+        "href": "../other-photos/",
+        "note": "Family photos (shared URL)"
+      }
+    ]
+  },
+  {
+    "id": "james-clayborn-waits",
+    "name": "James Clayborn Waits",
+    "short_name": "James Clayborn Waits",
+    "lifespan": "dates need-more",
+    "rel": "Lovy\u2019s father; William\u2019s great-grandfather (maternal Waits line \u2014 confirm)",
+    "role_in_household": "Husband; household head",
+    "bio_or_step": "bio",
+    "blurb": "Head of the Waits household in the Lauderdale\u2013Tipton area. Married Rhoda Milburn, then Gabie Pilkington Hopper.",
+    "narrative": "James Clayborn Waits anchors the \u201cStart here\u201d household diagram. Exact birth, death, and marriage dates are marked need-more until Crystal posts citations.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "need-more",
+        "status": "need"
+      },
+      {
+        "t": "Marriage 1",
+        "d": "Rhoda Milburn \u2014 date/place need-more",
+        "status": "need"
+      },
+      {
+        "t": "Children with Rhoda",
+        "d": "Including Carrie Love \u201cLovy\u201d \u2014 full sibling list need-more",
+        "status": "need"
+      },
+      {
+        "t": "Marriage 2",
+        "d": "Gabie Pilkington Hopper Waits (stepmother to Rhoda\u2019s children) \u2014 date need-more",
+        "status": "need"
+      },
+      {
+        "t": "Death / burial",
+        "d": "need-more",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Family structure (William / hybrid outline)",
+        "status": "fact",
+        "note": "Two marriages; Lovy among children of first marriage"
+      },
+      {
+        "label": "Census / vital / Find a Grave",
+        "status": "need",
+        "note": "Crystal"
+      }
+    ]
+  },
+  {
+    "id": "rhoda-milburn-waits",
+    "name": "Rhoda Milburn Waits",
+    "short_name": "Rhoda Milburn Waits",
+    "lifespan": "dates need-more",
+    "rel": "Lovy\u2019s mother; first wife of James Clayborn Waits",
+    "role_in_household": "1st wife \u00b7 biological mother of Lovy",
+    "bio_or_step": "bio",
+    "blurb": "First wife of James Clayborn Waits and Lovy\u2019s mother. A Rhoda portrait may already sit in the private album.",
+    "narrative": "Keep Rhoda clearly labeled as the biological mother in the household diagram so Gabie\u2019s stepmother role stays distinct.",
+    "timeline": [
+      {
+        "t": "Born (Milburn)",
+        "d": "need-more",
+        "status": "need"
+      },
+      {
+        "t": "Marriage to James Clayborn Waits",
+        "d": "need-more",
+        "status": "need"
+      },
+      {
+        "t": "Children",
+        "d": "Including Lovy \u2014 full list need-more",
+        "status": "need"
+      },
+      {
+        "t": "Death",
+        "d": "need-more \u2014 before or prompting James\u2019s remarriage",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Family structure",
+        "status": "fact",
+        "note": "1st wife; Lovy\u2019s mother"
+      },
+      {
+        "label": "Album photo \u201cRhoda\u201d",
+        "status": "need",
+        "href": "../other-photos/",
+        "note": "Confirm identity on album notes"
+      },
+      {
+        "label": "Vital / cemetery records",
+        "status": "need",
+        "note": "Crystal"
+      }
+    ]
+  },
+  {
+    "id": "gabie-pilkington-waits",
+    "name": "Gabie Pilkington Hopper Waits",
+    "short_name": "Gabie Pilkington Waits",
+    "lifespan": "dates need-more",
+    "rel": "Stepmother to Lovy; 2nd wife of James Clayborn Waits",
+    "role_in_household": "2nd wife \u00b7 stepmother",
+    "bio_or_step": "step",
+    "blurb": "Second wife of James Clayborn Waits (also known with Hopper). Stepmother in Lovy\u2019s household \u2014 not Lovy\u2019s biological mother.",
+    "narrative": "Label step relationships plainly on this site so readers don\u2019t conflate Gabie with Rhoda.",
+    "timeline": [
+      {
+        "t": "Born (Pilkington)",
+        "d": "need-more",
+        "status": "need"
+      },
+      {
+        "t": "Hopper marriage / widowhood",
+        "d": "need-more \u2014 surname Hopper before Waits",
+        "status": "need"
+      },
+      {
+        "t": "Marriage to James Clayborn Waits",
+        "d": "need-more",
+        "status": "need"
+      },
+      {
+        "t": "Role in household",
+        "d": "FACT (structure): stepmother to Rhoda\u2019s children including Lovy",
+        "status": "fact"
+      },
+      {
+        "t": "Death / burial",
+        "d": "need-more",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Family structure",
+        "status": "fact",
+        "note": "2nd wife / stepmother"
+      },
+      {
+        "label": "Records for Pilkington / Hopper / Waits",
+        "status": "need",
+        "note": "Crystal"
+      }
+    ]
+  },
+  {
+    "id": "josie-belle-sides",
+    "name": "Josie Belle Sides",
+    "short_name": "Josie Belle Sides",
+    "lifespan": "dates need-more",
+    "rel": "need-more \u2014 Sides line ties to Cherry / family circle (see Jack Sides in letters); exact link to Lovy/Waits TBD",
+    "role_in_household": "Featured relative (placement need-more)",
+    "bio_or_step": "need",
+    "blurb": "Included in the first person set at William\u2019s request. Relationship to the Waits/Simpson household is still being locked by Crystal.",
+    "narrative": "Do not invent a parent/child link to Lovy. Use this page as a stub with Sources ready for citations. Cross-check Those Who Served / letters for Jack Sides context without forcing Josie into that story.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "need-more",
+        "status": "need"
+      },
+      {
+        "t": "Relationship to William / Lovy",
+        "d": "need-more",
+        "status": "need"
+      },
+      {
+        "t": "Connection to Sides family at Cherry",
+        "d": "need-more \u2014 may relate to Jack Sides circle",
+        "status": "need"
+      },
+      {
+        "t": "Death / burial",
+        "d": "need-more",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Owner request to include page",
+        "status": "fact",
+        "note": "Name on first person set"
+      },
+      {
+        "label": "Relationship proof",
+        "status": "need",
+        "note": "Crystal"
+      },
+      {
+        "label": "Letters / Those Who Served (Jack Sides)",
+        "status": "need",
+        "note": "Contextual only until linked"
+      }
+    ]
+  }
+]

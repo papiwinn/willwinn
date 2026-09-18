@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Family genealogy – Will Winn</title>
+    <style>
+      :root { --accent: #e94560; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: system-ui, -apple-system, sans-serif;
+        color: white;
+        padding: 40px 20px 60px;
+      }
+      .container { max-width: 920px; margin: 0 auto; }
+      h1 { font-size: 2rem; margin: 0 0 8px; font-weight: 700; }
+      h2 { font-size: 1.25rem; margin: 28px 0 12px; color: var(--accent); }
+      h3 { font-size: 1.05rem; margin: 0 0 8px; }
+      .subtitle { color: var(--accent); font-size: 1.05rem; margin-bottom: 16px; }
+      .intro { opacity: 0.88; line-height: 1.55; margin: 0 0 28px; max-width: 40rem; }
+      a { color: var(--accent); }
+      a:hover { color: #ff6b6b; }
+      .card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 18px 18px 16px;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 999px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+      }
+      .tag.fact { background: rgba(46, 204, 113, 0.18); border: 1px solid rgba(46, 204, 113, 0.45); color: #a8e6c1; }
+      .tag.need { background: rgba(233, 69, 96, 0.18); border: 1px solid rgba(233, 69, 96, 0.45); color: #ffb3c0; }
+      .household {
+        display: grid;
+        gap: 12px;
+        margin: 0 0 8px;
+      }
+      .household .parents, .household .kids {
+        display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch;
+      }
+      .person-chip {
+        flex: 1 1 160px;
+        background: rgba(0,0,0,0.22);
+        border: 1px solid rgba(255,255,255,0.14);
+        border-radius: 10px;
+        padding: 12px 14px;
+        text-decoration: none;
+        color: inherit;
+      }
+      .person-chip:hover { border-color: var(--accent); }
+      .person-chip .role { font-size: 0.75rem; color: var(--accent); margin-bottom: 4px; }
+      .person-chip .name { font-weight: 650; }
+      .person-chip .meta { font-size: 0.82rem; opacity: 0.7; margin-top: 4px; }
+      .connector {
+        text-align: center; opacity: 0.55; font-size: 0.85rem; margin: 4px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 14px;
+      }
+      .feature-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 16px;
+        min-height: 120px;
+      }
+      .feature-card:hover { border-color: var(--accent); }
+      .feature-card .lifespan { font-size: 0.85rem; opacity: 0.7; margin: 4px 0 10px; }
+      .feature-card p { font-size: 0.9rem; opacity: 0.85; margin: 0; line-height: 1.45; }
+      .strip {
+        display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;
+      }
+      .strip a.btn {
+        display: inline-block;
+        padding: 12px 18px;
+        background: var(--accent);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      .strip a.btn.secondary {
+        background: transparent;
+        border: 2px solid var(--accent);
+      }
+      .strip a.btn:hover { background: #ff6b6b; color: white; }
+      .strip a.btn.secondary:hover { background: rgba(233,69,96,0.15); }
+      .note { font-size: 0.88rem; opacity: 0.75; margin-top: 12px; line-height: 1.45; }
+      .photo-ph {
+        width: 100%;
+        max-width: 280px;
+        aspect-ratio: 4/5;
+        background: rgba(0,0,0,0.35);
+        border: 1px dashed rgba(255,255,255,0.25);
+        border-radius: 10px;
+        display: flex; align-items: center; justify-content: center;
+        color: rgba(255,255,255,0.45);
+        font-size: 0.9rem;
+        margin: 0 0 18px;
+      }
+      .timeline { margin: 0; padding-left: 1.2rem; }
+      .timeline li { margin: 0 0 8px; line-height: 1.45; }
+      .sources { margin: 0; padding-left: 1.2rem; }
+      .sources li { margin: 0 0 8px; line-height: 1.45; opacity: 0.9; }
+      .back { display: inline-block; margin-bottom: 22px; color: var(--accent); text-decoration: none; font-weight: 500; }
+      .back:hover { text-decoration: underline; }
+      .status-row { margin: 0 0 14px; }
+      footer.colophon {
+        margin-top: 40px;
+        font-size: 0.82rem;
+        opacity: 0.55;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Family genealogy</h1>
+      <div class="subtitle">Lauderdale &amp; Tipton County, Tennessee</div>
+      <p class="intro">
+        A private family-history corner for the Waits / Simpson line and close kin.
+        Shared by URL only — not linked from the public home, letters, or manuscript pages.
+        Crystal is researching records in parallel; green <span class="tag fact">FACT</span> marks
+        what the family has locked, and pink <span class="tag need">need-more</span> marks open questions.
+      </p>
+
+      <h2>Start here · Lovy’s household</h2>
+      <div class="card household">
+        <p class="note" style="margin-top:0">Simple diagram of James Clayborn Waits’s household. Bio vs step is labeled on purpose.</p>
+        <div class="parents">
+          <a class="person-chip" href="people/james-clayborn-waits.html">
+            <div class="role">Husband · household head</div>
+            <div class="name">James Clayborn Waits</div>
+            <div class="meta">dates need-more</div>
+          </a>
+        </div>
+        <div class="connector">married (1st)</div>
+        <div class="parents">
+          <a class="person-chip" href="people/rhoda-milburn-waits.html">
+            <div class="role">1st wife · biological mother</div>
+            <div class="name">Rhoda Milburn Waits</div>
+            <div class="meta"><span class="tag fact">bio</span> Lovy’s mother</div>
+          </a>
+        </div>
+        <div class="connector">↓ children of James &amp; Rhoda (list incomplete)</div>
+        <div class="kids">
+          <a class="person-chip" href="people/lovy-waits-simpson.html">
+            <div class="role">Daughter</div>
+            <div class="name">Carrie Love “Lovy” Waits Simpson</div>
+            <div class="meta"><span class="tag fact">bio child</span></div>
+          </a>
+          <div class="person-chip" style="opacity:0.65">
+            <div class="role">Other children</div>
+            <div class="name">Names need-more</div>
+            <div class="meta">Crystal to complete sibling list</div>
+          </div>
+        </div>
+        <div class="connector">married (2nd) — after Rhoda</div>
+        <div class="parents">
+          <a class="person-chip" href="people/gabie-pilkington-waits.html">
+            <div class="role">2nd wife · stepmother</div>
+            <div class="name">Gabie Pilkington Hopper Waits</div>
+            <div class="meta"><span class="tag fact">step</span> not Lovy’s mother</div>
+          </a>
+        </div>
+      </div>
+
+      <h2>Featured people</h2>
+      <div class="grid">
+        <a class="feature-card" href="people/lovy-waits-simpson.html">
+          <h3>Lovy Waits Simpson</h3>
+          <div class="lifespan">dates need-more</div>
+          <p>Carrie Love Waits — called Lovy — is a central figure in the Lauderdale–Tipton County family story. Crystal is locking vital dates and marriage details.</p>
+        </a>
+        <a class="feature-card" href="people/james-clayborn-waits.html">
+          <h3>James Clayborn Waits</h3>
+          <div class="lifespan">dates need-more</div>
+          <p>Head of the Waits household in the Lauderdale–Tipton area. Married Rhoda Milburn, then Gabie Pilkington Hopper.</p>
+        </a>
+        <a class="feature-card" href="people/rhoda-milburn-waits.html">
+          <h3>Rhoda Milburn Waits</h3>
+          <div class="lifespan">dates need-more</div>
+          <p>First wife of James Clayborn Waits and Lovy’s mother. A Rhoda portrait may already sit in the private album.</p>
+        </a>
+        <a class="feature-card" href="people/gabie-pilkington-waits.html">
+          <h3>Gabie Pilkington Waits</h3>
+          <div class="lifespan">dates need-more</div>
+          <p>Second wife of James Clayborn Waits (also known with Hopper). Stepmother in Lovy’s household — not Lovy’s biological mother.</p>
+        </a>
+        <a class="feature-card" href="people/josie-belle-sides.html">
+          <h3>Josie Belle Sides</h3>
+          <div class="lifespan">dates need-more</div>
+          <p>Included in the first person set at William’s request. Relationship to the Waits/Simpson household is still being locked by Crystal.</p>
+        </a>
+      </div>
+
+      <h2>Documents &amp; photos</h2>
+      <div class="card">
+        <div class="strip">
+          <a class="btn" href="../other-photos/">Private family photo album</a>
+          <a class="btn secondary" href="people/lovy-waits-simpson.html">Lovy’s person page</a>
+        </div>
+        <p class="note">Scanned obituaries and certificates will land here (or in the album) when Crystal or William add them. Until then, Sources lists on each person page hold citation slots.</p>
+      </div>
+
+      <footer class="colophon">Unlisted · https://willwinn.xyz/genealogy/ · also https://papiwinn.github.io/willwinn/genealogy/</footer>
+    </div>
+  </body>
+</html>
