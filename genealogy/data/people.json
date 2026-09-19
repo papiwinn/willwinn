@@ -486,7 +486,7 @@
     "lifespan": "27 Feb 1921 \u2013 16 Nov 1996",
     "rel": "William\u2019s father. Subject of the WWII letters and manuscript.",
     "bio_or_step": "need",
-    "blurb": "William\u2019s father. Parents Willis Hunley & Fannie Lee McBride Winn. Birth 27 Feb 1921 (William; matches stone). Siblings John Winn, Joan Lee, Jim Willis (William FACT).",
+    "blurb": "William\u2019s father. Parents Willis Hunley & Fannie Lee McBride Winn. Birth 27 Feb 1921 (William; matches stone). Sister Mary Frances (Winn) Peyton; brother-in-law John Peyton (William FACT).",
     "narrative": "William FACT: born 27 February 1921 (matches grave marker). Parents Willis Hunley Winn & Fannie Lee McBride Winn. Spouse Mary Oletta. Death 16 Nov 1996.",
     "timeline": [
       {
@@ -615,8 +615,8 @@
     "lifespan": "d. March 1943",
     "bio_or_step": "need",
     "rel": "Father of Austin Hunley Winn.",
-    "blurb": "Austin\u2019s father (William FACT). Children: Austin, John Winn, Joan Lee, Jim Willis. Letter Mr. W. H. Winn, Henning.",
-    "narrative": "Willis Hunley Winn; d. Mar 1943; spouse Fannie; children Austin, John Winn, Joan Lee, Jim Willis (William).",
+    "blurb": "Austin\u2019s father (William FACT). Children: Austin and Mary Frances (Winn) Peyton. Letter Mr. W. H. Winn, Henning.",
+    "narrative": "Willis Hunley Winn; d. Mar 1943; spouse Fannie; children Austin and Mary Frances Peyton (William). John/Joan/Jim child claim retracted.",
     "timeline": [
       {
         "t": "Died",
@@ -642,7 +642,7 @@
     "lifespan": "b. 1894 Tipton Co., TN",
     "bio_or_step": "need",
     "rel": "Mother of Austin Hunley Winn.",
-    "blurb": "Fannie Lee McBride Winn; b. 1894 Tipton. Children: Austin, John Winn, Joan Lee, Jim Willis (William).",
+    "blurb": "Fannie Lee McBride Winn; b. 1894 Tipton. Children: Austin and Mary Frances (Winn) Peyton (William).",
     "narrative": "Parents locked FACT (William): James Peter McBride and Molly Fulce. FaG Mary Ann = same as Molly unless disproven.",
     "timeline": [],
     "sources": [
@@ -797,15 +797,15 @@
     "name": "John Winn",
     "short_name": "John Winn",
     "lifespan": "dates open",
-    "rel": "Child of Willis \u00d7 Fannie; sibling of Austin.",
-    "bio_or_step": "need",
-    "blurb": "John Winn. FACT sibling of Austin (William). Stub.",
-    "narrative": "William FACT. Parents Willis Hunley Winn \u00d7 Fannie Lee McBride Winn.",
+    "rel": "HOLD \u2014 not Willis\u00d7Fannie child; placement open (maybe Peyton child).",
+    "bio_or_step": "hold",
+    "blurb": "John Winn. HOLD \u2014 Willis\u00d7Fannie child claim retracted (William).",
+    "narrative": "Awaiting William on whether Peyton child.",
     "timeline": [],
     "sources": [
       {
-        "label": "William",
-        "status": "fact"
+        "label": "William correction 19 Sep 2026",
+        "status": "hold"
       }
     ]
   },
@@ -814,10 +814,44 @@
     "name": "Joan Lee",
     "short_name": "Joan Lee",
     "lifespan": "dates open",
-    "rel": "Child of Willis \u00d7 Fannie; sibling of Austin. Married surname open.",
+    "rel": "HOLD \u2014 not Willis\u00d7Fannie child; placement open.",
+    "bio_or_step": "hold",
+    "blurb": "Joan Lee. HOLD \u2014 Willis\u00d7Fannie child claim retracted (William).",
+    "narrative": "Awaiting William on placement.",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William correction 19 Sep 2026",
+        "status": "hold"
+      }
+    ]
+  },
+  {
+    "id": "jim-willis",
+    "name": "Jim Willis",
+    "short_name": "Jim Willis",
+    "lifespan": "dates open",
+    "rel": "HOLD \u2014 not Willis\u00d7Fannie child; placement open.",
+    "bio_or_step": "hold",
+    "blurb": "Jim Willis. HOLD \u2014 Willis\u00d7Fannie child claim retracted (William).",
+    "narrative": "Awaiting William on placement.",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William correction 19 Sep 2026",
+        "status": "hold"
+      }
+    ]
+  },
+  {
+    "id": "mary-frances-peyton",
+    "name": "Mary Frances (Winn) Peyton",
+    "short_name": "Mary Frances Peyton",
+    "lifespan": "dates open",
+    "rel": "Austin\u2019s sister; daughter of Willis \u00d7 Fannie; wife of John Peyton.",
     "bio_or_step": "need",
-    "blurb": "Joan Lee. FACT sibling of Austin (William). Married surname open.",
-    "narrative": "William FACT. Birth family Winn; married surname pending William.",
+    "blurb": "Mary Frances (Winn) Peyton. FACT sister of Austin (William). Mrs. John Peyton.",
+    "narrative": "William FACT. Letters Mrs. John Peyton / Mary Peyton / Sister John.",
     "timeline": [],
     "sources": [
       {
@@ -827,14 +861,14 @@
     ]
   },
   {
-    "id": "jim-willis",
-    "name": "Jim Willis",
-    "short_name": "Jim Willis",
+    "id": "john-peyton",
+    "name": "John Peyton",
+    "short_name": "John Peyton",
     "lifespan": "dates open",
-    "rel": "Child of Willis \u00d7 Fannie; sibling of Austin. Married surname open.",
+    "rel": "Husband of Mary Frances (Winn) Peyton; Austin\u2019s brother-in-law.",
     "bio_or_step": "need",
-    "blurb": "Jim Willis. FACT sibling of Austin (William). Married surname open.",
-    "narrative": "William FACT. Birth family Winn; married surname pending William.",
+    "blurb": "John Peyton. FACT brother-in-law of Austin (William).",
+    "narrative": "William FACT. Letters Mrs. John Peyton / Sister John.",
     "timeline": [],
     "sources": [
       {
