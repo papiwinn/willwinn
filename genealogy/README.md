@@ -36,3 +36,7 @@ Each person page (and the hub) has a floating **✎** button. Reviewers sign in 
 
 Submissions go through `corrections/config.js` (FormSubmit to `ownerEmail`, or `formEndpoint` / Web3Forms if set). William receives email and edits pages himself — public submits never rewrite HTML. Pending notes are not shown on the page.
 
+## Portraits
+
+Person portraits live in `images/` as `{person-slug}.jpg` and are shown on the matching `people/{slug}.html` page. Source files arrive via William’s Google Sheet (Drive links); Amos compresses for web before commit.
+
