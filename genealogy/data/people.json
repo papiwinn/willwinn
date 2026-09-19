@@ -6,7 +6,7 @@
     "lifespan": "11 Jul 1892 \u2013 26 Aug 1985",
     "rel": "Daughter of James C. Waits and Phobe (Rhoda) Milburn; stepdaughter of Gabie Pilkington Waits; widow of Giles Rexford Simpson (Maley: \u201cPrexford\u201d). William\u2019s grandmother line (Waits \u2192 Simpson).",
     "bio_or_step": "bio",
-    "blurb": "Carrie Love Waits \u2014 Lovy \u2014 of Lauderdale County. Born 1892, died 1985; Asbury; FaG #55032391.",
+    "blurb": "Carrie Love Waits \u2014 Lovy \u2014 of Lauderdale County. Born 1892, died 1985; Asbury; FaG #55032391. Children FACT (William order): LaVaughan, Bill, Oletta, Waits, Rhoda, Milburn.",
     "narrative": "Funeral-home and family sources name Carrie Love (Lovy/Lovey) Waits Simpson as daughter of James C. Waits and Phobe Milburn, later with stepmother Mrs. Gaby/Gabie Waits. Widow of Giles Rexford Simpson (FaG #55032391; Maley \u201cPrexford\u201d). Linked child Oletta Simpson Winn 1924\u20132017.",
     "timeline": [
       {
@@ -451,7 +451,7 @@
     "lifespan": "13 Feb 1924 \u2013 2017",
     "rel": "William\u2019s mother. Daughter of Carrie Love \u201cLovy\u201d Waits Simpson and Giles Rexford Simpson.",
     "bio_or_step": "need",
-    "blurb": "William\u2019s mother. Full legal name; 13 Feb 1924; spouse Austin Hunley Winn FACT.",
+    "blurb": "William\u2019s mother. Full legal name; 13 Feb 1924; spouse Austin Hunley Winn FACT. Siblings (William order): LaVaughan, Bill, Waits, Rhoda, Milburn.",
     "narrative": "William override locked. FaG child label \u201cOletta Simpson Winn\u201d 1924\u20132017 kept as source wording only.",
     "timeline": [
       {
@@ -869,6 +869,99 @@
     "bio_or_step": "need",
     "blurb": "John Peyton. FACT brother-in-law of Austin; children John Winn, Joan Lee, Jim Willis (William).",
     "narrative": "William FACT. Letters Mrs. John Peyton / Sister John.",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "lavaughan-simpson",
+    "name": "LaVaughan Simpson",
+    "short_name": "LaVaughan",
+    "lifespan": "1917\u20131993 (FaG)",
+    "rel": "Child of Lovy \u00d7 Giles; 1st in William birth-list.",
+    "bio_or_step": "need",
+    "blurb": "LaVaughan L. Simpson. FACT sibling (William). FaG 1917\u20131993.",
+    "narrative": "William FACT order. Carrie FaG years.",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "william-bill-simpson",
+    "name": "William (Bill) Simpson",
+    "short_name": "Bill Simpson",
+    "lifespan": "1939\u20132004 (FaG years; order conflict)",
+    "rel": "Child of Lovy \u00d7 Giles; 2nd in William birth-list.",
+    "bio_or_step": "need",
+    "blurb": "William (Bill) Simpson. FACT sibling (William). FaG years conflict with order.",
+    "narrative": "William puts Bill before Oletta; FaG 1939\u20132004.",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "waits-andrew-simpson",
+    "name": "Waits Andrew Simpson",
+    "short_name": "Waits",
+    "lifespan": "21 Aug 1926 \u2013 9 Nov 2004",
+    "rel": "Child of Lovy \u00d7 Giles; 4th in William birth-list.",
+    "bio_or_step": "need",
+    "blurb": "Waits Andrew Simpson. FACT. FaG #76666074.",
+    "narrative": "William FACT. FaG memorial.",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact"
+      },
+      {
+        "label": "FaG #76666074",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "rhoda-violet-gonnsen",
+    "name": "Rhoda Violet (Simpson) Gonnsen",
+    "short_name": "Rhoda Violet Gonnsen",
+    "lifespan": "12 Jan 1933 \u2013 8 Aug 2019",
+    "rel": "Child of Lovy \u00d7 Giles; 5th in William birth-list. Married Gonnsen.",
+    "bio_or_step": "need",
+    "blurb": "Rhoda Violet Gonnsen n\u00e9e Simpson. FACT. Youngest of six per obit.",
+    "narrative": "Not grandmother Rhoda Milburn Waits.",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "William",
+        "status": "fact"
+      },
+      {
+        "label": "Gonnsen obit",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "milburn-simpson",
+    "name": "Milburn Simpson",
+    "short_name": "Milburn",
+    "lifespan": "dates open",
+    "rel": "Child of Lovy \u00d7 Giles; 6th in William birth-list.",
+    "bio_or_step": "need",
+    "blurb": "Milburn Simpson. FACT name (William). No FaG yet.",
+    "narrative": "Stub.",
     "timeline": [],
     "sources": [
       {
