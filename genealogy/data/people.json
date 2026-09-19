@@ -898,11 +898,11 @@
     "id": "william-bill-simpson",
     "name": "William (Bill) Simpson",
     "short_name": "Bill Simpson",
-    "lifespan": "1939\u20132004 (FaG years; order conflict)",
+    "lifespan": "b. 1920 (death open)",
     "rel": "Child of Lovy \u00d7 Giles; 2nd in William birth-list.",
     "bio_or_step": "need",
-    "blurb": "William (Bill) Simpson. FACT sibling (William). FaG years conflict with order.",
-    "narrative": "William puts Bill before Oletta; FaG 1939\u20132004.",
+    "blurb": "William (Bill) Simpson. FACT sibling (William); born 1920. FaG 1939\u20132004 rejected as mismatch.",
+    "narrative": "William FACT birth 1920; 2nd in birth-list before Oletta. Carrie FaG William Simpson 1939\u20132004 is not this Bill.",
     "timeline": [],
     "sources": [
       {
