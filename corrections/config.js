@@ -1,23 +1,27 @@
-/* Corrections + stories + photos + private album config (GitHub Pages — no secrets here).
+/* Corrections + stories + photos + private album + genealogy config (no secrets here).
  *
- * Corrections / stories (text):
- *   ownerEmail → FormSubmit email inbox (works for text fields).
+ * Corrections / stories / genealogy text (comments + vitals notify):
+ *   ownerEmail → FormSubmit email inbox.
  *
  * Photos (files must not use FormSubmit AJAX — it drops attachments):
- *   photoEndpoint → Cloudflare Worker URL (photos/upload-worker.js)
- *   that commits the image into letters/images/ using a server-side
- *   GITHUB_TOKEN secret.
+ *   photoEndpoint → Cloudflare Worker (photos/upload-worker.js)
+ *
+ * Genealogy portraits (pending only — William approves before live):
+ *   genealogyPortraitEndpoint → same Worker + "/genealogy-portrait"
+ *   Writes genealogy/images/pending/ … redeploy icy-dust after Worker changes.
+ *
+ * Genealogy vitals staging (optional; FormSubmit is the notify path):
+ *   genealogyVitalsEndpoint → same Worker + "/genealogy-vitals"
  *
  * Private family album notes (other-photos/):
  *   albumNotesEndpoint → same Worker + "/notes"
- *   Example: "https://icy-dust-9cb5.papiwinn.workers.dev/notes"
- *   Redeploy photos/upload-worker.js to icy-dust so /notes exists.
  */
 window.CORRECTIONS_CONFIG = {
   formEndpoint: "",
   web3formsKey: "",
   ownerEmail: "papiwinn@gmail.com",
   photoEndpoint: "https://icy-dust-9cb5.papiwinn.workers.dev",
-  /* After redeploying upload-worker.js with /notes support: */
-  albumNotesEndpoint: "https://icy-dust-9cb5.papiwinn.workers.dev/notes"
+  albumNotesEndpoint: "https://icy-dust-9cb5.papiwinn.workers.dev/notes",
+  genealogyPortraitEndpoint: "https://icy-dust-9cb5.papiwinn.workers.dev/genealogy-portrait",
+  genealogyVitalsEndpoint: "https://icy-dust-9cb5.papiwinn.workers.dev/genealogy-vitals"
 };

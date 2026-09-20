@@ -40,3 +40,13 @@ Submissions go through `corrections/config.js` (FormSubmit to `ownerEmail`, or `
 
 Person portraits live in `images/` as `{person-slug}.jpg` and are shown on the matching `people/{slug}.html` page. Source files arrive via William’s Google Sheet (Drive links); Amos compresses for web before commit.
 
+## Family contributions (✎ button)
+
+On the hub and every person page, signed-in reviewers can:
+
+1. **Comment / correction** — FormSubmit email to `papiwinn@gmail.com` (same as letters)
+2. **Portrait upload** — file goes to `images/pending/` via icy-dust `/genealogy-portrait` (never auto-replaces live `images/{slug}.jpg`)
+3. **Vitals** — DOB/DOD/places/marriage fields emailed as **PENDING** (not FACT); optional Worker staging in `pending/vitals.json`
+
+William reviews email (and pending paths), then promotes approved portraits/vitals by hand or asks Amos. Redeploy icy-dust after updating `photos/upload-worker.js` so portrait/vitals Worker routes exist.
+

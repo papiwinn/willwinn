@@ -1,7 +1,6 @@
-/* Genealogy correction/comment widget.
- * Reuses corrections/config.js (CORRECTIONS_CONFIG) and the same
- * willwinn_reviewer localStorage + ww_* cookies as letters corrections.
- * Submits text only to FormSubmit / formEndpoint / web3forms — never edits HTML.
+/* Genealogy family contributions widget.
+ * Auth: same willwinn_reviewer + ww_* cookies as letters corrections.
+ * Modes: comment | portrait | vitals — William approves; never auto-edits FACT HTML.
  */
 (function () {
   "use strict";
@@ -48,7 +47,9 @@
   }
 
   function getCookie(name) {
-    var m = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([.$?*|{}()[\]\\/+^])/g, "\\$1") + "=([^;]*)"));
+    var m = document.cookie.match(
+      new RegExp("(?:^|; )" + name.replace(/([.$?*|{}()[\]\\/+^])/g, "\\$1") + "=([^;]*)")
+    );
     return m ? decodeURIComponent(m[1]) : "";
   }
 
@@ -124,12 +125,58 @@
     return null;
   }
 
+  function portraitEndpoint() {
+    var cfg = window.CORRECTIONS_CONFIG || {};
+    return (cfg.genealogyPortraitEndpoint || "").trim();
+  }
+
+  function vitalsEndpoint() {
+    var cfg = window.CORRECTIONS_CONFIG || {};
+    return (cfg.genealogyVitalsEndpoint || "").trim();
+  }
+
   function appendOutbox(payload) {
     try {
       var list = JSON.parse(localStorage.getItem(OUTBOX_KEY) || "[]");
       list.push(payload);
       localStorage.setItem(OUTBOX_KEY, JSON.stringify(list));
     } catch (e) {}
+  }
+
+  function notifyEmail(subject, fields, done, fail) {
+    var dest = configuredEndpoint();
+    if (!dest) {
+      fail("Inbox not configured (corrections/config.js).");
+      return;
+    }
+    var url;
+    var headers = { Accept: "application/json", "Content-Type": "application/json" };
+    var body;
+    if (dest.type === "web3forms") {
+      url = "https://api.web3forms.com/submit";
+      body = JSON.stringify(Object.assign({ access_key: dest.key, subject: subject }, fields));
+    } else if (dest.type === "formsubmit") {
+      url = dest.url;
+      body = JSON.stringify(Object.assign({ _subject: subject, _template: "table" }, fields));
+    } else {
+      url = dest.url;
+      body = JSON.stringify(Object.assign({ subject: subject }, fields));
+    }
+    fetch(url, { method: "POST", headers: headers, body: body })
+      .then(function (res) {
+        if (!res.ok) {
+          return res.text().then(function (t) {
+            throw new Error(t || "HTTP " + res.status);
+          });
+        }
+        return res.json().catch(function () {
+          return {};
+        });
+      })
+      .then(done)
+      .catch(function (ex) {
+        fail(ex && ex.message ? ex.message : "Notify failed.");
+      });
   }
 
   function injectStyles() {
@@ -139,28 +186,31 @@
     css.textContent = [
       "#ww-gene-corr-btn{position:fixed;right:18px;bottom:18px;z-index:9998;width:52px;height:52px;border-radius:50%;border:none;background:#e94560;color:#fff;font-size:1.35rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.35);line-height:1}",
       "#ww-gene-corr-btn:hover{background:#ff6b6b}",
-      "#ww-gene-corr-btn:focus{outline:2px solid #fff;outline-offset:2px}",
       "#ww-gene-corr-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.55);padding:20px;overflow:auto}",
       "#ww-gene-corr-overlay.open{display:flex;align-items:flex-start;justify-content:center}",
-      "#ww-gene-corr-panel{width:100%;max-width:480px;margin:40px auto;background:#16213e;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:20px 18px 16px;color:#fff;font-family:system-ui,-apple-system,sans-serif}",
+      "#ww-gene-corr-panel{width:100%;max-width:520px;margin:40px auto;background:#16213e;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:20px 18px 16px;color:#fff;font-family:system-ui,-apple-system,sans-serif}",
       "#ww-gene-corr-panel h2{margin:0 0 6px;font-size:1.25rem}",
-      "#ww-gene-corr-panel .sub{opacity:.75;font-size:.9rem;margin:0 0 16px;line-height:1.4}",
+      "#ww-gene-corr-panel .sub{opacity:.75;font-size:.9rem;margin:0 0 14px;line-height:1.4}",
       "#ww-gene-corr-panel label{display:block;font-size:.9rem;font-weight:600;margin:0 0 6px}",
       "#ww-gene-corr-panel .hint{font-size:.8rem;opacity:.7;margin:-2px 0 8px;font-weight:400}",
-      "#ww-gene-corr-panel input,#ww-gene-corr-panel textarea{width:100%;box-sizing:border-box;padding:11px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.25);color:#fff;font:inherit;margin-bottom:14px}",
-      "#ww-gene-corr-panel textarea{min-height:100px;resize:vertical}",
+      "#ww-gene-corr-panel input,#ww-gene-corr-panel textarea,#ww-gene-corr-panel select{width:100%;box-sizing:border-box;padding:11px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.25);color:#fff;font:inherit;margin-bottom:14px}",
+      "#ww-gene-corr-panel textarea{min-height:90px;resize:vertical}",
       "#ww-gene-corr-panel .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:4px}",
       "#ww-gene-corr-panel .btn{display:inline-block;padding:10px 18px;background:#e94560;color:#fff;border:none;border-radius:8px;font-weight:600;font-size:.95rem;cursor:pointer}",
       "#ww-gene-corr-panel .btn:hover{background:#ff6b6b}",
       "#ww-gene-corr-panel .btn.secondary{background:transparent;border:2px solid #e94560}",
       "#ww-gene-corr-panel .btn:disabled{opacity:.5;cursor:not-allowed}",
       "#ww-gene-corr-panel .welcome{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:14px;padding:10px 12px;background:rgba(233,69,96,.12);border:1px solid rgba(233,69,96,.45);border-radius:8px;font-size:.9rem}",
+      "#ww-gene-corr-panel .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}",
+      "#ww-gene-corr-panel .tab{padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;cursor:pointer;font-size:.85rem}",
+      "#ww-gene-corr-panel .tab.active{background:#e94560;border-color:#e94560}",
       "#ww-gene-corr-panel .msg{margin-top:12px;padding:10px 12px;border-radius:8px;display:none;font-size:.9rem;line-height:1.4}",
       "#ww-gene-corr-panel .msg.error{display:block;background:rgba(233,69,96,.2);border:1px solid #e94560}",
       "#ww-gene-corr-panel .msg.ok{display:block;background:rgba(46,204,113,.15);border:1px solid rgba(46,204,113,.45)}",
       "#ww-gene-corr-panel .hidden{display:none!important}",
-      "#ww-gene-corr-close{float:right;background:transparent;border:none;color:#fff;font-size:1.4rem;cursor:pointer;line-height:1;opacity:.7;padding:0 4px}",
-      "#ww-gene-corr-close:hover{opacity:1}"
+      "#ww-gene-corr-panel .grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}",
+      "@media(max-width:560px){#ww-gene-corr-panel .grid2{grid-template-columns:1fr}}",
+      "#ww-gene-corr-close{float:right;background:transparent;border:none;color:#fff;font-size:1.4rem;cursor:pointer;line-height:1;opacity:.7;padding:0 4px}"
     ].join("");
     document.head.appendChild(css);
   }
@@ -168,57 +218,98 @@
   function buildUI() {
     injectStyles();
     var meta = pageMeta();
+    var mode = "comment";
 
     var btn = document.createElement("button");
     btn.id = "ww-gene-corr-btn";
     btn.type = "button";
-    btn.title = "Suggest a correction or leave a comment";
-    btn.setAttribute("aria-label", "Suggest a correction or leave a comment");
+    btn.title = "Comment, propose vitals, or upload a portrait";
+    btn.setAttribute("aria-label", "Comment, propose vitals, or upload a portrait");
     btn.textContent = "✎";
     document.body.appendChild(btn);
 
     var overlay = document.createElement("div");
     overlay.id = "ww-gene-corr-overlay";
     overlay.innerHTML =
-      '<div id="ww-gene-corr-panel" role="dialog" aria-modal="true" aria-labelledby="ww-gene-corr-title">' +
+      '<div id="ww-gene-corr-panel" role="dialog" aria-modal="true">' +
       '<button type="button" id="ww-gene-corr-close" aria-label="Close">×</button>' +
-      '<h2 id="ww-gene-corr-title">Correction / comment</h2>' +
-      '<p class="sub">About <strong id="ww-gene-corr-about"></strong>. William reviews every note before anything changes on the page.</p>' +
+      "<h2>Contribute to this page</h2>" +
+      '<p class="sub">About <strong id="ww-gene-corr-about"></strong>. Everything is <strong>pending</strong> until William reviews — nothing auto-edits FACT on the page.</p>' +
       '<div id="ww-gene-auth-block">' +
       '<form id="ww-gene-auth-form">' +
       '<label for="ww-gene-auth-name">Your name</label>' +
-      '<input id="ww-gene-auth-name" name="name" type="text" required autocomplete="name" />' +
+      '<input id="ww-gene-auth-name" type="text" required autocomplete="name" />' +
       '<label for="ww-gene-auth-email">Your email</label>' +
-      '<input id="ww-gene-auth-email" name="email" type="email" required autocomplete="email" />' +
+      '<input id="ww-gene-auth-email" type="email" required autocomplete="email" />' +
       '<p class="hint">Same sign-in as letters corrections. Stored in this browser only.</p>' +
       '<div class="row"><button class="btn" type="submit">Continue</button></div>' +
       "</form></div>" +
       '<div id="ww-gene-form-block" class="hidden">' +
       '<div class="welcome"><span>Signed in as <strong id="ww-gene-who"></strong></span>' +
       '<button type="button" class="btn secondary" id="ww-gene-signout">Sign out</button></div>' +
-      '<form id="ww-gene-corr-form">' +
-      '<label for="ww-gene-comment">What to correct or comment on</label>' +
-      '<textarea id="ww-gene-comment" name="comment" required placeholder="Describe the correction or add a family note…"></textarea>' +
-      '<label for="ww-gene-where">Where on this page <span style="font-weight:400;opacity:.7">(optional)</span></label>' +
-      '<input id="ww-gene-where" name="where" type="text" placeholder="e.g. Timeline → parents, Sources list…" />' +
-      '<div class="row">' +
-      '<button class="btn" type="submit" id="ww-gene-submit">Submit</button>' +
-      '<button class="btn secondary" type="button" id="ww-gene-cancel">Cancel</button>' +
+      '<div class="tabs">' +
+      '<button type="button" class="tab active" data-mode="comment">Comment</button>' +
+      '<button type="button" class="tab" data-mode="portrait">Portrait</button>' +
+      '<button type="button" class="tab" data-mode="vitals">Vitals</button>' +
       "</div>" +
+      '<form id="ww-gene-comment-form">' +
+      '<label for="ww-gene-comment">What to correct or comment on</label>' +
+      '<textarea id="ww-gene-comment" required placeholder="Describe the correction or add a family note…"></textarea>' +
+      '<label for="ww-gene-where">Where on this page <span style="font-weight:400;opacity:.7">(optional)</span></label>' +
+      '<input id="ww-gene-where" type="text" placeholder="e.g. Timeline → parents" />' +
+      '<div class="row"><button class="btn" type="submit">Submit comment</button></div>' +
+      "</form>" +
+      '<form id="ww-gene-portrait-form" class="hidden">' +
+      '<p class="hint">Uploads go to a <strong>pending</strong> folder. Live portraits are not replaced until William approves.</p>' +
+      '<label for="ww-gene-portrait-file">Portrait image</label>' +
+      '<input id="ww-gene-portrait-file" type="file" accept="image/*" required />' +
+      '<label for="ww-gene-portrait-note">Note <span style="font-weight:400;opacity:.7">(optional)</span></label>' +
+      '<input id="ww-gene-portrait-note" type="text" placeholder="Who is in the photo, year, source…" />' +
+      '<div class="row"><button class="btn" type="submit" id="ww-gene-portrait-submit">Upload for review</button></div>' +
+      "</form>" +
+      '<form id="ww-gene-vitals-form" class="hidden">' +
+      '<p class="hint">Proposed vitals are labeled <strong>PENDING</strong> (not Crystal FACT). Fill any fields you know.</p>' +
+      '<div class="grid2">' +
+      '<div><label for="ww-gene-dob">Date of birth</label><input id="ww-gene-dob" type="text" placeholder="e.g. 13 Feb 1924" /></div>' +
+      '<div><label for="ww-gene-dod">Date of death</label><input id="ww-gene-dod" type="text" placeholder="e.g. 16 Nov 1996" /></div>' +
+      '<div><label for="ww-gene-birthplace">Birthplace</label><input id="ww-gene-birthplace" type="text" /></div>' +
+      '<div><label for="ww-gene-deathplace">Death place</label><input id="ww-gene-deathplace" type="text" /></div>' +
+      '<div><label for="ww-gene-mdate">Marriage date</label><input id="ww-gene-mdate" type="text" /></div>' +
+      '<div><label for="ww-gene-mplace">Marriage place</label><input id="ww-gene-mplace" type="text" /></div>' +
+      "</div>" +
+      '<label for="ww-gene-mspouse">Marriage spouse</label>' +
+      '<input id="ww-gene-mspouse" type="text" />' +
+      '<label for="ww-gene-other">Other vitals / notes</label>' +
+      '<textarea id="ww-gene-other" placeholder="Burial, additional marriages, sources…"></textarea>' +
+      '<div class="row"><button class="btn" type="submit">Submit vitals for review</button></div>' +
+      "</form>" +
       '<div class="msg" id="ww-gene-msg" role="status"></div>' +
-      "</form></div></div>";
+      '<div class="row" style="margin-top:12px"><button class="btn secondary" type="button" id="ww-gene-cancel">Close</button></div>' +
+      "</div></div>";
     document.body.appendChild(overlay);
     document.getElementById("ww-gene-corr-about").textContent = meta.person_name;
 
-    function open() {
-      overlay.classList.add("open");
-      paint();
+    var msgEl = document.getElementById("ww-gene-msg");
+
+    function setMsg(ok, text) {
+      msgEl.className = "msg " + (ok ? "ok" : "error");
+      msgEl.textContent = text;
     }
-    function close() {
-      overlay.classList.remove("open");
-      var msg = document.getElementById("ww-gene-msg");
-      msg.className = "msg";
-      msg.textContent = "";
+
+    function clearMsg() {
+      msgEl.className = "msg";
+      msgEl.textContent = "";
+    }
+
+    function showMode(m) {
+      mode = m;
+      document.querySelectorAll("#ww-gene-corr-panel .tab").forEach(function (t) {
+        t.classList.toggle("active", t.getAttribute("data-mode") === m);
+      });
+      document.getElementById("ww-gene-comment-form").classList.toggle("hidden", m !== "comment");
+      document.getElementById("ww-gene-portrait-form").classList.toggle("hidden", m !== "portrait");
+      document.getElementById("ww-gene-vitals-form").classList.toggle("hidden", m !== "vitals");
+      clearMsg();
     }
 
     function paint() {
@@ -233,6 +324,15 @@
         auth.classList.remove("hidden");
         form.classList.add("hidden");
       }
+    }
+
+    function open() {
+      overlay.classList.add("open");
+      paint();
+    }
+    function close() {
+      overlay.classList.remove("open");
+      clearMsg();
     }
 
     btn.addEventListener("click", open);
@@ -253,28 +353,21 @@
       persist({ uid: uuid(), name: name, email: email });
       paint();
     });
-
     document.getElementById("ww-gene-signout").addEventListener("click", function () {
       clearSession();
       paint();
     });
 
-    document.getElementById("ww-gene-corr-form").addEventListener("submit", function (e) {
+    document.querySelectorAll("#ww-gene-corr-panel .tab").forEach(function (t) {
+      t.addEventListener("click", function () {
+        showMode(t.getAttribute("data-mode"));
+      });
+    });
+
+    document.getElementById("ww-gene-comment-form").addEventListener("submit", function (e) {
       e.preventDefault();
       var s = session();
-      if (!s) {
-        paint();
-        return;
-      }
-      var dest = configuredEndpoint();
-      var msg = document.getElementById("ww-gene-msg");
-      var submitBtn = document.getElementById("ww-gene-submit");
-      if (!dest) {
-        msg.className = "msg error";
-        msg.textContent = "Inbox not configured (corrections/config.js).";
-        return;
-      }
-
+      if (!s) return paint();
       var m = pageMeta();
       var comment = document.getElementById("ww-gene-comment").value.trim();
       var where = document.getElementById("ww-gene-where").value.trim();
@@ -282,92 +375,186 @@
         kind: "genealogy_correction",
         person_slug: m.person_slug,
         person_name: m.person_name,
-        page_path: m.page_path,
         page_url: m.page_url,
         comment: comment,
-        where: where,
-        uid: s.uid,
-        user_id: s.uid,
+        where: where || "(not specified)",
         name: s.name,
         email: s.email,
+        uid: s.uid,
         submitted_at: new Date().toISOString()
       };
+      notifyEmail(
+        "[Genealogy correction] " + m.person_name,
+        payload,
+        function () {
+          appendOutbox(payload);
+          document.getElementById("ww-gene-comment-form").reset();
+          setMsg(true, "We will review your information and let you know when corrections are made. Thank you.");
+        },
+        function (err) {
+          setMsg(false, err);
+        }
+      );
+    });
 
+    document.getElementById("ww-gene-portrait-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var s = session();
+      if (!s) return paint();
+      var endpoint = portraitEndpoint();
+      if (!endpoint) {
+        setMsg(false, "Portrait upload endpoint not configured. Ask William to redeploy icy-dust.");
+        return;
+      }
+      var fileInput = document.getElementById("ww-gene-portrait-file");
+      var file = fileInput.files && fileInput.files[0];
+      if (!file) {
+        setMsg(false, "Choose an image file.");
+        return;
+      }
+      var m = pageMeta();
+      var note = document.getElementById("ww-gene-portrait-note").value.trim();
+      var fd = new FormData();
+      fd.append("attachment", file);
+      fd.append("person_slug", m.person_slug);
+      fd.append("person_name", m.person_name);
+      fd.append("note", note);
+      fd.append("uid", s.uid);
+      fd.append("name", s.name);
+      fd.append("email", s.email);
+      fd.append("submitted_at", new Date().toISOString());
+      var submitBtn = document.getElementById("ww-gene-portrait-submit");
       submitBtn.disabled = true;
-      msg.className = "msg";
-      msg.textContent = "";
-
-      function fail(text) {
-        submitBtn.disabled = false;
-        msg.className = "msg error";
-        msg.textContent = text || "Submit failed. Please try again.";
-      }
-
-      var url;
-      var headers = { Accept: "application/json" };
-      var body;
-      if (dest.type === "web3forms") {
-        url = "https://api.web3forms.com/submit";
-        headers["Content-Type"] = "application/json";
-        body = JSON.stringify({
-          access_key: dest.key,
-          subject: "[Genealogy] " + m.person_name,
-          from_name: s.name,
-          email: s.email,
-          kind: payload.kind,
-          person_slug: payload.person_slug,
-          person_name: payload.person_name,
-          page_url: payload.page_url,
-          where: payload.where,
-          comment: payload.comment,
-          uid: payload.uid,
-          submitted_at: payload.submitted_at
-        });
-      } else if (dest.type === "formsubmit") {
-        url = dest.url;
-        headers["Content-Type"] = "application/json";
-        body = JSON.stringify({
-          _subject: "[Genealogy correction] " + m.person_name,
-          kind: payload.kind,
-          person_slug: payload.person_slug,
-          person_name: payload.person_name,
-          page_path: payload.page_path,
-          page_url: payload.page_url,
-          where: payload.where || "(not specified)",
-          comment: payload.comment,
-          name: payload.name,
-          email: payload.email,
-          uid: payload.uid,
-          submitted_at: payload.submitted_at,
-          _template: "table"
-        });
-      } else {
-        url = dest.url;
-        headers["Content-Type"] = "application/json";
-        body = JSON.stringify(payload);
-      }
-
-      fetch(url, { method: "POST", headers: headers, body: body })
+      clearMsg();
+      fetch(endpoint, { method: "POST", body: fd })
         .then(function (res) {
-          if (!res.ok) {
-            return res.text().then(function (t) {
-              throw new Error(t || "HTTP " + res.status);
-            });
-          }
-          return res.json().catch(function () {
-            return {};
+          return res.json().then(function (j) {
+            if (!res.ok) throw new Error((j && (j.error || j.detail)) || "Upload failed");
+            return j;
           });
         })
-        .then(function () {
-          appendOutbox(payload);
-          document.getElementById("ww-gene-corr-form").reset();
-          submitBtn.disabled = false;
-          msg.className = "msg ok";
-          msg.textContent =
-            "We will review your information and let you know when corrections are made. Thank you.";
+        .then(function (j) {
+          appendOutbox({ kind: "genealogy_portrait_pending", result: j, person_slug: m.person_slug });
+          notifyEmail(
+            "[Genealogy portrait PENDING] " + m.person_name,
+            {
+              kind: "genealogy_portrait_pending",
+              person_slug: m.person_slug,
+              person_name: m.person_name,
+              page_url: m.page_url,
+              pending_path: j.path || "",
+              download_url: j.download_url || "",
+              note: note || "(none)",
+              name: s.name,
+              email: s.email,
+              uid: s.uid,
+              submitted_at: new Date().toISOString(),
+              instruction: "PENDING only — do not auto-replace live portrait. Approve then promote to genealogy/images/{slug}.jpg"
+            },
+            function () {
+              submitBtn.disabled = false;
+              document.getElementById("ww-gene-portrait-form").reset();
+              setMsg(true, "Portrait uploaded for William’s review. It will not replace the live photo until he approves.");
+            },
+            function (err) {
+              submitBtn.disabled = false;
+              setMsg(
+                true,
+                "Portrait saved as pending (" +
+                  (j.path || "ok") +
+                  "). Email notify had a problem (" +
+                  err +
+                  ") — William can still see the pending file in the repo."
+              );
+            }
+          );
         })
         .catch(function (ex) {
-          fail(ex && ex.message ? ex.message : "Submit failed.");
+          submitBtn.disabled = false;
+          setMsg(false, ex && ex.message ? ex.message : "Upload failed. Worker may need redeploy.");
+        });
+    });
+
+    document.getElementById("ww-gene-vitals-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var s = session();
+      if (!s) return paint();
+      var m = pageMeta();
+      var entry = {
+        kind: "genealogy_vitals_pending",
+        status: "pending",
+        label: "PENDING — not FACT until William approves",
+        person_slug: m.person_slug,
+        person_name: m.person_name,
+        page_url: m.page_url,
+        dob: document.getElementById("ww-gene-dob").value.trim(),
+        dod: document.getElementById("ww-gene-dod").value.trim(),
+        birthplace: document.getElementById("ww-gene-birthplace").value.trim(),
+        death_place: document.getElementById("ww-gene-deathplace").value.trim(),
+        marriage_date: document.getElementById("ww-gene-mdate").value.trim(),
+        marriage_place: document.getElementById("ww-gene-mplace").value.trim(),
+        marriage_spouse: document.getElementById("ww-gene-mspouse").value.trim(),
+        other: document.getElementById("ww-gene-other").value.trim(),
+        name: s.name,
+        email: s.email,
+        uid: s.uid,
+        submitted_at: new Date().toISOString()
+      };
+      var hasAny =
+        entry.dob ||
+        entry.dod ||
+        entry.birthplace ||
+        entry.death_place ||
+        entry.marriage_date ||
+        entry.marriage_place ||
+        entry.marriage_spouse ||
+        entry.other;
+      if (!hasAny) {
+        setMsg(false, "Enter at least one vital or note.");
+        return;
+      }
+
+      function finishOk(extra) {
+        appendOutbox(entry);
+        document.getElementById("ww-gene-vitals-form").reset();
+        setMsg(
+          true,
+          "Vitals submitted as PENDING for William’s review" +
+            (extra || "") +
+            ". They will not change FACT on the page until he approves."
+        );
+      }
+
+      var vEndpoint = vitalsEndpoint();
+      var stage = Promise.resolve(null);
+      if (vEndpoint) {
+        stage = fetch(vEndpoint, {
+          method: "POST",
+          headers: { Accept: "application/json", "Content-Type": "application/json" },
+          body: JSON.stringify(entry)
+        }).then(function (res) {
+          return res.json().then(function (j) {
+            if (!res.ok) throw new Error((j && (j.error || j.detail)) || "Staging failed");
+            return j;
+          });
+        });
+      }
+
+      stage
+        .catch(function () {
+          return null;
+        })
+        .then(function () {
+          notifyEmail(
+            "[Genealogy vitals PENDING] " + m.person_name,
+            entry,
+            function () {
+              finishOk(vEndpoint ? "" : " (email only — Worker staging optional)");
+            },
+            function (err) {
+              setMsg(false, err);
+            }
+          );
         });
     });
   }
