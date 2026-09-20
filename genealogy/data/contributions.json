@@ -1,1 +1,17 @@
-{}
+{
+  "fannie-winn": {
+    "vitals": [],
+    "portraits": [
+      {
+        "id": "7a3de9a6-e2b9-4112-8be7-6161a71b347d",
+        "src": "images/fannie-winn/gallery/20260920235105-888f5b89.jpg",
+        "name": "Dad",
+        "email": "papiwinn@gmail.com",
+        "note": "Fannie Winn and baby",
+        "uid": "888f5b89-7070-4624-a5b9-5bcaaac872de",
+        "submitted_at": "2026-09-20T23:51:05.512Z",
+        "became_primary": false
+      }
+    ]
+  }
+}
