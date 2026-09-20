@@ -1,6 +1,6 @@
 /* Genealogy family contributions widget.
  * Auth: same willwinn_reviewer + ww_* cookies as letters corrections.
- * Modes: comment | portrait | vitals — William approves; never auto-edits FACT HTML.
+ * Modes: comment | portrait | vitals — portraits/vitals publish live (UNVERIFIED); FACT HTML still only edited by William.
  */
 (function () {
   "use strict";
@@ -234,7 +234,7 @@
       '<div id="ww-gene-corr-panel" role="dialog" aria-modal="true">' +
       '<button type="button" id="ww-gene-corr-close" aria-label="Close">×</button>' +
       "<h2>Contribute to this page</h2>" +
-      '<p class="sub">About <strong id="ww-gene-corr-about"></strong>. Everything is <strong>pending</strong> until William reviews — nothing auto-edits FACT on the page.</p>' +
+      '<p class="sub">About <strong id="ww-gene-corr-about"></strong>. Comments stay for William’s review. Portraits and vitals publish on this page right away (vitals as UNVERIFIED). FACT HTML is only edited by William.</p>' +
       '<div id="ww-gene-auth-block">' +
       '<form id="ww-gene-auth-form">' +
       '<label for="ww-gene-auth-name">Your name</label>' +
@@ -260,15 +260,15 @@
       '<div class="row"><button class="btn" type="submit">Submit comment</button></div>' +
       "</form>" +
       '<form id="ww-gene-portrait-form" class="hidden">' +
-      '<p class="hint">Uploads go to a <strong>pending</strong> folder. Live portraits are not replaced until William approves.</p>' +
+      '<p class="hint">Photos appear on this page in the gallery (and as the top portrait if none exists yet). William gets an email copy. Multiple photos are supported.</p>' +
       '<label for="ww-gene-portrait-file">Portrait image</label>' +
       '<input id="ww-gene-portrait-file" type="file" accept="image/*" required />' +
       '<label for="ww-gene-portrait-note">Note <span style="font-weight:400;opacity:.7">(optional)</span></label>' +
       '<input id="ww-gene-portrait-note" type="text" placeholder="Who is in the photo, year, source…" />' +
-      '<div class="row"><button class="btn" type="submit" id="ww-gene-portrait-submit">Upload for review</button></div>' +
+      '<div class="row"><button class="btn" type="submit" id="ww-gene-portrait-submit">Publish portrait</button></div>' +
       "</form>" +
       '<form id="ww-gene-vitals-form" class="hidden">' +
-      '<p class="hint">Proposed vitals are labeled <strong>PENDING</strong> (not Crystal FACT). Fill any fields you know.</p>' +
+      '<p class="hint">Vitals show on this page immediately as <strong>UNVERIFIED</strong> (with your name). William may later promote them to FACT.</p>' +
       '<div class="grid2">' +
       '<div><label for="ww-gene-dob">Date of birth</label><input id="ww-gene-dob" type="text" placeholder="e.g. 13 Feb 1924" /></div>' +
       '<div><label for="ww-gene-dod">Date of death</label><input id="ww-gene-dod" type="text" placeholder="e.g. 16 Nov 1996" /></div>' +
@@ -281,7 +281,7 @@
       '<input id="ww-gene-mspouse" type="text" />' +
       '<label for="ww-gene-other">Other vitals / notes</label>' +
       '<textarea id="ww-gene-other" placeholder="Burial, additional marriages, sources…"></textarea>' +
-      '<div class="row"><button class="btn" type="submit">Submit vitals for review</button></div>' +
+      '<div class="row"><button class="btn" type="submit">Post vitals (UNVERIFIED)</button></div>' +
       "</form>" +
       '<div class="msg" id="ww-gene-msg" role="status"></div>' +
       '<div class="row" style="margin-top:12px"><button class="btn secondary" type="button" id="ww-gene-cancel">Close</button></div>' +
@@ -434,37 +434,37 @@
           });
         })
         .then(function (j) {
-          appendOutbox({ kind: "genealogy_portrait_pending", result: j, person_slug: m.person_slug });
+          appendOutbox({ kind: "genealogy_portrait", result: j, person_slug: m.person_slug });
           notifyEmail(
-            "[Genealogy portrait PENDING] " + m.person_name,
+            "[Genealogy portrait] " + m.person_name,
             {
-              kind: "genealogy_portrait_pending",
+              kind: "genealogy_portrait",
               person_slug: m.person_slug,
               person_name: m.person_name,
               page_url: m.page_url,
-              pending_path: j.path || "",
+              gallery_path: j.gallery_path || "",
               download_url: j.download_url || "",
               note: note || "(none)",
               name: s.name,
               email: s.email,
               uid: s.uid,
               submitted_at: new Date().toISOString(),
-              instruction: "PENDING only — do not auto-replace live portrait. Approve then promote to genealogy/images/{slug}.jpg"
+              instruction: "Published to gallery (and primary if none). Awareness copy only — family can already see it on the person page."
             },
             function () {
               submitBtn.disabled = false;
               document.getElementById("ww-gene-portrait-form").reset();
-              setMsg(true, "Portrait uploaded for William’s review. It will not replace the live photo until he approves.");
+              setMsg(true, "Portrait published to this person’s gallery. William was emailed a copy.");
             },
             function (err) {
               submitBtn.disabled = false;
               setMsg(
                 true,
-                "Portrait saved as pending (" +
-                  (j.path || "ok") +
+                "Portrait saved (" +
+                  (j.gallery_path || "ok") +
                   "). Email notify had a problem (" +
                   err +
-                  ") — William can still see the pending file in the repo."
+                  ") — photo is still in the gallery; check contributions.json."
               );
             }
           );
@@ -481,9 +481,9 @@
       if (!s) return paint();
       var m = pageMeta();
       var entry = {
-        kind: "genealogy_vitals_pending",
-        status: "pending",
-        label: "PENDING — not FACT until William approves",
+        kind: "genealogy_vitals",
+        status: "unverified",
+        label: "UNVERIFIED — family submission (not FACT until William promotes)",
         person_slug: m.person_slug,
         person_name: m.person_name,
         page_url: m.page_url,
@@ -519,42 +519,42 @@
         document.getElementById("ww-gene-vitals-form").reset();
         setMsg(
           true,
-          "Vitals submitted as PENDING for William’s review" +
+          "Vitals posted as UNVERIFIED on this page" +
             (extra || "") +
-            ". They will not change FACT on the page until he approves."
+            ". They are attributed to you and are not FACT until William promotes them."
         );
       }
 
       var vEndpoint = vitalsEndpoint();
-      var stage = Promise.resolve(null);
-      if (vEndpoint) {
-        stage = fetch(vEndpoint, {
-          method: "POST",
-          headers: { Accept: "application/json", "Content-Type": "application/json" },
-          body: JSON.stringify(entry)
-        }).then(function (res) {
+      if (!vEndpoint) {
+        setMsg(false, "Vitals endpoint not configured. Ask William to redeploy icy-dust.");
+        return;
+      }
+      fetch(vEndpoint, {
+        method: "POST",
+        headers: { Accept: "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify(entry)
+      })
+        .then(function (res) {
           return res.json().then(function (j) {
-            if (!res.ok) throw new Error((j && (j.error || j.detail)) || "Staging failed");
+            if (!res.ok) throw new Error((j && (j.error || j.detail)) || "Publish failed");
             return j;
           });
-        });
-      }
-
-      stage
-        .catch(function () {
-          return null;
         })
         .then(function () {
           notifyEmail(
-            "[Genealogy vitals PENDING] " + m.person_name,
+            "[Genealogy vitals UNVERIFIED] " + m.person_name,
             entry,
             function () {
-              finishOk(vEndpoint ? "" : " (email only — Worker staging optional)");
+              finishOk("");
             },
             function (err) {
-              setMsg(false, err);
+              finishOk(" (email notify failed: " + err + " — still on page)");
             }
           );
+        })
+        .catch(function (ex) {
+          setMsg(false, ex && ex.message ? ex.message : "Could not publish vitals. Worker may need redeploy.");
         });
     });
   }

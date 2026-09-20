@@ -1,9 +1,10 @@
-# Genealogy pending submissions
+# Genealogy contributions
 
-Family uploads and vitals land here for **William’s review** before anything changes on live person pages.
+Live family submissions land in `../data/contributions.json` and show on person pages:
 
-- `submissions.jsonl` — portrait upload log (one JSON object per line)
-- `vitals.json` — proposed vitals (array); items are **pending**, not FACT
-- Images: `../images/pending/{person-slug}-….jpg` (not live portraits)
+- **Vitals** — tagged UNVERIFIED, attributed to the submitter (auth name)
+- **Portraits** — files under `../images/{slug}/gallery/`; bottom grid on the person page; first upload may also become the hero at `../images/{slug}.jpg` if none exists
 
-Promote by hand: copy an approved image to `../images/{slug}.jpg` and update the person HTML, or ask Amos. Do not auto-merge pending into FACT HTML.
+William still gets FormSubmit email copies for awareness. Promote UNVERIFIED → FACT by editing the person HTML when ready.
+
+Older pending-only staging is obsolete for display.

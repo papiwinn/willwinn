@@ -50,3 +50,11 @@ On the hub and every person page, signed-in reviewers can:
 
 William reviews email (and pending paths), then promotes approved portraits/vitals by hand or asks Amos. Redeploy icy-dust after updating `photos/upload-worker.js` so portrait/vitals Worker routes exist.
 
+
+
+## Family contributions (live UNVERIFIED)
+
+- Person pages load `data/contributions.json` via `contributions-display.js`.
+- **Vitals** appear in an UNVERIFIED section (submitter name + fields).
+- **Portraits** appear in a bottom photo grid; hero portrait at top if `images/{slug}.*` exists.
+- Uploads go through icy-dust Worker routes `/genealogy-portrait` and `/genealogy-vitals` (redeploy Worker after code changes in `photos/upload-worker.js`).

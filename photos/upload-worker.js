@@ -2,14 +2,15 @@
  * Cloudflare Worker for willwinn (icy-dust-9cb5):
  *   POST /                      → photo upload → letters/images/
  *   GET|POST /notes             → family album notes → other-photos/notes.json
- *   POST /genealogy-portrait    → pending portrait → genealogy/images/pending/
- *   POST /genealogy-vitals      → pending vitals → genealogy/pending/vitals.json
+ *   POST /genealogy-portrait    → gallery (+ primary if none) + contributions.json
+ *   POST /genealogy-vitals      → contributions.json (UNVERIFIED on person pages)
  *
  * Secret: GITHUB_TOKEN (Contents Read/Write on papiwinn/willwinn)
  * Optional: GITHUB_REPO, IMAGES_PATH, NOTES_PATH
  *
- * Pending genealogy files are NEVER auto-promoted to live person portraits/FACT HTML.
- * William reviews (email + pending paths), then promotes by hand or via Amos.
+ * Vitals show on person pages as UNVERIFIED (attributed). Portraits publish to
+ * genealogy/images/{slug}/gallery/ for the bottom grid; first image may also
+ * become the hero at genealogy/images/{slug}.jpg if none exists. Email notifies William.
  *
  * config.js:
  *   photoEndpoint / albumNotesEndpoint / genealogyPortraitEndpoint / genealogyVitalsEndpoint
@@ -192,7 +193,6 @@ async function handleGenealogyPortrait(request, env) {
   if (!token) return json({ error: "Server not configured (missing GITHUB_TOKEN)" }, 500);
 
   const repo = env.GITHUB_REPO || "papiwinn/willwinn";
-  const pendingPath = "genealogy/images/pending";
 
   let form;
   try {
@@ -220,73 +220,99 @@ async function handleGenealogyPortrait(request, env) {
   if (!reviewerName || !reviewerEmail) {
     return json({ error: "Missing reviewer name/email" }, 400);
   }
+  if (personSlug === "hub") {
+    return json({ error: "Pick a person page to attach a portrait (not the hub)" }, 400);
+  }
 
   const ext = extFromFile(file);
   const stamp = submittedAt.replace(/[^0-9]/g, "").slice(0, 14) || Date.now().toString();
   const short = (uid || crypto.randomUUID()).slice(0, 8);
-  const filename = personSlug + "-" + stamp + "-" + short + ext;
-  const path = pendingPath + "/" + filename;
+  const galleryName = stamp + "-" + short + ext;
+  const galleryPath = "genealogy/images/" + personSlug + "/gallery/" + galleryName;
+  const primaryPath = "genealogy/images/" + personSlug + ".jpg";
 
   const bytes = new Uint8Array(await file.arrayBuffer());
   const contentB64 = btoa(chunk(bytes));
 
-  const commitMessage =
-    "Pending genealogy portrait: " + personName + "\n\n" +
-    "PENDING — not live. William must approve before promoting to genealogy/images/.\n" +
-    "slug: " + personSlug + "\n" +
-    "Reviewer: " + reviewerName + " <" + reviewerEmail + ">\n" +
-    "uid: " + uid + "\n" +
-    (note ? "Note: " + note + "\n" : "");
-
-  const put = await fetch(
-    "https://api.github.com/repos/" + repo + "/contents/" + path,
-    {
-      method: "PUT",
-      headers: {
-        Accept: "application/vnd.github+json",
-        Authorization: "Bearer " + token,
-        "Content-Type": "application/json",
-        "User-Agent": "willwinn-genealogy-portrait",
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-      body: JSON.stringify({
-        message: commitMessage,
-        content: contentB64,
-        branch: "main",
-      }),
+  const putFile = async (path, message) => {
+    const put = await fetch(
+      "https://api.github.com/repos/" + repo + "/contents/" + path,
+      {
+        method: "PUT",
+        headers: {
+          Accept: "application/vnd.github+json",
+          Authorization: "Bearer " + token,
+          "Content-Type": "application/json",
+          "User-Agent": "willwinn-genealogy-portrait",
+          "X-GitHub-Api-Version": "2022-11-28",
+        },
+        body: JSON.stringify({ message, content: contentB64, branch: "main" }),
+      }
+    );
+    if (!put.ok) {
+      const detail = (await put.text()).slice(0, 400);
+      throw new Error("GitHub " + put.status + " " + detail);
     }
-  );
+    return put.json();
+  };
 
-  if (!put.ok) {
-    const detail = (await put.text()).slice(0, 400);
-    return json({ error: "GitHub " + put.status, detail }, 502);
+  let becamePrimary = false;
+  const primaryExists = await githubGet(repo, primaryPath, token);
+  // also treat other common primary extensions as existing hero
+  let hasHero = !!primaryExists;
+  if (!hasHero) {
+    for (const e of [".jpeg", ".png", ".webp"]) {
+      if (await githubGet(repo, "genealogy/images/" + personSlug + e, token)) {
+        hasHero = true;
+        break;
+      }
+    }
   }
 
-  const body = await put.json();
-  const metaLine = JSON.stringify({
-    kind: "genealogy_portrait_pending",
-    path,
-    person_slug: personSlug,
-    person_name: personName,
+  try {
+    await putFile(
+      galleryPath,
+      "Genealogy gallery photo: " + personName + "\n\n" +
+        "slug: " + personSlug + "\n" +
+        "By: " + reviewerName + " <" + reviewerEmail + ">\n" +
+        (note ? "Note: " + note + "\n" : "")
+    );
+    if (!hasHero) {
+      // store hero as .jpg path even if upload was png/webp — keep original ext if not jpg
+      const heroPath = ext.toLowerCase() === ".jpg" || ext.toLowerCase() === ".jpeg"
+        ? primaryPath
+        : "genealogy/images/" + personSlug + ext;
+      await putFile(
+        heroPath,
+        "Genealogy primary portrait: " + personName + " (first upload)\n\nBy: " + reviewerName
+      );
+      becamePrimary = true;
+    }
+  } catch (err) {
+    return json({ error: String(err.message || err) }, 502);
+  }
+
+  const portraitEntry = {
+    id: crypto.randomUUID(),
+    src: "images/" + personSlug + "/gallery/" + galleryName,
+    name: reviewerName,
+    email: reviewerEmail,
     note,
     uid,
     submitted_at: submittedAt,
-    name: reviewerName,
-    email: reviewerEmail,
-    html_url: body.content && body.content.html_url,
-    download_url: body.content && body.content.download_url,
-  }) + "\n";
+    became_primary: becamePrimary,
+  };
 
   try {
-    await appendJsonl(repo, "genealogy/pending/submissions.jsonl", metaLine, token, "Log pending genealogy portrait " + path);
+    await mergeContribution(repo, personSlug, { portraits: [portraitEntry] }, token);
   } catch (_) {}
 
   return json({
     ok: true,
-    pending: true,
-    path,
-    html_url: body.content && body.content.html_url,
-    download_url: body.content && body.content.download_url,
+    published: true,
+    gallery_path: galleryPath,
+    became_primary: becamePrimary,
+    portrait: portraitEntry,
   }, 200);
 }
 
@@ -302,7 +328,6 @@ async function handleGenealogyVitals(request, env) {
   if (!token) return json({ error: "Server not configured (missing GITHUB_TOKEN)" }, 500);
 
   const repo = env.GITHUB_REPO || "papiwinn/willwinn";
-  const vitalsPath = "genealogy/pending/vitals.json";
 
   let payload;
   try {
@@ -311,12 +336,12 @@ async function handleGenealogyVitals(request, env) {
     return json({ error: "Expected JSON body" }, 400);
   }
 
+  const personSlug = String(payload.person_slug || "").trim();
   const entry = {
     id: payload.id || crypto.randomUUID(),
-    kind: "genealogy_vitals_pending",
-    status: "pending",
-    label: "PENDING — not FACT until William approves",
-    person_slug: payload.person_slug || "",
+    status: "unverified",
+    label: "UNVERIFIED — family submission (not Crystal/William FACT until promoted)",
+    person_slug: personSlug,
     person_name: payload.person_name || "",
     page_url: payload.page_url || "",
     dob: payload.dob || "",
@@ -337,40 +362,80 @@ async function handleGenealogyVitals(request, env) {
     return json({ error: "Missing person_slug, name, or email" }, 400);
   }
 
-  const existing = await githubGet(repo, vitalsPath, token);
-  let list = await decodeNotesPayload(existing, token);
-  if (!Array.isArray(list)) list = [];
-  list.push(entry);
+  try {
+    await mergeContribution(repo, personSlug, { vitals: [entry] }, token);
+  } catch (err) {
+    return json({ error: String(err.message || err) }, 502);
+  }
+
+  return json({ ok: true, published: true, status: "unverified", entry }, 200);
+}
+
+async function mergeContribution(repo, personSlug, patch, token) {
+  const path = "genealogy/data/contributions.json";
+  const existing = await githubGet(repo, path, token);
+  let data = {};
+  if (existing) {
+    const raw = await readExistingText(existing, token);
+    try {
+      data = JSON.parse(raw || "{}") || {};
+    } catch {
+      data = {};
+    }
+  }
+  if (!data[personSlug]) data[personSlug] = { vitals: [], portraits: [] };
+  if (!Array.isArray(data[personSlug].vitals)) data[personSlug].vitals = [];
+  if (!Array.isArray(data[personSlug].portraits)) data[personSlug].portraits = [];
+  if (patch.vitals) data[personSlug].vitals = data[personSlug].vitals.concat(patch.vitals);
+  if (patch.portraits) data[personSlug].portraits = data[personSlug].portraits.concat(patch.portraits);
 
   const sha = existing && existing.sha ? existing.sha : null;
   const putBody = {
-    message: "Pending genealogy vitals: " + entry.person_name + "\n\nPENDING — not FACT. William reviews before page edits.",
-    content: btoa(unescape(encodeURIComponent(JSON.stringify(list, null, 2) + "\n"))),
+    message: "Genealogy contributions update: " + personSlug,
+    content: btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2) + "\n"))),
     branch: "main",
   };
   if (sha) putBody.sha = sha;
 
   const put = await fetch(
-    "https://api.github.com/repos/" + repo + "/contents/" + vitalsPath,
+    "https://api.github.com/repos/" + repo + "/contents/" + path,
     {
       method: "PUT",
       headers: {
         Accept: "application/vnd.github+json",
         Authorization: "Bearer " + token,
         "Content-Type": "application/json",
-        "User-Agent": "willwinn-genealogy-vitals",
+        "User-Agent": "willwinn-genealogy",
         "X-GitHub-Api-Version": "2022-11-28",
       },
       body: JSON.stringify(putBody),
     }
   );
-
   if (!put.ok) {
     const detail = (await put.text()).slice(0, 400);
-    return json({ error: "GitHub " + put.status, detail }, 502);
+    throw new Error("GitHub " + put.status + " " + detail);
   }
+}
 
-  return json({ ok: true, pending: true, entry }, 200);
+async function readExistingText(existing, token) {
+  if (existing.content && existing.encoding === "base64") {
+    try {
+      return atob(existing.content.replace(/\n/g, ""));
+    } catch {
+      return "";
+    }
+  }
+  if (existing.download_url) {
+    const res = await fetch(existing.download_url, {
+      headers: {
+        Authorization: "Bearer " + token,
+        "User-Agent": "willwinn-genealogy",
+        Accept: "application/vnd.github.raw",
+      },
+    });
+    if (res.ok) return await res.text();
+  }
+  return "";
 }
 
 async function appendJsonl(repo, path, line, token, message) {
