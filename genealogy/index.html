@@ -128,12 +128,71 @@
         opacity: 0.55;
       }
 
+
+      .ww-edit-callout {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        margin: 0 0 28px;
+        padding: 18px 18px 16px;
+        border-radius: 12px;
+        border: 2px solid rgba(233,69,96,.65);
+        background: linear-gradient(135deg, rgba(233,69,96,.22), rgba(233,69,96,.08));
+        box-shadow: 0 6px 24px rgba(0,0,0,.25);
+      }
+      .ww-edit-callout-icon {
+        flex: 0 0 auto;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: #e94560;
+        color: #fff;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 3px 12px rgba(233,69,96,.45);
+      }
+      .ww-edit-callout h2 {
+        margin: 0 0 8px;
+        font-size: 1.2rem;
+        color: #ffb3c0;
+      }
+      .ww-edit-callout p {
+        margin: 0 0 10px;
+        line-height: 1.5;
+        opacity: 0.95;
+      }
+      .ww-edit-callout ul {
+        margin: 0;
+        padding-left: 1.15rem;
+        line-height: 1.55;
+      }
+      .ww-edit-callout li { margin: 0 0 4px; }
+      @media (max-width: 560px) {
+        .ww-edit-callout { flex-direction: column; gap: 10px; }
+      }
+
     </style>
   </head>
   <body>
     <div class="container">
       <h1>Family genealogy</h1>
       <div class="subtitle">Lauderdale &amp; Tipton County, Tennessee</div>
+
+      <aside class="ww-edit-callout" aria-label="How to contribute">
+        <div class="ww-edit-callout-icon" aria-hidden="true">✎</div>
+        <div>
+          <h2>Contribute with the ✎ button</h2>
+          <p>Use the ✎ button on any person page to send a comment, propose missing vitals, or upload a portrait for William to approve.</p>
+          <ul>
+            <li><strong>Comment</strong> — corrections and family notes</li>
+            <li><strong>Vitals</strong> — birth, death, marriage details (show as UNVERIFIED until William promotes them)</li>
+            <li><strong>Portrait</strong> — photos for the person page gallery</li>
+          </ul>
+        </div>
+      </aside>
+
       <p class="intro">
         A private family-history corner for William’s kin: mother’s side
         <strong>Waits / Simpson</strong> (Lovy, Giles, Oletta) and father’s side
@@ -141,7 +200,6 @@
         Shared by URL only — not linked from the public home, letters, or manuscript pages.
         Green <span class="tag fact">FACT</span> marks Crystal’s locked citations or William’s confirmed facts;
         pink <span class="tag need">need-more</span> / hypothesis marks open questions.
-        Use the ✎ button on any person page to send a comment, propose missing vitals, or upload a portrait for William to approve.
       </p>
 
       <h2>Mother’s side · Waits / Simpson / Gabie</h2>

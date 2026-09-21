@@ -184,7 +184,14 @@
     var css = document.createElement("style");
     css.id = "ww-gene-corr-styles";
     css.textContent = [
-      "#ww-gene-corr-btn{position:fixed;right:18px;bottom:18px;z-index:9998;width:52px;height:52px;border-radius:50%;border:none;background:#e94560;color:#fff;font-size:1.35rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.35);line-height:1}",
+            "#ww-gene-page-hint{margin:0 0 20px;padding:14px 16px;border-radius:10px;border:2px solid rgba(233,69,96,.55);background:rgba(233,69,96,.12);color:inherit;font:inherit}",
+      "#ww-gene-page-hint .lead{margin:0 0 8px;line-height:1.45;font-size:.95rem}",
+      "#ww-gene-page-hint ul{margin:0;padding-left:1.15rem;line-height:1.5;font-size:.9rem}",
+      "#ww-gene-page-hint li{margin:0 0 2px}",
+      "#ww-gene-fab-wrap{position:fixed;right:18px;bottom:18px;z-index:9998;display:flex;flex-direction:column;align-items:flex-end;gap:8px}",
+      "#ww-gene-fab-hint{max-width:160px;padding:8px 10px;border-radius:10px;background:#16213e;border:1px solid rgba(233,69,96,.7);color:#fff;font:600 .72rem/1.35 system-ui,-apple-system,sans-serif;text-align:right;box-shadow:0 4px 14px rgba(0,0,0,.35)}",
+      "#ww-gene-corr-btn{position:relative;right:auto;bottom:auto;z-index:auto;width:52px;height:52px;border-radius:50%;border:none;background:#e94560;color:#fff;font-size:1.35rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.35);line-height:1}",
+
       "#ww-gene-corr-btn:hover{background:#ff6b6b}",
       "#ww-gene-corr-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.55);padding:20px;overflow:auto}",
       "#ww-gene-corr-overlay.open{display:flex;align-items:flex-start;justify-content:center}",
@@ -226,7 +233,41 @@
     btn.title = "Comment, propose vitals, or upload a portrait";
     btn.setAttribute("aria-label", "Comment, propose vitals, or upload a portrait");
     btn.textContent = "✎";
-    document.body.appendChild(btn);
+
+    var fabWrap = document.createElement("div");
+    fabWrap.id = "ww-gene-fab-wrap";
+    var fabHint = document.createElement("div");
+    fabHint.id = "ww-gene-fab-hint";
+    fabHint.textContent = "Comment · Vitals · Portrait";
+    fabWrap.appendChild(fabHint);
+    fabWrap.appendChild(btn);
+    document.body.appendChild(fabWrap);
+
+    if (!isHub()) {
+      var pageHint = document.createElement("aside");
+      pageHint.id = "ww-gene-page-hint";
+      pageHint.setAttribute("aria-label", "How to contribute");
+      pageHint.innerHTML =
+        '<p class="lead">Use the <strong>✎</strong> button to send a <strong>comment</strong>, propose missing <strong>vitals</strong>, or upload a <strong>portrait</strong> for William to approve.</p>' +
+        "<ul>" +
+        "<li><strong>Comment</strong> — corrections and family notes</li>" +
+        "<li><strong>Vitals</strong> — birth, death, marriage (UNVERIFIED until promoted)</li>" +
+        "<li><strong>Portrait</strong> — photos for this page</li>" +
+        "</ul>";
+      var container = document.querySelector(".container");
+      var portrait = container && container.querySelector(".portrait");
+      var status = container && container.querySelector(".status-row");
+      var subtitle = container && container.querySelector(".subtitle");
+      var anchor = portrait || status || subtitle;
+      if (container && anchor && anchor.parentNode === container) {
+        if (anchor.nextSibling) container.insertBefore(pageHint, anchor.nextSibling);
+        else container.appendChild(pageHint);
+      } else if (container) {
+        var h1 = container.querySelector("h1");
+        if (h1 && h1.nextSibling) container.insertBefore(pageHint, h1.nextSibling);
+        else container.insertBefore(pageHint, container.firstChild);
+      }
+    }
 
     var overlay = document.createElement("div");
     overlay.id = "ww-gene-corr-overlay";
