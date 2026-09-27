@@ -707,6 +707,11 @@
         "label": "Lauderdale County Enterprise 1926 deed transfers",
         "status": "fact",
         "href": "http://files.usgwarchives.net/tn/lauderdale/newspapers/ent-1926-1.txt"
+      },
+      {
+        "label": "FamilySearch Family Tree GH7N-X5D (Austin Hunley Winn)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/GH7N-X5D"
       }
     ]
   },
@@ -787,7 +792,7 @@
       },
       {
         "t": "Died",
-        "d": "March 1943",
+        "d": "1943 (letters, about March); FS tree 26 Feb 1943 (HYPOTHESIS)",
         "status": "fact"
       },
       {
@@ -850,20 +855,35 @@
     "id": "willis-hunley-winn",
     "name": "Willis Hunley Winn",
     "short_name": "Willis Hunley Winn",
-    "lifespan": "d. March 1943",
+    "lifespan": "6 Aug 1875 \u2013 26 Feb 1943 (per FS tree)",
     "bio_or_step": "need",
     "rel": "Father of Austin Hunley Winn.",
-    "blurb": "Austin\u2019s father (William FACT). Children: Austin and Mary Frances (Winn) Peyton. Siblings named in the 1932 obituary of Susan Winn Kinney.",
+    "blurb": "Austin\u2019s father (William FACT). Died 1943 (FACT, letters; about March). FS tree LDXR-VVJ (Low quality): b. 6 Aug 1875, d. 26 Feb 1943 (HYPOTHESIS; conflict with letters). Children: William Lenard (1914\u20131916, hyp.), Mary Frances (Winn) Peyton and Austin. Siblings named in the 1932 obituary of Susan Winn Kinney.",
     "narrative": "Willis Hunley Winn; d. Mar 1943; spouse Fannie; children Austin and Mary Frances Peyton (William). John/Joan/Jim child claim retracted.",
     "timeline": [
       {
         "t": "Born",
-        "d": "1875 (FS tree LDXR-VVJ)",
+        "d": "6 Aug 1875 (FS tree LDXR-VVJ, Low quality)",
         "status": "need"
       },
       {
         "t": "Died",
-        "d": "March 1943",
+        "d": "1943 \u2014 letters point to about March 1943",
+        "status": "fact"
+      },
+      {
+        "t": "Died (FS tree)",
+        "d": "26 Feb 1943 (HYPOTHESIS; DISCREPANCY with letters \u2014 awaits death certificate)",
+        "status": "need"
+      },
+      {
+        "t": "Married",
+        "d": "Fannie McBride / Willis Hunley Winn, 11 Jan 1914, Lauderdale Co., TN (FS tree LDXR-VVJ, HYPOTHESIS)",
+        "status": "need"
+      },
+      {
+        "t": "Children",
+        "d": "William Lenard (1914\u20131916, HYPOTHESIS, FS tree); Mary Frances (Winn) Peyton (FACT; 1918\u20132007 per FS tree); Austin Hunley (27 Feb 1921 \u2013 16 Nov 1996, FACT)",
         "status": "fact"
       },
       {
@@ -929,17 +949,21 @@
         "note": "research lead"
       },
       {
-        "label": "FamilySearch Family Tree LDXR-VVJ (Willis Hunley Winn)",
-        "status": "need",
-        "href": "https://www.familysearch.org/tree/person/details/LDXR-VVJ"
-      },
-      {
         "label": "FamilySearch Family Tree G95C-CBQ (William Hunley Winn; 10 sources, Medium quality)",
         "status": "need",
         "href": "https://www.familysearch.org/tree/person/details/G95C-CBQ"
       },
       {
         "label": "William LaVaughan Winn, family oral history (27 Sep 2026)",
+        "status": "fact"
+      },
+      {
+        "label": "FamilySearch Family Tree LDXR-VVJ (Willis Hunley Winn; 18 sources, Low quality)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/LDXR-VVJ"
+      },
+      {
+        "label": "Crystal\u2019s Willis Hunley Winn batch (27 Sep 2026)",
         "status": "fact"
       }
     ]
@@ -1204,12 +1228,27 @@
     "id": "fannie-winn",
     "name": "Fannie Lee (McBride) Winn",
     "short_name": "Fannie Lee McBride Winn",
-    "lifespan": "b. 1894 Tipton Co., TN",
+    "lifespan": "b. 1894 Tipton Co., TN \u2013 d. 1987 (per FS tree)",
     "bio_or_step": "need",
     "rel": "Mother of Austin Hunley Winn.",
-    "blurb": "Fannie Lee McBride Winn; b. 1894 Tipton. Children: Austin and Mary Frances (Winn) Peyton (William).",
+    "blurb": "Fannie Lee McBride Winn; b. 1894 Tipton (William FACT). Per FS tree: m. Willis 11 Jan 1914, Lauderdale Co., TN; d. 1987 (HYPOTHESIS). Children: William Lenard (1914\u20131916, hyp.), Mary Frances (Winn) Peyton and Austin (William).",
     "narrative": "Parents locked FACT (William): James Peter McBride and Molly Fulce. FaG Mary Ann = same as Molly unless disproven.",
     "timeline": [
+      {
+        "t": "Married",
+        "d": "Fannie McBride / Willis Hunley Winn, 11 Jan 1914, Lauderdale Co., TN (FS tree LDXR-VVJ, HYPOTHESIS)",
+        "status": "need"
+      },
+      {
+        "t": "Died",
+        "d": "1987 (FS tree LDXR-VVN)",
+        "status": "need"
+      },
+      {
+        "t": "Children",
+        "d": "William Lenard (1914\u20131916, HYPOTHESIS, FS tree); Mary Frances (Winn) Peyton (FACT; 1918\u20132007 per FS tree); Austin Hunley (27 Feb 1921 \u2013 16 Nov 1996, FACT)",
+        "status": "fact"
+      },
       {
         "t": "Possible sibling",
         "d": "W. C. McBride (1882\u20131960), Walton Cemetery \u2014 HYPOTHESIS",
@@ -1225,6 +1264,20 @@
         "label": "Walton Cemetery, Burlison (Genealogy Trails)",
         "status": "fact",
         "href": "http://genealogytrails.com/tenn/tipton/cemetery_waltonA-J.html"
+      },
+      {
+        "label": "FamilySearch Family Tree LDXR-VVN (Fannie McBride)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/LDXR-VVN"
+      },
+      {
+        "label": "FamilySearch Family Tree LDXR-VVJ (Willis Hunley Winn; 18 sources, Low quality)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/LDXR-VVJ"
+      },
+      {
+        "label": "Crystal\u2019s Willis Hunley Winn batch (27 Sep 2026)",
+        "status": "fact"
       }
     ]
   },
@@ -1503,19 +1556,83 @@
     ]
   },
   {
+    "id": "william-lenard-winn",
+    "name": "William Lenard Winn",
+    "short_name": "William Lenard Winn",
+    "lifespan": "1914 \u2013 1916 (per FS tree)",
+    "rel": "HYPOTHESIS: first child of Willis Hunley Winn and Fannie Lee (McBride) Winn; died in childhood.",
+    "bio_or_step": "bio",
+    "blurb": "First child of Willis and Fannie Winn per FS tree GHMZ-J7S (HYPOTHESIS): 1914\u20131916, died in childhood.",
+    "narrative": "First child of Willis Hunley Winn and Fannie Lee (McBride) Winn per FamilySearch Family Tree GHMZ-J7S and LDXR-VVJ (HYPOTHESIS): born 1914, died 1916 in childhood. Everything else NOT FOUND.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "1914 (FS tree)",
+        "status": "need"
+      },
+      {
+        "t": "Died",
+        "d": "1916, in childhood (FS tree)",
+        "status": "need"
+      },
+      {
+        "t": "Exact dates, places, burial",
+        "d": "NOT FOUND",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "FamilySearch Family Tree GHMZ-J7S",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/GHMZ-J7S"
+      },
+      {
+        "label": "FamilySearch Family Tree LDXR-VVJ (Willis Hunley Winn; 18 sources, Low quality)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/LDXR-VVJ"
+      },
+      {
+        "label": "Crystal\u2019s Willis Hunley Winn batch (27 Sep 2026)",
+        "status": "fact"
+      }
+    ]
+  },
+  {
     "id": "mary-frances-peyton",
     "name": "Mary Frances (Winn) Peyton",
     "short_name": "Mary Frances Peyton",
-    "lifespan": "dates open",
+    "lifespan": "1918 \u2013 2007 (per FS tree)",
     "rel": "Austin\u2019s sister; daughter of Willis \u00d7 Fannie; wife of John Peyton.",
     "bio_or_step": "need",
-    "blurb": "Mary Frances (Winn) Peyton. FACT sister of Austin; children John Winn, Joan Lee, Jim Willis (William).",
+    "blurb": "Mary Frances (Winn) Peyton. FACT sister of Austin; children John Winn, Joan Lee, Jim Willis (William). Dates 1918\u20132007 per FS tree G95C-XZ4 (HYPOTHESIS).",
     "narrative": "William FACT. Husband John Peyton. Children John Winn (letter nephew), Joan Lee, Jim Willis.",
-    "timeline": [],
+    "timeline": [
+      {
+        "t": "Dates",
+        "d": "1918 \u2013 2007 (FS tree G95C-XZ4)",
+        "status": "need"
+      },
+      {
+        "t": "Older brother",
+        "d": "William Lenard Winn (1914\u20131916, HYPOTHESIS)",
+        "status": "need"
+      }
+    ],
     "sources": [
       {
         "label": "William",
         "status": "fact"
+      },
+      {
+        "label": "FamilySearch Family Tree G95C-XZ4 (Mary Frances Winn)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/G95C-XZ4"
+      },
+      {
+        "label": "FamilySearch Family Tree LDXR-VVJ (Willis Hunley Winn; 18 sources, Low quality)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/LDXR-VVJ"
       }
     ]
   },

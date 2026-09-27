@@ -339,7 +339,7 @@
       <h2>About this chart</h2>
       <ul class="tree-notes">
         <li>William’s father’s line: Winn → McBride. William’s mother’s line: Simpson → Waits / Milburn.</li>
-        <li>Willis H. Winn’s parents, <a href="people/william-hunley-winn.html">William Hunley Winn</a> and <a href="people/mary-evelyn-austin-winn.html">Mary Evelyn (Austin) Winn</a>, are shown dashed as a <strong>strong hypothesis</strong> from the FamilySearch tree (their children match the siblings in the 1932 Kinney obituary; family oral history matches William Hunley’s age at Willis’s birth); <a href="people/peter-winn.html">Peter Winn</a> and <a href="people/martha-hunley-winn.html">Martha “Patsy” Hunley</a> above them are FS tree only. The parents of James Peter McBride and Molly Fulce stay Unknown. Leads — Simon Peter Driver on <a href="people/willis-hunley-winn.html">Willis’s page</a>; Catherine Bringle McBride and the Bringles on <a href="people/james-peter-mcbride.html">JP’s page</a> — are hypotheses only.</li>
+        <li>Willis H. Winn’s parents, <a href="people/william-hunley-winn.html">William Hunley Winn</a> and <a href="people/mary-evelyn-austin-winn.html">Mary Evelyn (Austin) Winn</a>, are shown dashed as a <strong>strong hypothesis</strong> from the FamilySearch tree (their children match the siblings in the 1932 Kinney obituary; family oral history matches William Hunley’s age at Willis’s birth); <a href="people/peter-winn.html">Peter Winn</a> and <a href="people/martha-hunley-winn.html">Martha “Patsy” Hunley</a> above them are FS tree only. Willis and Fannie married 11 Jan 1914, Lauderdale Co., TN, and Willis’s dates are 6 Aug 1875 – 26 Feb 1943, all per the FamilySearch tree (Low quality; the letters point to about March 1943 for his death). Their first child, <a href="people/william-lenard-winn.html">William Lenard Winn</a> (1914–1916, hypothesis), is listed with Mary Frances as Austin’s siblings. The parents of James Peter McBride and Molly Fulce stay Unknown. Leads — Simon Peter Driver on <a href="people/willis-hunley-winn.html">Willis’s page</a>; Catherine Bringle McBride and the Bringles on <a href="people/james-peter-mcbride.html">JP’s page</a> — are hypotheses only.</li>
         <li><strong>Gabie Pilkington Waits</strong> was James Clayborn Waits’s second wife and Lovy’s stepmother, not her mother — she is linked beside James, not placed in the line.</li>
         <li><a href="people/james-samuel-waits.html">James Samuel Waits</a> and <a href="people/almenia-earhart-waits.html">Almenia Earhart Waits</a> are James Clayborn Waits’s parents per his Find a Grave memorial (#200803433). Their possible parents (Mark &amp; Mahala Waits; Jacob &amp; Leah Earheart) are listed as <strong>research leads</strong> on their pages and stay Unknown here.</li>
         <li>Dashed boxes on the mother’s side are <strong>hypotheses</strong> from Crystal’s maternal batch: <a href="people/andrew-solon-simpson.html">Andrew Solon Simpson</a> and <a href="people/kate-mcmahon-simpson.html">Kate McMahon</a> as Giles’s parents, and <a href="people/mack-milburn.html">Mack Milburn</a> and <a href="people/mary-owens-milburn.html">Mary (Owens) Milburn</a> as Rhoda’s parents. William Simpson is named as Andrew’s father in Andrew’s funeral record.</li>
@@ -379,9 +379,14 @@
         father: {
           slug: "austin-hunley-winn", name: "Austin Hunley Winn",
           dates: "27 Feb 1921 – 16 Nov 1996", status: "fact",
+          /* Austin's siblings: Mary Frances FACT (William); William Lenard HYPOTHESIS (FS tree GHMZ-J7S) */
+          siblings: [
+            { slug: "william-lenard-winn", name: "William Lenard Winn (1914–1916, hypothesis)" },
+            { slug: "mary-frances-peyton", name: "Mary Frances (Winn) Peyton" }
+          ],
           father: {
             slug: "willis-hunley-winn", name: "Willis Hunley Winn",
-            dates: "d. Mar 1943 · Henning, TN", status: "fact",
+            dates: "6 Aug 1875 – 26 Feb 1943 (per FS tree) · Henning, TN", status: "fact",
             /* parents: HYPOTHESIS (strong) — FS tree G95C-CBQ; siblings match 1932 Kinney obituary; family oral history */
             father: {
               slug: "william-hunley-winn", name: "William Hunley Winn",
@@ -402,7 +407,7 @@
           },
           mother: {
             slug: "fannie-winn", name: "Fannie Lee (McBride) Winn",
-            dates: "b. 1894 · Tipton Co., TN", status: "fact",
+            dates: "1894 · Tipton Co., TN – 1987 (per FS tree)", status: "fact",
             father: {
               slug: "james-peter-mcbride", name: "James Peter McBride",
               dates: "1860 – 1948 · Walton Cem.", status: "fact"
