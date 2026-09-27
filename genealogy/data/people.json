@@ -1698,9 +1698,16 @@
         "note": "brother William M. Jr. in parents\u2019 household"
       },
       {
-        "label": "Crystal\u2019s Holden batch 2 (27 Sep 2026)",
+        "label": "1950 US census, Hopedale, ED 14-201, sheet 75 (image)",
         "status": "need",
-        "note": "Barbara J. (Holden) LaCasse as possible sister (HYPOTHESIS)"
+        "href": "https://1950census.archives.gov/iiif/2/1950census%2F43290879-Massachusetts%2F43290879-Massachusetts-157694%2F43290879-Massachusetts-157694-0024.jpg/full/full/0/default.jpg",
+        "note": "Barbara in the dwelling next to William M. Holden\u2019s, same farm at 41 Mill St. (possible sister)"
+      },
+      {
+        "label": "Hopedale Annual Town Report, births registered 1951, PDF p. 32",
+        "status": "need",
+        "href": "https://archive.org/details/annualreportoft1952unse_3",
+        "note": "a child\u2019s parents: \u201cErnest G. and Barbara (Holden)\u201d"
       }
     ]
   },
@@ -2579,8 +2586,8 @@
     "lifespan": "21 Jul 1886 \u00b7 Eastport, ME \u2013 8 Feb 1979 \u00b7 Natick (per FS tree)",
     "rel": "Mother of Elizabeth Jane (Holden) Barrett. Wife of William Martin Holden.",
     "bio_or_step": "bio",
-    "blurb": "Elizabeth\u2019s mother (William FACT). Born 21 Jul 1886, Eastport, ME; died 8 Feb 1979, last residence Medway, MA (FACT). Place of death Natick per FS tree (HYPOTHESIS). Parents Joseph E. & Addie J. Corbett (HYPOTHESIS).",
-    "narrative": "Agnes C. Corbett, born 21 Jul 1886, Eastport, Washington Co., Maine (FACT: Maine birth index; SSDI; Elizabeth\u2019s Milford birth entry; William). Married William Martin Holden 6 Nov 1918, Massachusetts. Censuses 1920, 1930, 1940 with William. 1950: Hopedale, aged 63, hat-factory machine operator. Died 8 Feb 1979, last residence Medway, MA 02053 (MA Death Index; SSDI); place Natick per FamilySearch Family Tree 9QW1-LTK (HYPOTHESIS). Parents: Joseph E. and Addie J. Corbett (HYPOTHESIS strong, 1900/1910 census).",
+    "blurb": "Elizabeth\u2019s mother (William FACT). Born 21 Jul 1886, Eastport, ME; died 8 Feb 1979, last residence Medway, MA (FACT). Place of death Natick per FS tree (HYPOTHESIS). Parents Joseph Edward & Addie (Rumery) Corbett (HYPOTHESIS).",
+    "narrative": "Agnes C. Corbett, born 21 Jul 1886, Eastport, Washington Co., Maine (FACT: Maine birth index; SSDI; Elizabeth\u2019s Milford birth entry; William). Married William Martin Holden 6 Nov 1918, Massachusetts. Censuses 1920, 1930, 1940 with William. 1950: Hopedale, aged 63, hat-factory machine operator. Died 8 Feb 1979, last residence Medway, MA 02053 (MA Death Index; SSDI); place Natick per FamilySearch Family Tree 9QW1-LTK (HYPOTHESIS). Parents: Joseph Edward Corbett and Adeline Jane \u201cAddie\u201d (Rumery) Corbett (HYPOTHESIS strong; FS tree; 1900/1910 census). Siblings per FS tree: Walter B. (1881\u20131946); Mary Louise (1884\u20131942); Howard (1884\u20131951); Margaret (1888\u20131967); Chauncey Graham (1890\u20131967); Ralph Waldo (1891\u20131963); Joseph Edward Jr./II (1894\u20131950); Davis John (1898\u20131960); Sarah Daphne (1901\u20131998).",
     "timeline": [
       {
         "t": "Born",
@@ -2619,7 +2626,12 @@
       },
       {
         "t": "Parents",
-        "d": "Joseph E. Corbett & Addie J. Corbett \u2014 HYPOTHESIS (strong), 1900 & 1910 census",
+        "d": "Joseph Edward Corbett (1859\u20131920) & Adeline Jane \u201cAddie\u201d (Rumery) Corbett (1858\u20131928) \u2014 HYPOTHESIS (strong), FS tree; 1900 & 1910 census",
+        "status": "need"
+      },
+      {
+        "t": "Siblings (FS tree)",
+        "d": "Walter B. (1881\u20131946); Mary Louise (1884\u20131942); Howard (1884\u20131951); Margaret (1888\u20131967); Chauncey Graham (1890\u20131967); Ralph Waldo (1891\u20131963); Joseph Edward Jr./II (1894\u20131950); Davis John (1898\u20131960); Sarah Daphne (1901\u20131998)",
         "status": "need"
       },
       {
@@ -2706,19 +2718,39 @@
         "status": "need",
         "href": "https://www.familysearch.org/ark:/61903/1:1:MR3K-5XK",
         "note": "possible parents"
+      },
+      {
+        "label": "FamilySearch Family Tree LK78-ZC6 (Joseph Edward Corbett)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/LK78-ZC6"
+      },
+      {
+        "label": "FamilySearch Family Tree LK78-ZNL (Addie Rumery Corbett)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/LK78-ZNL"
       }
     ]
   },
   {
     "id": "joseph-e-corbett",
-    "name": "Joseph E. Corbett",
+    "name": "Joseph Edward Corbett",
     "short_name": "Joseph E. Corbett",
-    "lifespan": "1900 census \u00b7 dates not found",
-    "rel": "HYPOTHESIS (strong): father of Agnes C. Corbett (Holden). Spouse Addie J. Corbett.",
+    "lifespan": "30 May 1859 \u2013 15 Aug 1920 \u00b7 Eastport, ME",
+    "rel": "HYPOTHESIS (strong): father of Agnes C. Corbett (Holden). Husband of Adeline Jane \u201cAddie\u201d Rumery.",
     "bio_or_step": "bio",
-    "blurb": "Possible father of Agnes \u2014 1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d.",
-    "narrative": "1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d; 1910 census indexes the same couple as \u201cJoseph & Addy Cabilt\u201d. HYPOTHESIS until a record shows Agnes as their daughter. Birth, death, burial, parents NOT FOUND.",
+    "blurb": "Possible father of Agnes (FamilySearch Family Tree LK78-ZC6; 1900 & 1910 census households). Eastport, ME, 1859\u20131920.",
+    "narrative": "Per FamilySearch Family Tree LK78-ZC6 (46 sources, High quality): born 30 May 1859, Eastport; married Adeline Jane \u201cAddie\u201d Rumery about 1881, Eastport; died 15 Aug 1920, Eastport; buried 17 Aug 1920, Hillside Cemetery, Eastport. Parents Robert Edward Corbett and Mary A. (Walsh) Corbett (HYPOTHESIS). Consistent with the 1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d and 1910 \u201cJoseph & Addy Cabilt\u201d. HYPOTHESIS until a record shows Agnes as his daughter.",
     "timeline": [
+      {
+        "t": "Born",
+        "d": "30 May 1859, Eastport, Washington Co., ME (FS tree)",
+        "status": "need"
+      },
+      {
+        "t": "Married",
+        "d": "Adeline Jane \u201cAddie\u201d Rumery, about 1881, Eastport (FS tree)",
+        "status": "need"
+      },
       {
         "t": "1900 census",
         "d": "Joseph E Corbett and Addie J Corbett household",
@@ -2730,43 +2762,68 @@
         "status": "fact"
       },
       {
-        "t": "Daughter Agnes",
-        "d": "HYPOTHESIS (strong)",
+        "t": "Died",
+        "d": "15 Aug 1920, Eastport (FS tree)",
         "status": "need"
       },
       {
-        "t": "Birth, death, burial, parents",
-        "d": "NOT FOUND",
+        "t": "Buried",
+        "d": "17 Aug 1920, Hillside Cemetery, Eastport (FS tree)",
+        "status": "need"
+      },
+      {
+        "t": "Parents",
+        "d": "Robert Edward Corbett & Mary A. (Walsh) Corbett (HYPOTHESIS)",
+        "status": "need"
+      },
+      {
+        "t": "Children (FS tree)",
+        "d": "Walter B. (1881\u20131946); Mary Louise (1884\u20131942); Howard (1884\u20131951); Agnes C. (1886\u20131979); Margaret (1888\u20131967); Chauncey Graham (1890\u20131967); Ralph Waldo (1891\u20131963); Joseph Edward Jr./II (1894\u20131950); Davis John (1898\u20131960); Sarah Daphne (1901\u20131998)",
         "status": "need"
       }
     ],
     "sources": [
       {
-        "label": "1900 US census (FamilySearch)",
+        "label": "FamilySearch Family Tree LK78-ZC6 (46 sources, High quality)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/LK78-ZC6"
+      },
+      {
+        "label": "1900 US census (Joseph E & Addie J Corbett)",
         "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:MMG3-JCF"
       },
       {
-        "label": "1910 US census (FamilySearch)",
+        "label": "1910 US census (Joseph & Addy Cabilt)",
         "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:MR3K-5XK"
       },
       {
-        "label": "Crystal\u2019s Holden/Corbett batch (27 Sep 2026)",
+        "label": "Crystal\u2019s Corbett line batch (27 Sep 2026)",
         "status": "fact"
       }
     ]
   },
   {
     "id": "addie-j-corbett",
-    "name": "Addie J. Corbett",
-    "short_name": "Addie J. Corbett",
-    "lifespan": "1900 census \u00b7 dates not found",
-    "rel": "HYPOTHESIS (strong): mother of Agnes C. Corbett (Holden). Spouse Joseph E. Corbett.",
+    "name": "Adeline Jane \u201cAddie\u201d (Rumery) Corbett",
+    "short_name": "Addie (Rumery) Corbett",
+    "lifespan": "1858 \u2013 1928",
+    "rel": "HYPOTHESIS (strong): mother of Agnes C. Corbett (Holden). Wife of Joseph Edward Corbett.",
     "bio_or_step": "bio",
-    "blurb": "Possible mother of Agnes \u2014 1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d.",
-    "narrative": "1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d; 1910 census indexes the same couple as \u201cJoseph & Addy Cabilt\u201d. HYPOTHESIS until a record shows Agnes as their daughter. Birth, death, burial, parents NOT FOUND.",
+    "blurb": "Possible mother of Agnes (FamilySearch Family Tree LK78-ZNL; 1900 & 1910 census households). 1858\u20131928.",
+    "narrative": "Per FamilySearch Family Tree LK78-ZNL: Adeline Jane \u201cAddie\u201d Rumery, 1858\u20131928; married Joseph Edward Corbett about 1881, Eastport. Consistent with the 1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d and 1910 \u201cJoseph & Addy Cabilt\u201d. Parents NOT FOUND. HYPOTHESIS until a record shows Agnes as her daughter.",
     "timeline": [
+      {
+        "t": "Life years",
+        "d": "1858\u20131928 (FS tree)",
+        "status": "need"
+      },
+      {
+        "t": "Married",
+        "d": "Joseph Edward Corbett, about 1881, Eastport (FS tree)",
+        "status": "need"
+      },
       {
         "t": "1900 census",
         "d": "Joseph E Corbett and Addie J Corbett household",
@@ -2778,29 +2835,120 @@
         "status": "fact"
       },
       {
-        "t": "Daughter Agnes",
-        "d": "HYPOTHESIS (strong)",
+        "t": "Children (FS tree)",
+        "d": "Walter B. (1881\u20131946); Mary Louise (1884\u20131942); Howard (1884\u20131951); Agnes C. (1886\u20131979); Margaret (1888\u20131967); Chauncey Graham (1890\u20131967); Ralph Waldo (1891\u20131963); Joseph Edward Jr./II (1894\u20131950); Davis John (1898\u20131960); Sarah Daphne (1901\u20131998)",
         "status": "need"
       },
       {
-        "t": "Birth, death, burial, parents",
+        "t": "Parents",
         "d": "NOT FOUND",
         "status": "need"
       }
     ],
     "sources": [
       {
-        "label": "1900 US census (FamilySearch)",
+        "label": "FamilySearch Family Tree LK78-ZNL",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/LK78-ZNL"
+      },
+      {
+        "label": "1900 US census (Joseph E & Addie J Corbett)",
         "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:MMG3-JCF"
       },
       {
-        "label": "1910 US census (FamilySearch)",
+        "label": "1910 US census (Joseph & Addy Cabilt)",
         "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:MR3K-5XK"
       },
       {
-        "label": "Crystal\u2019s Holden/Corbett batch (27 Sep 2026)",
+        "label": "Crystal\u2019s Corbett line batch (27 Sep 2026)",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "robert-edward-corbett",
+    "name": "Robert Edward Corbett",
+    "short_name": "Robert Edward Corbett",
+    "lifespan": "1832 \u2013 1864",
+    "rel": "HYPOTHESIS: father of Joseph Edward Corbett. Spouse Mary A. (Walsh) Corbett.",
+    "bio_or_step": "bio",
+    "blurb": "Possible father of Joseph Edward Corbett \u2014 FamilySearch Family Tree LK78-8XT only.",
+    "narrative": "Per FamilySearch Family Tree LK78-8XT: Robert Edward Corbett, 1832\u20131864; spouse Mary A. (Walsh) Corbett. Children (FS tree): Walter (b. 1853); Joseph Edward (b. 1859); Margaret R. (1861\u20131936); Robert (1865\u20131946). Everything else NOT FOUND.",
+    "timeline": [
+      {
+        "t": "Life years",
+        "d": "1832\u20131864 (FS tree)",
+        "status": "need"
+      },
+      {
+        "t": "Spouse",
+        "d": "Mary A. (Walsh) Corbett",
+        "status": "need"
+      },
+      {
+        "t": "Children (FS tree)",
+        "d": "Walter (b. 1853); Joseph Edward (b. 1859); Margaret R. (1861\u20131936); Robert (1865\u20131946)",
+        "status": "need"
+      },
+      {
+        "t": "Dates, places, burial, parents",
+        "d": "NOT FOUND",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "FamilySearch Family Tree LK78-8XT",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/LK78-8XT"
+      },
+      {
+        "label": "Crystal\u2019s Corbett line batch (27 Sep 2026)",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "mary-walsh-corbett",
+    "name": "Mary A. (Walsh) Corbett",
+    "short_name": "Mary A. (Walsh) Corbett",
+    "lifespan": "1836 \u2013 1915",
+    "rel": "HYPOTHESIS: mother of Joseph Edward Corbett. Spouse Robert Edward Corbett.",
+    "bio_or_step": "bio",
+    "blurb": "Possible mother of Joseph Edward Corbett \u2014 FamilySearch Family Tree LK78-8LG only.",
+    "narrative": "Per FamilySearch Family Tree LK78-8LG: Mary A. (Walsh) Corbett, 1836\u20131915; spouse Robert Edward Corbett. Children (FS tree): Walter (b. 1853); Joseph Edward (b. 1859); Margaret R. (1861\u20131936); Robert (1865\u20131946). Everything else NOT FOUND.",
+    "timeline": [
+      {
+        "t": "Life years",
+        "d": "1836\u20131915 (FS tree)",
+        "status": "need"
+      },
+      {
+        "t": "Spouse",
+        "d": "Robert Edward Corbett",
+        "status": "need"
+      },
+      {
+        "t": "Children (FS tree)",
+        "d": "Walter (b. 1853); Joseph Edward (b. 1859); Margaret R. (1861\u20131936); Robert (1865\u20131946)",
+        "status": "need"
+      },
+      {
+        "t": "Dates, places, burial, parents",
+        "d": "NOT FOUND",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "FamilySearch Family Tree LK78-8LG",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/LK78-8LG"
+      },
+      {
+        "label": "Crystal\u2019s Corbett line batch (27 Sep 2026)",
         "status": "fact"
       }
     ]
