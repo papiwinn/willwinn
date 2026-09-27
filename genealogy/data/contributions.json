@@ -19,7 +19,7 @@
       {
         "id": "b589ec0a-c046-4dbe-81f7-af7d4e7a7174",
         "status": "unverified",
-        "label": "UNVERIFIED ÃÂ¢ÃÂÃÂ family submission (not Crystal/William FACT until promoted)",
+        "label": "UNVERIFIED ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ family submission (not Crystal/William FACT until promoted)",
         "person_slug": "martha-jean-winn",
         "person_name": "Martha Jean Williams",
         "page_url": "https://willwinn.xyz/genealogy/people/martha-jean-winn",
@@ -39,7 +39,7 @@
       {
         "id": "0994e4b4-61c5-4abe-a07b-728843c7e243",
         "status": "unverified",
-        "label": "UNVERIFIED Ã¢ÂÂ family submission (not Crystal/William FACT until promoted)",
+        "label": "UNVERIFIED ÃÂ¢ÃÂÃÂ family submission (not Crystal/William FACT until promoted)",
         "person_slug": "martha-jean-winn",
         "person_name": "Martha Jean Williams",
         "page_url": "https://willwinn.xyz/genealogy/people/martha-jean-winn",
@@ -59,7 +59,7 @@
       {
         "id": "eb7f3eca-04a5-40f9-8511-27498efc6471",
         "status": "unverified",
-        "label": "UNVERIFIED â family submission (not Crystal/William FACT until promoted)",
+        "label": "UNVERIFIED Ã¢ÂÂ family submission (not Crystal/William FACT until promoted)",
         "person_slug": "martha-jean-winn",
         "person_name": "Martha Jean Williams",
         "page_url": "https://willwinn.xyz/genealogy/people/martha-jean-winn",
@@ -84,7 +84,7 @@
       {
         "id": "cf616c41-5f97-41b4-bd31-29fa548fb18d",
         "status": "unverified",
-        "label": "UNVERIFIED — family submission (not Crystal/William FACT until promoted)",
+        "label": "UNVERIFIED â family submission (not Crystal/William FACT until promoted)",
         "person_slug": "william-lavaughan-winn-jr",
         "person_name": "William LaVaughan Winn Jr.",
         "page_url": "https://willwinn.xyz/genealogy/people/william-lavaughan-winn-jr",
@@ -100,6 +100,31 @@
         "name": "William L Winn",
         "email": "papiwinn@gmail.com",
         "submitted_at": "2026-09-27T22:00:44.224Z"
+      }
+    ],
+    "portraits": []
+  },
+  "nathan-lee-winn": {
+    "vitals": [
+      {
+        "id": "3e618116-2eec-4864-bb04-90e48c0f5632",
+        "status": "unverified",
+        "label": "UNVERIFIED — family submission (not Crystal/William FACT until promoted)",
+        "person_slug": "nathan-lee-winn",
+        "person_name": "Nathan Lee Winn",
+        "page_url": "https://willwinn.xyz/genealogy/people/nathan-lee-winn",
+        "dob": "07/10/1987",
+        "dod": "",
+        "birthplace": "Jackson, TN",
+        "death_place": "",
+        "marriage_date": "1/22/2010",
+        "marriage_place": "Las Vegas, NV",
+        "marriage_spouse": "Justine Winn",
+        "other": "",
+        "uid": "098d45c3-e801-4b11-ad82-a6ce99aa6a2d",
+        "name": "Justine Winn",
+        "email": "justinemwinn@gmail.com",
+        "submitted_at": "2026-09-27T22:04:34.197Z"
       }
     ],
     "portraits": []
