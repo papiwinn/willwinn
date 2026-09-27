@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Mary Evelyn (Austin) Winn – Family genealogy</title>
+    <style>
+      :root { --accent: #e94560; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: system-ui, -apple-system, sans-serif;
+        color: white;
+        padding: 40px 20px 60px;
+      }
+      .container { max-width: 920px; margin: 0 auto; }
+      h1 { font-size: 2rem; margin: 0 0 8px; font-weight: 700; }
+      h2 { font-size: 1.25rem; margin: 28px 0 12px; color: var(--accent); }
+      h3 { font-size: 1.05rem; margin: 0 0 8px; }
+      .subtitle { color: var(--accent); font-size: 1.05rem; margin-bottom: 16px; }
+      .intro { opacity: 0.88; line-height: 1.55; margin: 0 0 28px; max-width: 40rem; }
+      a { color: var(--accent); }
+      a:hover { color: #ff6b6b; }
+      .card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 18px 18px 16px;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 999px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+      }
+      .tag.fact { background: rgba(46, 204, 113, 0.18); border: 1px solid rgba(46, 204, 113, 0.45); color: #a8e6c1; }
+      .tag.need { background: rgba(233, 69, 96, 0.18); border: 1px solid rgba(233, 69, 96, 0.45); color: #ffb3c0; }
+      .household {
+        display: grid;
+        gap: 12px;
+        margin: 0 0 8px;
+      }
+      .household .parents, .household .kids {
+        display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch;
+      }
+      .person-chip {
+        flex: 1 1 160px;
+        background: rgba(0,0,0,0.22);
+        border: 1px solid rgba(255,255,255,0.14);
+        border-radius: 10px;
+        padding: 12px 14px;
+        text-decoration: none;
+        color: inherit;
+      }
+      .person-chip:hover { border-color: var(--accent); }
+      .person-chip .role { font-size: 0.75rem; color: var(--accent); margin-bottom: 4px; }
+      .person-chip .name { font-weight: 650; }
+      .person-chip .meta { font-size: 0.82rem; opacity: 0.7; margin-top: 4px; }
+      .connector {
+        text-align: center; opacity: 0.55; font-size: 0.85rem; margin: 4px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 14px;
+      }
+      .feature-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 16px;
+        min-height: 120px;
+      }
+      .feature-card:hover { border-color: var(--accent); }
+      .feature-card .lifespan { font-size: 0.85rem; opacity: 0.7; margin: 4px 0 10px; }
+      .feature-card p { font-size: 0.9rem; opacity: 0.85; margin: 0; line-height: 1.45; }
+      .strip {
+        display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;
+      }
+      .strip a.btn {
+        display: inline-block;
+        padding: 12px 18px;
+        background: var(--accent);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      .strip a.btn.secondary {
+        background: transparent;
+        border: 2px solid var(--accent);
+      }
+      .strip a.btn:hover { background: #ff6b6b; color: white; }
+      .strip a.btn.secondary:hover { background: rgba(233,69,96,0.15); }
+      .note { font-size: 0.88rem; opacity: 0.75; margin-top: 12px; line-height: 1.45; }
+      .photo-ph {
+        width: 100%;
+        max-width: 280px;
+        aspect-ratio: 4/5;
+        background: rgba(0,0,0,0.35);
+        border: 1px dashed rgba(255,255,255,0.25);
+        border-radius: 10px;
+        display: flex; align-items: center; justify-content: center;
+        color: rgba(255,255,255,0.45);
+        font-size: 0.9rem;
+        margin: 0 0 18px;
+      }
+      .timeline { margin: 0; padding-left: 1.2rem; }
+      .timeline li { margin: 0 0 8px; line-height: 1.45; }
+      .sources { margin: 0; padding-left: 1.2rem; }
+      .sources li { margin: 0 0 8px; line-height: 1.45; opacity: 0.9; }
+      .back { display: inline-block; margin-bottom: 22px; color: var(--accent); text-decoration: none; font-weight: 500; }
+      .back:hover { text-decoration: underline; }
+      .status-row { margin: 0 0 14px; }
+      footer.colophon {
+        margin-top: 40px;
+        font-size: 0.82rem;
+        opacity: 0.55;
+      }
+
+    
+      .portrait {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 0 18px;
+      }
+      .portrait img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(0,0,0,0.35);
+      }
+
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
+      .hyp-banner {
+        margin: 0 0 20px; padding: 14px 16px; border-radius: 10px;
+        border: 2px dashed rgba(233,69,96,.75); background: rgba(233,69,96,.12);
+        line-height: 1.5;
+      }
+      .hyp-banner strong.big { display: block; font-size: 1.05rem; color: #ffb3c0; margin-bottom: 4px; }
+    </style>
+  </head>
+                <body>
+    <div class="container">
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="../">← Genealogy hub</a> <a class="tree-btn" href="../tree.html">🌳 Back to tree</a></nav>
+      <div class="hyp-banner"><strong class="big"><span class="tag need">HYPOTHESIS (strong)</span> Mother of Willis Hunley Winn — per FS tree</strong>
+        From FamilySearch Family Tree <a href="https://www.familysearch.org/tree/person/details/LDB3-M88">LDB3-M88</a> and her husband’s profile <a href="https://www.familysearch.org/tree/person/details/G95C-CBQ">G95C-CBQ</a> (10 sources, rated Medium quality). HYPOTHESIS (strong): the sibling names match the FACT 1932 Covington Leader obituary of Susan Winn Kinney.</div>
+      <h1>Mary Evelyn (Austin) Winn</h1>
+      <div class="subtitle">1837 – 1908 (per FS tree)</div>
+      <div class="status-row"><span class="tag need">HYPOTHESIS (strong)</span> mother of Willis Hunley Winn · <span class="tag need">NOT FOUND</span> places, parents, burial</div>
+      <div class="photo-ph">Photo placeholder</div>
+      <p class="intro"><strong>Relation:</strong> <span class="tag need">HYPOTHESIS (strong)</span> Mother of <a href="willis-hunley-winn.html">Willis Hunley Winn</a> and so Austin Hunley Winn’s grandmother. Husband: <a href="william-hunley-winn.html">William Hunley Winn</a>. <span class="tag need">HYPOTHESIS</span> Austin Hunley Winn’s first given name, Austin, matches her maiden name (an inference — see <a href="austin-hunley-winn.html">Austin’s page</a>).</p>
+      <p class="intro"><a href="willis-hunley-winn.html">→ Willis Hunley Winn</a> · <a href="william-hunley-winn.html">→ William Hunley Winn</a> · <a href="austin-hunley-winn.html">→ Austin Hunley Winn</a></p>
+      <h2>Timeline</h2>
+      <ul class="timeline">
+          <li><span class="tag need">HYPOTHESIS (strong)</span> <strong>Born:</strong> 1837 (FS tree <a href="https://www.familysearch.org/tree/person/details/LDB3-M88">LDB3-M88</a>)</li>
+          <li><span class="tag need">HYPOTHESIS (strong)</span> <strong>Married:</strong> <a href="william-hunley-winn.html">William Hunley Winn</a>, 3 March 1865, Tipton Co., TN (FS tree)</li>
+          <li><span class="tag need">HYPOTHESIS</span> <strong>Not confirmed:</strong> the obituary’s half-siblings <strong>J. H. Pitt</strong> (Little Rock, Ark.) and <strong>Mrs. S. T. Leatherwood</strong> (née Pitt, West Point, Miss.) may have been Mary Evelyn Austin’s children by an earlier Pitt marriage (before 1865). The obituary does not say which parent they share.</li>
+          <li><span class="tag need">HYPOTHESIS (strong)</span> <strong>Died:</strong> 1908 (FS tree)</li>
+          <li><span class="tag need">NOT FOUND</span> <strong>Places of birth and death; parents; burial; any first husband’s name</strong></li>
+      </ul>
+      <h2>Children with William Hunley Winn (per FS tree)</h2>
+      <p class="note"><span class="tag need">HYPOTHESIS (strong)</span> Per FS tree; the names match the siblings in the 1932 obituary of Susan Winn Kinney. All deceased.</p>
+      <ul class="timeline">
+          <li><span class="tag need">HYPOTHESIS (strong)</span> Sarah Eveline Winn (1866–1953) — possibly “Mrs. Casper Wiseman” of Osceola, Ark. (see note)</li>
+          <li><span class="tag need">HYPOTHESIS (strong)</span> Willie Mae Winn (1869–1935) — matches “Miss Willie Winn” of Memphis in the 1932 obituary (FACT); Leader index “Winn, Miss Willie May”, 14 Mar 1935</li>
+          <li><span class="tag need">HYPOTHESIS (strong)</span> William Peter Winn (1870–1937) — matches “W. P. Winn” of Cherry in the 1932 obituary (FACT); Leader index “Winn, William P.”, 9 Dec 1937</li>
+          <li><span class="tag need">HYPOTHESIS (strong)</span> C. B. Winn (female, b. 1872) — possibly “Mrs. Casper Wiseman” (see note)</li>
+          <li><span class="tag need">HYPOTHESIS (strong)</span> <a href="willis-hunley-winn.html">Willis Hunley Winn</a> (1875–1943) — Austin’s father</li>
+          <li><span class="tag need">HYPOTHESIS (strong)</span> Mary Sue Winn (1878–1932) — matches Mrs. Susan Winn Kinney, d. Mar 1932 (FACT, 1932 obituary)</li>
+      </ul>
+      <p class="note"><span class="tag need">HYPOTHESIS</span> “Mrs. Casper Wiseman” (née Winn) of Osceola, Ark., in the 1932 obituary is probably Sarah Eveline or C. B. — not assigned.</p>
+      <h2>Sources &amp; references</h2>
+      <ul class="sources">
+          <li><li><span class="tag need">HYPOTHESIS (strong)</span> FamilySearch Family Tree, profile LDB3-M88 (user-editable) — <a href="https://www.familysearch.org/tree/person/details/LDB3-M88">https://www.familysearch.org/tree/person/details/LDB3-M88</a></li></li>
+          <li><li><span class="tag need">HYPOTHESIS (strong)</span> FamilySearch Family Tree, profile G95C-CBQ (William Hunley Winn; 10 sources, rated Medium quality; user-editable) — <a href="https://www.familysearch.org/tree/person/details/G95C-CBQ">https://www.familysearch.org/tree/person/details/G95C-CBQ</a></li></li>
+          <li><li><span class="tag fact">FACT</span> Covington Leader, 31 Mar 1932, p.8 c.2, obituary of Mrs. Susan Winn Kinney (siblings Willis, W. P., Mrs. Casper Wiseman, Miss Willie Winn; half-siblings Mrs. S. T. Leatherwood, J. H. Pitt) — <a href="https://www.tngenweb.org/tipton/newspapers/leader4.html">https://www.tngenweb.org/tipton/newspapers/leader4.html</a></li></li>
+          <li><li><span class="tag fact">FACT</span> Crystal’s Winn batch from FamilySearch Family Tree G95C-CBQ, pasted by William (27 Sep 2026)</li></li>
+          <li><li><span class="tag need">need-more</span> 1865 Tipton Co. marriage record; any earlier Pitt marriage; 1870–1900 censuses; death and burial</li></li>
+      </ul>
+      <footer class="colophon">Unlisted genealogy · FACT = William or a record Crystal read · HYPOTHESIS / NOT FOUND = still open</footer>
+    </div>
+  
+<script src="../../corrections/config.js"></script>
+<script src="../corrections-widget.js"></script>
+<script src="../contributions-display.js"></script>
+</body>
+</html>
