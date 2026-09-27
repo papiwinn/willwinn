@@ -229,7 +229,8 @@
       }
       a.box:hover, a.box:focus-visible { border-color: var(--accent); background: rgba(233,69,96,0.12); outline: none; }
       .box.fact { border-left: 4px solid rgba(46, 204, 113, 0.75); }
-      .box.hypothesis { border-left: 4px solid rgba(233, 69, 96, 0.8); border-style: solid; }
+      .box.hypothesis { border: 1px dashed rgba(233, 69, 96, 0.75); border-left: 4px solid rgba(233, 69, 96, 0.8); background: rgba(233, 69, 96, 0.07); }
+      .parents > .node.hyp::before { border-top-style: dashed; border-top-color: rgba(233, 69, 96, 0.7); }
       .box.unknown {
         background: transparent;
         border: 2px dashed rgba(255,255,255,0.28);
@@ -340,7 +341,7 @@
         <li>William’s father’s line: Winn → McBride. William’s mother’s line: Simpson → Waits / Milburn.</li>
         <li><strong>Gabie Pilkington Waits</strong> was James Clayborn Waits’s second wife and Lovy’s stepmother, not her mother — she is linked beside James, not placed in the line.</li>
         <li>James Samuel Waits and Almenia Earhart Waits don’t have their own pages yet; they are cited on <a href="people/james-clayborn-waits.html">James Clayborn Waits’s page</a> (Find a Grave #200803433 parent links).</li>
-        <li>Robyn’s parents, <a href="people/richard-clinton-barrett.html">Richard Clinton Barrett</a> and <a href="people/elizabeth-jane-holden.html">Elizabeth Jane Holden</a>, are FACT from William; Elizabeth’s birthplace (possibly Eastport, Maine) is unverified. Crystal is extending the Barrett and Holden lines — see the <a href="people/barrett-family.html">Barrett family overview</a>.</li>
+        <li>Robyn’s parents, <a href="people/richard-clinton-barrett.html">Richard Clinton Barrett</a> and <a href="people/elizabeth-jane-holden.html">Elizabeth Jane Holden</a>, are FACT from William; Elizabeth’s Eastport, Maine birthplace is a hypothesis. Richard’s parents Royden Y. and Lillian Barrett are named on his 1923 Norwood birth record. <a href="people/henry-waldo-barrett.html">Henry Waldo Barrett</a> is shown dashed as a <strong>hypothesis</strong> for Royden’s father — see the <a href="people/barrett-family.html">Barrett family overview</a>.</li>
       </ul>
       <footer class="colophon">Unlisted genealogy · tree data lives in the <code>TREE</code> block inside <code>genealogy/tree.html</code></footer>
     </div>
@@ -430,13 +431,26 @@
         notes: [{ slug: "barrett-family", text: "Barrett family overview — research in progress" }],
         father: {
           slug: "richard-clinton-barrett", name: "Richard Clinton Barrett",
-          dates: "b. 26 Jan 1923 · Islington (Westwood), MA", status: "fact"
-          /* parents unknown — research open (Crystal extending the line) */
+          dates: "b. 26 Jan 1923 · Islington or Norwood, MA", status: "fact",
+          father: {
+            slug: "royden-young-barrett", name: "Royden Young “Roy Y.” Barrett",
+            dates: "c. 1877 – 12 May 1939 · Millis, MA", status: "fact",
+            father: {
+              slug: "henry-waldo-barrett", name: "Henry Waldo Barrett",
+              dates: "c. 1843 – 7 Oct 1902 · Norwood, MA", status: "hypothesis"
+            }
+            /* Royden's mother unknown — research open */
+          },
+          mother: {
+            slug: "lillian-garland-barrett", name: "Lillian G. (Garland) Barrett",
+            dates: "c. 1879 – 15 Nov 1969 · Wrentham, MA", status: "fact"
+            /* parents unknown — research open */
+          }
         },
         mother: {
-          slug: "elizabeth-jane-holden", name: "Elizabeth Jane Holden",
-          dates: "b. 2 Aug 1923 · birthplace unverified", status: "fact"
-          /* birthplace "possibly Eastport, Maine" is UNVERIFIED — see her page */
+          slug: "elizabeth-jane-holden", name: "Elizabeth Jane “Betty” Holden",
+          dates: "b. 2 Aug 1923 · birthplace unconfirmed", status: "fact"
+          /* Eastport, Maine birthplace is a HYPOTHESIS; parents unknown — research open */
         }
       }
     };
@@ -532,7 +546,7 @@
         return d;
       }
       function build(p, depth, sex, mirror, rootRole) {
-        var node = el("div", "node" + (mirror ? " mirror" : ""));
+        var node = el("div", "node" + (mirror ? " mirror" : "") + (p && p.status === "hypothesis" ? " hyp" : ""));
         var self = el("div", "self");
         var role = roleLabel(depth, sex, rootRole);
         self.appendChild(makeBox(p, role, depth === 0));

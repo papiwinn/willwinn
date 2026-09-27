@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Royden Young “Roy Y.” Barrett – Family genealogy</title>
+    <style>
+      :root { --accent: #e94560; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: system-ui, -apple-system, sans-serif;
+        color: white;
+        padding: 40px 20px 60px;
+      }
+      .container { max-width: 920px; margin: 0 auto; }
+      h1 { font-size: 2rem; margin: 0 0 8px; font-weight: 700; }
+      h2 { font-size: 1.25rem; margin: 28px 0 12px; color: var(--accent); }
+      h3 { font-size: 1.05rem; margin: 0 0 8px; }
+      .subtitle { color: var(--accent); font-size: 1.05rem; margin-bottom: 16px; }
+      .intro { opacity: 0.88; line-height: 1.55; margin: 0 0 28px; max-width: 40rem; }
+      a { color: var(--accent); }
+      a:hover { color: #ff6b6b; }
+      .card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 18px 18px 16px;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 999px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+      }
+      .tag.fact { background: rgba(46, 204, 113, 0.18); border: 1px solid rgba(46, 204, 113, 0.45); color: #a8e6c1; }
+      .tag.need { background: rgba(233, 69, 96, 0.18); border: 1px solid rgba(233, 69, 96, 0.45); color: #ffb3c0; }
+      .household {
+        display: grid;
+        gap: 12px;
+        margin: 0 0 8px;
+      }
+      .household .parents, .household .kids {
+        display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch;
+      }
+      .person-chip {
+        flex: 1 1 160px;
+        background: rgba(0,0,0,0.22);
+        border: 1px solid rgba(255,255,255,0.14);
+        border-radius: 10px;
+        padding: 12px 14px;
+        text-decoration: none;
+        color: inherit;
+      }
+      .person-chip:hover { border-color: var(--accent); }
+      .person-chip .role { font-size: 0.75rem; color: var(--accent); margin-bottom: 4px; }
+      .person-chip .name { font-weight: 650; }
+      .person-chip .meta { font-size: 0.82rem; opacity: 0.7; margin-top: 4px; }
+      .connector {
+        text-align: center; opacity: 0.55; font-size: 0.85rem; margin: 4px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 14px;
+      }
+      .feature-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 16px;
+        min-height: 120px;
+      }
+      .feature-card:hover { border-color: var(--accent); }
+      .feature-card .lifespan { font-size: 0.85rem; opacity: 0.7; margin: 4px 0 10px; }
+      .feature-card p { font-size: 0.9rem; opacity: 0.85; margin: 0; line-height: 1.45; }
+      .strip {
+        display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;
+      }
+      .strip a.btn {
+        display: inline-block;
+        padding: 12px 18px;
+        background: var(--accent);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      .strip a.btn.secondary {
+        background: transparent;
+        border: 2px solid var(--accent);
+      }
+      .strip a.btn:hover { background: #ff6b6b; color: white; }
+      .strip a.btn.secondary:hover { background: rgba(233,69,96,0.15); }
+      .note { font-size: 0.88rem; opacity: 0.75; margin-top: 12px; line-height: 1.45; }
+      .photo-ph {
+        width: 100%;
+        max-width: 280px;
+        aspect-ratio: 4/5;
+        background: rgba(0,0,0,0.35);
+        border: 1px dashed rgba(255,255,255,0.25);
+        border-radius: 10px;
+        display: flex; align-items: center; justify-content: center;
+        color: rgba(255,255,255,0.45);
+        font-size: 0.9rem;
+        margin: 0 0 18px;
+      }
+      .timeline { margin: 0; padding-left: 1.2rem; }
+      .timeline li { margin: 0 0 8px; line-height: 1.45; }
+      .sources { margin: 0; padding-left: 1.2rem; }
+      .sources li { margin: 0 0 8px; line-height: 1.45; opacity: 0.9; }
+      .back { display: inline-block; margin-bottom: 22px; color: var(--accent); text-decoration: none; font-weight: 500; }
+      .back:hover { text-decoration: underline; }
+      .status-row { margin: 0 0 14px; }
+      footer.colophon {
+        margin-top: 40px;
+        font-size: 0.82rem;
+        opacity: 0.55;
+      }
+
+    
+      .portrait {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 0 18px;
+      }
+      .portrait img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(0,0,0,0.35);
+      }
+
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
+    </style>
+  </head>
+                <body>
+    <div class="container">
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="../">← Genealogy hub</a> <a class="tree-btn" href="../tree.html">🌳 Back to tree</a></nav>
+      <h1>Royden Young “Roy Y.” Barrett</h1>
+      <div class="subtitle">c. 19 Apr 1877 – 12 May 1939 · Millis, Massachusetts</div>
+      <div class="status-row"><span class="tag fact">FACT</span> Richard’s father (named in 1923 birth record) · <span class="tag need">HYPOTHESIS (strong)</span> same man as the 1939 Millis death</div>
+      <div class="photo-ph">Photo placeholder</div>
+      <p class="intro"><strong>Relation:</strong> Father of <a href="richard-clinton-barrett.html">Richard Clinton Barrett</a>; Robyn’s paternal grandfather. <span class="tag fact">FACT (image)</span> Richard’s 1923 Norwood birth record names his father “Royden Y.”</p>
+      <p class="intro"><span class="tag need">HYPOTHESIS (strong)</span> That this Royden Y. is the Royden Y. Barrett who died in Millis on 12 May 1939: the name is rare, a Royden Y. Barrett <strong>Jr.</strong> existed, and the family was in Millis by 1928. No record found directly states “son of” linking the 1939 death to Richard.</p>
+      <p class="intro"><a href="richard-clinton-barrett.html">→ Richard Clinton Barrett</a> · <a href="lillian-garland-barrett.html">→ Lillian G. (Garland) Barrett</a> · <a href="henry-waldo-barrett.html">→ Henry Waldo Barrett (possible father)</a> · <a href="barrett-family.html">→ Barrett family overview</a></p>
+      <h2>Timeline</h2>
+      <ul class="timeline">
+          <li><span class="tag need">HYPOTHESIS</span> <strong>Born:</strong> about 19 April 1877 — calculated from age at death. Birthplace <span class="tag need">NOT FOUND</span>; he is not in the Norwood birth lists for 1876 or 1877</li>
+          <li><span class="tag fact">FACT</span> <strong>Norwood tax lists:</strong> “Roy Y. Barrett” / “Barrett, Roy Y.” in the 1900–1903 and 1904–1907 Norwood report volumes</li>
+          <li><span class="tag need">HYPOTHESIS</span> 1897: a “Royden Barrett of Norwood” was a cycling pacemaker (Boston Globe, 8 Aug 1897, as quoted by the Norwood Historical Society)</li>
+          <li><span class="tag fact">FACT</span> <strong>Wife:</strong> Lillian — named in the 1905 and 1923 Norwood birth records — <a href="lillian-garland-barrett.html">Lillian G. (Garland) Barrett</a></li>
+          <li><span class="tag fact">FACT (image)</span> <strong>Died:</strong> 12 May 1939, Millis, MA, aged 62y 0m 23d (Millis 1939 report, “Deaths recorded in Millis 1939,” p.27)</li>
+          <li><span class="tag fact">FACT</span> <strong>Buried:</strong> in Millis (same record); cemetery not named. <span class="tag need">HYPOTHESIS</span> Prospect Hill Cemetery</li>
+          <li><span class="tag need">HYPOTHESIS</span> <strong>Father:</strong> <a href="henry-waldo-barrett.html">Henry Waldo Barrett</a> — circumstantial only (see his page)</li>
+          <li><span class="tag need">HYPOTHESIS</span> The middle name “Young” may be his mother’s maiden name</li>
+          <li><span class="tag need">need-more</span> Death certificate (birthplace, parents); marriage to Lillian c.1904–05 (not in Norwood report OCR)</li>
+      </ul>
+      <h2>Children of Royden Y. and Lillian Barrett</h2>
+      <p class="note" style="margin-top:0">From Norwood birth lists (checked against the images unless noted). Death status unknown except Royden Jr.</p>
+      <ul class="timeline">
+          <li><span class="tag fact">FACT (image)</span> <strong>Henry Karl Barrett</strong> — 5 Sep 1905, Norwood (parents “Roy Y. and Lillian F.”; 1905 births, p.68)</li>
+          <li><span class="tag fact">FACT (image)</span> <strong>Muriel G. Barrett</strong> — 17 Jun 1908, Norwood (1908 births, p.15)</li>
+          <li><span class="tag need">HYPOTHESIS</span> <strong>Royden Y. Barrett Jr.</strong> — born about 1911–12 (birth record <span class="tag need">NOT FOUND</span>); <span class="tag fact">FACT (image)</span> died 1 May 1998, Plymouth, MA, aged 86 (Plymouth 1998 report, deaths, p.230). That he is this family’s son is very likely (the “Jr.” and the Millis link)</li>
+          <li><span class="tag fact">FACT (image)</span> <strong>Unnamed (“——— Barrett”)</strong> — 16 Mar 1918, Norwood (parents “Royden and Lillian”; 1918 births, p.21)</li>
+          <li><span class="tag fact">FACT (image)</span> <strong>Kenneth Edwin Barrett</strong> — 22 Jan 1921, Norwood (1921 births, p.17)</li>
+          <li><span class="tag fact">FACT (image)</span> <strong><a href="richard-clinton-barrett.html">Richard Clinton Barrett</a></strong> — 26 Jan 1923, Norwood (1923 births, p.26)</li>
+      </ul>
+      <h2>Sources &amp; references</h2>
+      <ul class="sources">
+          <li><span class="tag fact">FACT (image)</span> Norwood, MA 1923 annual report, births p.26 — “Jan. 26, Richard Clinton Barrett, Royden Y. and Lillian.” — <a href="https://archive.org/details/norwoodannualrep1923norw">https://archive.org/details/norwoodannualrep1923norw</a></li>
+          <li><span class="tag fact">FACT (image)</span> Millis, MA 1939 annual town report, “Deaths recorded in Millis 1939,” p.27 — died 12 May 1939, aged 62y 0m 23d; buried Millis — <a href="https://archive.org/details/complete-1939-annual-town-report">https://archive.org/details/complete-1939-annual-town-report</a></li>
+          <li><span class="tag fact">FACT</span> Norwood annual reports 1904–1907 volume — tax lists (“Roy Y. Barrett”); 1905 births p.68 (Henry Karl) — <a href="https://archive.org/details/norwoodannualrep1904norw">https://archive.org/details/norwoodannualrep1904norw</a></li>
+          <li><span class="tag fact">FACT (image)</span> Norwood annual report 1908, births p.15 (Muriel G.) — <a href="https://archive.org/details/norwoodannualrep1908norw">https://archive.org/details/norwoodannualrep1908norw</a></li>
+          <li><span class="tag fact">FACT (image)</span> Norwood annual reports 1915–22 volume, 1918 births p.21 (unnamed child) and 1921 births p.17 (Kenneth Edwin) — <a href="https://archive.org/details/norwoodannualrep1915norw">https://archive.org/details/norwoodannualrep1915norw</a></li>
+          <li><span class="tag fact">FACT (image)</span> Plymouth, MA 1998 annual report, deaths p.230 — Royden Y. Barrett Jr., 1 May 1998, aged 86 — <a href="https://archive.org/details/annualreportoft1998unse_0">https://archive.org/details/annualreportoft1998unse_0</a></li>
+          <li><span class="tag need">HYPOTHESIS</span> Norwood Historical Society, “This day in Norwood history: August 8” (quoting Boston Globe, 8 Aug 1897) — <a href="https://norwoodhistoricalsociety.org/this-day-in-norwood-history-august-8/">https://norwoodhistoricalsociety.org/this-day-in-norwood-history-august-8/</a></li>
+      </ul>
+      <footer class="colophon">Unlisted genealogy · FACT = William or a record Crystal read · HYPOTHESIS / NOT FOUND = still open</footer>
+    </div>
+  
+<script src="../../corrections/config.js"></script>
+<script src="../corrections-widget.js"></script>
+<script src="../contributions-display.js"></script>
+</body>
+</html>

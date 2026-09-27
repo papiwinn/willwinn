@@ -1012,6 +1012,11 @@
         "status": "fact"
       },
       {
+        "t": "Birth listed",
+        "d": "Millis 1958 town report births: \u201cAug. 27, Robyn Louise Barrett, Richard C. and Elizabeth.\u201d",
+        "status": "fact"
+      },
+      {
         "t": "Father",
         "d": "Richard Clinton Barrett (William)",
         "status": "fact"
@@ -1030,6 +1035,11 @@
         "t": "Children",
         "d": "William LaVaughan Winn Jr.; Nathan Lee Winn; Jonathan Lucas Winn (adopted)",
         "status": "fact"
+      },
+      {
+        "t": "Siblings",
+        "d": "Bonny Jane Barrett; Gayle Elizabeth Barrett; Richard Clinton Barrett Jr.",
+        "status": "fact"
       }
     ],
     "sources": [
@@ -1039,14 +1049,20 @@
         "note": "birth, marriage, parents"
       },
       {
-        "label": "Sources pending \u2014 research open",
-        "status": "need",
-        "note": "Crystal to send sources"
-      },
-      {
         "label": "William LaVaughan Winn, family record",
         "status": "fact",
         "note": "children"
+      },
+      {
+        "label": "Millis 1958 annual town report, births",
+        "status": "fact",
+        "href": "https://archive.org/details/complete-1958-annual-town-report",
+        "note": "Aug. 27, Robyn Louise Barrett, Richard C. and Elizabeth."
+      },
+      {
+        "label": "Crystal\u2019s Barrett/Holden research report (27 Sep 2026)",
+        "status": "fact",
+        "note": "siblings (Millis birth lists)"
       }
     ]
   },
@@ -1054,15 +1070,30 @@
     "id": "richard-clinton-barrett",
     "name": "Richard Clinton Barrett",
     "short_name": "Richard Clinton Barrett",
-    "lifespan": "b. 26 Jan 1923 \u00b7 Islington (Westwood), MA",
-    "rel": "Father of Robyn Louise Barrett. Husband of Elizabeth Jane Holden.",
+    "lifespan": "b. 26 Jan 1923 \u00b7 Islington (Westwood), MA (William) / reg. Norwood",
+    "rel": "Father of Robyn Louise Barrett. Husband of Elizabeth Jane Holden. Son of Royden Y. and Lillian Barrett.",
     "bio_or_step": "need",
-    "blurb": "Robyn\u2019s father (William FACT). Parents unknown \u2014 research open.",
-    "narrative": "Richard Clinton Barrett, born 26 Jan 1923 in Islington (Westwood), Massachusetts (William FACT). Father of Robyn Louise Barrett; husband of Elizabeth Jane Holden. Parents unknown \u2014 research open.",
+    "blurb": "Robyn\u2019s father (William FACT). Parents Royden Y. & Lillian Barrett (1923 Norwood birth record).",
+    "narrative": "Richard Clinton Barrett, born 26 Jan 1923, Islington (Westwood), Massachusetts (William FACT); birth registered in Norwood (1923 report) \u2014 discrepancy unresolved. Parents Royden Y. and Lillian. Father of Robyn Louise Barrett; husband of Elizabeth Jane Holden. Death status unknown.",
     "timeline": [
       {
         "t": "Born",
         "d": "26 Jan 1923, Islington (Westwood), Massachusetts (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Birth registered",
+        "d": "Norwood 1923: \u201cJan. 26, Richard Clinton Barrett, Royden Y. and Lillian.\u201d",
+        "status": "fact"
+      },
+      {
+        "t": "Birthplace discrepancy",
+        "d": "Islington (Westwood) per William vs. Norwood registration \u2014 unresolved",
+        "status": "need"
+      },
+      {
+        "t": "Parents",
+        "d": "Royden Y. and Lillian Barrett (1923 birth record)",
         "status": "fact"
       },
       {
@@ -1071,14 +1102,9 @@
         "status": "fact"
       },
       {
-        "t": "Daughter",
-        "d": "Robyn Louise Barrett (William)",
+        "t": "Children",
+        "d": "Robyn Louise Barrett; Bonny Jane Barrett; Gayle Elizabeth Barrett; Richard Clinton Barrett Jr.",
         "status": "fact"
-      },
-      {
-        "t": "Parents",
-        "d": "unknown \u2014 research open",
-        "status": "need"
       }
     ],
     "sources": [
@@ -1088,21 +1114,33 @@
         "note": "name, birth date and place, daughter Robyn"
       },
       {
-        "label": "Sources pending \u2014 research open",
-        "status": "need",
-        "note": "Crystal to send sources"
+        "label": "Norwood 1923 annual report, births p.26",
+        "status": "fact",
+        "href": "https://archive.org/details/norwoodannualrep1923norw",
+        "note": "Jan. 26, Richard Clinton Barrett, Royden Y. and Lillian."
+      },
+      {
+        "label": "Millis 1958 annual town report, births",
+        "status": "fact",
+        "href": "https://archive.org/details/complete-1958-annual-town-report",
+        "note": "daughter Robyn Louise"
+      },
+      {
+        "label": "Crystal\u2019s Barrett/Holden research report (27 Sep 2026)",
+        "status": "fact",
+        "note": "children (Millis birth lists)"
       }
     ]
   },
   {
     "id": "elizabeth-jane-holden",
-    "name": "Elizabeth Jane Holden",
+    "name": "Elizabeth Jane \u201cBetty\u201d Holden",
     "short_name": "Elizabeth Jane Holden",
     "lifespan": "b. 2 Aug 1923",
     "rel": "Mother of Robyn Louise Barrett. Wife of Richard Clinton Barrett.",
     "bio_or_step": "need",
-    "blurb": "Robyn\u2019s mother (William FACT). Birthplace possibly Eastport, Maine \u2014 UNVERIFIED.",
-    "narrative": "Elizabeth Jane Holden, born 2 Aug 1923 (William FACT). Birthplace possibly Eastport, Maine \u2014 UNVERIFIED / unconfirmed. Mother of Robyn Louise Barrett; wife of Richard Clinton Barrett.",
+    "blurb": "Robyn\u2019s mother (William FACT). Eastport, Maine birthplace \u2014 HYPOTHESIS. Parents unknown.",
+    "narrative": "Elizabeth Jane \u201cBetty\u201d Holden, born 2 Aug 1923 (William FACT). Birthplace Eastport, Maine \u2014 HYPOTHESIS, no record confirms. Mother of Robyn Louise Barrett; wife of Richard Clinton Barrett. Parents unknown. Death status unknown.",
     "timeline": [
       {
         "t": "Born",
@@ -1111,8 +1149,13 @@
       },
       {
         "t": "Birthplace",
-        "d": "possibly Eastport, Maine \u2014 UNVERIFIED",
+        "d": "Eastport, Maine \u2014 HYPOTHESIS (no record confirms)",
         "status": "need"
+      },
+      {
+        "t": "Nickname",
+        "d": "Betty (Millis town reports, per Crystal)",
+        "status": "fact"
       },
       {
         "t": "Spouse",
@@ -1120,8 +1163,8 @@
         "status": "fact"
       },
       {
-        "t": "Daughter",
-        "d": "Robyn Louise Barrett (William)",
+        "t": "Children",
+        "d": "Robyn Louise Barrett; Bonny Jane Barrett; Gayle Elizabeth Barrett; Richard Clinton Barrett Jr.",
         "status": "fact"
       },
       {
@@ -1139,12 +1182,22 @@
       {
         "label": "William (family knowledge)",
         "status": "need",
-        "note": "birthplace possibly Eastport, Maine \u2014 UNVERIFIED"
+        "note": "birthplace possibly Eastport, Maine \u2014 HYPOTHESIS; no record found"
       },
       {
-        "label": "Sources pending \u2014 research open",
-        "status": "need",
-        "note": "Crystal to send sources"
+        "label": "Crystal\u2019s Barrett/Holden research report (27 Sep 2026)",
+        "status": "fact",
+        "note": "nickname Betty (Millis town reports)"
+      },
+      {
+        "label": "Millis 1958 annual town report, births",
+        "status": "fact",
+        "href": "https://archive.org/details/complete-1958-annual-town-report",
+        "note": "daughter Robyn Louise"
+      },
+      {
+        "label": "Parents \u2014 research open",
+        "status": "need"
       }
     ]
   },
@@ -1155,14 +1208,38 @@
     "lifespan": "research in progress",
     "rel": "Family overview for Robyn Louise Barrett\u2019s Barrett and Holden lines.",
     "bio_or_step": "need",
-    "blurb": "Overview of Robyn\u2019s Barrett and Holden lines. Crystal is extending the line; sources pending.",
-    "narrative": "Placeholder / overview page. Robyn\u2019s parents Richard Clinton Barrett and Elizabeth Jane Holden are known (William FACT); earlier generations research open \u2014 Crystal extending the line.",
+    "blurb": "Overview of Robyn\u2019s Barrett and Holden lines, with sources from Crystal\u2019s batch.",
+    "narrative": "Overview of Robyn\u2019s Barrett and Holden lines: Richard Clinton Barrett & Elizabeth Jane Holden; Royden Y. & Lillian (Garland) Barrett; Henry Waldo Barrett (HYPOTHESIS). Holden parents not found.",
     "timeline": [],
     "sources": [
       {
-        "label": "Sources pending \u2014 research open",
-        "status": "need",
-        "note": "Crystal to send sources"
+        "label": "Millis 1958 annual town report",
+        "status": "fact",
+        "href": "https://archive.org/details/complete-1958-annual-town-report"
+      },
+      {
+        "label": "Norwood 1923 annual report",
+        "status": "fact",
+        "href": "https://archive.org/details/norwoodannualrep1923norw"
+      },
+      {
+        "label": "Millis 1939 annual town report",
+        "status": "fact",
+        "href": "https://archive.org/details/complete-1939-annual-town-report"
+      },
+      {
+        "label": "Millis 1969 annual town report",
+        "status": "fact",
+        "href": "https://archive.org/details/complete-1969-annual-town-report"
+      },
+      {
+        "label": "Norwood 1900\u20131903 volume",
+        "status": "fact",
+        "href": "https://archive.org/details/norwoodannualrep1900norw"
+      },
+      {
+        "label": "Holden line \u2014 research open",
+        "status": "need"
       }
     ]
   },
@@ -1247,6 +1324,199 @@
       {
         "label": "William LaVaughan Winn, family record",
         "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "royden-young-barrett",
+    "name": "Royden Young \u201cRoy Y.\u201d Barrett",
+    "short_name": "Royden Y. Barrett",
+    "lifespan": "c. 19 Apr 1877 \u2013 12 May 1939",
+    "rel": "Father of Richard Clinton Barrett (1923 birth record). Husband of Lillian (Garland) Barrett.",
+    "bio_or_step": "bio",
+    "blurb": "Richard\u2019s father (1923 birth record). Died 12 May 1939, Millis. Norwood tax lists 1900\u201307.",
+    "narrative": "Named father \u201cRoyden Y.\u201d on Richard\u2019s 1923 Norwood birth record (FACT). Died 12 May 1939, Millis, aged 62y 0m 23d; buried Millis (FACT). Identity with the 1939 death = strong HYPOTHESIS. Birth about 19 Apr 1877 calculated (HYPOTHESIS). Father Henry Waldo Barrett = HYPOTHESIS.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "about 19 Apr 1877 (calculated from age at death); birthplace not found",
+        "status": "need"
+      },
+      {
+        "t": "Norwood tax lists",
+        "d": "Roy Y. Barrett, 1900\u20131903 and 1904\u20131907 volumes",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "12 May 1939, Millis, MA, aged 62y 0m 23d; buried Millis (cemetery not named)",
+        "status": "fact"
+      },
+      {
+        "t": "Burial",
+        "d": "Prospect Hill Cemetery \u2014 HYPOTHESIS",
+        "status": "need"
+      },
+      {
+        "t": "Father",
+        "d": "Henry Waldo Barrett \u2014 HYPOTHESIS",
+        "status": "need"
+      },
+      {
+        "t": "Children",
+        "d": "Henry Karl (1905); Muriel G. (1908); Royden Y. Jr. (c.1911\u201312 \u2013 1 May 1998); unnamed (1918); Kenneth Edwin (1921); Richard Clinton (1923)",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Norwood 1923 annual report, births p.26",
+        "status": "fact",
+        "href": "https://archive.org/details/norwoodannualrep1923norw"
+      },
+      {
+        "label": "Millis 1939 annual town report, deaths p.27",
+        "status": "fact",
+        "href": "https://archive.org/details/complete-1939-annual-town-report"
+      },
+      {
+        "label": "Norwood 1904\u20131907 volume (tax lists; 1905 births)",
+        "status": "fact",
+        "href": "https://archive.org/details/norwoodannualrep1904norw"
+      },
+      {
+        "label": "Norwood 1908 annual report, births",
+        "status": "fact",
+        "href": "https://archive.org/details/norwoodannualrep1908norw"
+      },
+      {
+        "label": "Norwood 1915\u201322 volume, births 1918 & 1921",
+        "status": "fact",
+        "href": "https://archive.org/details/norwoodannualrep1915norw"
+      },
+      {
+        "label": "Plymouth 1998 annual report, deaths p.230",
+        "status": "fact",
+        "href": "https://archive.org/details/annualreportoft1998unse_0"
+      },
+      {
+        "label": "Norwood Historical Society (Boston Globe 8 Aug 1897)",
+        "status": "need",
+        "href": "https://norwoodhistoricalsociety.org/this-day-in-norwood-history-august-8/",
+        "note": "HYPOTHESIS"
+      }
+    ]
+  },
+  {
+    "id": "lillian-garland-barrett",
+    "name": "Lillian G. (Garland) Barrett",
+    "short_name": "Lillian (Garland) Barrett",
+    "lifespan": "c. 4 Mar 1879 \u2013 15 Nov 1969",
+    "rel": "Mother of Richard Clinton Barrett (1923 birth record). Wife of Royden Y. Barrett.",
+    "bio_or_step": "bio",
+    "blurb": "Richard\u2019s mother; wife of Royden. Died 15 Nov 1969, Wrentham. Parents not found.",
+    "narrative": "Named mother \u201cLillian\u201d on Richard\u2019s 1923 birth record (FACT). Died 15 Nov 1969, Wrentham, aged 90y 8m 11d, \u201cLillian G. Barrett (Garland)\u201d (FACT). Identity = strong HYPOTHESIS. Middle initial F. (1905) vs G. (1969) unresolved. Frank W. Garland possibly a brother (HYPOTHESIS).",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "about 4 Mar 1879 (calculated from age at death); birthplace not found",
+        "status": "need"
+      },
+      {
+        "t": "Died",
+        "d": "15 Nov 1969, Wrentham, MA, aged 90y 8m 11d \u2014 \u201cLillian G. Barrett (Garland)\u201d",
+        "status": "fact"
+      },
+      {
+        "t": "Middle initial",
+        "d": "Lillian F. (1905) vs Lillian G. (1969) \u2014 unresolved",
+        "status": "need"
+      },
+      {
+        "t": "Burial",
+        "d": "not found",
+        "status": "need"
+      },
+      {
+        "t": "Parents",
+        "d": "not found; Frank W. Garland possibly a brother (HYPOTHESIS)",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Millis 1969 annual town report, deaths p.75",
+        "status": "fact",
+        "href": "https://archive.org/details/complete-1969-annual-town-report"
+      },
+      {
+        "label": "Norwood 1923 annual report, births p.26",
+        "status": "fact",
+        "href": "https://archive.org/details/norwoodannualrep1923norw"
+      },
+      {
+        "label": "Norwood 1904\u20131907 volume, 1905 births p.68",
+        "status": "fact",
+        "href": "https://archive.org/details/norwoodannualrep1904norw"
+      }
+    ]
+  },
+  {
+    "id": "henry-waldo-barrett",
+    "name": "Henry Waldo Barrett",
+    "short_name": "Henry Waldo Barrett",
+    "lifespan": "c. 24 Mar 1843 \u2013 7 Oct 1902",
+    "rel": "HYPOTHESIS: possible father of Royden Y. Barrett. Husband of Mary E.",
+    "bio_or_step": "need",
+    "blurb": "HYPOTHESIS \u2014 possible father of Royden; circumstantial only. Died 7 Oct 1902, Norwood.",
+    "narrative": "Died 7 Oct 1902, Norwood, aged 59y 6m 13d (FACT, OCR), so born about 24 Mar 1843. Wife Mary E. Children Mabel Curtis (d.1876), Frank Guy (d.1876), James Karl (b. c.1879\u201380). Father of Royden = HYPOTHESIS (names Karl, shared Norwood tax list, timing); no record says son of.",
+    "timeline": [
+      {
+        "t": "Died",
+        "d": "7 Oct 1902, Norwood, MA, aged 59y 6m 13d",
+        "status": "fact"
+      },
+      {
+        "t": "Born",
+        "d": "about 24 Mar 1843 (calculated)",
+        "status": "need"
+      },
+      {
+        "t": "Wife",
+        "d": "Mary E.",
+        "status": "fact"
+      },
+      {
+        "t": "Children",
+        "d": "Mabel Curtis (d. 14 Oct 1876); Frank Guy (d. 25 Oct 1876); James Karl (b. c.1879\u201380)",
+        "status": "fact"
+      },
+      {
+        "t": "Son Royden?",
+        "d": "HYPOTHESIS \u2014 circumstantial only",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Norwood 1900\u20131903 volume, deaths 1902",
+        "status": "fact",
+        "href": "https://archive.org/details/norwoodannualrep1900norw"
+      },
+      {
+        "label": "Norwood 1877 annual report, deaths",
+        "status": "fact",
+        "href": "https://archive.org/details/norwoodannualrep1877norw"
+      },
+      {
+        "label": "Norwood 1880 annual report",
+        "status": "fact",
+        "href": "https://archive.org/details/norwoodannualrep1880norw"
+      },
+      {
+        "label": "Norwood 1904\u20131907 volume, tax list",
+        "status": "fact",
+        "href": "https://archive.org/details/norwoodannualrep1904norw"
       }
     ]
   }
