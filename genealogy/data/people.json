@@ -2451,8 +2451,8 @@
     "lifespan": "c. 1870 \u00b7 Blackstone, MA \u2013 28 Apr 1951 \u00b7 Hopedale, MA",
     "rel": "Father of Elizabeth Jane (Holden) Barrett. Husband of Agnes C. Corbett.",
     "bio_or_step": "bio",
-    "blurb": "Elizabeth\u2019s father (William FACT). Born Blackstone, MA c. 1870 (date estimated); married Agnes C. Corbett 6 Nov 1918; died 28 Apr 1951, Hopedale, MA.",
-    "narrative": "William Martin Holden (1918 marriage record, FACT), \u201cWilliam M.\u201d on Elizabeth\u2019s 1923 birth records. Born in Blackstone, MA (FACT: 1951 death entry; Elizabeth\u2019s Milford birth entry), about 21 Sep 1870 (HYPOTHESIS, calculated from age at death 80y 7m 7d). Lived in Blackstone (William). Married Agnes C. Corbett 6 Nov 1918, Massachusetts. Censuses 1920, 1930, 1940 with Agnes. In Millis the year before 1950; 1950 census: farmer, 41 Mill St., Hopedale, aged 80, with wife Agnes and son William M. Jr. Died 28 Apr 1951, Hopedale, aged 80y 7m 7d (Hopedale town report). Parents NOT FOUND.",
+    "blurb": "Elizabeth\u2019s father (William FACT). Born Blackstone, MA c. 1870 (date estimated); married Agnes C. Corbett 6 Nov 1918, Medway, MA; son of John Holden & Mary Sinclaire; died 28 Apr 1951, Hopedale, MA.",
+    "narrative": "William Martin Holden (1918 marriage record, FACT), \u201cWilliam M.\u201d on Elizabeth\u2019s 1923 birth records. Born in Blackstone, MA (FACT: 1951 death entry; Elizabeth\u2019s Milford birth entry), about 21 Sep 1870 (HYPOTHESIS, calculated from age at death 80y 7m 7d). Lived in Blackstone (William). Married Agnes C. Corbett 6 Nov 1918, Medway, Norfolk Co., MA. Censuses 1920, 1930, 1940 with Agnes. In Millis the year before 1950; 1950 census: farmer, 41 Mill St., Hopedale, aged 80, with wife Agnes and son William M. Jr. Died 28 Apr 1951, Hopedale, aged 80y 7m 7d (Hopedale town report). Parents John Holden and Mary Sinclaire (FACT, 1918 marriage record, cert. no. 21, p. 193).",
     "timeline": [
       {
         "t": "Born",
@@ -2471,7 +2471,7 @@
       },
       {
         "t": "Married",
-        "d": "Agnes C. Corbett, 6 Nov 1918, Massachusetts (MA State Vital Records 1638-1927)",
+        "d": "Agnes C. Corbett, 6 Nov 1918, Medway, Norfolk Co., MA (MA State Vital Records 1638-1927), cert. no. 21, p. 193",
         "status": "fact"
       },
       {
@@ -2496,12 +2496,12 @@
       },
       {
         "t": "Parents",
-        "d": "NOT FOUND \u2014 1951 death certificate and 1918 marriage record should name them",
-        "status": "need"
+        "d": "John Holden & Mary Sinclaire (1918 marriage record, cert. no. 21, p. 193)",
+        "status": "fact"
       },
       {
         "t": "Research lead",
-        "d": "Carrie Berrian Holden (d. 6 Feb 1948, Millis, aged 80; b. c. Aug 1867) \u2014 too close in age to be his mother; possible relative, unproven",
+        "d": "Carrie Berrian Holden (d. 6 Feb 1948, Millis, aged 80; b. c. Aug 1867) \u2014 not his mother (his mother was Mary Sinclaire); possible relative, unproven",
         "status": "need"
       }
     ],
@@ -2511,10 +2511,15 @@
         "status": "fact"
       },
       {
-        "label": "Massachusetts, State Vital Records, 1638-1927 (marriage)",
+        "label": "Massachusetts, State Vital Records, 1638-1927 (marriage, cert. no. 21, p. 193)",
         "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:QLKG-DJRM",
-        "note": "William Martin Holden \u00d7 Agnes C. Corbett, 6 Nov 1918"
+        "note": "William Martin Holden \u00d7 Agnes Corbet, 6 Nov 1918, Medway; groom\u2019s parents John Holden & Mary Sinclaire; bride\u2019s parents \u201cJoseph Corbet\u201d & \u201cAddie Rumley\u201d"
+      },
+      {
+        "label": "FamilySearch Family Tree L4ZR-YYJ",
+        "status": "fact",
+        "href": "https://www.familysearch.org/tree/person/details/L4ZR-YYJ"
       },
       {
         "label": "Massachusetts, State Vital Records, 1638-1927 (birth of Elizabeth)",
@@ -2575,7 +2580,107 @@
       {
         "label": "Further research open",
         "status": "need",
-        "note": "1951 death certificate; 1918 marriage record (parents)"
+        "note": "1951 death certificate; burial; dates for John Holden and Mary Sinclaire"
+      }
+    ]
+  },
+  {
+    "id": "john-holden",
+    "name": "John Holden",
+    "short_name": "John Holden",
+    "lifespan": "dates not found",
+    "rel": "FACT: father of William Martin Holden (1918 marriage record).",
+    "bio_or_step": "bio",
+    "blurb": "William Martin Holden\u2019s father (FACT, 1918 marriage record, cert. no. 21, p. 193). Dates, places, parents, burial not found.",
+    "narrative": "John Holden is named as William Martin Holden\u2019s father in his marriage to Agnes Corbet, 6 Nov 1918, Medway, Norfolk Co., MA (Massachusetts State Vital Records 1638-1927, cert. no. 21, p. 193). Dates, places, parents and burial NOT FOUND.",
+    "timeline": [
+      {
+        "t": "Name",
+        "d": "John Holden (1918 marriage record)",
+        "status": "fact"
+      },
+      {
+        "t": "Child",
+        "d": "William Martin Holden (c. 1870 \u2013 1951)",
+        "status": "fact"
+      },
+      {
+        "t": "Dates and places",
+        "d": "NOT FOUND",
+        "status": "need"
+      },
+      {
+        "t": "Parents",
+        "d": "NOT FOUND",
+        "status": "need"
+      },
+      {
+        "t": "Burial",
+        "d": "NOT FOUND",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Massachusetts, State Vital Records, 1638-1927 (marriage, cert. no. 21, p. 193)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:QLKG-DJRM",
+        "note": "William Martin Holden \u00d7 Agnes Corbet, 6 Nov 1918, Medway; groom\u2019s parents John Holden & Mary Sinclaire; bride\u2019s parents \u201cJoseph Corbet\u201d & \u201cAddie Rumley\u201d"
+      },
+      {
+        "label": "FamilySearch Family Tree L4ZR-YYJ (William Martin Holden)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/tree/person/details/L4ZR-YYJ"
+      }
+    ]
+  },
+  {
+    "id": "mary-sinclaire-holden",
+    "name": "Mary Sinclaire",
+    "short_name": "Mary Sinclaire",
+    "lifespan": "dates not found",
+    "rel": "FACT: mother of William Martin Holden (1918 marriage record).",
+    "bio_or_step": "bio",
+    "blurb": "William Martin Holden\u2019s mother (FACT, 1918 marriage record, cert. no. 21, p. 193). Dates, places, parents, burial not found.",
+    "narrative": "Mary Sinclaire is named as William Martin Holden\u2019s mother in his marriage to Agnes Corbet, 6 Nov 1918, Medway, Norfolk Co., MA (Massachusetts State Vital Records 1638-1927, cert. no. 21, p. 193). Dates, places, parents and burial NOT FOUND.",
+    "timeline": [
+      {
+        "t": "Name",
+        "d": "Mary Sinclaire (1918 marriage record)",
+        "status": "fact"
+      },
+      {
+        "t": "Child",
+        "d": "William Martin Holden (c. 1870 \u2013 1951)",
+        "status": "fact"
+      },
+      {
+        "t": "Dates and places",
+        "d": "NOT FOUND",
+        "status": "need"
+      },
+      {
+        "t": "Parents",
+        "d": "NOT FOUND",
+        "status": "need"
+      },
+      {
+        "t": "Burial",
+        "d": "NOT FOUND",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Massachusetts, State Vital Records, 1638-1927 (marriage, cert. no. 21, p. 193)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:QLKG-DJRM",
+        "note": "William Martin Holden \u00d7 Agnes Corbet, 6 Nov 1918, Medway; groom\u2019s parents John Holden & Mary Sinclaire; bride\u2019s parents \u201cJoseph Corbet\u201d & \u201cAddie Rumley\u201d"
+      },
+      {
+        "label": "FamilySearch Family Tree L4ZR-YYJ (William Martin Holden)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/tree/person/details/L4ZR-YYJ"
       }
     ]
   },
@@ -2586,8 +2691,8 @@
     "lifespan": "21 Jul 1886 \u00b7 Eastport, ME \u2013 8 Feb 1979 \u00b7 Natick (per FS tree)",
     "rel": "Mother of Elizabeth Jane (Holden) Barrett. Wife of William Martin Holden.",
     "bio_or_step": "bio",
-    "blurb": "Elizabeth\u2019s mother (William FACT). Born 21 Jul 1886, Eastport, ME; died 8 Feb 1979, last residence Medway, MA (FACT). Place of death Natick per FS tree (HYPOTHESIS). Parents Joseph Edward & Addie (Rumery) Corbett (HYPOTHESIS).",
-    "narrative": "Agnes C. Corbett, born 21 Jul 1886, Eastport, Washington Co., Maine (FACT: Maine birth index; SSDI; Elizabeth\u2019s Milford birth entry; William). Married William Martin Holden 6 Nov 1918, Massachusetts. Censuses 1920, 1930, 1940 with William. 1950: Hopedale, aged 63, hat-factory machine operator. Died 8 Feb 1979, last residence Medway, MA 02053 (MA Death Index; SSDI); place Natick per FamilySearch Family Tree 9QW1-LTK (HYPOTHESIS). Parents: Joseph Edward Corbett and Adeline Jane \u201cAddie\u201d (Rumery) Corbett (HYPOTHESIS strong; FS tree; 1900/1910 census). Siblings per FS tree: Walter B. (1881\u20131946); Mary Louise (1884\u20131942); Howard (1884\u20131951); Margaret (1888\u20131967); Chauncey Graham (1890\u20131967); Ralph Waldo (1891\u20131963); Joseph Edward Jr./II (1894\u20131950); Davis John (1898\u20131960); Sarah Daphne (1901\u20131998).",
+    "blurb": "Elizabeth\u2019s mother (William FACT). Born 21 Jul 1886, Eastport, ME; died 8 Feb 1979, last residence Medway, MA (FACT). Place of death Natick per FS tree (HYPOTHESIS). Parents Joseph Edward & Addie (Rumery) Corbett (FACT, 1918 marriage record).",
+    "narrative": "Agnes C. Corbett, born 21 Jul 1886, Eastport, Washington Co., Maine (FACT: Maine birth index; SSDI; Elizabeth\u2019s Milford birth entry; William). Married William Martin Holden 6 Nov 1918, Medway, Norfolk Co., MA. Censuses 1920, 1930, 1940 with William. 1950: Hopedale, aged 63, hat-factory machine operator. Died 8 Feb 1979, last residence Medway, MA 02053 (MA Death Index; SSDI); place Natick per FamilySearch Family Tree 9QW1-LTK (HYPOTHESIS). Parents: Joseph Edward Corbett and Adeline Jane \u201cAddie\u201d (Rumery) Corbett (FACT: 1918 marriage record \u201cJoseph Corbet\u201d and \u201cAddie Rumley\u201d; 1900 census; their dates per FS tree are HYPOTHESIS). Siblings per FS tree: Walter B. (1881\u20131946); Mary Louise (1884\u20131942); Howard (1884\u20131951); Margaret (1888\u20131967); Chauncey Graham (1890\u20131967); Ralph Waldo (1891\u20131963); Joseph Edward Jr./II (1894\u20131950); Davis John (1898\u20131960); Sarah Daphne (1901\u20131998).",
     "timeline": [
       {
         "t": "Born",
@@ -2596,7 +2701,7 @@
       },
       {
         "t": "Married",
-        "d": "William Martin Holden, 6 Nov 1918, Massachusetts (MA State Vital Records 1638-1927)",
+        "d": "William Martin Holden, 6 Nov 1918, Medway, Norfolk Co., MA (MA State Vital Records 1638-1927), cert. no. 21, p. 193",
         "status": "fact"
       },
       {
@@ -2626,8 +2731,8 @@
       },
       {
         "t": "Parents",
-        "d": "Joseph Edward Corbett (1859\u20131920) & Adeline Jane \u201cAddie\u201d (Rumery) Corbett (1858\u20131928) \u2014 HYPOTHESIS (strong), FS tree; 1900 & 1910 census",
-        "status": "need"
+        "d": "Joseph Edward Corbett & Adeline Jane \u201cAddie\u201d (Rumery) Corbett \u2014 FACT (1918 marriage record \u201cJoseph Corbet\u201d & \u201cAddie Rumley\u201d; 1900 census); dates 1859\u20131920 / 1858\u20131928 HYPOTHESIS (FS tree)",
+        "status": "fact"
       },
       {
         "t": "Siblings (FS tree)",
@@ -2653,10 +2758,10 @@
         "note": "21 Jul 1886, Eastport"
       },
       {
-        "label": "Massachusetts, State Vital Records, 1638-1927 (marriage)",
+        "label": "Massachusetts, State Vital Records, 1638-1927 (marriage, cert. no. 21, p. 193)",
         "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:QLKG-DJRM",
-        "note": "6 Nov 1918"
+        "note": "William Martin Holden \u00d7 Agnes Corbet, 6 Nov 1918, Medway; groom\u2019s parents John Holden & Mary Sinclaire; bride\u2019s parents \u201cJoseph Corbet\u201d & \u201cAddie Rumley\u201d"
       },
       {
         "label": "Massachusetts, State Vital Records, 1638-1927 (birth of Elizabeth)",
@@ -2709,15 +2814,15 @@
       },
       {
         "label": "1900 US census (Joseph E & Addie J Corbett)",
-        "status": "need",
+        "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:MMG3-JCF",
-        "note": "possible parents"
+        "note": "parents"
       },
       {
         "label": "1910 US census (Joseph & Addy Cabilt)",
-        "status": "need",
+        "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:MR3K-5XK",
-        "note": "possible parents"
+        "note": "parents"
       },
       {
         "label": "FamilySearch Family Tree LK78-ZC6 (Joseph Edward Corbett)",
@@ -2736,11 +2841,16 @@
     "name": "Joseph Edward Corbett",
     "short_name": "Joseph E. Corbett",
     "lifespan": "30 May 1859 \u2013 15 Aug 1920 \u00b7 Eastport, ME",
-    "rel": "HYPOTHESIS (strong): father of Agnes C. Corbett (Holden). Husband of Adeline Jane \u201cAddie\u201d Rumery.",
+    "rel": "FACT: father of Agnes C. Corbett (Holden). Husband of Adeline Jane \u201cAddie\u201d Rumery. Dates HYPOTHESIS (FS tree).",
     "bio_or_step": "bio",
-    "blurb": "Possible father of Agnes (FamilySearch Family Tree LK78-ZC6; 1900 & 1910 census households). Eastport, ME, 1859\u20131920.",
-    "narrative": "Per FamilySearch Family Tree LK78-ZC6 (46 sources, High quality): born 30 May 1859, Eastport; married Adeline Jane \u201cAddie\u201d Rumery about 1881, Eastport; died 15 Aug 1920, Eastport; buried 17 Aug 1920, Hillside Cemetery, Eastport. Parents Robert Edward Corbett and Mary A. (Walsh) Corbett (HYPOTHESIS). Consistent with the 1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d and 1910 \u201cJoseph & Addy Cabilt\u201d. HYPOTHESIS until a record shows Agnes as his daughter.",
+    "blurb": "Agnes\u2019s father (FACT: 1918 marriage record \u201cJoseph Corbet\u201d; 1900 census household). Dates per FS tree (HYPOTHESIS).",
+    "narrative": "Per FamilySearch Family Tree LK78-ZC6 (46 sources, High quality): born 30 May 1859, Eastport; married Adeline Jane \u201cAddie\u201d Rumery about 1881, Eastport; died 15 Aug 1920, Eastport; buried 17 Aug 1920, Hillside Cemetery, Eastport. Parents Robert Edward Corbett and Mary A. (Walsh) Corbett (HYPOTHESIS). Consistent with the 1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d and 1910 \u201cJoseph & Addy Cabilt\u201d. Agnes\u2019s 1918 marriage record names her father \u201cJoseph Corbet\u201d (FACT).",
     "timeline": [
+      {
+        "t": "Daughter",
+        "d": "Agnes C. Corbett (1886\u20131979) \u2014 FACT, 1918 marriage record (\u201cJoseph Corbet\u201d)",
+        "status": "fact"
+      },
       {
         "t": "Born",
         "d": "30 May 1859, Eastport, Washington Co., ME (FS tree)",
@@ -2784,6 +2894,12 @@
     ],
     "sources": [
       {
+        "label": "Massachusetts, State Vital Records, 1638-1927 (marriage, cert. no. 21, p. 193)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:QLKG-DJRM",
+        "note": "William Martin Holden \u00d7 Agnes Corbet, 6 Nov 1918, Medway; groom\u2019s parents John Holden & Mary Sinclaire; bride\u2019s parents \u201cJoseph Corbet\u201d & \u201cAddie Rumley\u201d"
+      },
+      {
         "label": "FamilySearch Family Tree LK78-ZC6 (46 sources, High quality)",
         "status": "need",
         "href": "https://www.familysearch.org/tree/person/details/LK78-ZC6"
@@ -2809,11 +2925,16 @@
     "name": "Adeline Jane \u201cAddie\u201d (Rumery) Corbett",
     "short_name": "Addie (Rumery) Corbett",
     "lifespan": "1858 \u2013 1928",
-    "rel": "HYPOTHESIS (strong): mother of Agnes C. Corbett (Holden). Wife of Joseph Edward Corbett.",
+    "rel": "FACT: mother of Agnes C. Corbett (Holden). Wife of Joseph Edward Corbett. Dates HYPOTHESIS (FS tree).",
     "bio_or_step": "bio",
-    "blurb": "Possible mother of Agnes (FamilySearch Family Tree LK78-ZNL; 1900 & 1910 census households). 1858\u20131928.",
-    "narrative": "Per FamilySearch Family Tree LK78-ZNL: Adeline Jane \u201cAddie\u201d Rumery, 1858\u20131928; married Joseph Edward Corbett about 1881, Eastport. Consistent with the 1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d and 1910 \u201cJoseph & Addy Cabilt\u201d. Parents NOT FOUND. HYPOTHESIS until a record shows Agnes as her daughter.",
+    "blurb": "Agnes\u2019s mother (FACT: 1918 marriage record \u201cAddie Rumley\u201d; 1900 census household). Dates per FS tree (HYPOTHESIS).",
+    "narrative": "Per FamilySearch Family Tree LK78-ZNL: Adeline Jane \u201cAddie\u201d Rumery, 1858\u20131928; married Joseph Edward Corbett about 1881, Eastport. Consistent with the 1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d and 1910 \u201cJoseph & Addy Cabilt\u201d. Parents NOT FOUND. Agnes\u2019s 1918 marriage record names her mother \u201cAddie Rumley\u201d (FACT).",
     "timeline": [
+      {
+        "t": "Daughter",
+        "d": "Agnes C. Corbett (1886\u20131979) \u2014 FACT, 1918 marriage record (\u201cAddie Rumley\u201d)",
+        "status": "fact"
+      },
       {
         "t": "Life years",
         "d": "1858\u20131928 (FS tree)",
@@ -2846,6 +2967,12 @@
       }
     ],
     "sources": [
+      {
+        "label": "Massachusetts, State Vital Records, 1638-1927 (marriage, cert. no. 21, p. 193)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:QLKG-DJRM",
+        "note": "William Martin Holden \u00d7 Agnes Corbet, 6 Nov 1918, Medway; groom\u2019s parents John Holden & Mary Sinclaire; bride\u2019s parents \u201cJoseph Corbet\u201d & \u201cAddie Rumley\u201d"
+      },
       {
         "label": "FamilySearch Family Tree LK78-ZNL",
         "status": "need",
