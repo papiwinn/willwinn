@@ -19,7 +19,7 @@
       {
         "id": "b589ec0a-c046-4dbe-81f7-af7d4e7a7174",
         "status": "unverified",
-        "label": "UNVERIFIED Ã¢ÂÂ family submission (not Crystal/William FACT until promoted)",
+        "label": "UNVERIFIED ÃÂ¢ÃÂÃÂ family submission (not Crystal/William FACT until promoted)",
         "person_slug": "martha-jean-winn",
         "person_name": "Martha Jean Williams",
         "page_url": "https://willwinn.xyz/genealogy/people/martha-jean-winn",
@@ -39,7 +39,7 @@
       {
         "id": "0994e4b4-61c5-4abe-a07b-728843c7e243",
         "status": "unverified",
-        "label": "UNVERIFIED â family submission (not Crystal/William FACT until promoted)",
+        "label": "UNVERIFIED Ã¢ÂÂ family submission (not Crystal/William FACT until promoted)",
         "person_slug": "martha-jean-winn",
         "person_name": "Martha Jean Williams",
         "page_url": "https://willwinn.xyz/genealogy/people/martha-jean-winn",
@@ -59,7 +59,7 @@
       {
         "id": "eb7f3eca-04a5-40f9-8511-27498efc6471",
         "status": "unverified",
-        "label": "UNVERIFIED — family submission (not Crystal/William FACT until promoted)",
+        "label": "UNVERIFIED â family submission (not Crystal/William FACT until promoted)",
         "person_slug": "martha-jean-winn",
         "person_name": "Martha Jean Williams",
         "page_url": "https://willwinn.xyz/genealogy/people/martha-jean-winn",
@@ -75,6 +75,31 @@
         "name": "Mary Piercey",
         "email": "merluv@aol.com",
         "submitted_at": "2026-09-27T15:22:53.255Z"
+      }
+    ],
+    "portraits": []
+  },
+  "william-lavaughan-winn-jr": {
+    "vitals": [
+      {
+        "id": "cf616c41-5f97-41b4-bd31-29fa548fb18d",
+        "status": "unverified",
+        "label": "UNVERIFIED — family submission (not Crystal/William FACT until promoted)",
+        "person_slug": "william-lavaughan-winn-jr",
+        "person_name": "William LaVaughan Winn Jr.",
+        "page_url": "https://willwinn.xyz/genealogy/people/william-lavaughan-winn-jr",
+        "dob": "6 May 1985",
+        "dod": "",
+        "birthplace": "Union City, Tennessee",
+        "death_place": "",
+        "marriage_date": "4 October 2020",
+        "marriage_place": "Sterling,  Massachusetts",
+        "marriage_spouse": "Kathleen Rose McGuire",
+        "other": "",
+        "uid": "0d0d127a-19a9-4c6d-bbd4-a1ce8979d5c6",
+        "name": "William L Winn",
+        "email": "papiwinn@gmail.com",
+        "submitted_at": "2026-09-27T22:00:44.224Z"
       }
     ],
     "portraits": []
