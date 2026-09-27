@@ -128,11 +128,23 @@
         opacity: 0.55;
       }
 
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
     </style>
   </head>
           <body>
     <div class="container">
-      <a class="back" href="../">← Genealogy hub</a>
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="../">← Genealogy hub</a> <a class="tree-btn" href="../tree.html">🌳 Back to tree</a></nav>
       <h1>Mary Oletta Littleheart Simpson Winn</h1>
       <div class="subtitle">13 Feb 1924 – 2017</div>
       <div class="status-row"><span class="tag fact">FACT</span> Mother’s side · William’s mother</div>
@@ -156,7 +168,7 @@
           <li><span class="tag fact">FACT</span> <strong>Death year:</strong> 2017 (Carrie FaG #55032391 child link — day/place need-more)</li>
           <li><span class="tag need">need-more</span> Own FaG; burial; exact death day/place; children named on-site as William wishes</li>
       </ul>
-      <h2>Sources</h2>
+      <h2>Sources &amp; references</h2>
       <ul class="sources">
           <li><span class="tag fact">FACT</span> William — full legal name Mary Oletta Littleheart Simpson Winn; birth 13 February 1924; spouse Austin Hunley Winn; children Martha Jean Williams, Mary Love Piercey, Austin Hunley (Jr.), William LaVaughan</li>
           <li><span class="tag fact">FACT</span> Find a Grave #55032391 Carrie Love Simpson — <a href="https://www.findagrave.com/memorial/55032391/carrie_love-simpson">https://www.findagrave.com/memorial/55032391/carrie_love-simpson</a>. Child display “Oletta Simpson Winn” 1924–2017 (source label)</li>

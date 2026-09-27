@@ -128,11 +128,23 @@
         opacity: 0.55;
       }
 
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
     </style>
   </head>
   <body>
     <div class="container">
-      <a class="back" href="../">← Genealogy hub</a>
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="../">← Genealogy hub</a> <a class="tree-btn" href="../tree.html">🌳 Back to tree</a></nav>
       <h1>Rhoda Milburn Waits</h1>
       <div class="subtitle">13 May 1873 – 14 May 1908 (birth from Carrie FaG bio)</div>
       <div class="status-row"><span class="tag fact">Biological line</span></div>
@@ -148,7 +160,7 @@
           <li><span class="tag fact">FACT</span> <strong>Daughter Virginia Elleene Chaney:</strong> 27 Nov 1900 – 15 Aug 1972 (Garner FH); mother Rosa</li>
           <li><span class="tag fact">FACT</span> <strong>Died:</strong> 14 May 1908 (baseline; cert still desirable)</li>
       </ul>
-      <h2>Sources</h2>
+      <h2>Sources &amp; references</h2>
       <ul class="sources">
           <li><span class="tag need">need-more</span> Find a Grave #55032391 Carrie Love Simpson (memorial bio) — <a href="https://www.findagrave.com/memorial/55032391/carrie_love-simpson">https://www.findagrave.com/memorial/55032391/carrie_love-simpson</a>. Rhoda b. 13 May 1873 TN d. 14 May 1908 TN (secondary)</li>
           <li><span class="tag fact">FACT</span> Garner FH records — <a href="https://tngenweb.org/lauderdale/2022/02/01/1971-1980-garner-funeral-home-records/">https://tngenweb.org/lauderdale/2022/02/01/1971-1980-garner-funeral-home-records/</a>. Daughters Mary & Elleene; mother name variants</li>

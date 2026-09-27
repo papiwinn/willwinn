@@ -128,11 +128,23 @@
         opacity: 0.55;
       }
 
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
     </style>
   </head>
   <body>
     <div class="container">
-      <a class="back" href="../">← Genealogy hub</a>
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="../">← Genealogy hub</a> <a class="tree-btn" href="../tree.html">🌳 Back to tree</a></nav>
       <h1>Waits Andrew Simpson</h1>
       <div class="subtitle">Lovy × Giles child · 4th in William’s birth-list · FaG #76666074</div>
       <div class="status-row"><span class="tag fact">FACT</span> Mother’s side · stub</div>
@@ -150,7 +162,7 @@
           
           <li><span class="tag need">need-more</span> Married surname (if any) open unless noted; photos; burial details</li>
       </ul>
-      <h2>Sources</h2>
+      <h2>Sources &amp; references</h2>
       <ul class="sources">
           <li><span class="tag fact">FACT</span> William — Lovy × Giles children in order: LaVaughan, William (Bill), Oletta, Waits, Rhoda, Milburn</li>
           <li><span class="tag fact">FACT</span> Find a Grave #76666074 Waits Andrew Simpson — <a href="https://www.findagrave.com/memorial/76666074/waits-andrew-simpson">memorial</a></li>

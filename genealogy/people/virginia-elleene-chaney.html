@@ -128,11 +128,23 @@
         opacity: 0.55;
       }
 
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
     </style>
   </head>
           <body>
     <div class="container">
-      <a class="back" href="../">← Genealogy hub</a>
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="../">← Genealogy hub</a> <a class="tree-btn" href="../tree.html">🌳 Back to tree</a></nav>
       <h1>Virginia Elleene (Waits) Chaney</h1>
       <div class="subtitle">27 Nov 1900 – 15 Aug 1972</div>
       <div class="status-row"><span class="tag fact">FACT</span> Mother’s side · sister of Lovy</div>
@@ -149,7 +161,7 @@
           <li><span class="tag fact">FACT</span> <strong>Husband:</strong> William S. / Wm. S. Chaney (Garner: widow of Wm.S.CHANEY)</li>
           <li><span class="tag need">need-more</span> Own FaG; marriage date</li>
       </ul>
-      <h2>Sources</h2>
+      <h2>Sources &amp; references</h2>
       <ul class="sources">
           <li><span class="tag fact">FACT</span> Garner FH 1971–1980 — <a href="https://tngenweb.org/lauderdale/2022/02/01/1971-1980-garner-funeral-home-records/">TNGenWeb</a> / <a href="http://files.usgwarchives.net/tn/lauderdale/vitals/deaths/garner2.txt">garner2.txt</a>. CHANEY, Virginia Elleene widow of Wm.S.CHANEY 11/27/1900–8/15/1972 Memorial Park Memphis; f. James C. WAITS m. Rosa MILBURN</li>
       </ul>

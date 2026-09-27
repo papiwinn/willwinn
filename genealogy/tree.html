@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Family tree – Family genealogy</title>
+    <style>
+
+      :root { --accent: #e94560; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: system-ui, -apple-system, sans-serif;
+        color: white;
+        padding: 40px 20px 60px;
+      }
+      .container { max-width: 920px; margin: 0 auto; }
+      h1 { font-size: 2rem; margin: 0 0 8px; font-weight: 700; }
+      h2 { font-size: 1.25rem; margin: 28px 0 12px; color: var(--accent); }
+      h3 { font-size: 1.05rem; margin: 0 0 8px; }
+      .subtitle { color: var(--accent); font-size: 1.05rem; margin-bottom: 16px; }
+      .intro { opacity: 0.88; line-height: 1.55; margin: 0 0 28px; max-width: 40rem; }
+      a { color: var(--accent); }
+      a:hover { color: #ff6b6b; }
+      .card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 18px 18px 16px;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 999px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+      }
+      .tag.fact { background: rgba(46, 204, 113, 0.18); border: 1px solid rgba(46, 204, 113, 0.45); color: #a8e6c1; }
+      .tag.need { background: rgba(233, 69, 96, 0.18); border: 1px solid rgba(233, 69, 96, 0.45); color: #ffb3c0; }
+      .household {
+        display: grid;
+        gap: 12px;
+        margin: 0 0 8px;
+      }
+      .household .parents, .household .kids {
+        display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch;
+      }
+      .person-chip {
+        flex: 1 1 160px;
+        background: rgba(0,0,0,0.22);
+        border: 1px solid rgba(255,255,255,0.14);
+        border-radius: 10px;
+        padding: 12px 14px;
+        text-decoration: none;
+        color: inherit;
+      }
+      .person-chip:hover { border-color: var(--accent); }
+      .person-chip .role { font-size: 0.75rem; color: var(--accent); margin-bottom: 4px; }
+      .person-chip .name { font-weight: 650; }
+      .person-chip .meta { font-size: 0.82rem; opacity: 0.7; margin-top: 4px; }
+      .connector {
+        text-align: center; opacity: 0.55; font-size: 0.85rem; margin: 4px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 14px;
+      }
+      .feature-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 16px;
+        min-height: 120px;
+      }
+      .feature-card:hover { border-color: var(--accent); }
+      .feature-card .lifespan { font-size: 0.85rem; opacity: 0.7; margin: 4px 0 10px; }
+      .feature-card p { font-size: 0.9rem; opacity: 0.85; margin: 0; line-height: 1.45; }
+      .strip {
+        display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;
+      }
+      .strip a.btn {
+        display: inline-block;
+        padding: 12px 18px;
+        background: var(--accent);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      .strip a.btn.secondary {
+        background: transparent;
+        border: 2px solid var(--accent);
+      }
+      .strip a.btn:hover { background: #ff6b6b; color: white; }
+      .strip a.btn.secondary:hover { background: rgba(233,69,96,0.15); }
+      .note { font-size: 0.88rem; opacity: 0.75; margin-top: 12px; line-height: 1.45; }
+      .photo-ph {
+        width: 100%;
+        max-width: 280px;
+        aspect-ratio: 4/5;
+        background: rgba(0,0,0,0.35);
+        border: 1px dashed rgba(255,255,255,0.25);
+        border-radius: 10px;
+        display: flex; align-items: center; justify-content: center;
+        color: rgba(255,255,255,0.45);
+        font-size: 0.9rem;
+        margin: 0 0 18px;
+      }
+      .timeline { margin: 0; padding-left: 1.2rem; }
+      .timeline li { margin: 0 0 8px; line-height: 1.45; }
+      .sources { margin: 0; padding-left: 1.2rem; }
+      .sources li { margin: 0 0 8px; line-height: 1.45; opacity: 0.9; }
+      .back { display: inline-block; margin-bottom: 22px; color: var(--accent); text-decoration: none; font-weight: 500; }
+      .back:hover { text-decoration: underline; }
+      .status-row { margin: 0 0 14px; }
+      footer.colophon {
+        margin-top: 40px;
+        font-size: 0.82rem;
+        opacity: 0.55;
+      }
+
+    
+      .portrait {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 0 18px;
+      }
+      .portrait img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(0,0,0,0.35);
+      }
+
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
+
+      /* ---------- Family tree page ---------- */
+      .container.tree-page { max-width: none; }
+      .tree-page > *:not(.tree-scroll) { max-width: 1100px; margin-left: auto; margin-right: auto; }
+      .tree-page > #ww-gene-page-hint { box-sizing: border-box; max-width: 1100px; margin-left: auto; margin-right: auto; }
+      .tree-page .intro { max-width: 46rem; }
+      .legend {
+        display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 12px 16px;
+        margin: 0 0 10px;
+        font-size: 0.9rem;
+      }
+      .legend .item { display: inline-flex; align-items: center; gap: 8px; }
+      .legend .tag { margin: 0; }
+      .legend .swatch-unknown {
+        display: inline-block; width: 34px; height: 20px;
+        border: 2px dashed rgba(255,255,255,0.35); border-radius: 6px;
+      }
+      .grows { font-size: 0.9rem; opacity: 0.8; margin: 0 0 18px; line-height: 1.45; }
+      .tree-scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 18px 6px 30px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+      .scroll-hint { font-size: 0.82rem; opacity: 0.6; margin: 0 0 8px; }
+      .pedigree { display: flex; align-items: center; width: max-content; margin: 0 auto; }
+
+      /* One person + their parents to the right (or left when mirrored) */
+      .node { display: flex; align-items: center; position: relative; }
+      .node.mirror { flex-direction: row-reverse; }
+      .self { position: relative; flex: 0 0 auto; width: 190px; }
+      .parents { display: flex; flex-direction: column; margin-left: 22px; }
+      .mirror > .parents { margin-left: 0; margin-right: 22px; }
+      .parents > .node { padding: 5px 0 5px 18px; }
+      .mirror > .parents > .node { padding: 5px 18px 5px 0; }
+
+      /* Connectors: box -> bracket, bracket -> each parent */
+      .node.has-parents > .self > .box::after {
+        content: ""; position: absolute; top: 50%; right: -24px; width: 24px;
+        border-top: 2px solid rgba(255,255,255,0.35);
+      }
+      .node.mirror.has-parents > .self > .box::after { right: auto; left: -24px; }
+      .parents > .node::before {
+        content: ""; position: absolute; top: 50%; left: 0; width: 18px;
+        border-top: 2px solid rgba(255,255,255,0.35);
+      }
+      .parents > .node::after {
+        content: ""; position: absolute; left: 0;
+        border-left: 2px solid rgba(255,255,255,0.35);
+      }
+      .mirror > .parents > .node::before { left: auto; right: 0; }
+      .mirror > .parents > .node::after { left: auto; right: 0; }
+      .parents > .node:first-child::after { top: 50%; bottom: 0; }
+      .parents > .node:last-child::after { top: 0; bottom: 50%; }
+
+      /* Person boxes */
+      .box {
+        position: relative;
+        display: flex; gap: 10px; align-items: center;
+        box-sizing: border-box; width: 190px; min-height: 66px;
+        padding: 8px 10px;
+        background: rgba(0,0,0,0.28);
+        border: 1px solid rgba(255,255,255,0.18);
+        border-radius: 10px;
+        color: inherit; text-decoration: none;
+      }
+      a.box:hover, a.box:focus-visible { border-color: var(--accent); background: rgba(233,69,96,0.12); outline: none; }
+      .box.fact { border-left: 4px solid rgba(46, 204, 113, 0.75); }
+      .box.hypothesis { border-left: 4px solid rgba(233, 69, 96, 0.8); border-style: solid; }
+      .box.unknown {
+        background: transparent;
+        border: 2px dashed rgba(255,255,255,0.28);
+        color: rgba(255,255,255,0.62);
+      }
+      .box.root { width: 190px; border-width: 2px; border-color: rgba(233,69,96,0.7); background: rgba(233,69,96,0.14); }
+      .box.root.fact { border-left: 5px solid rgba(46, 204, 113, 0.85); }
+      .box .thumb {
+        flex: 0 0 auto; width: 40px; height: 50px; object-fit: cover;
+        border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.35);
+      }
+      .box .txt { min-width: 0; }
+      .box .role { font-size: 0.68rem; color: var(--accent); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 2px; }
+      .box.unknown .role { color: rgba(255,179,192,0.7); }
+      .box .nm { font-weight: 650; font-size: 0.9rem; line-height: 1.2; }
+      .box .dt { font-size: 0.76rem; opacity: 0.72; margin-top: 3px; line-height: 1.3; }
+      .box .tag { font-size: 0.6rem; padding: 1px 6px; margin: 4px 0 0; }
+      .box .nopage { font-size: 0.68rem; opacity: 0.6; margin-top: 2px; }
+
+      /* Small notes / side links under a box (absolutely placed so they don't shift connectors) */
+      .below {
+        position: absolute; top: 100%; left: 0; width: 190px;
+        margin-top: 5px; font-size: 0.74rem; line-height: 1.35; opacity: 0.85;
+      }
+      .below a { text-decoration: none; }
+      .below a:hover { text-decoration: underline; }
+      .siblings { display: flex; flex-direction: column; gap: 4px; }
+      .siblings .lbl { font-size: 0.66rem; text-transform: uppercase; letter-spacing: .05em; opacity: 0.7; }
+      .sib {
+        display: flex; align-items: center; gap: 6px;
+        padding: 3px 6px; border-radius: 7px;
+        border: 1px solid rgba(255,255,255,0.14); background: rgba(0,0,0,0.22);
+        color: inherit; text-decoration: none;
+      }
+      .sib:hover { border-color: var(--accent); }
+      .sib img { width: 22px; height: 27px; object-fit: cover; border-radius: 4px; }
+
+      /* Marriage link between the two roots */
+      .couple-link {
+        flex: 0 0 auto; margin: 0 10px; text-align: center; font-size: 0.74rem; line-height: 1.25;
+        color: #ffb3c0; position: relative; padding: 0 6px; width: 76px;
+      }
+      .couple-link .rings { font-size: 1.3rem; display: block; }
+      .couple-link::before, .couple-link::after {
+        content: ""; position: absolute; top: 50%; width: 10px; border-top: 2px solid rgba(233,69,96,0.6);
+      }
+      .couple-link::before { left: -10px; }
+      .couple-link::after { right: -10px; }
+
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-notes { margin-top: 26px; }
+      @media (max-width: 640px) {
+        .self, .box, .box.root, .below { width: 158px; }
+        .box { min-height: 56px; padding: 6px 8px; gap: 7px; }
+        .box .thumb { width: 32px; height: 40px; }
+        .box .nm { font-size: 0.82rem; }
+        .box .dt { font-size: 0.7rem; }
+        .parents > .node { padding-top: 3px; padding-bottom: 3px; }
+        .couple-link { width: 60px; margin: 0 8px; }
+      }
+      .tree-notes li { margin: 0 0 8px; line-height: 1.45; }
+    </style>
+  </head>
+  <body>
+    <div class="container tree-page">
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="./">← Genealogy hub</a></nav>
+      <h1>Family tree</h1>
+      <div class="subtitle">William LaVaughan Winn &amp; Robyn Louise Barrett — ancestors</div>
+      <div class="legend" aria-label="Legend">
+        <span class="item"><span class="tag fact">FACT</span> confirmed by William or Crystal’s locked citations</span>
+        <span class="item"><span class="tag need">HYPOTHESIS</span> working theory, not yet proven</span>
+        <span class="item"><span class="swatch-unknown" aria-hidden="true"></span> Unknown — research open</span>
+      </div>
+      <p class="grows">🌱 This tree grows as research arrives — new ancestors are added as William and Crystal confirm them. Tap any box to open that person’s page.</p>
+
+      <p class="scroll-hint">On a phone, scroll sideways (and down) to see every generation. Robyn’s side opens to the left, William’s to the right.</p>
+      <div class="tree-scroll" id="tree-scroll">
+        <div class="pedigree" id="pedigree" aria-label="Pedigree chart"></div>
+        <noscript><p>This chart needs JavaScript. Browse everyone from the <a href="./">genealogy hub</a>.</p></noscript>
+      </div>
+
+      <h2>About this chart</h2>
+      <ul class="tree-notes">
+        <li>William’s father’s line: Winn → McBride. William’s mother’s line: Simpson → Waits / Milburn.</li>
+        <li><strong>Gabie Pilkington Waits</strong> was James Clayborn Waits’s second wife and Lovy’s stepmother, not her mother — she is linked beside James, not placed in the line.</li>
+        <li>James Samuel Waits and Almenia Earhart Waits don’t have their own pages yet; they are cited on <a href="people/james-clayborn-waits.html">James Clayborn Waits’s page</a> (Find a Grave #200803433 parent links).</li>
+        <li>Robyn’s parents, <a href="people/richard-clinton-barrett.html">Richard Clinton Barrett</a> and <a href="people/elizabeth-jane-holden.html">Elizabeth Jane Holden</a>, are FACT from William; Elizabeth’s birthplace (possibly Eastport, Maine) is unverified. Crystal is extending the Barrett and Holden lines — see the <a href="people/barrett-family.html">Barrett family overview</a>.</li>
+      </ul>
+      <footer class="colophon">Unlisted genealogy · tree data lives in the <code>TREE</code> block inside <code>genealogy/tree.html</code></footer>
+    </div>
+
+    <script>
+    /* =====================================================================
+       FAMILY TREE DATA — the single place to edit the chart.
+       Each person: { slug, name, dates, status: "fact" | "hypothesis",
+                      father: {...}, mother: {...}, notes: [...] }
+       - slug  -> links to people/<slug>.html and tries images/<slug>.jpg
+                  (set slug: null for someone without a page; add cite + citeLabel)
+       - Missing father/mother on a known person is drawn automatically as a
+         dashed "Unknown — research open" box. To add an ancestor, replace the
+         gap with a father:{...} or mother:{...} object.
+       - unknown: true + label -> a labelled Unknown placeholder box.
+       ===================================================================== */
+    var TREE = {
+      marriage: "m. 20 Aug 1983",
+      husband: {
+        slug: "william-lavaughan-winn", name: "William LaVaughan Winn",
+        dates: "b. 28 Mar 1957 · Ripley, TN", status: "fact",
+        siblings: [
+          { slug: "martha-jean-winn", name: "Martha Jean (Winn) Williams" },
+          { slug: "mary-love-winn", name: "Mary Love (Winn) Piercey" },
+          { slug: "austin-hunley-winn-jr", name: "Austin Hunley Winn Jr." }
+        ],
+        father: {
+          slug: "austin-hunley-winn", name: "Austin Hunley Winn",
+          dates: "27 Feb 1921 – 16 Nov 1996", status: "fact",
+          father: {
+            slug: "willis-hunley-winn", name: "Willis Hunley Winn",
+            dates: "d. Mar 1943 · Henning, TN", status: "fact"
+            /* parents unknown — research open */
+          },
+          mother: {
+            slug: "fannie-winn", name: "Fannie Lee (McBride) Winn",
+            dates: "b. 1894 · Tipton Co., TN", status: "fact",
+            father: {
+              slug: "james-peter-mcbride", name: "James Peter McBride",
+              dates: "“JP” · dates open", status: "fact"
+            },
+            mother: {
+              slug: "molly-fulce-mcbride", name: "Molly (Fulce) McBride",
+              dates: "aka Mary Ann · dates open", status: "fact"
+            }
+          }
+        },
+        mother: {
+          slug: "oletta-simpson-winn", name: "Mary Oletta (Simpson) Winn",
+          dates: "13 Feb 1924 – 2017", status: "fact",
+          father: {
+            slug: "giles-rexford-simpson", name: "Giles Rexford Simpson",
+            dates: "22 Jun 1889/1899 – 9 Apr 1944", status: "fact"
+          },
+          mother: {
+            slug: "lovy-waits-simpson", name: "Carrie Love “Lovy” Waits Simpson",
+            dates: "11 Jul 1892 – 26 Aug 1985", status: "fact",
+            father: {
+              slug: "james-clayborn-waits", name: "James Clayborn Waits",
+              dates: "Apr 1864 – 20 Dec 1944", status: "fact",
+              notes: [{ slug: "gabie-pilkington-waits", text: "2nd wife: Gabie Pilkington Waits (stepmother, not Lovy’s mother)" }],
+              father: {
+                slug: null, name: "James Samuel Waits", dates: "1830 – 1910", status: "fact",
+                cite: "james-clayborn-waits", citeLabel: "no page yet"
+              },
+              mother: {
+                slug: null, name: "Almenia (Earhart) Waits", dates: "1831 – 1908", status: "fact",
+                cite: "james-clayborn-waits", citeLabel: "no page yet"
+              }
+            },
+            mother: {
+              slug: "rhoda-milburn-waits", name: "Rhoda / Phobe (Milburn) Waits",
+              dates: "13 May 1873 – 14 May 1908", status: "fact"
+            }
+          }
+        }
+      },
+      wife: {
+        slug: "robyn-louise-barrett", name: "Robyn Louise Barrett",
+        dates: "b. 27 Aug 1958 · Natick, MA", status: "fact",
+        notes: [{ slug: "barrett-family", text: "Barrett family overview — research in progress" }],
+        father: {
+          slug: "richard-clinton-barrett", name: "Richard Clinton Barrett",
+          dates: "b. 26 Jan 1923 · Islington (Westwood), MA", status: "fact"
+          /* parents unknown — research open (Crystal extending the line) */
+        },
+        mother: {
+          slug: "elizabeth-jane-holden", name: "Elizabeth Jane Holden",
+          dates: "b. 2 Aug 1923 · birthplace unverified", status: "fact"
+          /* birthplace "possibly Eastport, Maine" is UNVERIFIED — see her page */
+        }
+      }
+    };
+    /* ===================== end of tree data ===================== */
+
+    (function () {
+      "use strict";
+      function el(tag, cls, text) {
+        var e = document.createElement(tag);
+        if (cls) e.className = cls;
+        if (text != null) e.textContent = text;
+        return e;
+      }
+      function roleLabel(depth, sex, side) {
+        if (depth === 0) return side;
+        var base = sex === "m" ? "father" : "mother";
+        var word;
+        if (depth === 1) word = base.charAt(0).toUpperCase() + base.slice(1);
+        else if (depth === 2) word = "Grand" + base;
+        else if (depth === 3) word = "Great-grand" + base;
+        else word = (depth - 2) + "× great-grand" + base;
+        return word;
+      }
+      function addThumb(box, slug) {
+        var img = new Image();
+        img.className = "thumb";
+        img.alt = "";
+        img.loading = "lazy";
+        img.width = 40; img.height = 50;
+        img.onerror = function () { if (img.parentNode) img.parentNode.removeChild(img); };
+        img.src = "images/" + slug + ".jpg";
+        box.insertBefore(img, box.firstChild);
+      }
+      function makeBox(p, role, isRoot) {
+        var box;
+        if (!p || p.unknown) {
+          box = el("div", "box unknown");
+          var t0 = el("div", "txt");
+          t0.appendChild(el("div", "role", (p && p.label) || role));
+          t0.appendChild(el("div", "nm", "Unknown"));
+          t0.appendChild(el("div", "dt", "research open"));
+          box.appendChild(t0);
+          box.setAttribute("aria-label", ((p && p.label) || role) + ": Unknown — research open");
+          return box;
+        }
+        box = el(p.slug ? "a" : "div", "box " + (p.status === "hypothesis" ? "hypothesis" : "fact") + (isRoot ? " root" : ""));
+        if (p.slug) box.href = "people/" + p.slug + ".html";
+        var t = el("div", "txt");
+        t.appendChild(el("div", "role", role));
+        t.appendChild(el("div", "nm", p.name));
+        if (p.dates) t.appendChild(el("div", "dt", p.dates));
+        var tag = el("span", "tag " + (p.status === "hypothesis" ? "need" : "fact"), p.status === "hypothesis" ? "HYPOTHESIS" : "FACT");
+        t.appendChild(tag);
+        if (!p.slug && p.citeLabel) t.appendChild(el("div", "nopage", p.citeLabel));
+        box.appendChild(t);
+        if (p.slug) addThumb(box, p.slug);
+        return box;
+      }
+      function makeBelow(p) {
+        var parts = [];
+        (p.notes || []).forEach(function (n) {
+          var a = el("a", null, "↳ " + n.text);
+          a.href = "people/" + n.slug + ".html";
+          parts.push(a);
+        });
+        if (!p.slug && p.cite) {
+          var c = el("a", null, "↳ cited on James C. Waits’s page");
+          c.href = "people/" + p.cite + ".html";
+          parts.push(c);
+        }
+        if (p.siblings && p.siblings.length) {
+          var s = el("div", "siblings");
+          s.appendChild(el("div", "lbl", "Siblings"));
+          p.siblings.forEach(function (sb) {
+            var a = el("a", "sib");
+            a.href = "people/" + sb.slug + ".html";
+            var img = new Image();
+            img.alt = ""; img.loading = "lazy"; img.width = 22; img.height = 27;
+            img.onerror = function () { if (img.parentNode) img.parentNode.removeChild(img); };
+            img.src = "images/" + sb.slug + ".jpg";
+            a.appendChild(img);
+            a.appendChild(el("span", null, sb.name));
+            s.appendChild(a);
+          });
+          parts.push(s);
+        }
+        if (!parts.length) return null;
+        var d = el("div", "below");
+        parts.forEach(function (x, i) {
+          if (i && x.tagName === "A") d.appendChild(el("br"));
+          d.appendChild(x);
+        });
+        return d;
+      }
+      function build(p, depth, sex, mirror, rootRole) {
+        var node = el("div", "node" + (mirror ? " mirror" : ""));
+        var self = el("div", "self");
+        var role = roleLabel(depth, sex, rootRole);
+        self.appendChild(makeBox(p, role, depth === 0));
+        if (p && !p.unknown) {
+          var below = makeBelow(p);
+          if (below) self.appendChild(below);
+        }
+        node.appendChild(self);
+        if (p && !p.unknown && !p.noParents) {
+          node.classList.add("has-parents");
+          var par = el("div", "parents");
+          par.appendChild(build(p.father || null, depth + 1, "m", mirror));
+          par.appendChild(build(p.mother || null, depth + 1, "f", mirror));
+          node.appendChild(par);
+        }
+        return node;
+      }
+      var root = document.getElementById("pedigree");
+      root.appendChild(build(TREE.wife, 0, "f", true, "Wife"));
+      var link = el("div", "couple-link");
+      link.appendChild(el("span", "rings", "⚭"));
+      link.appendChild(document.createTextNode(TREE.marriage));
+      root.appendChild(link);
+      root.appendChild(build(TREE.husband, 0, "m", false, "Husband · site owner"));
+
+      // Start the view with Robyn + William visible on narrow screens.
+      var sc = document.getElementById("tree-scroll");
+      if (sc && sc.scrollWidth > sc.clientWidth && window.innerWidth < 700) {
+        var wifeSelf = root.querySelector(".node.mirror > .self");
+        if (wifeSelf) sc.scrollLeft = Math.max(0, wifeSelf.getBoundingClientRect().left - sc.getBoundingClientRect().left - 8);
+      }
+    })();
+    </script>
+
+<script src="../corrections/config.js"></script>
+<script src="corrections-widget.js"></script>
+<script src="contributions-display.js"></script>
+</body>
+</html>

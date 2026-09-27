@@ -710,17 +710,33 @@
     "id": "william-lavaughan-winn",
     "name": "William LaVaughan Winn",
     "short_name": "William LaVaughan Winn",
-    "lifespan": "living",
-    "rel": "Child of Austin Hunley Winn and Mary Oletta Littleheart Simpson Winn.",
+    "lifespan": "b. 28 Mar 1957 \u00b7 Ripley, TN (living)",
+    "rel": "Child of Austin Hunley Winn and Mary Oletta Littleheart Simpson Winn. Husband of Robyn Louise Barrett (m. 20 Aug 1983).",
     "bio_or_step": "need",
     "blurb": "Youngest child of Austin \u00d7 Oletta; site owner.",
     "narrative": "Youngest child of Austin \u00d7 Oletta; site owner.",
-    "timeline": [],
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "28 Mar 1957, Ripley, Tennessee (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Married",
+        "d": "Robyn Louise Barrett, 20 Aug 1983 (William)",
+        "status": "fact"
+      }
+    ],
     "sources": [
       {
         "label": "William",
         "status": "fact",
         "note": "birth order"
+      },
+      {
+        "label": "William (family knowledge)",
+        "status": "fact",
+        "note": "birth 28 Mar 1957 Ripley, TN; marriage to Robyn Louise Barrett 20 Aug 1983"
       }
     ]
   },
@@ -967,6 +983,166 @@
       {
         "label": "William",
         "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "robyn-louise-barrett",
+    "name": "Robyn Louise Barrett",
+    "short_name": "Robyn Louise Barrett",
+    "lifespan": "b. 27 Aug 1958 \u00b7 Natick, MA",
+    "rel": "Wife of William LaVaughan Winn (m. 20 Aug 1983). Daughter of Richard Clinton Barrett and Elizabeth Jane Holden.",
+    "bio_or_step": "need",
+    "blurb": "William\u2019s wife; married 20 Aug 1983 (William FACT). Daughter of Richard Clinton Barrett & Elizabeth Jane Holden.",
+    "narrative": "Robyn Louise Barrett, born 27 Aug 1958 in Natick, Massachusetts; married William LaVaughan Winn on 20 Aug 1983 (William FACT). Parents Richard Clinton Barrett and Elizabeth Jane Holden (William FACT).",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "27 Aug 1958, Natick, Massachusetts (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Father",
+        "d": "Richard Clinton Barrett (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Mother",
+        "d": "Elizabeth Jane Holden (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Married",
+        "d": "William LaVaughan Winn, 20 Aug 1983 (William)",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "William (family knowledge)",
+        "status": "fact",
+        "note": "birth, marriage, parents"
+      },
+      {
+        "label": "Sources pending \u2014 research open",
+        "status": "need",
+        "note": "Crystal to send sources"
+      }
+    ]
+  },
+  {
+    "id": "richard-clinton-barrett",
+    "name": "Richard Clinton Barrett",
+    "short_name": "Richard Clinton Barrett",
+    "lifespan": "b. 26 Jan 1923 \u00b7 Islington (Westwood), MA",
+    "rel": "Father of Robyn Louise Barrett. Husband of Elizabeth Jane Holden.",
+    "bio_or_step": "need",
+    "blurb": "Robyn\u2019s father (William FACT). Parents unknown \u2014 research open.",
+    "narrative": "Richard Clinton Barrett, born 26 Jan 1923 in Islington (Westwood), Massachusetts (William FACT). Father of Robyn Louise Barrett; husband of Elizabeth Jane Holden. Parents unknown \u2014 research open.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "26 Jan 1923, Islington (Westwood), Massachusetts (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Spouse",
+        "d": "Elizabeth Jane Holden (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Daughter",
+        "d": "Robyn Louise Barrett (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Parents",
+        "d": "unknown \u2014 research open",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "William (family knowledge)",
+        "status": "fact",
+        "note": "name, birth date and place, daughter Robyn"
+      },
+      {
+        "label": "Sources pending \u2014 research open",
+        "status": "need",
+        "note": "Crystal to send sources"
+      }
+    ]
+  },
+  {
+    "id": "elizabeth-jane-holden",
+    "name": "Elizabeth Jane Holden",
+    "short_name": "Elizabeth Jane Holden",
+    "lifespan": "b. 2 Aug 1923",
+    "rel": "Mother of Robyn Louise Barrett. Wife of Richard Clinton Barrett.",
+    "bio_or_step": "need",
+    "blurb": "Robyn\u2019s mother (William FACT). Birthplace possibly Eastport, Maine \u2014 UNVERIFIED.",
+    "narrative": "Elizabeth Jane Holden, born 2 Aug 1923 (William FACT). Birthplace possibly Eastport, Maine \u2014 UNVERIFIED / unconfirmed. Mother of Robyn Louise Barrett; wife of Richard Clinton Barrett.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "2 Aug 1923 (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Birthplace",
+        "d": "possibly Eastport, Maine \u2014 UNVERIFIED",
+        "status": "need"
+      },
+      {
+        "t": "Spouse",
+        "d": "Richard Clinton Barrett (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Daughter",
+        "d": "Robyn Louise Barrett (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Parents",
+        "d": "unknown \u2014 research open",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "William (family knowledge)",
+        "status": "fact",
+        "note": "name, birth date, daughter Robyn"
+      },
+      {
+        "label": "William (family knowledge)",
+        "status": "need",
+        "note": "birthplace possibly Eastport, Maine \u2014 UNVERIFIED"
+      },
+      {
+        "label": "Sources pending \u2014 research open",
+        "status": "need",
+        "note": "Crystal to send sources"
+      }
+    ]
+  },
+  {
+    "id": "barrett-family",
+    "name": "Barrett family (Robyn\u2019s side)",
+    "short_name": "Barrett family",
+    "lifespan": "research in progress",
+    "rel": "Family overview for Robyn Louise Barrett\u2019s Barrett and Holden lines.",
+    "bio_or_step": "need",
+    "blurb": "Overview of Robyn\u2019s Barrett and Holden lines. Crystal is extending the line; sources pending.",
+    "narrative": "Placeholder / overview page. Robyn\u2019s parents Richard Clinton Barrett and Elizabeth Jane Holden are known (William FACT); earlier generations research open \u2014 Crystal extending the line.",
+    "timeline": [],
+    "sources": [
+      {
+        "label": "Sources pending \u2014 research open",
+        "status": "need",
+        "note": "Crystal to send sources"
       }
     ]
   }

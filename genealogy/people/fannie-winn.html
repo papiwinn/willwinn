@@ -143,11 +143,23 @@
         background: rgba(0,0,0,0.35);
       }
 
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
     </style>
   </head>
                 <body>
     <div class="container">
-      <a class="back" href="../">← Genealogy hub</a>
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="../">← Genealogy hub</a> <a class="tree-btn" href="../tree.html">🌳 Back to tree</a></nav>
       <h1>Fannie Lee (McBride) Winn</h1>
       <div class="subtitle">b. 1894 Tipton County, TN</div>
       <div class="status-row"><span class="tag fact">FACT</span> Father’s side · Austin’s mother</div>
@@ -179,7 +191,7 @@
           <li><span class="tag need">HYPOTHESIS</span> Drive <code>Fannie_Willis_Wedding.jpg</code> — unlabeled studio couple (not maiden proof)</li>
           <li><span class="tag need">HYPOTHESIS</span> Drive <code>FannieCemetary.jpg</code> — woman at PITT stone (Netherwood / J.D. / M.D. Pitt 1888–1952); possible Kinney/Pitt link — kin hypothesis only</li>
       </ul>
-      <h2>Sources</h2>
+      <h2>Sources &amp; references</h2>
       <ul class="sources">
           <li><span class="tag fact">FACT</span> William — Fannie Lee McBride Winn; b. 1894 Tipton Co.; children Austin and Mary Frances (Winn) Peyton. grandchildren via Mary Frances: John Winn, Joan Lee, Jim Willis</li>
           <li><span class="tag fact">FACT</span> Letters 194301–194303 — Mrs. W. H. / Mrs. Fannie</li>

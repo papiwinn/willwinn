@@ -25,6 +25,19 @@ Person pages tag items:
 3. Add a featured card on `index.html` if they belong on the hub
 4. Keep Sources ready for Crystal’s links (census, vital, Find a Grave, newspapers)
 
+## Family tree (`tree.html` → `/genealogy/tree`)
+
+Visual pedigree chart: Robyn’s ancestors open to the left, William’s to the right. Pure HTML/CSS + one small inline script; no libraries.
+
+- **Data lives in one place:** the `var TREE = { ... }` block near the bottom of `tree.html`.
+- Each person is `{ slug, name, dates, status: "fact" | "hypothesis", father: {...}, mother: {...} }`.
+  `slug` links to `people/<slug>.html` and shows `images/<slug>.jpg` as a thumbnail if it exists.
+- A known person with no `father`/`mother` is drawn automatically with dashed **Unknown — research open** boxes.
+- **To add an ancestor:** create their `people/<slug>.html` page, then add a `father: { ... }` or `mother: { ... }`
+  object under their child in `TREE`. Use `status: "hypothesis"` for unproven links.
+- Someone with no page yet: `slug: null, cite: "<child-slug>", citeLabel: "no page yet"`.
+- Every person page has a **Back to tree** button (`../tree.html`) and a `Sources &amp; references` section before the footer.
+
 ## Do not
 
 - Link this section from the public site chrome

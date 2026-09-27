@@ -128,11 +128,23 @@
         opacity: 0.55;
       }
 
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
     </style>
   </head>
   <body>
     <div class="container">
-      <a class="back" href="../">← Genealogy hub</a>
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="../">← Genealogy hub</a> <a class="tree-btn" href="../tree.html">🌳 Back to tree</a></nav>
       <h1>James Clayborn Waits</h1>
       <div class="subtitle">Apr 1864 – 20 Dec 1944</div>
       <div class="status-row"><span class="tag fact">Biological line</span></div>
@@ -149,7 +161,7 @@
           <li><span class="tag fact">FACT</span> <strong>Died:</strong> 20 Dec 1944 Memphis, Shelby Co., TN (FaG #200803433)</li>
           <li><span class="tag fact">FACT</span> <strong>Burial:</strong> Maplewood Cemetery, Ripley, Lauderdale Co., TN — inscription James C. Waits 1864–1944</li>
       </ul>
-      <h2>Sources</h2>
+      <h2>Sources &amp; references</h2>
       <ul class="sources">
           <li><span class="tag fact">FACT</span> Find a Grave #200803433 James Clayborn Waits — <a href="https://www.findagrave.com/memorial/200803433/james_clayborn-waits">https://www.findagrave.com/memorial/200803433/james_clayborn-waits</a>. Apr 1864 Newberry SC – 20 Dec 1944 Memphis; Maplewood Ripley; parents James Samuel &amp; Almenia Earhart; spouse Gabie. Do NOT use #200804333 (wrong person)</li>
           <li><span class="tag need">need-more</span> Find a Grave #55032391 Carrie Love Simpson (memorial bio) — <a href="https://www.findagrave.com/memorial/55032391/carrie_love-simpson">https://www.findagrave.com/memorial/55032391/carrie_love-simpson</a>. Secondary: birth year 1863 (prefer James stone/FaG Apr 1864); Rhoda dates — pending cert</li>

@@ -128,11 +128,23 @@
         opacity: 0.55;
       }
 
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
     </style>
   </head>
             <body>
     <div class="container">
-      <a class="back" href="../">← Genealogy hub</a>
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="../">← Genealogy hub</a> <a class="tree-btn" href="../tree.html">🌳 Back to tree</a></nav>
       <h1>Austin Hunley Winn</h1>
       <div class="subtitle">27 Feb 1921 – 16 Nov 1996</div>
       <div class="status-row"><span class="tag fact">FACT</span> Father’s side · letters/manuscript subject</div>
@@ -140,7 +152,7 @@
       <p class="intro"><strong>Relation:</strong> William’s father. Subject of the WWII letters and manuscript on willwinn.xyz. Spouse: <strong>Mary Oletta Littleheart Simpson Winn</strong> (b. 13 Feb 1924) — do <em>not</em> list her as Austin’s mother.</p>
       <p class="intro"><span class="tag fact">FACT</span> Parents (William): father <strong>Willis Hunley Winn</strong>; mother <strong>Fannie Lee (McBride) Winn</strong> (b. 1894 Tipton). Letters address father as Mr. W. H. Winn / Mr &amp; Mrs W. H. Winn, Route 2, Henning (d. Mar 1943). Parker 1978 memoir corroborates Willis &amp; Fannie and sister Mrs. John Peyton (secondary).</p>
       <p class="intro"><span class="tag fact">FACT</span> Born <strong>27 February 1921</strong> (William; matches grave marker <code>Austin_s Grave.jpg</code>). Death <strong>16 November 1996</strong>; 1st Lt US Army Air Corps, WWII (marker).</p>
-      <p class="intro"><a href="willis-hunley-winn.html">→ Willis Hunley Winn</a> · <a href="fannie-winn.html">→ Fannie Lee (McBride) Winn</a> · <a href="oletta-simpson-winn.html">→ Mary Oletta Littleheart Simpson Winn</a> · <a href="william-lavaughan-winn.html">→ William LaVaughan Winn</a> · <a href="../letters/">→ Letters</a></p>
+      <p class="intro"><a href="willis-hunley-winn.html">→ Willis Hunley Winn</a> · <a href="fannie-winn.html">→ Fannie Lee (McBride) Winn</a> · <a href="oletta-simpson-winn.html">→ Mary Oletta Littleheart Simpson Winn</a> · <a href="william-lavaughan-winn.html">→ William LaVaughan Winn</a> · <a href="../../letters/">→ Letters</a></p>
       <h2>Timeline</h2>
       <ul class="timeline">
           <li><span class="tag fact">FACT</span> <strong>Born:</strong> 27 February 1921 (William; matches grave marker)</li>
@@ -169,7 +181,7 @@
           <li><span class="tag need">PARKED</span> Drive photo labels John &amp; Martha as parents — superseded by William FACTS</li>
           <li><span class="tag need">need-more</span> Free birth record / obit NOT FOUND; cemeteries; FaG IDs</li>
       </ul>
-      <h2>Sources</h2>
+      <h2>Sources &amp; references</h2>
       <ul class="sources">
           <li><span class="tag fact">FACT</span> William — parents Willis Hunley Winn &amp; Fannie Lee McBride Winn; birth 27 Feb 1921; sister Mary Frances (Winn) Peyton (husband John Peyton; their children John Winn, Joan Lee, Jim Willis); spouse Mary Oletta Littleheart Simpson Winn; children Martha Jean Williams, Mary Love Piercey, Austin Hunley (Jr.), William LaVaughan</li>
           <li><span class="tag fact">FACT</span> Drive grave photo <code>Austin_s Grave.jpg</code> — FEB 27 1921 – NOV 16 1996 (matches William); 1st Lt US Army Air Corps WWII</li>

@@ -128,11 +128,23 @@
         opacity: 0.55;
       }
 
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
     </style>
   </head>
       <body>
     <div class="container">
-      <a class="back" href="../">← Genealogy hub</a>
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="../">← Genealogy hub</a> <a class="tree-btn" href="../tree.html">🌳 Back to tree</a></nav>
       <h1>Marion Alex (Alec / Alex) Sides</h1>
       <div class="subtitle">1895 – 1970</div>
       <div class="status-row"><span class="tag fact">FACT</span> Mother’s side (by marriage) · <span class="tag need">need-more</span> parents / FaG ID</div>
@@ -147,7 +159,7 @@
           <li><span class="tag fact">FACT</span> <strong>Died:</strong> 1970; Ripley Memorial Gardens with Josie (stone / listing)</li>
           <li><span class="tag need">need-more</span> <strong>Parents, siblings, military, occupation;</strong> marriage date/place; numeric FaG ID</li>
       </ul>
-      <h2>Sources</h2>
+      <h2>Sources &amp; references</h2>
       <ul class="sources">
           <li><span class="tag fact">FACT</span> FaG search listing + USGWArchives stone — Marion Alex Sides 1895–1970; double stone with Josie Waite Sides 1906–2001; Ripley Memorial Gardens cem. 15589</li>
           <li><span class="tag fact">FACT</span> William — Alec/Alex Sides of Henning</li>
