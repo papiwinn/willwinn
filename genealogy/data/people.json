@@ -676,7 +676,7 @@
       },
       {
         "t": "Given names",
-        "d": "Inference: Austin = grandmother Mary Evelyn\u2019s maiden name (per FS tree only); Hunley = grandfather William Hunley Winn (grandparents FACT, 1880 census)",
+        "d": "Inference: Hunley = grandfather William Hunley Winn; Austin only if grandmother Mary E.\u2019s maiden name was Austin (FS tree) \u2014 unresolved, as Willis\u2019s death certificate says Alston",
         "status": "need"
       }
     ],
@@ -779,7 +779,7 @@
     "id": "w-h-winn",
     "name": "Mr. W. H. Winn",
     "short_name": "W. H. Winn",
-    "lifespan": "d. March 1943",
+    "lifespan": "6 Aug 1874 \u2013 26 Feb 1943",
     "rel": "Father of Austin Hunley Winn. Route 2, Henning, TN.",
     "bio_or_step": "need",
     "blurb": "Legacy slug \u2192 Willis Hunley Winn.",
@@ -792,7 +792,7 @@
       },
       {
         "t": "Died",
-        "d": "1943 (letters, about March); FS tree 26 Feb 1943 (HYPOTHESIS)",
+        "d": "26 Feb 1943, Cherry (death certificate); buried early Mar 1943, Munford Cemetery, Covington",
         "status": "fact"
       },
       {
@@ -812,7 +812,7 @@
       },
       {
         "t": "Parents",
-        "d": "William H. Winn and Mary E. (FACT, 1880 census); maiden name Austin and dates per FS tree (HYPOTHESIS)",
+        "d": "William H. Winn and Mary E. (FACT, 1880 census); mother\u2019s maiden name Alston (death certificate) / Austin (FS tree), unresolved",
         "status": "fact"
       }
     ],
@@ -855,31 +855,36 @@
     "id": "willis-hunley-winn",
     "name": "Willis Hunley Winn",
     "short_name": "Willis Hunley Winn",
-    "lifespan": "6 Aug 1874 \u2013 1943 (death 26 Feb 1943 per FS tree)",
+    "lifespan": "6 Aug 1874 \u2013 26 Feb 1943",
     "bio_or_step": "need",
     "rel": "Father of Austin Hunley Winn.",
-    "blurb": "Austin\u2019s father (William FACT). Born 6 Aug 1874 (FACT, WWI draft card; 1900 census and FS tree give 1875). Parents William H. Winn and Mary E. (FACT, 1880 census). Married Fannie McBride 11 Jan 1914, Lauderdale Co. (FACT). Children William Lenard (1914\u20131916), Mary Frances, Willis Pitt (d. 1920), Austin. Died 1943 (letters; 26 Feb per FS tree).",
-    "narrative": "Willis Hunley Winn; d. Mar 1943; spouse Fannie; children Austin and Mary Frances Peyton (William). John/Joan/Jim child claim retracted.",
+    "blurb": "Austin\u2019s father (William FACT). Born 6 Aug 1874, Tipton Co., TN (draft card, 1880 census, family knowledge; death certificate and 1900 census give 1875). Grocery merchant at Cherry. Died 26 Feb 1943 at Cherry (death certificate; coronary block); buried early Mar 1943, Munford Cemetery, Covington. Parents William H. Winn and Mary E. (FACT, 1880 census). Married Fannie McBride 11 Jan 1914 (FACT). Children William Lenard (1914\u20131916), Mary Frances, Willis Pitt (d. 1920), Austin.",
+    "narrative": "Willis Hunley Winn; b. 6 Aug 1874, Tipton Co.; d. 26 Feb 1943, Cherry; spouse Fannie; children William Lenard, Mary Frances Peyton, Willis Pitt, Austin (William; records). John/Joan/Jim child claim retracted.",
     "timeline": [
       {
         "t": "Born",
-        "d": "6 Aug 1874 (WWI draft card); age 6 in 1880",
+        "d": "6 Aug 1874, Tipton Co., TN (draft card; age 6 in 1880; family knowledge; birthplace from 1943 death certificate)",
         "status": "fact"
       },
       {
         "t": "Birth conflict",
-        "d": "1900 census Jan 1875; FS tree 6 Aug 1875 \u2014 open until 1943 death certificate",
+        "d": "6 Aug 1875 on 1943 death certificate (informant his widow) and FS tree; Jan 1875 in 1900 census",
         "status": "need"
       },
       {
         "t": "Died",
-        "d": "1943 \u2014 letters point to about March 1943",
+        "d": "26 Feb 1943, Cherry, Lauderdale Co., CD 13; coronary block (death certificate); letters: died 1943",
         "status": "fact"
       },
       {
-        "t": "Died (FS tree)",
-        "d": "26 Feb 1943 (HYPOTHESIS; DISCREPANCY with letters \u2014 awaits death certificate)",
-        "status": "need"
+        "t": "Buried",
+        "d": "early Mar 1943 (possibly 2nd), Munford Cemetery, Covington; Maley Funeral Home",
+        "status": "fact"
+      },
+      {
+        "t": "Occupation",
+        "d": "grocery merchant at Cherry (1943)",
+        "status": "fact"
       },
       {
         "t": "Married",
@@ -913,7 +918,7 @@
       },
       {
         "t": "Parents (FS tree)",
-        "d": "Maiden name Austin; William 6 Apr 1812 \u2013 27 Jul 1891; Mary Evelyn 1837\u20131908; m. 3 Mar 1865, Tipton Co. (HYPOTHESIS)",
+        "d": "William 6 Apr 1812 \u2013 27 Jul 1891; Mary Evelyn 1837\u20131908; m. 3 Mar 1865, Tipton Co. (HYPOTHESIS). Mother\u2019s maiden name unresolved: Alston (death certificate, informant his widow) / Austin (FS tree)",
         "status": "need"
       },
       {
@@ -933,7 +938,7 @@
       },
       {
         "t": "Still pending",
-        "d": "1943 death certificate; 1930 and 1940 censuses; Social Security (NUMIDENT) record",
+        "d": "1930 and 1940 censuses; Social Security (NUMIDENT) record",
         "status": "need"
       }
     ],
@@ -1024,6 +1029,14 @@
       {
         "label": "Crystal\u2019s Willis batch from William\u2019s FamilySearch record paste (27 Sep 2026)",
         "status": "fact"
+      },
+      {
+        "label": "Tennessee death certificate no. 10043, Lauderdale Co., reg. dist. 502; image supplied by William LaVaughan Winn",
+        "status": "fact"
+      },
+      {
+        "label": "William LaVaughan Winn, family knowledge, 27 Sep 2026 (born 1874)",
+        "status": "fact"
       }
     ]
   },
@@ -1034,8 +1047,8 @@
     "lifespan": "6 Apr 1812 \u2013 27 Jul 1891 (per FS tree)",
     "rel": "FACT: father of Willis Hunley Winn (1880 census).",
     "bio_or_step": "bio",
-    "blurb": "Willis Hunley Winn\u2019s father (FACT, 1880 census: William H. Winn, 67). Per FS tree G95C-CBQ (HYPOTHESIS): b. 6 Apr 1812, d. 27 Jul 1891; m. Mary Evelyn Austin 3 Mar 1865, Tipton Co., TN; son of Peter Winn and Martha \u201cPatsy\u201d Hunley. Children match the 1880 initials and the 1932 Kinney obituary; family oral history: about 63 at Willis\u2019s birth.",
-    "narrative": "Willis Hunley Winn\u2019s father (FACT, 1880 census: William H. Winn, 67). Per FS tree G95C-CBQ (HYPOTHESIS): b. 6 Apr 1812, d. 27 Jul 1891; m. Mary Evelyn Austin 3 Mar 1865, Tipton Co., TN; son of Peter Winn and Martha \u201cPatsy\u201d Hunley. Children match the 1880 initials and the 1932 Kinney obituary; family oral history: about 63 at Willis\u2019s birth. Places and burial NOT FOUND.",
+    "blurb": "Willis Hunley Winn\u2019s father (FACT, 1880 census: William H. Winn, 67). Per FS tree G95C-CBQ (HYPOTHESIS): b. 6 Apr 1812, d. 27 Jul 1891; m. Mary E. (Alston or Austin) 3 Mar 1865, Tipton Co., TN; son of Peter Winn and Martha \u201cPatsy\u201d Hunley. Children match the 1880 initials and the 1932 Kinney obituary; family oral history: about 63 at Willis\u2019s birth.",
+    "narrative": "Willis Hunley Winn\u2019s father (FACT, 1880 census: William H. Winn, 67). Per FS tree G95C-CBQ (HYPOTHESIS): b. 6 Apr 1812, d. 27 Jul 1891; m. Mary E. (Alston or Austin) 3 Mar 1865, Tipton Co., TN; son of Peter Winn and Martha \u201cPatsy\u201d Hunley. Children match the 1880 initials and the 1932 Kinney obituary; family oral history: about 63 at Willis\u2019s birth. Places and burial NOT FOUND.",
     "timeline": [
       {
         "t": "1880 census",
@@ -1049,7 +1062,7 @@
       },
       {
         "t": "Married",
-        "d": "Mary Evelyn Austin, 3 Mar 1865, Tipton Co., TN (FS tree)",
+        "d": "Mary E. (maiden name Alston per death certificate / Austin per FS tree), 3 Mar 1865, Tipton Co., TN (FS tree)",
         "status": "need"
       },
       {
@@ -1120,18 +1133,23 @@
   },
   {
     "id": "mary-evelyn-austin-winn",
-    "name": "Mary Evelyn (Austin) Winn",
-    "short_name": "Mary Evelyn (Austin) Winn",
+    "name": "Mary E. (Alston or Austin) Winn",
+    "short_name": "Mary E. (Alston or Austin) Winn",
     "lifespan": "1837 \u2013 1908 (per FS tree)",
     "rel": "FACT: mother of Willis Hunley Winn (1880 census).",
     "bio_or_step": "bio",
-    "blurb": "Willis Hunley Winn\u2019s mother (FACT, 1880 census: Mary E., wife of William H. Winn). Earlier Pitt marriage (FACT): James M. and Henrietta Pitt. Maiden name Austin, 1837\u20131908 and 3 Mar 1865 marriage per FS tree (HYPOTHESIS).",
-    "narrative": "Willis Hunley Winn\u2019s mother (FACT, 1880 census: Mary E., wife of William H. Winn). Earlier Pitt marriage (FACT): James M. and Henrietta Pitt. Maiden name Austin, 1837\u20131908 and 3 Mar 1865 marriage per FS tree (HYPOTHESIS). Places, parents and burial NOT FOUND.",
+    "blurb": "Willis Hunley Winn\u2019s mother (FACT, 1880 census: Mary E., wife of William H. Winn). Maiden name unresolved: Alston (Willis\u2019s 1943 death certificate, informant his widow) / Austin (FS tree). Earlier Pitt marriage (FACT): James M. and Henrietta Pitt. 1837\u20131908 and 3 Mar 1865 marriage per FS tree (HYPOTHESIS).",
+    "narrative": "Willis Hunley Winn\u2019s mother (FACT, 1880 census: Mary E., wife of William H. Winn). Maiden name unresolved: Alston (Willis\u2019s 1943 death certificate, informant his widow) / Austin (FS tree). Earlier Pitt marriage (FACT): James M. and Henrietta Pitt. 1837\u20131908 and 3 Mar 1865 marriage per FS tree (HYPOTHESIS). Places, parents and burial NOT FOUND.",
     "timeline": [
       {
         "t": "1880 census",
         "d": "Tipton Co. Dist. 1: William H. Winn 67; wife M. D. [Mary E.] 42; S. E. 14; W. M. 12; W. P. 10; C. B. 8; W. H. 6; S. M. 1; stepchildren James M. Pitt 19, Henrietta Pitt 16",
         "status": "fact"
+      },
+      {
+        "t": "Maiden name",
+        "d": "Unresolved: Alston (death certificate, informant his widow) / Austin (FS tree)",
+        "status": "need"
       },
       {
         "t": "Born",
@@ -1191,6 +1209,10 @@
       },
       {
         "label": "Crystal\u2019s Willis batch from William\u2019s FamilySearch record paste (27 Sep 2026)",
+        "status": "fact"
+      },
+      {
+        "label": "Tennessee death certificate no. 10043, Lauderdale Co., reg. dist. 502; image supplied by William LaVaughan Winn",
         "status": "fact"
       }
     ]
@@ -1342,6 +1364,11 @@
         "status": "fact"
       },
       {
+        "t": "Widowed",
+        "d": "26 Feb 1943; informant Mrs. W. H. Winn, Cherry, on Willis\u2019s death certificate",
+        "status": "fact"
+      },
+      {
         "t": "Possible sibling",
         "d": "W. C. McBride (1882\u20131960), Walton Cemetery \u2014 HYPOTHESIS",
         "status": "need"
@@ -1383,6 +1410,10 @@
       },
       {
         "label": "Crystal\u2019s Willis batch from William\u2019s FamilySearch record paste (27 Sep 2026)",
+        "status": "fact"
+      },
+      {
+        "label": "Tennessee death certificate no. 10043, Lauderdale Co., reg. dist. 502; image supplied by William LaVaughan Winn",
         "status": "fact"
       }
     ]
