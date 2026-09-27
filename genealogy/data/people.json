@@ -2471,18 +2471,23 @@
   },
   {
     "id": "agnes-corbett-holden",
-    "name": "Agnes (Corbett) Holden",
+    "name": "Agnes C. Corbett (Holden)",
     "short_name": "Agnes Corbett Holden",
-    "lifespan": "born Eastport, Washington Co., ME",
+    "lifespan": "born Eastport, Washington Co., ME \u00b7 21 Jul 1886 \u2013 8 Feb 1979 (hyp.)",
     "rel": "Mother of Elizabeth Jane (Holden) Barrett. Wife of William M. Holden.",
     "bio_or_step": "bio",
-    "blurb": "Elizabeth\u2019s mother (William FACT). Born Eastport, ME.",
-    "narrative": "Agnes Corbett, born in Eastport, Maine; wife of William M. Holden; mother of Elizabeth Jane (Holden) Barrett (William FACT). No dates given.",
+    "blurb": "Elizabeth\u2019s mother (William FACT). Born Eastport, ME. Dates 21 Jul 1886 \u2013 8 Feb 1979, Natick, MA: HYPOTHESIS (FamilySearch Family Tree).",
+    "narrative": "Agnes Corbett, born in Eastport, Maine; wife of William M. Holden; mother of Elizabeth Jane (Holden) Barrett (William FACT). Dates HYPOTHESIS per FamilySearch Family Tree 9QW1-LTK (user-editable): born 21 Jul 1886, Eastport; died 8 Feb 1979, Natick, Middlesex Co., MA.",
     "timeline": [
       {
-        "t": "Born",
+        "t": "Birthplace",
         "d": "Eastport, Washington Co., Maine (William)",
         "status": "fact"
+      },
+      {
+        "t": "Born",
+        "d": "21 Jul 1886, Eastport, Washington Co., Maine (FamilySearch Family Tree 9QW1-LTK)",
+        "status": "need"
       },
       {
         "t": "Husband",
@@ -2495,7 +2500,12 @@
         "status": "fact"
       },
       {
-        "t": "Dates, parents, death, burial",
+        "t": "Died",
+        "d": "8 Feb 1979, Natick, Middlesex Co., MA (FamilySearch Family Tree 9QW1-LTK)",
+        "status": "need"
+      },
+      {
+        "t": "Parents, burial",
         "d": "NOT FOUND",
         "status": "need"
       }
@@ -2504,6 +2514,12 @@
       {
         "label": "William LaVaughan Winn, family record",
         "status": "fact"
+      },
+      {
+        "label": "FamilySearch Family Tree, profile 9QW1-LTK (user-editable)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/9QW1-LTK",
+        "note": "HYPOTHESIS: b. 21 Jul 1886, Eastport; d. 8 Feb 1979, Natick"
       },
       {
         "label": "Further research open",
