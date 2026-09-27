@@ -454,7 +454,7 @@
         slug: "robyn-louise-barrett", name: "Robyn Louise Barrett",
         dates: "b. 27 Aug 1958 · Natick, MA", status: "fact",
         notes: [{ slug: "barrett-family", text: "Barrett family overview — research in progress" }],
-        /* Robyn's siblings: FACT (William, family record, 27 Sep 2026) — names only, possibly living, no pages */
+        /* Robyn's siblings: FACT (William, family record, 27 Sep 2026) — living — names only, no pages */
         siblings: [
           { slug: null, name: "Katherine A. Barrett" },
           { slug: null, name: "Bonny Jane Barrett" },
@@ -568,7 +568,7 @@
           var s = el("div", "siblings");
           s.appendChild(el("div", "lbl", "Siblings"));
           p.siblings.forEach(function (sb) {
-            if (!sb.slug) { /* name only — no page (possibly living) */
+            if (!sb.slug) { /* name only — no page (living) */
               var n = el("span", "sib");
               n.appendChild(el("span", null, sb.name));
               s.appendChild(n);
