@@ -95,7 +95,7 @@ export async function handleAlbumNotes(request, env) {
   let sha;
   if (existing && existing.content) {
     try {
-      const raw = atob(existing.content.replace(/\n/g, ""));
+      const raw = b64ToUtf8(existing.content);
       notes = JSON.parse(raw || "[]");
       if (!Array.isArray(notes)) notes = [];
     } catch {
@@ -105,7 +105,7 @@ export async function handleAlbumNotes(request, env) {
   }
   notes.push(note);
 
-  const contentB64 = btoa(unescape(encodeURIComponent(JSON.stringify(notes, null, 2) + "\n")));
+  const contentB64 = utf8ToB64(JSON.stringify(notes, null, 2) + "\n");
   const putBody = {
     message: "Add album note on " + photoId + " by " + name,
     content: contentB64,
@@ -166,10 +166,29 @@ async function readNotes(repo, path, token) {
   const existing = await githubGet(repo, path, token);
   if (!existing || !existing.content) return [];
   try {
-    const raw = atob(existing.content.replace(/\n/g, ""));
+    const raw = b64ToUtf8(existing.content);
     const notes = JSON.parse(raw || "[]");
     return Array.isArray(notes) ? notes : [];
   } catch {
     return [];
   }
+}
+
+/* UTF-8-safe base64 helpers. GitHub's contents API returns base64 of UTF-8 bytes;
+ * atob() alone yields one Latin-1 char per byte, and re-encoding that with
+ * encodeURIComponent double-encodes every non-ASCII char on each write
+ * (the cascading "Ã¢Â€Â”" mojibake in contributions.json / notes.json). */
+function b64ToUtf8(b64) {
+  const bin = atob(String(b64 || "").replace(/\n/g, ""));
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return new TextDecoder("utf-8").decode(bytes);
+}
+function utf8ToB64(str) {
+  const bytes = new TextEncoder().encode(String(str));
+  let bin = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) {
+    bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+  }
+  return btoa(bin);
 }

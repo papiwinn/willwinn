@@ -18,8 +18,8 @@
     "vitals": [
       {
         "id": "b589ec0a-c046-4dbe-81f7-af7d4e7a7174",
-        "status": "unverified",
-        "label": "UNVERIFIED ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ family submission (not Crystal/William FACT until promoted)",
+        "status": "verified",
+        "label": "VERIFIED - promoted to FACT by William LaVaughan Winn, 27 Sep 2026",
         "person_slug": "martha-jean-winn",
         "person_name": "Martha Jean Williams",
         "page_url": "https://willwinn.xyz/genealogy/people/martha-jean-winn",
@@ -34,12 +34,14 @@
         "uid": "4f93f110-bdcb-4e70-9cca-50ceb5915a5b",
         "name": "Mary Piercey",
         "email": "merluv@aol.com",
-        "submitted_at": "2026-09-27T15:16:15.066Z"
+        "submitted_at": "2026-09-27T15:16:15.066Z",
+        "verified_by": "William LaVaughan Winn",
+        "verified_at": "2026-09-27"
       },
       {
         "id": "0994e4b4-61c5-4abe-a07b-728843c7e243",
-        "status": "unverified",
-        "label": "UNVERIFIED ÃÂ¢ÃÂÃÂ family submission (not Crystal/William FACT until promoted)",
+        "status": "verified",
+        "label": "VERIFIED - promoted to FACT by William LaVaughan Winn, 27 Sep 2026",
         "person_slug": "martha-jean-winn",
         "person_name": "Martha Jean Williams",
         "page_url": "https://willwinn.xyz/genealogy/people/martha-jean-winn",
@@ -54,27 +56,9 @@
         "uid": "4f93f110-bdcb-4e70-9cca-50ceb5915a5b",
         "name": "Mary Piercey",
         "email": "merluv@aol.com",
-        "submitted_at": "2026-09-27T15:22:30.397Z"
-      },
-      {
-        "id": "eb7f3eca-04a5-40f9-8511-27498efc6471",
-        "status": "unverified",
-        "label": "UNVERIFIED Ã¢ÂÂ family submission (not Crystal/William FACT until promoted)",
-        "person_slug": "martha-jean-winn",
-        "person_name": "Martha Jean Williams",
-        "page_url": "https://willwinn.xyz/genealogy/people/martha-jean-winn",
-        "dob": "",
-        "dod": "23 June 2025",
-        "birthplace": "",
-        "death_place": "",
-        "marriage_date": "",
-        "marriage_place": "",
-        "marriage_spouse": "",
-        "other": "",
-        "uid": "4f93f110-bdcb-4e70-9cca-50ceb5915a5b",
-        "name": "Mary Piercey",
-        "email": "merluv@aol.com",
-        "submitted_at": "2026-09-27T15:22:53.255Z"
+        "submitted_at": "2026-09-27T15:22:30.397Z",
+        "verified_by": "William LaVaughan Winn",
+        "verified_at": "2026-09-27"
       }
     ],
     "portraits": []
@@ -83,8 +67,8 @@
     "vitals": [
       {
         "id": "cf616c41-5f97-41b4-bd31-29fa548fb18d",
-        "status": "unverified",
-        "label": "UNVERIFIED â family submission (not Crystal/William FACT until promoted)",
+        "status": "verified",
+        "label": "VERIFIED - promoted to FACT by William LaVaughan Winn, 27 Sep 2026",
         "person_slug": "william-lavaughan-winn-jr",
         "person_name": "William LaVaughan Winn Jr.",
         "page_url": "https://willwinn.xyz/genealogy/people/william-lavaughan-winn-jr",
@@ -99,7 +83,9 @@
         "uid": "0d0d127a-19a9-4c6d-bbd4-a1ce8979d5c6",
         "name": "William L Winn",
         "email": "papiwinn@gmail.com",
-        "submitted_at": "2026-09-27T22:00:44.224Z"
+        "submitted_at": "2026-09-27T22:00:44.224Z",
+        "verified_by": "William LaVaughan Winn",
+        "verified_at": "2026-09-27"
       }
     ],
     "portraits": []
@@ -108,8 +94,8 @@
     "vitals": [
       {
         "id": "3e618116-2eec-4864-bb04-90e48c0f5632",
-        "status": "unverified",
-        "label": "UNVERIFIED — family submission (not Crystal/William FACT until promoted)",
+        "status": "verified",
+        "label": "VERIFIED - promoted to FACT by William LaVaughan Winn, 27 Sep 2026",
         "person_slug": "nathan-lee-winn",
         "person_name": "Nathan Lee Winn",
         "page_url": "https://willwinn.xyz/genealogy/people/nathan-lee-winn",
@@ -124,7 +110,9 @@
         "uid": "098d45c3-e801-4b11-ad82-a6ce99aa6a2d",
         "name": "Justine Winn",
         "email": "justinemwinn@gmail.com",
-        "submitted_at": "2026-09-27T22:04:34.197Z"
+        "submitted_at": "2026-09-27T22:04:34.197Z",
+        "verified_by": "William LaVaughan Winn",
+        "verified_at": "2026-09-27"
       }
     ],
     "portraits": []

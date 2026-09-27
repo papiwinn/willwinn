@@ -524,7 +524,7 @@
       var entry = {
         kind: "genealogy_vitals",
         status: "unverified",
-        label: "UNVERIFIED — family submission (not FACT until William promotes)",
+        label: "UNVERIFIED - family submission (not FACT until William promotes)", // ASCII only (server also sets it)
         person_slug: m.person_slug,
         person_name: m.person_name,
         page_url: m.page_url,

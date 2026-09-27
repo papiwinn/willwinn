@@ -71,7 +71,13 @@
     var slug = slugFromPath();
     if (!slug || slug === "index") return;
     var block = (data && data[slug]) || { vitals: [], portraits: [] };
-    var vitals = Array.isArray(block.vitals) ? block.vitals : [];
+    // Only UNVERIFIED entries render in the red box; entries William has verified
+    // (status "verified") are already FACT on the page. The stored "label" field is
+    // never displayed, so a garbled label cannot reach the page.
+    var vitals = (Array.isArray(block.vitals) ? block.vitals : []).filter(function (v) {
+      var st = String((v && v.status) || "unverified").toLowerCase();
+      return st !== "verified" && st !== "promoted" && st !== "rejected";
+    });
     var portraits = Array.isArray(block.portraits) ? block.portraits : [];
     var footer = document.querySelector("footer.colophon");
     var container = document.querySelector(".container");

@@ -1422,17 +1422,33 @@
     "id": "martha-jean-winn",
     "name": "Martha Jean Williams",
     "short_name": "Martha Jean Williams",
-    "lifespan": "dates open",
+    "lifespan": "16 Jan 1947 \u2013 23 Jun 2025",
     "rel": "Child of Austin Hunley Winn and Mary Oletta Littleheart Simpson Winn.",
     "bio_or_step": "need",
-    "blurb": "Eldest child of Austin \u00d7 Oletta. Married Williams (n\u00e9e Winn).",
+    "blurb": "Eldest child of Austin \u00d7 Oletta. Married Williams (n\u00e9e Winn). Born 16 Jan 1947, Brownsville, TN; died 23 Jun 2025, Burnsville, NC.",
     "narrative": "Eldest child of Austin \u00d7 Oletta (William FACT).",
-    "timeline": [],
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "16 Jan 1947, Brownsville, TN",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "23 Jun 2025, Burnsville, NC",
+        "status": "fact"
+      }
+    ],
     "sources": [
       {
         "label": "William",
         "status": "fact",
         "note": "birth order"
+      },
+      {
+        "label": "William LaVaughan Winn, verified family submission, 27 Sep 2026",
+        "status": "fact",
+        "note": "submitted by Mary Piercey"
       }
     ]
   },
@@ -2369,10 +2385,10 @@
     "id": "william-lavaughan-winn-jr",
     "name": "William LaVaughan Winn Jr.",
     "short_name": "William LaVaughan Winn Jr.",
-    "lifespan": "b. 6 May 1985 \u00b7 Union City, TN",
+    "lifespan": "b. 6 May 1985 \u00b7 Union City, TN \u00b7 m. 4 Oct 2020",
     "rel": "Child of William LaVaughan Winn and Robyn Louise Barrett.",
     "bio_or_step": "need",
-    "blurb": "b. 6 May 1985 \u00b7 Union City, TN",
+    "blurb": "b. 6 May 1985 \u00b7 Union City, TN \u00b7 m. 4 Oct 2020",
     "narrative": "",
     "timeline": [
       {
@@ -2381,31 +2397,8 @@
         "status": "fact"
       },
       {
-        "t": "Parents",
-        "d": "William LaVaughan Winn; Robyn Louise Barrett",
-        "status": "fact"
-      }
-    ],
-    "sources": [
-      {
-        "label": "William LaVaughan Winn, family record",
-        "status": "fact"
-      }
-    ]
-  },
-  {
-    "id": "nathan-lee-winn",
-    "name": "Nathan Lee Winn",
-    "short_name": "Nathan Lee Winn",
-    "lifespan": "b. 10 Jul 1987 \u00b7 Jackson, TN",
-    "rel": "Child of William LaVaughan Winn and Robyn Louise Barrett.",
-    "bio_or_step": "need",
-    "blurb": "b. 10 Jul 1987 \u00b7 Jackson, TN",
-    "narrative": "",
-    "timeline": [
-      {
-        "t": "Born",
-        "d": "10 Jul 1987, Jackson, TN",
+        "t": "Married",
+        "d": "4 Oct 2020",
         "status": "fact"
       },
       {
@@ -2418,6 +2411,49 @@
       {
         "label": "William LaVaughan Winn, family record",
         "status": "fact"
+      },
+      {
+        "label": "William LaVaughan Winn, verified family submission, 27 Sep 2026",
+        "status": "fact",
+        "note": "submitted by William L Winn"
+      }
+    ]
+  },
+  {
+    "id": "nathan-lee-winn",
+    "name": "Nathan Lee Winn",
+    "short_name": "Nathan Lee Winn",
+    "lifespan": "b. 10 Jul 1987 \u00b7 Jackson, TN \u00b7 m. 22 Jan 2010",
+    "rel": "Child of William LaVaughan Winn and Robyn Louise Barrett.",
+    "bio_or_step": "need",
+    "blurb": "b. 10 Jul 1987 \u00b7 Jackson, TN \u00b7 m. 22 Jan 2010",
+    "narrative": "",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "10 Jul 1987, Jackson, TN",
+        "status": "fact"
+      },
+      {
+        "t": "Married",
+        "d": "22 Jan 2010, to Justine Winn",
+        "status": "fact"
+      },
+      {
+        "t": "Parents",
+        "d": "William LaVaughan Winn; Robyn Louise Barrett",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "William LaVaughan Winn, family record",
+        "status": "fact"
+      },
+      {
+        "label": "William LaVaughan Winn, verified family submission, 27 Sep 2026",
+        "status": "fact",
+        "note": "submitted by Justine Winn"
       }
     ]
   },

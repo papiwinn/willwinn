@@ -72,3 +72,5 @@ William reviews email (and pending paths), then promotes approved portraits/vita
 - **Vitals** appear in an UNVERIFIED section (submitter name + fields).
 - **Portraits** appear in a bottom photo grid; hero portrait at top if `images/{slug}.*` exists.
 - Uploads go through icy-dust Worker routes `/genealogy-portrait` and `/genealogy-vitals` (redeploy Worker after code changes in `photos/upload-worker.js`).
+- Verified entries: when William promotes a submission to FACT, set its `status` to `"verified"` in `data/contributions.json`; `contributions-display.js` then stops showing it in the red UNVERIFIED box.
+- Encoding: the Worker decodes GitHub's base64 as UTF-8 (`b64ToUtf8`) and re-encodes with `utf8ToB64`; labels are plain ASCII. Older Worker builds decoded with bare `atob()`, which re-encoded every non-ASCII character on each write (cascading mojibake). Redeploy icy-dust from `photos/upload-worker.js` to pick up the fix.

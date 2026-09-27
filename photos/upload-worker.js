@@ -150,12 +150,12 @@ async function handlePhotoUpload(request, env) {
     let prev = "";
     let sha;
     if (existing && existing.content) {
-      prev = atob(existing.content.replace(/\n/g, ""));
+      prev = b64ToUtf8(existing.content);
       sha = existing.sha;
     }
     const metaPayload = {
       message: "Log photo submission " + path,
-      content: btoa(prev + metaLine),
+      content: utf8ToB64(prev + metaLine),
       branch: "main",
     };
     if (sha) metaPayload.sha = sha;
@@ -340,7 +340,7 @@ async function handleGenealogyVitals(request, env) {
   const entry = {
     id: payload.id || crypto.randomUUID(),
     status: "unverified",
-    label: "UNVERIFIED — family submission (not Crystal/William FACT until promoted)",
+    label: "UNVERIFIED - family submission (not FACT until William promotes)", // ASCII only
     person_slug: personSlug,
     person_name: payload.person_name || "",
     page_url: payload.page_url || "",
@@ -387,12 +387,24 @@ async function mergeContribution(repo, personSlug, patch, token) {
   if (!Array.isArray(data[personSlug].vitals)) data[personSlug].vitals = [];
   if (!Array.isArray(data[personSlug].portraits)) data[personSlug].portraits = [];
   if (patch.vitals) data[personSlug].vitals = data[personSlug].vitals.concat(patch.vitals);
+  // Self-heal: any stored label with non-ASCII (old mojibake) is reset to plain ASCII.
+  Object.keys(data).forEach(function (k) {
+    const blk = data[k];
+    if (!blk || !Array.isArray(blk.vitals)) return;
+    blk.vitals.forEach(function (v) {
+      if (v && typeof v.label === "string" && /[^\x00-\x7f]/.test(v.label)) {
+        v.label = v.status === "verified"
+          ? "VERIFIED - promoted to FACT by William"
+          : "UNVERIFIED - family submission (not FACT until William promotes)";
+      }
+    });
+  });
   if (patch.portraits) data[personSlug].portraits = data[personSlug].portraits.concat(patch.portraits);
 
   const sha = existing && existing.sha ? existing.sha : null;
   const putBody = {
     message: "Genealogy contributions update: " + personSlug,
-    content: btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2) + "\n"))),
+    content: utf8ToB64(JSON.stringify(data, null, 2) + "\n"),
     branch: "main",
   };
   if (sha) putBody.sha = sha;
@@ -420,7 +432,7 @@ async function mergeContribution(repo, personSlug, patch, token) {
 async function readExistingText(existing, token) {
   if (existing.content && existing.encoding === "base64") {
     try {
-      return atob(existing.content.replace(/\n/g, ""));
+      return b64ToUtf8(existing.content);
     } catch {
       return "";
     }
@@ -443,7 +455,7 @@ async function appendJsonl(repo, path, line, token, message) {
   let prev = "";
   let sha;
   if (existing && existing.content) {
-    prev = atob(existing.content.replace(/\n/g, ""));
+    prev = b64ToUtf8(existing.content);
     sha = existing.sha;
   } else if (existing && existing.download_url) {
     const res = await fetch(existing.download_url, {
@@ -458,7 +470,7 @@ async function appendJsonl(repo, path, line, token, message) {
   }
   const metaPayload = {
     message: message || ("Append " + path),
-    content: btoa(unescape(encodeURIComponent(prev + line))),
+    content: utf8ToB64(prev + line),
     branch: "main",
   };
   if (sha) metaPayload.sha = sha;
@@ -551,7 +563,7 @@ async function handleAlbumNotes(request, env) {
   const sha = existing && existing.sha ? existing.sha : null;
   notes.push(note);
 
-  const contentB64 = btoa(unescape(encodeURIComponent(JSON.stringify(notes, null, 2) + "\n")));
+  const contentB64 = utf8ToB64(JSON.stringify(notes, null, 2) + "\n");
   const putBody = {
     message: "Add album note on " + photoId + " by " + name,
     content: contentB64,
@@ -587,7 +599,7 @@ async function decodeNotesPayload(existing, token) {
   let raw = "";
   if (existing.content && existing.encoding === "base64") {
     try {
-      raw = atob(existing.content.replace(/\n/g, ""));
+      raw = b64ToUtf8(existing.content);
     } catch {
       raw = "";
     }
@@ -675,4 +687,23 @@ function chunk(bytes) {
     out.push(String.fromCharCode.apply(null, bytes.subarray(i, i + size)));
   }
   return out.join("");
+}
+
+/* UTF-8-safe base64 helpers. GitHub's contents API returns base64 of UTF-8 bytes;
+ * atob() alone yields one Latin-1 char per byte, and re-encoding that with
+ * encodeURIComponent double-encodes every non-ASCII char on each write
+ * (the cascading "Ã¢Â€Â”" mojibake in contributions.json / notes.json). */
+function b64ToUtf8(b64) {
+  const bin = atob(String(b64 || "").replace(/\n/g, ""));
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return new TextDecoder("utf-8").decode(bytes);
+}
+function utf8ToB64(str) {
+  const bytes = new TextEncoder().encode(String(str));
+  let bin = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) {
+    bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+  }
+  return btoa(bin);
 }
