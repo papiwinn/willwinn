@@ -2629,11 +2629,11 @@
     "id": "john-holden",
     "name": "John Daniel Holden",
     "short_name": "John Holden",
-    "lifespan": "1845 \u2013 1902 (per FS tree)",
+    "lifespan": "3 Apr 1845 \u2013 10 Nov 1902 (per FS tree)",
     "rel": "FACT: father of William Martin Holden (1918 marriage record).",
     "bio_or_step": "bio",
-    "blurb": "William Martin Holden\u2019s father (FACT, 1918 marriage record, cert. no. 21, p. 193). Dates 1845 \u2013 1902 per FS tree (HYPOTHESIS). Places, parents, burial not found.",
-    "narrative": "John Holden is named as William Martin Holden\u2019s father in his marriage to Agnes Corbet, 6 Nov 1918, Medway, Norfolk Co., MA (Massachusetts State Vital Records 1638-1927, cert. no. 21, p. 193). Named \u201cJohn Holden\u201d in the 1918 record; middle name Daniel per FS tree. Dates 1845 \u2013 1902 per FS tree GZV2-JZT (HYPOTHESIS). Places, parents and burial NOT FOUND.",
+    "blurb": "William Martin Holden\u2019s father (FACT, 1918 marriage record, cert. no. 21, p. 193). Born 3 Apr 1845, died 10 Nov 1902 per FS tree GZV2-JZT (HYPOTHESIS); father Daniel John Holden per FS tree (HYPOTHESIS). Places, mother, burial not found.",
+    "narrative": "John Holden is named as William Martin Holden\u2019s father in his marriage to Agnes Corbet, 6 Nov 1918, Medway, Norfolk Co., MA (Massachusetts State Vital Records 1638-1927, cert. no. 21, p. 193), with his wife Mary Sinclaire. Named \u201cJohn Holden\u201d in the 1918 record; middle name Daniel per FS tree. Born 3 Apr 1845, died 10 Nov 1902 per FS tree GZV2-JZT (42 sources, High quality; HYPOTHESIS); places pending (NOT FOUND). The FS tree records no marriage event. Father Daniel John Holden per FS tree GZBW-TS3 (HYPOTHESIS); mother and burial NOT FOUND.",
     "timeline": [
       {
         "t": "Name",
@@ -2641,8 +2641,18 @@
         "status": "fact"
       },
       {
-        "t": "Dates",
-        "d": "1845 \u2013 1902 (FS tree GZV2-JZT)",
+        "t": "Born",
+        "d": "3 Apr 1845 (FS tree GZV2-JZT)",
+        "status": "need"
+      },
+      {
+        "t": "Wife",
+        "d": "Mary Sinclair(e) (1918 marriage record); FS tree records no marriage event",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "10 Nov 1902 (FS tree GZV2-JZT)",
         "status": "need"
       },
       {
@@ -2652,12 +2662,12 @@
       },
       {
         "t": "Places",
-        "d": "NOT FOUND",
+        "d": "NOT FOUND (pending)",
         "status": "need"
       },
       {
         "t": "Parents",
-        "d": "NOT FOUND",
+        "d": "Father Daniel John Holden (FS tree GZBW-TS3, HYPOTHESIS); mother NOT FOUND",
         "status": "need"
       },
       {
@@ -2679,9 +2689,52 @@
         "href": "https://www.familysearch.org/tree/person/details/L4ZR-YYJ"
       },
       {
-        "label": "FamilySearch Family Tree GZV2-JZT",
+        "label": "FamilySearch Family Tree GZV2-JZT (42 sources, High quality)",
         "status": "need",
         "href": "https://www.familysearch.org/tree/person/details/GZV2-JZT"
+      },
+      {
+        "label": "FamilySearch Family Tree GZBW-TS3 (Daniel John Holden, father)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/GZBW-TS3"
+      }
+    ]
+  },
+  {
+    "id": "daniel-john-holden",
+    "name": "Daniel John Holden",
+    "short_name": "Daniel John Holden",
+    "lifespan": "deceased \u00b7 dates not found",
+    "rel": "HYPOTHESIS: father of John Daniel Holden (FS tree).",
+    "bio_or_step": "bio",
+    "blurb": "John Daniel Holden\u2019s father per FS tree GZBW-TS3 (HYPOTHESIS): deceased, no dates; no spouse recorded.",
+    "narrative": "John Daniel Holden\u2019s father per FamilySearch Family Tree GZBW-TS3 (HYPOTHESIS): deceased, no dates, no spouse recorded. Everything else NOT FOUND.",
+    "timeline": [
+      {
+        "t": "Son",
+        "d": "John Daniel Holden (1845\u20131902, per FS tree)",
+        "status": "need"
+      },
+      {
+        "t": "Birth, death, spouse, parents, burial",
+        "d": "NOT FOUND",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "FamilySearch Family Tree GZBW-TS3",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/GZBW-TS3"
+      },
+      {
+        "label": "FamilySearch Family Tree GZV2-JZT (John Daniel Holden; 42 sources, High quality)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/GZV2-JZT"
+      },
+      {
+        "label": "Crystal\u2019s Holden update (27 Sep 2026)",
+        "status": "fact"
       }
     ]
   },
