@@ -1549,7 +1549,7 @@
     "timeline": [
       {
         "t": "Born",
-        "d": "2 Aug 1923, Milford, Worcester Co., MA (Milford 1923 town report, births p. 287; MA State Vital Records 1638-1927; William)",
+        "d": "2 Aug 1923, Milford, Worcester Co., MA (Milford 1923 town report, births p. 287; MA State Vital Records 1638-1927, cert. no. 269; William)",
         "status": "fact"
       },
       {
@@ -1569,12 +1569,12 @@
       },
       {
         "t": "Father",
-        "d": "William Martin Holden, born and lived in Blackstone, MA (William; Milford 1923 birth entry; MA State Vital Records)",
+        "d": "William Martin Holden, born and lived in Blackstone, MA (William; Milford 1923 birth entry; MA State Vital Records, cert. no. 269)",
         "status": "fact"
       },
       {
         "t": "Mother",
-        "d": "Agnes Corbett, born Eastport, ME (William; Milford 1923 birth entry; MA State Vital Records lists \u201cAgnes Corbett Holden\u201d)",
+        "d": "Agnes Corbett, born Eastport, ME (William; Milford 1923 birth entry; MA State Vital Records, cert. no. 269, \u201cAgnes Corbett Holden\u201d)",
         "status": "fact"
       },
       {
@@ -1585,6 +1585,11 @@
       {
         "t": "Possible sister",
         "d": "Barbara J. (Holden) LaCasse \u2014 HYPOTHESIS, possibly living, name only",
+        "status": "need"
+      },
+      {
+        "t": "Half-sister",
+        "d": "Hazel Eastman Holden (b. 1898, deceased) \u2014 William\u2019s daughter by Florence Augusta Carr (FS tree, HYPOTHESIS)",
         "status": "need"
       },
       {
@@ -1683,7 +1688,7 @@
         "label": "Massachusetts, State Vital Records, 1638-1927 (FamilySearch)",
         "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:6ZMG-8Y7Q",
-        "note": "Elizabeth Jane Holden, 2 Aug 1923; father William M Holden; mother Agnes Corbett Holden"
+        "note": "Elizabeth Jane Holden, 2 Aug 1923, Milford, Worcester Co., MA, cert. no. 269; father William M. Holden; mother Agnes Corbett Holden"
       },
       {
         "label": "Milford Annual Town Report 1923, births for August, p. 287",
@@ -2448,15 +2453,15 @@
     "id": "william-holden",
     "name": "William Martin Holden",
     "short_name": "William M. Holden",
-    "lifespan": "c. 1870 \u00b7 Blackstone, MA \u2013 28 Apr 1951 \u00b7 Hopedale, MA",
+    "lifespan": "21 Sep 1870 (per FS tree) \u00b7 Blackstone, MA \u2013 28 Apr 1951 \u00b7 Hopedale, MA",
     "rel": "Father of Elizabeth Jane (Holden) Barrett. Husband of Agnes C. Corbett.",
     "bio_or_step": "bio",
-    "blurb": "Elizabeth\u2019s father (William FACT). Born Blackstone, MA c. 1870 (date estimated); married Agnes C. Corbett 6 Nov 1918, Medway, MA; son of John Holden & Mary Sinclaire; died 28 Apr 1951, Hopedale, MA.",
-    "narrative": "William Martin Holden (1918 marriage record, FACT), \u201cWilliam M.\u201d on Elizabeth\u2019s 1923 birth records. Born in Blackstone, MA (FACT: 1951 death entry; Elizabeth\u2019s Milford birth entry), about 21 Sep 1870 (HYPOTHESIS, calculated from age at death 80y 7m 7d). Lived in Blackstone (William). Married Agnes C. Corbett 6 Nov 1918, Medway, Norfolk Co., MA. Censuses 1920, 1930, 1940 with Agnes. In Millis the year before 1950; 1950 census: farmer, 41 Mill St., Hopedale, aged 80, with wife Agnes and son William M. Jr. Died 28 Apr 1951, Hopedale, aged 80y 7m 7d (Hopedale town report). Parents John Holden and Mary Sinclaire (FACT, 1918 marriage record, cert. no. 21, p. 193).",
+    "blurb": "Elizabeth\u2019s father (William FACT). Born Blackstone, MA, 21 Sep 1870 (FS tree, HYPOTHESIS strong); married Agnes C. Corbett 6 Nov 1918, Medway, MA; son of John Holden & Mary Sinclaire; died 28 Apr 1951, Hopedale, MA.",
+    "narrative": "William Martin Holden (1918 marriage record, FACT), son of John Holden and Mary Sinclaire (FACT, same record). Born Blackstone, MA (FACT); 21 Sep 1870 per FS tree L4ZR-YYJ (HYPOTHESIS strong; matches age at death 80y 7m 7d). Per FS tree (HYPOTHESIS): Medway 1880; first marriage to Florence Augusta Carr 17 Oct 1894, Holliston; daughter Hazel Eastman Holden (b. 1898); Holliston 1900\u20131910; Medway 1920\u20131940; burial West Medway. Married Agnes C. Corbett 6 Nov 1918, Medway (cert. no. 21, p. 193). 1950 census Hopedale. Died 28 Apr 1951, Hopedale (FACT; FS tree says 1951, Medway \u2014 discrepancy).",
     "timeline": [
       {
         "t": "Born",
-        "d": "c. 21 Sep 1870 (HYPOTHESIS, from age at death); birthplace Blackstone, MA (FACT: 1951 death entry; 1923 Milford birth entry)",
+        "d": "21 Sep 1870 (FS tree, HYPOTHESIS strong; matches age at death); birthplace Blackstone, MA (FACT)",
         "status": "need"
       },
       {
@@ -2465,9 +2470,34 @@
         "status": "fact"
       },
       {
+        "t": "Parents",
+        "d": "John Holden & Mary Sinclaire (1918 marriage record, cert. no. 21, p. 193); FS tree: John Daniel Holden 1845\u20131902, Mary Sinclair d. 1929",
+        "status": "fact"
+      },
+      {
         "t": "Residence",
         "d": "Blackstone, Massachusetts (William)",
         "status": "fact"
+      },
+      {
+        "t": "1880",
+        "d": "Medway, MA (FS tree)",
+        "status": "need"
+      },
+      {
+        "t": "First marriage",
+        "d": "Florence Augusta Carr (b. 1872), 17 Oct 1894, Holliston, Middlesex Co., MA (FS tree)",
+        "status": "need"
+      },
+      {
+        "t": "Daughter",
+        "d": "Hazel Eastman Holden (b. 1898) (FS tree)",
+        "status": "need"
+      },
+      {
+        "t": "1900, 1910",
+        "d": "Holliston, MA (FS tree)",
+        "status": "need"
       },
       {
         "t": "Married",
@@ -2476,12 +2506,12 @@
       },
       {
         "t": "Censuses",
-        "d": "1920, 1930, 1940 with wife Agnes (FamilySearch)",
+        "d": "1920, 1930, 1940 with wife Agnes (FamilySearch); residence Medway per FS tree (HYPOTHESIS)",
         "status": "fact"
       },
       {
         "t": "Child",
-        "d": "Elizabeth Jane Holden, b. 2 Aug 1923, Milford, MA (named father on her birth record)",
+        "d": "Elizabeth Jane Holden, b. 2 Aug 1923, Milford, MA (named father on her birth record, cert. no. 269)",
         "status": "fact"
       },
       {
@@ -2491,13 +2521,18 @@
       },
       {
         "t": "Died",
-        "d": "28 Apr 1951, Hopedale, MA, aged 80y 7m 7d (Hopedale town report p. 34)",
+        "d": "28 Apr 1951, Hopedale, MA, aged 80y 7m 7d (Hopedale town report p. 34); FS tree says 1951, Medway (DISCREPANCY)",
         "status": "fact"
       },
       {
-        "t": "Parents",
-        "d": "John Holden & Mary Sinclaire (1918 marriage record, cert. no. 21, p. 193)",
-        "status": "fact"
+        "t": "Burial",
+        "d": "West Medway, Norfolk Co., MA (FS tree) \u2014 cemetery not named",
+        "status": "need"
+      },
+      {
+        "t": "Siblings (FS tree)",
+        "d": "Mary Agnes (1873\u20131928); John Edmund (1875\u20131876); Edward (1877\u20131943); Margaret Allen (1879\u20131881); Alexander Bancroft (1882\u20131943); Thomas (1884\u20131943)",
+        "status": "need"
       },
       {
         "t": "Research lead",
@@ -2511,21 +2546,27 @@
         "status": "fact"
       },
       {
+        "label": "FamilySearch Family Tree L4ZR-YYJ (25 sources, High quality)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/L4ZR-YYJ",
+        "note": "birth date, residences, first marriage, Hazel, burial, siblings"
+      },
+      {
+        "label": "FamilySearch Family Tree GZV2-JZT (John Daniel Holden) and 9VX2-QPP (Mary Sinclair)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/GZV2-JZT"
+      },
+      {
         "label": "Massachusetts, State Vital Records, 1638-1927 (marriage, cert. no. 21, p. 193)",
         "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:QLKG-DJRM",
         "note": "William Martin Holden \u00d7 Agnes Corbet, 6 Nov 1918, Medway; groom\u2019s parents John Holden & Mary Sinclaire; bride\u2019s parents \u201cJoseph Corbet\u201d & \u201cAddie Rumley\u201d"
       },
       {
-        "label": "FamilySearch Family Tree L4ZR-YYJ",
-        "status": "fact",
-        "href": "https://www.familysearch.org/tree/person/details/L4ZR-YYJ"
-      },
-      {
         "label": "Massachusetts, State Vital Records, 1638-1927 (birth of Elizabeth)",
         "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:6ZMG-8Y7Q",
-        "note": "father William M Holden, 2 Aug 1923"
+        "note": "Elizabeth Jane Holden, 2 Aug 1923, Milford, Worcester Co., MA, cert. no. 269; father William M. Holden; mother Agnes Corbett Holden"
       },
       {
         "label": "Milford Annual Town Report 1923, births p. 287",
@@ -2586,13 +2627,13 @@
   },
   {
     "id": "john-holden",
-    "name": "John Holden",
+    "name": "John Daniel Holden",
     "short_name": "John Holden",
-    "lifespan": "dates not found",
+    "lifespan": "1845 \u2013 1902 (per FS tree)",
     "rel": "FACT: father of William Martin Holden (1918 marriage record).",
     "bio_or_step": "bio",
-    "blurb": "William Martin Holden\u2019s father (FACT, 1918 marriage record, cert. no. 21, p. 193). Dates, places, parents, burial not found.",
-    "narrative": "John Holden is named as William Martin Holden\u2019s father in his marriage to Agnes Corbet, 6 Nov 1918, Medway, Norfolk Co., MA (Massachusetts State Vital Records 1638-1927, cert. no. 21, p. 193). Dates, places, parents and burial NOT FOUND.",
+    "blurb": "William Martin Holden\u2019s father (FACT, 1918 marriage record, cert. no. 21, p. 193). Dates 1845 \u2013 1902 per FS tree (HYPOTHESIS). Places, parents, burial not found.",
+    "narrative": "John Holden is named as William Martin Holden\u2019s father in his marriage to Agnes Corbet, 6 Nov 1918, Medway, Norfolk Co., MA (Massachusetts State Vital Records 1638-1927, cert. no. 21, p. 193). Named \u201cJohn Holden\u201d in the 1918 record; middle name Daniel per FS tree. Dates 1845 \u2013 1902 per FS tree GZV2-JZT (HYPOTHESIS). Places, parents and burial NOT FOUND.",
     "timeline": [
       {
         "t": "Name",
@@ -2600,12 +2641,17 @@
         "status": "fact"
       },
       {
-        "t": "Child",
-        "d": "William Martin Holden (c. 1870 \u2013 1951)",
+        "t": "Dates",
+        "d": "1845 \u2013 1902 (FS tree GZV2-JZT)",
+        "status": "need"
+      },
+      {
+        "t": "Children",
+        "d": "William Martin Holden (1870\u20131951, FACT); Mary Agnes (1873\u20131928); John Edmund (1875\u20131876); Edward (1877\u20131943); Margaret Allen (1879\u20131881); Alexander Bancroft (1882\u20131943); Thomas (1884\u20131943) (FS tree)",
         "status": "fact"
       },
       {
-        "t": "Dates and places",
+        "t": "Places",
         "d": "NOT FOUND",
         "status": "need"
       },
@@ -2628,21 +2674,26 @@
         "note": "William Martin Holden \u00d7 Agnes Corbet, 6 Nov 1918, Medway; groom\u2019s parents John Holden & Mary Sinclaire; bride\u2019s parents \u201cJoseph Corbet\u201d & \u201cAddie Rumley\u201d"
       },
       {
-        "label": "FamilySearch Family Tree L4ZR-YYJ (William Martin Holden)",
-        "status": "fact",
+        "label": "FamilySearch Family Tree L4ZR-YYJ (25 sources, High quality)",
+        "status": "need",
         "href": "https://www.familysearch.org/tree/person/details/L4ZR-YYJ"
+      },
+      {
+        "label": "FamilySearch Family Tree GZV2-JZT",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/GZV2-JZT"
       }
     ]
   },
   {
     "id": "mary-sinclaire-holden",
-    "name": "Mary Sinclaire",
+    "name": "Mary Sinclair(e)",
     "short_name": "Mary Sinclaire",
-    "lifespan": "dates not found",
+    "lifespan": "d. 1929 (per FS tree)",
     "rel": "FACT: mother of William Martin Holden (1918 marriage record).",
     "bio_or_step": "bio",
-    "blurb": "William Martin Holden\u2019s mother (FACT, 1918 marriage record, cert. no. 21, p. 193). Dates, places, parents, burial not found.",
-    "narrative": "Mary Sinclaire is named as William Martin Holden\u2019s mother in his marriage to Agnes Corbet, 6 Nov 1918, Medway, Norfolk Co., MA (Massachusetts State Vital Records 1638-1927, cert. no. 21, p. 193). Dates, places, parents and burial NOT FOUND.",
+    "blurb": "William Martin Holden\u2019s mother (FACT, 1918 marriage record, cert. no. 21, p. 193). Dates d. 1929 per FS tree (HYPOTHESIS). Places, parents, burial not found.",
+    "narrative": "Mary Sinclaire is named as William Martin Holden\u2019s mother in his marriage to Agnes Corbet, 6 Nov 1918, Medway, Norfolk Co., MA (Massachusetts State Vital Records 1638-1927, cert. no. 21, p. 193). Spelled \u201cSinclaire\u201d in the 1918 record (main form); \u201cSinclair\u201d in the FS tree. Dates d. 1929 per FS tree 9VX2-QPP (HYPOTHESIS). Places, parents and burial NOT FOUND.",
     "timeline": [
       {
         "t": "Name",
@@ -2650,12 +2701,17 @@
         "status": "fact"
       },
       {
-        "t": "Child",
-        "d": "William Martin Holden (c. 1870 \u2013 1951)",
+        "t": "Dates",
+        "d": "d. 1929 (FS tree 9VX2-QPP)",
+        "status": "need"
+      },
+      {
+        "t": "Children",
+        "d": "William Martin Holden (1870\u20131951, FACT); Mary Agnes (1873\u20131928); John Edmund (1875\u20131876); Edward (1877\u20131943); Margaret Allen (1879\u20131881); Alexander Bancroft (1882\u20131943); Thomas (1884\u20131943) (FS tree)",
         "status": "fact"
       },
       {
-        "t": "Dates and places",
+        "t": "Places",
         "d": "NOT FOUND",
         "status": "need"
       },
@@ -2678,9 +2734,95 @@
         "note": "William Martin Holden \u00d7 Agnes Corbet, 6 Nov 1918, Medway; groom\u2019s parents John Holden & Mary Sinclaire; bride\u2019s parents \u201cJoseph Corbet\u201d & \u201cAddie Rumley\u201d"
       },
       {
-        "label": "FamilySearch Family Tree L4ZR-YYJ (William Martin Holden)",
-        "status": "fact",
+        "label": "FamilySearch Family Tree L4ZR-YYJ (25 sources, High quality)",
+        "status": "need",
         "href": "https://www.familysearch.org/tree/person/details/L4ZR-YYJ"
+      },
+      {
+        "label": "FamilySearch Family Tree 9VX2-QPP",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/9VX2-QPP"
+      }
+    ]
+  },
+  {
+    "id": "florence-augusta-carr",
+    "name": "Florence Augusta Carr",
+    "short_name": "Florence Augusta Carr",
+    "lifespan": "b. 1872 \u00b7 deceased",
+    "rel": "HYPOTHESIS: first wife of William Martin Holden; mother of Hazel Eastman Holden.",
+    "bio_or_step": "bio",
+    "blurb": "William Martin Holden\u2019s first wife per FS tree (HYPOTHESIS): b. 1872, deceased; married 17 Oct 1894, Holliston, Middlesex Co., MA; daughter Hazel Eastman Holden (b. 1898).",
+    "narrative": "William Martin Holden\u2019s first wife per FS tree (HYPOTHESIS): b. 1872, deceased; married 17 Oct 1894, Holliston, Middlesex Co., MA; daughter Hazel Eastman Holden (b. 1898). Everything else NOT FOUND.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "1872 (FS tree); deceased",
+        "status": "need"
+      },
+      {
+        "t": "Married",
+        "d": "William Martin Holden, 17 Oct 1894, Holliston, Middlesex Co., MA (FS tree)",
+        "status": "need"
+      },
+      {
+        "t": "Daughter",
+        "d": "Hazel Eastman Holden (b. 1898)",
+        "status": "need"
+      },
+      {
+        "t": "Birthplace, death, burial, parents",
+        "d": "NOT FOUND",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "FamilySearch Family Tree L4ZR-YYJ (William Martin Holden; 25 sources, High quality)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/L4ZR-YYJ"
+      },
+      {
+        "label": "Crystal\u2019s Holden update (27 Sep 2026)",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "hazel-eastman-holden",
+    "name": "Hazel Eastman Holden",
+    "short_name": "Hazel Eastman Holden",
+    "lifespan": "b. 1898 \u00b7 deceased",
+    "rel": "HYPOTHESIS: daughter of William Martin Holden and Florence Augusta Carr; half-sister of Elizabeth Jane (Holden) Barrett.",
+    "bio_or_step": "bio",
+    "blurb": "Elizabeth\u2019s half-sister per FS tree (HYPOTHESIS): b. 1898, deceased; daughter of William Martin Holden and Florence Augusta Carr.",
+    "narrative": "Elizabeth\u2019s half-sister per FS tree (HYPOTHESIS): b. 1898, deceased; daughter of William Martin Holden and Florence Augusta Carr. Everything else NOT FOUND.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "1898 (FS tree); deceased",
+        "status": "need"
+      },
+      {
+        "t": "Parents",
+        "d": "William Martin Holden & Florence Augusta Carr (FS tree)",
+        "status": "need"
+      },
+      {
+        "t": "Birthplace, marriage, death, burial",
+        "d": "NOT FOUND",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "FamilySearch Family Tree L4ZR-YYJ (William Martin Holden; 25 sources, High quality)",
+        "status": "need",
+        "href": "https://www.familysearch.org/tree/person/details/L4ZR-YYJ"
+      },
+      {
+        "label": "Crystal\u2019s Holden update (27 Sep 2026)",
+        "status": "fact"
       }
     ]
   },
@@ -2767,7 +2909,7 @@
         "label": "Massachusetts, State Vital Records, 1638-1927 (birth of Elizabeth)",
         "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:6ZMG-8Y7Q",
-        "note": "mother Agnes Corbett Holden"
+        "note": "Elizabeth Jane Holden, 2 Aug 1923, Milford, Worcester Co., MA, cert. no. 269; father William M. Holden; mother Agnes Corbett Holden"
       },
       {
         "label": "Milford Annual Town Report 1923, births p. 287",
