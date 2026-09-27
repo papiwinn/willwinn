@@ -1541,21 +1541,16 @@
     "id": "elizabeth-jane-holden",
     "name": "Elizabeth Jane \u201cBetty\u201d Holden",
     "short_name": "Elizabeth Jane Holden",
-    "lifespan": "2 Aug 1923 \u2013 3 Nov 2015 \u00b7 Millis, MA",
+    "lifespan": "2 Aug 1923 \u00b7 Milford, MA \u2013 3 Nov 2015 \u00b7 Millis, MA",
     "rel": "Mother of Robyn Louise Barrett. Wife of Richard Clinton Barrett.",
     "bio_or_step": "need",
-    "blurb": "Robyn\u2019s mother (William FACT). Died 3 Nov 2015, Millis, MA, aged 92. Birthplace not confirmed (Eastport, ME or Blackstone, MA). Parents William Holden & Agnes Corbett (William FACT).",
-    "narrative": "Elizabeth Jane \u201cBetty\u201d Holden, born 2 Aug 1923 (William FACT). Mother of Robyn Louise Barrett; wife of Richard Clinton Barrett. Parents William Holden (lived in Blackstone, MA) and Agnes Corbett (born Eastport, ME) \u2014 FACT (William); her mother\u2019s Eastport birth may explain the family belief. Married Richard C. Barrett 13 Oct 1945, Medway (she was of Medway). Millis: treasurer 1948; ceramics teacher, Council on Aging 1987\u201391. Died 3 Nov 2015, Millis, MA, aged 92 (William FACT; Millis 2015 report). Birthplace not confirmed (Eastport, ME or Blackstone, MA). Burial and obituary not found.",
+    "blurb": "Robyn\u2019s mother (William FACT). Died 3 Nov 2015, Millis, MA, aged 92. Born 2 Aug 1923, Milford, MA (William FACT). Parents William Holden & Agnes Corbett (William FACT).",
+    "narrative": "Elizabeth Jane \u201cBetty\u201d Holden, born 2 Aug 1923, Milford, Worcester Co., MA (William FACT; 1950 census: born Massachusetts). Mother of Robyn Louise Barrett; wife of Richard Clinton Barrett. Parents William Holden (lived in Blackstone, MA) and Agnes Corbett (born Eastport, ME) \u2014 FACT (William). Married Richard C. Barrett 13 Oct 1945, Medway (she was of Medway). Millis: treasurer 1948; ceramics teacher, Council on Aging 1987\u201391. Died 3 Nov 2015, Millis, MA, aged 92 (William FACT; Millis 2015 report). Burial and obituary not found.",
     "timeline": [
       {
         "t": "Born",
-        "d": "2 Aug 1923 (William)",
+        "d": "2 Aug 1923, Milford, Worcester Co., MA (William; supported by 1950 census, born Massachusetts)",
         "status": "fact"
-      },
-      {
-        "t": "Birthplace",
-        "d": "NOT CONFIRMED \u2014 Eastport, ME or Blackstone, MA; 1950 census says Massachusetts (supports Blackstone)",
-        "status": "need"
       },
       {
         "t": "Nickname",
@@ -1667,6 +1662,12 @@
         "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:6F3W-9XL1",
         "note": "Richard C, 27, fireman at the State Hospital, mother b. Nova Scotia; wife Elizabeth J, 26, b. Massachusetts"
+      },
+      {
+        "label": "William LaVaughan Winn, family record (27 Sep 2026)",
+        "status": "fact",
+        "note": "born 2 Aug 1923, Milford, Worcester Co., MA; supported by 1950 US census (born Massachusetts)",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:6F3W-9XL1"
       }
     ]
   },
