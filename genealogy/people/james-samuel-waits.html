@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>James Samuel Waits – Family genealogy</title>
+    <style>
+      :root { --accent: #e94560; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: system-ui, -apple-system, sans-serif;
+        color: white;
+        padding: 40px 20px 60px;
+      }
+      .container { max-width: 920px; margin: 0 auto; }
+      h1 { font-size: 2rem; margin: 0 0 8px; font-weight: 700; }
+      h2 { font-size: 1.25rem; margin: 28px 0 12px; color: var(--accent); }
+      h3 { font-size: 1.05rem; margin: 0 0 8px; }
+      .subtitle { color: var(--accent); font-size: 1.05rem; margin-bottom: 16px; }
+      .intro { opacity: 0.88; line-height: 1.55; margin: 0 0 28px; max-width: 40rem; }
+      a { color: var(--accent); }
+      a:hover { color: #ff6b6b; }
+      .card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 18px 18px 16px;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 999px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+      }
+      .tag.fact { background: rgba(46, 204, 113, 0.18); border: 1px solid rgba(46, 204, 113, 0.45); color: #a8e6c1; }
+      .tag.need { background: rgba(233, 69, 96, 0.18); border: 1px solid rgba(233, 69, 96, 0.45); color: #ffb3c0; }
+      .household {
+        display: grid;
+        gap: 12px;
+        margin: 0 0 8px;
+      }
+      .household .parents, .household .kids {
+        display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch;
+      }
+      .person-chip {
+        flex: 1 1 160px;
+        background: rgba(0,0,0,0.22);
+        border: 1px solid rgba(255,255,255,0.14);
+        border-radius: 10px;
+        padding: 12px 14px;
+        text-decoration: none;
+        color: inherit;
+      }
+      .person-chip:hover { border-color: var(--accent); }
+      .person-chip .role { font-size: 0.75rem; color: var(--accent); margin-bottom: 4px; }
+      .person-chip .name { font-weight: 650; }
+      .person-chip .meta { font-size: 0.82rem; opacity: 0.7; margin-top: 4px; }
+      .connector {
+        text-align: center; opacity: 0.55; font-size: 0.85rem; margin: 4px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 14px;
+      }
+      .feature-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 16px;
+        min-height: 120px;
+      }
+      .feature-card:hover { border-color: var(--accent); }
+      .feature-card .lifespan { font-size: 0.85rem; opacity: 0.7; margin: 4px 0 10px; }
+      .feature-card p { font-size: 0.9rem; opacity: 0.85; margin: 0; line-height: 1.45; }
+      .strip {
+        display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;
+      }
+      .strip a.btn {
+        display: inline-block;
+        padding: 12px 18px;
+        background: var(--accent);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      .strip a.btn.secondary {
+        background: transparent;
+        border: 2px solid var(--accent);
+      }
+      .strip a.btn:hover { background: #ff6b6b; color: white; }
+      .strip a.btn.secondary:hover { background: rgba(233,69,96,0.15); }
+      .note { font-size: 0.88rem; opacity: 0.75; margin-top: 12px; line-height: 1.45; }
+      .photo-ph {
+        width: 100%;
+        max-width: 280px;
+        aspect-ratio: 4/5;
+        background: rgba(0,0,0,0.35);
+        border: 1px dashed rgba(255,255,255,0.25);
+        border-radius: 10px;
+        display: flex; align-items: center; justify-content: center;
+        color: rgba(255,255,255,0.45);
+        font-size: 0.9rem;
+        margin: 0 0 18px;
+      }
+      .timeline { margin: 0; padding-left: 1.2rem; }
+      .timeline li { margin: 0 0 8px; line-height: 1.45; }
+      .sources { margin: 0; padding-left: 1.2rem; }
+      .sources li { margin: 0 0 8px; line-height: 1.45; opacity: 0.9; }
+      .back { display: inline-block; margin-bottom: 22px; color: var(--accent); text-decoration: none; font-weight: 500; }
+      .back:hover { text-decoration: underline; }
+      .status-row { margin: 0 0 14px; }
+      footer.colophon {
+        margin-top: 40px;
+        font-size: 0.82rem;
+        opacity: 0.55;
+      }
+
+    
+      .portrait {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 0 18px;
+      }
+      .portrait img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(0,0,0,0.35);
+      }
+
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
+    </style>
+  </head>
+                <body>
+    <div class="container">
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="../">← Genealogy hub</a> <a class="tree-btn" href="../tree.html">🌳 Back to tree</a></nav>
+      <h1>James Samuel “J. S.” Waits</h1>
+      <div class="subtitle">c. 1830/31 – after 1900 · Newberry Co., SC → Lauderdale Co., TN</div>
+      <div class="status-row"><span class="tag fact">FACT</span> father of J. C. Waits per Find a Grave (via William) · <span class="tag need">HYPOTHESIS (strong)</span> identification with the census “J S Waits”</div>
+      <div class="photo-ph">Photo placeholder</div>
+      <p class="intro"><strong>Relation:</strong> Father of <a href="james-clayborn-waits.html">James Clayborn Waits</a> (linked on J. C.’s Find a Grave memorial #200803433); husband of <a href="almenia-earhart-waits.html">Almenia Earhart Waits</a>. William’s 2nd-great-grandfather.</p>
+      <p class="intro">In the censuses he is “J S Wates” (1850), “J S Waits” (1860), “Samuel Waits” (1869, 1870) and “J S Waits” (1900) (<span class="tag fact">FACT (index)</span>). The initials match Find a Grave’s “James Samuel”; with the wife’s name and J. C.’s household beside his in 1900, the identification is <span class="tag need">HYPOTHESIS (strong)</span>.</p>
+      <p class="intro"><a href="james-clayborn-waits.html">→ James Clayborn Waits</a> · <a href="almenia-earhart-waits.html">→ Almenia Earhart Waits</a> · <a href="lovy-waits-simpson.html">→ Lovy</a></p>
+      <h2>Timeline</h2>
+      <ul class="timeline">
+          <li><span class="tag fact">FACT (index)</span> <strong>Born:</strong> about 1830–1831, South Carolina (Newberry Co.) — 1850 abt 1831; 1860 abt 1831; 1870 abt 1831; 1900 b. 1830</li>
+          <li><span class="tag fact">FACT (index)</span> <strong>1850:</strong> Newberry Co., SC — “J S Wates” (b. ~1831), in the household that follows Mark and Mahala Wates</li>
+          <li><span class="tag fact">FACT</span> <strong>Wife:</strong> <a href="almenia-earhart-waits.html">Almenia</a> — “Almena” (1860), “Almma” (1870), “A E” (1900). Marriage (between 1850 and about 1857) <span class="tag need">NOT FOUND</span></li>
+          <li><span class="tag fact">FACT (index)</span> <strong>1860 and 1870:</strong> Newberry Co., SC, with Almena/Almma</li>
+          <li><span class="tag fact">FACT</span> <strong>1869:</strong> SC state census, Newberry Township No. 9 — “Samuel Waits”, listed between Mark Waits and Drucilla Waits</li>
+          <li><span class="tag fact">FACT</span> <strong>Civil War:</strong> “Samuel Waits, discharged in camp”, Company H, Holcombe Legion, SC (Capt. James M. Maffett) — the entry exists; <span class="tag need">HYPOTHESIS</span> that it is him (Bluford and Drayton Waits of the same Newberry family served in the same company)</li>
+          <li><span class="tag need">HYPOTHESIS</span> <strong>Move to Tennessee:</strong> between 1870 and 1900, probably the 1870s (J. C. was in Lauderdale “as a boy”, per the 1978 Parker memoir)</li>
+          <li><span class="tag fact">FACT (index)</span> <strong>1900:</strong> Lauderdale Co., TN — “J S Waits” (b. 1830) and “A E” (b. 1832), indexed immediately before J C Waits’s household; <span class="tag need">HYPOTHESIS (strong)</span> that this places the parents next door to their son</li>
+          <li><span class="tag fact">FACT</span> <strong>Died:</strong> after the June 1900 census; <span class="tag need">HYPOTHESIS</span> probably before 1910 (his son indexed as “James Waits Jr” in 1910). Date and place <span class="tag need">NOT FOUND</span></li>
+          <li><span class="tag need">NOT FOUND</span> <strong>Burial</strong> — candidates Maplewood (Ripley) or Green’s Chapel/Halls area. <span class="tag need">CONFLICT</span> J. C.’s Find a Grave memorial (per William) links him as James Samuel Waits, 1830–1910, Maplewood; Crystal could not open the memorial and found no record of the death or burial</li>
+      </ul>
+      <h2>Children</h2>
+      <ul class="timeline">
+          <li><span class="tag need">HYPOTHESIS</span> Ellen (b. ~1857; in his 1860 household)</li>
+          <li><span class="tag fact">FACT</span> <a href="james-clayborn-waits.html">James Clayborn Waits</a> (Apr 1864 – 20 Dec 1944) — Find a Grave parent link; <span class="tag need">HYPOTHESIS</span> the 1870 “Clayborn Waits”, b. ~1863</li>
+          <li><span class="tag need">HYPOTHESIS</span> Martha (b. ~1867; a Martha Waits, 1870 Newberry, two-parent household)</li>
+          <li><span class="tag need">HYPOTHESIS</span> <strong>Love L. / “Louise Love” Waits Ray</strong> (b. ~1870) — probable daughter; married W. H. Ray 20 Sep 1892, Lauderdale; the 1900 “L L Ray” b. 1870 is indexed four entries before J S Waits. Her sons Knox Evander Ray (1895–1977) and Wesley Harrison Ray (1897–1973) are buried at Maplewood. Carrie <em>Love</em> was probably named for her</li>
+          <li><span class="tag need">HYPOTHESIS (strong)</span> <strong>Josie Waits Gaines</strong> (13 Dec 1873 – 13 Jan 1968) — probable daughter. <span class="tag fact">FACT</span> her funeral record names her father as “Samuel WAITS”; married William Monroe Gaines; Green’s Chapel Methodist; buried Halls. The 1900 “M J Gains” b. 1873 is indexed two entries before J S Waits</li>
+      </ul>
+      <h2>Research leads (not on the tree)</h2>
+      <p class="note">These stay <strong>Unknown</strong> on the tree until a record states the relationship.</p>
+      <ul class="timeline">
+          <li><span class="tag need">HYPOTHESIS</span> <strong>Parents — Mark Waits / Waites (c. 1800 – after 1870) and Mahala (c. 1810 – after 1870)</strong>, Newberry Co., SC. <span class="tag fact">FACT (index)</span> “Mark Wates” (b. ~1800) and “Mahala” (b. ~1810) are indexed in Newberry in 1850 immediately before “J S Wates”; again in 1860 (“Mark Waits”/“Mahala”) and 1870. In 1869 “Mark Waits” is listed just before “Samuel Waits” in Township No. 9. <span class="tag fact">FACT</span> A Mark Waites was clerk of <strong>Bethel Baptist Church</strong> (Newberry Co.) until 1848. <span class="tag need">HYPOTHESIS</span> that they are J. S.’s parents — other Newberry Waits households in 1850: William (b. ~1797) &amp; Rosanna; Samuel (b. ~1772) &amp; Rosanna; Benjamin (b. ~1805) &amp; Sarah</li>
+          <li><span class="tag need">need-more</span> NARA M267 service record (Holcombe Legion); 1880 census; 1910 Lauderdale census (Almenia as widow?); Green’s Chapel/Halls and Maplewood cemetery listings; open Find a Grave in a normal browser</li>
+      </ul>
+      <h2>Sources &amp; references</h2>
+      <ul class="sources">
+          <li><span class="tag fact">FACT</span> Find a Grave #200803433 James Clayborn Waits (parent links, per William; not opened by Crystal) — <a href="https://www.findagrave.com/memorial/200803433/james_clayborn-waits">https://www.findagrave.com/memorial/200803433/james_clayborn-waits</a></li>
+          <li><span class="tag fact">FACT (index)</span> 1850 census index, Newberry SC (coll. 8054, record 5839505) — <a href="https://www.ancestry.com/search/collections/8054?name=_Wates&name_x=_1&residence=_south+carolina-usa_43">https://www.ancestry.com/search/collections/8054?name=_Wates&name_x=_1&residence=_south+carolina-usa_43</a></li>
+          <li><span class="tag fact">FACT (index)</span> 1860 census index, Newberry SC (coll. 7667, records 18818040–18818042) — <a href="https://www.ancestry.com/search/collections/7667?name=_Waits&name_x=_1&residence=_newberry-south+carolina-usa_2427">https://www.ancestry.com/search/collections/7667?name=_Waits&name_x=_1&residence=_newberry-south+carolina-usa_2427</a></li>
+          <li><span class="tag fact">FACT</span> 1869 SC state census, Newberry Twp 9 (Genealogy Trails) — <a href="https://www.genealogytrails.com/scar/newberry/territorial_census/1869nbytwp9.htm">https://www.genealogytrails.com/scar/newberry/territorial_census/1869nbytwp9.htm</a></li>
+          <li><span class="tag fact">FACT (index)</span> 1870 census index, Newberry SC (coll. 7163, records 10058515–10058516) — <a href="https://www.ancestry.com/search/collections/7163?name=_Waits&name_x=_1&residence=_newberry-south+carolina-usa_2427">https://www.ancestry.com/search/collections/7163?name=_Waits&name_x=_1&residence=_newberry-south+carolina-usa_2427</a></li>
+          <li><span class="tag fact">FACT (index)</span> 1900 census index, Lauderdale TN (coll. 7602, records 54218776–54218777) — <a href="https://www.ancestry.com/search/collections/7602?name=_Waits&name_x=_1&residence=_tennessee-usa_45&keyword=Lauderdale">https://www.ancestry.com/search/collections/7602?name=_Waits&name_x=_1&residence=_tennessee-usa_45&keyword=Lauderdale</a></li>
+          <li><span class="tag fact">FACT</span> Annals of Newberry (O’Neall &amp; Chapman, 1892), p. 429 (Holcombe Legion Co. H) — <a href="https://archive.org/details/annalsofnewberry01onea">https://archive.org/details/annalsofnewberry01onea</a></li>
+          <li><span class="tag fact">FACT</span> 1961–70 funeral home records (Josie Gaines) — <a href="https://tngenweb.org/lauderdale/2022/02/01/1961-1970-funeral-home-records/">https://tngenweb.org/lauderdale/2022/02/01/1961-1970-funeral-home-records/</a></li>
+          <li><span class="tag fact">FACT</span> Jan 1968 obituaries (Josie Gaines) — <a href="https://www.tngenweb.org/lauderdale-old/obits/jan1968obits.htm">https://www.tngenweb.org/lauderdale-old/obits/jan1968obits.htm</a></li>
+          <li><span class="tag fact">FACT</span> Marriages 1886–1893 (Ray × Waits) — <a href="https://tngenweb.org/lauderdale/2022/01/31/marriages-1886-1893-groom-surnames-starting-with-o-y/">https://tngenweb.org/lauderdale/2022/01/31/marriages-1886-1893-groom-surnames-starting-with-o-y/</a></li>
+          <li><span class="tag fact">FACT</span> 1971–80 funeral home records (Ray sons) — <a href="https://tngenweb.org/lauderdale/2022/02/01/1971-1980-funeral-home-records-ripley-tn/">https://tngenweb.org/lauderdale/2022/02/01/1971-1980-funeral-home-records-ripley-tn/</a></li>
+          <li><span class="tag fact">FACT</span> 1978 Parker memoir — <a href="https://tngenweb.org/lauderdale/2022/02/04/1978-lauderdale-county-excerpt-from-march/">https://tngenweb.org/lauderdale/2022/02/04/1978-lauderdale-county-excerpt-from-march/</a></li>
+          <li><span class="tag fact">FACT</span> Bethel Baptist history (Mark Waites, clerk) — <a href="https://genealogytrails.com/scar/newberry/bethelbaptistchurch.htm">https://genealogytrails.com/scar/newberry/bethelbaptistchurch.htm</a></li>
+          <li><span class="tag fact">FACT</span> Bethel Baptist (Fairview) cemetery, Genealogy Trails Newberry — <a href="http://genealogytrails.com/scar/newberry/">http://genealogytrails.com/scar/newberry/</a></li>
+          <li><span class="tag fact">FACT</span> Crystal’s maternal research report (27 Sep 2026)</li>
+      </ul>
+      <footer class="colophon">Unlisted genealogy · FACT = William or a record Crystal read · HYPOTHESIS / NOT FOUND = still open</footer>
+    </div>
+  
+<script src="../../corrections/config.js"></script>
+<script src="../corrections-widget.js"></script>
+<script src="../contributions-display.js"></script>
+</body>
+</html>

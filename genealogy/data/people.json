@@ -26,7 +26,7 @@
       },
       {
         "t": "Marriage",
-        "d": "Giles Rexford Simpson 1899\u20131944 (FaG #55032391). Maley FH variant: \u201cPrexford.\u201d",
+        "d": "Giles Rexford Simpson (22 Jun 1889 \u2013 9 Apr 1944, Asbury stone; FaG spouse link 1899 is an outlier). Maley FH variant: \u201cPrexford.\u201d",
         "status": "fact"
       },
       {
@@ -48,6 +48,11 @@
         "t": "Census notes",
         "d": "1900 Civil Dist 10; 1910\u20131930 Civil Dist 13 Lauderdale (C L / Carrie L / Lovey) per FaG memorial",
         "status": "fact"
+      },
+      {
+        "t": "Probable infant daughter",
+        "d": "Celeste Simpson, 11 Sep 1918 \u2013 14 Jul 1919 (Asbury stone, FACT); TSLA index 15 Jul 1919 vol. 29 rec. 379. Parentage HYPOTHESIS (strong).",
+        "status": "need"
       }
     ],
     "sources": [
@@ -79,6 +84,17 @@
         "status": "fact",
         "href": "../../other-photos/",
         "note": "Family photos"
+      },
+      {
+        "label": "Asbury Cemetery transcription (USGWArchives)",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/lauderdale/cemeteries/asbury.txt",
+        "note": "Celeste Simpson 1918\u20131919"
+      },
+      {
+        "label": "TSLA death index (Celesta Simpson)",
+        "status": "fact",
+        "href": "https://tslaindexes.tnsos.gov/node/364498"
       }
     ]
   },
@@ -87,10 +103,10 @@
     "name": "James Clayborn Waits",
     "short_name": "James Clayborn Waits",
     "lifespan": "Apr 1864 \u2013 20 Dec 1944",
-    "rel": "Father of Carrie Love \u201cLovy\u201d Waits Simpson; husband of Rhoda/Phobe Milburn (1st) and Gabie Pilkington Waits (2nd).",
+    "rel": "Father of Carrie Love \u201cLovy\u201d Waits Simpson; husband of Rhoda Milburn (1st, licence 30 May 1891) and Gabie Pilkington Waits (2nd).",
     "bio_or_step": "bio",
     "blurb": "James Clayborn Waits (Apr 1864\u201320 Dec 1944), Maplewood Cemetery Ripley; FaG #200803433.",
-    "narrative": "FaG #200803433: b. Apr 1864 Newberry SC; d. 20 Dec 1944 Memphis; Maplewood Ripley; parents James Samuel Waits & Almenia Earhart (FACT); spouse Gabie. Prefer stone/FaG 1864 over Carrie bio 1863. Do not cite #200804333.",
+    "narrative": "FaG #200803433: b. Apr 1864 Newberry SC; d. 20 Dec 1944 Memphis; Maplewood Ripley; parents James Samuel Waits & Almenia Earhart (FACT); spouse Gabie. Married Rhoda Milburn, Lauderdale licence #297, 30 May 1891 (FACT). 1900: next door to J S & A E Waits (HYPOTHESIS strong). Do not cite #200804333.",
     "timeline": [
       {
         "t": "Born",
@@ -103,18 +119,33 @@
         "status": "fact"
       },
       {
-        "t": "Marriage 1",
-        "d": "Rhoda / Phobe Milburn \u2014 exact date need-more (Crystal still hunting)",
+        "t": "1900 census",
+        "d": "J S Waits (b. 1830) & A E (b. 1832) indexed immediately before J C Waits \u2014 next door (HYPOTHESIS strong)",
         "status": "need"
       },
       {
-        "t": "Children with first wife",
-        "d": "Includes Carrie Love Simpson; Mary Almenuia Williams; Virginia Elleene Chaney (Garner/Maley). Josie Belle and others \u2014 see maternity hypothesis on hub.",
+        "t": "1870 census",
+        "d": "\u201cClayborn Waits\u201d b. c.1863, Newberry Co., SC, in Samuel & Almma\u2019s household (HYPOTHESIS)",
+        "status": "need"
+      },
+      {
+        "t": "Marriage 1",
+        "d": "Rhoda Milburn \u2014 Lauderdale licence #297, \u201cWaits, Claborne\u201d \u00d7 \u201cMilburn, Rhoda\u201d, 30 May 1891, bondsman G. W. Leverit, \u201cNo return\u201d",
+        "status": "fact"
+      },
+      {
+        "t": "Children with Rhoda",
+        "d": "Carrie Love 1892 (FACT); \u201cO L\u201d/\u201cLannie O\u201d c.1896\u201397 (HYPOTHESIS); Mary Almenia Williams 1899\u20131978 (FACT); Virginia Elleene Chaney 1900\u20131972 (FACT); Josie Belle c.1906 (HYPOTHESIS)",
         "status": "fact"
       },
       {
         "t": "Marriage 2",
         "d": "Gabie \u2014 date/place open. FACT (negative): Lauderdale 1902\u20131918, free Shelby 1908\u20131912, Tipton free indexes empty. Need microfilm/TSLA/paid.",
+        "status": "need"
+      },
+      {
+        "t": "Child with Gabie",
+        "d": "Laura b. c.1911 (1920 household) \u2014 HYPOTHESIS",
         "status": "need"
       },
       {
@@ -162,48 +193,79 @@
         "label": "Negative: Lauderdale marriage books Jul 1902\u2013Oct 1918",
         "status": "fact",
         "note": "No James \u00d7 Gabie/Hopper/Pilkington (TNGenWeb)"
+      },
+      {
+        "label": "Marriages 1886\u20131893 (grooms O\u2013Y)",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/01/31/marriages-1886-1893-groom-surnames-starting-with-o-y/",
+        "note": "licence #297, 30 May 1891"
+      },
+      {
+        "label": "Marriages 1886\u20131893 (brides G\u2013N)",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/01/31/marriages-1886-1893-bride-surnames-starting-with-g-n/"
+      },
+      {
+        "label": "1900 census index (coll. 7602)",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/7602?name=_Waits&name_x=_1&residence=_tennessee-usa_45&keyword=Lauderdale"
+      },
+      {
+        "label": "1870 census index, Newberry SC (coll. 7163)",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/7163?name=_Waits&name_x=_1&residence=_newberry-south+carolina-usa_2427"
+      },
+      {
+        "label": "1869 SC state census, Newberry Twp 9",
+        "status": "fact",
+        "href": "https://www.genealogytrails.com/scar/newberry/territorial_census/1869nbytwp9.htm"
+      },
+      {
+        "label": "1978 Parker memoir",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/04/1978-lauderdale-county-excerpt-from-march/"
       }
     ]
   },
   {
     "id": "rhoda-milburn-waits",
     "name": "Rhoda Milburn Waits",
-    "short_name": "Rhoda / Phobe Milburn Waits",
-    "lifespan": "13 May 1873 \u2013 14 May 1908",
+    "short_name": "Rhoda Milburn Waits",
+    "lifespan": "c. 1873 \u2013 14 May 1908",
     "rel": "First wife of James C. Waits; biological mother of Carrie Love \u201cLovy\u201d Waits Simpson (and other daughters named in funeral-home records).",
     "bio_or_step": "bio",
-    "blurb": "First wife of James C. Waits. Died 14 May 1908. Given-name spellings vary widely in the records.",
-    "narrative": "Keep all spelling variants visible: Rhoda (family), Phobe (Maley), Rosa (Garner / Elleene), Rhonda (Garner / Mary), Phoebe/Rhonda/Rosa as encountered. Baseline death date 14 May 1908 \u2014 death certificate still desirable. Named mother of Carrie Love Simpson, Mary Almenuia Williams (8 Apr 1899\u20135 Jul 1978), and Virginia Elleene Chaney (27 Nov 1900\u201315 Aug 1972). Birth 13 May 1873 TN from Carrie FaG #55032391 memorial bio (secondary).",
+    "blurb": "First wife of James C. Waits (licence 30 May 1891). Aka Phobe / Rosa / Rhonda. Parents Mack & Mary (Owens) Milburn \u2014 HYPOTHESIS (strong).",
+    "narrative": "\u201cRhoda\u201d on her 1891 marriage licence (primary record); children\u2019s funeral records give Phobe (Carrie), Rosa (Elleene), Rhonda (Mary). Born c. 1873 (1900 index \u201cR E\u201d; FaG bio 13 May 1873). Died 14 May 1908 per Carrie\u2019s FaG bio only; death record and burial NOT FOUND. Parents Mack Milburn & Mary Owens \u2014 HYPOTHESIS (strong).",
     "timeline": [
       {
         "t": "Born",
-        "d": "13 May 1873 TN (Carrie FaG #55032391 bio \u2014 secondary)",
+        "d": "c. 1873 (1900 index \u201cR E Waits\u201d b. 1873); 13 May 1873 TN per Carrie FaG bio (secondary)",
         "status": "need"
       },
       {
         "t": "Marriage to James C. Waits",
-        "d": "Date/place need-more",
+        "d": "Lauderdale licence #297, 30 May 1891, bondsman G. W. Leverit, \u201cNo return\u201d",
+        "status": "fact"
+      },
+      {
+        "t": "Children",
+        "d": "Carrie Love 1892 (FACT); \u201cO L\u201d/\u201cLannie O\u201d c.1896\u201397 (HYPOTHESIS); Mary Almenia Williams 1899\u20131978 (FACT); Virginia Elleene Chaney 1900\u20131972 (FACT); Josie Belle c.1906 (HYPOTHESIS)",
+        "status": "fact"
+      },
+      {
+        "t": "Parents",
+        "d": "Mack Milburn & Mary Owens \u2014 HYPOTHESIS (strong)",
         "status": "need"
       },
       {
-        "t": "Daughter Carrie Love",
-        "d": "b. 11 Jul 1892 (Maley FH)",
-        "status": "fact"
-      },
-      {
-        "t": "Daughter Mary Almenuia Williams",
-        "d": "8 Apr 1899 \u2013 5 Jul 1978 (Garner FH); mother listed as Rhonda/Rosa variants",
-        "status": "fact"
-      },
-      {
-        "t": "Daughter Virginia Elleene Chaney",
-        "d": "27 Nov 1900 \u2013 15 Aug 1972 (Garner FH); mother Rosa",
-        "status": "fact"
-      },
-      {
         "t": "Died",
-        "d": "14 May 1908 (baseline; cert still desirable)",
-        "status": "fact"
+        "d": "14 May 1908 \u2014 only from Carrie\u2019s FaG bio; death record NOT FOUND",
+        "status": "need"
+      },
+      {
+        "t": "Burial",
+        "d": "NOT FOUND",
+        "status": "need"
       }
     ],
     "sources": [
@@ -224,6 +286,27 @@
         "status": "fact",
         "href": "https://tngenweb.org/lauderdale/2022/02/01/maley-yarbrough-funeral-home/",
         "note": "Phobe Milburn as mother of Carrie Love"
+      },
+      {
+        "label": "Marriages 1886\u20131893 (grooms O\u2013Y)",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/01/31/marriages-1886-1893-groom-surnames-starting-with-o-y/",
+        "note": "licence #297, 30 May 1891"
+      },
+      {
+        "label": "Marriages 1886\u20131893 (brides G\u2013N)",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/01/31/marriages-1886-1893-bride-surnames-starting-with-g-n/"
+      },
+      {
+        "label": "1951\u201360 funeral home records (Belle Milburn Parham)",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1951-1960-funeral-home-records/"
+      },
+      {
+        "label": "1900 census index (Milburn)",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/7602?name=_Milburn&name_x=_1&residence=_tennessee-usa_45&keyword=Lauderdale"
       },
       {
         "label": "Death certificate",
@@ -339,6 +422,11 @@
         "t": "Stone / FaG listing",
         "d": "Josie Waite Sides 1906\u20132001; Marion Alex Sides 1895\u20131970; Ripley Memorial Gardens cem. 15589. Numeric FaG IDs open.",
         "status": "fact"
+      },
+      {
+        "t": "Conflict",
+        "d": "Crystal\u2019s maternal batch: Josie Belle b. c.1906 as J. C. Waits\u2019s daughter and her identity with Mrs. Alex Sides are HYPOTHESIS (census index); page labels father FACT \u2014 to confirm",
+        "status": "need"
       }
     ],
     "sources": [
@@ -361,6 +449,11 @@
         "label": "Maternity vs Gabie",
         "status": "need",
         "note": "Hypothesis only until birth proof"
+      },
+      {
+        "label": "1910 census index (Waits, Lauderdale)",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/7884?name=_Waits&name_x=_1&residence=_tennessee-usa_45&keyword=Lauderdale"
       }
     ]
   },
@@ -402,11 +495,11 @@
     "id": "giles-rexford-simpson",
     "name": "Giles Rexford Simpson",
     "short_name": "Giles Rexford Simpson",
-    "lifespan": "22 Jun 1889/1899 \u2013 9 Apr 1944",
+    "lifespan": "22 Jun 1889 \u2013 9 Apr 1944",
     "rel": "Husband of Carrie Love \u201cLovy\u201d Waits Simpson. William\u2019s grandfather on the Simpson line.",
     "bio_or_step": "need",
-    "blurb": "Husband of Lovy. Rexford title; Prexford FH. Asbury stone vs FaG birth-year conflict.",
-    "narrative": "Asbury stone Giles R. 22 Jun 1889\u20139 Apr 1944; Carrie FaG spouse 1899\u20131944. Prefer Rexford. Waits Andrew FaG #76666074; Gonnsen obit youngest of six / Rexford.",
+    "blurb": "Husband of Lovy. Rexford title; Prexford FH. Born 1889 (stone + three censuses); FaG 1899 outlier.",
+    "narrative": "Asbury stone Giles R. 22 Jun 1889\u20139 Apr 1944 (FACT); 1900/1910/1920 census indexes agree on 1889; Carrie FaG spouse link 1899 is an outlier. Probable father Andrew Solon Simpson (HYPOTHESIS strong), mother Kate McMahon (HYPOTHESIS). Probable infant daughter Celeste 1918\u20131919 (HYPOTHESIS). Prefer Rexford.",
     "timeline": [
       {
         "t": "Name",
@@ -414,8 +507,28 @@
         "status": "fact"
       },
       {
-        "t": "Lifespan",
-        "d": "1899\u20131944 (Carrie FaG spouse link)",
+        "t": "Born",
+        "d": "22 Jun 1889 (Asbury stone); census indexes 1900/1910/1920 agree",
+        "status": "fact"
+      },
+      {
+        "t": "Birth-year conflict",
+        "d": "Carrie FaG spouse link gives 1899 \u2014 outlier",
+        "status": "need"
+      },
+      {
+        "t": "Father",
+        "d": "Andrew Solon Simpson \u2014 HYPOTHESIS (strong), 1900 household",
+        "status": "need"
+      },
+      {
+        "t": "Mother",
+        "d": "Kate McMahon \u2014 HYPOTHESIS",
+        "status": "need"
+      },
+      {
+        "t": "Died",
+        "d": "9 Apr 1944; Asbury Cemetery",
         "status": "fact"
       },
       {
@@ -427,6 +540,11 @@
         "t": "Child",
         "d": "Oletta Simpson Winn 1924\u20132017",
         "status": "fact"
+      },
+      {
+        "t": "Probable infant daughter",
+        "d": "Celeste Simpson, 11 Sep 1918 \u2013 14 Jul 1919 (Asbury stone, FACT); TSLA index 15 Jul 1919 vol. 29 rec. 379. Parentage HYPOTHESIS (strong).",
+        "status": "need"
       }
     ],
     "sources": [
@@ -441,6 +559,32 @@
         "status": "fact",
         "href": "https://tngenweb.org/lauderdale/2022/02/01/maley-yarbrough-funeral-home/",
         "note": "Prexford spelling"
+      },
+      {
+        "label": "Asbury Cemetery transcription (USGWArchives)",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/lauderdale/cemeteries/asbury.txt"
+      },
+      {
+        "label": "1900 census index (coll. 7602)",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/7602?name=Giles_Simpson&residence=_tennessee-usa_45",
+        "note": "Giles b. 1889 in Andrew Simpson household"
+      },
+      {
+        "label": "1910 census index (coll. 7884)",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/7884?name=Giles_Simpson&residence=_tennessee-usa_45"
+      },
+      {
+        "label": "1920 census index (coll. 6061)",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/6061?name=_Simpson&residence=_lauderdale-tennessee-usa_2472"
+      },
+      {
+        "label": "TSLA death index (Celesta Simpson)",
+        "status": "fact",
+        "href": "https://tslaindexes.tnsos.gov/node/364498"
       }
     ]
   },
@@ -1070,11 +1214,11 @@
     "id": "richard-clinton-barrett",
     "name": "Richard Clinton Barrett",
     "short_name": "Richard Clinton Barrett",
-    "lifespan": "b. 26 Jan 1923 \u00b7 Islington (Westwood), MA (William) / reg. Norwood",
+    "lifespan": "26 Jan 1923 \u2013 29 Apr 1996",
     "rel": "Father of Robyn Louise Barrett. Husband of Elizabeth Jane Holden. Son of Royden Y. and Lillian Barrett.",
     "bio_or_step": "need",
-    "blurb": "Robyn\u2019s father (William FACT). Parents Royden Y. & Lillian Barrett (1923 Norwood birth record).",
-    "narrative": "Richard Clinton Barrett, born 26 Jan 1923, Islington (Westwood), Massachusetts (William FACT); birth registered in Norwood (1923 report) \u2014 discrepancy unresolved. Parents Royden Y. and Lillian. Father of Robyn Louise Barrett; husband of Elizabeth Jane Holden. Death status unknown.",
+    "blurb": "Robyn\u2019s father (William FACT). Parents Royden Y. & Lillian Barrett (1923 birth record). Married Elizabeth 13 Oct 1945, Medway; Millis Public Works and Fire Department.",
+    "narrative": "Richard Clinton Barrett, born 26 Jan 1923, Islington (Westwood), Massachusetts (William FACT); birth registered in Norwood (1923 report) \u2014 discrepancy unresolved. Parents Royden Y. and Lillian. Married Elizabeth J. Holden 13 Oct 1945, Medway (Millis 1945 report). Millis Water Commissioner 1956; Superintendent of Streets 1960, later Public Works head until 1976; Fire Department Captain 1961\u201368. Died 29 Apr 1996 (William FACT).",
     "timeline": [
       {
         "t": "Born",
@@ -1102,8 +1246,23 @@
         "status": "fact"
       },
       {
+        "t": "Married",
+        "d": "13 Oct 1945, Medway, MA \u2014 Elizabeth J. Holden of Medway; Rev. Warren G. Hunt (Millis 1945 report p.31)",
+        "status": "fact"
+      },
+      {
+        "t": "Millis",
+        "d": "HS football 1939, 1941; Water Commissioner 1956; Superintendent of Streets 1 Nov 1960, later Public Works, resigned 25 Aug 1976; Fire Dept Captain 1961\u201368; town office to 1998",
+        "status": "fact"
+      },
+      {
         "t": "Children",
         "d": "Robyn Louise Barrett; Bonny Jane Barrett; Gayle Elizabeth Barrett; Richard Clinton Barrett Jr.",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "29 Apr 1996 (William LaVaughan Winn, family record)",
         "status": "fact"
       }
     ],
@@ -1129,6 +1288,22 @@
         "label": "Crystal\u2019s Barrett/Holden research report (27 Sep 2026)",
         "status": "fact",
         "note": "children (Millis birth lists)"
+      },
+      {
+        "label": "William LaVaughan Winn, family record",
+        "status": "fact",
+        "note": "died 29 Apr 1996"
+      },
+      {
+        "label": "Millis 1945 annual town report, marriages p.31",
+        "status": "fact",
+        "href": "https://archive.org/details/annual-town-report-1945",
+        "note": "Richard C. Barrett \u00d7 Elizabeth J. Holden, 13 Oct 1945"
+      },
+      {
+        "label": "Millis annual town reports (archive.org complete-YYYY-annual-town-report series)",
+        "status": "fact",
+        "note": "careers 1939\u20131998 (Crystal)"
       }
     ]
   },
@@ -1136,11 +1311,11 @@
     "id": "elizabeth-jane-holden",
     "name": "Elizabeth Jane \u201cBetty\u201d Holden",
     "short_name": "Elizabeth Jane Holden",
-    "lifespan": "b. 2 Aug 1923",
+    "lifespan": "2 Aug 1923 \u2013 3 Nov 2015",
     "rel": "Mother of Robyn Louise Barrett. Wife of Richard Clinton Barrett.",
     "bio_or_step": "need",
-    "blurb": "Robyn\u2019s mother (William FACT). Eastport, Maine birthplace \u2014 HYPOTHESIS. Parents unknown.",
-    "narrative": "Elizabeth Jane \u201cBetty\u201d Holden, born 2 Aug 1923 (William FACT). Birthplace Eastport, Maine \u2014 HYPOTHESIS, no record confirms. Mother of Robyn Louise Barrett; wife of Richard Clinton Barrett. Parents unknown. Death status unknown.",
+    "blurb": "Robyn\u2019s mother (William FACT). Eastport, Maine birthplace \u2014 HYPOTHESIS. Parents William Holden & Agnes Corbett (William FACT).",
+    "narrative": "Elizabeth Jane \u201cBetty\u201d Holden, born 2 Aug 1923 (William FACT). Birthplace Eastport, Maine \u2014 HYPOTHESIS, no record confirms. Mother of Robyn Louise Barrett; wife of Richard Clinton Barrett. Parents William Holden (lived in Blackstone, MA) and Agnes Corbett (born Eastport, ME) \u2014 FACT (William); her mother\u2019s Eastport birth may explain the family belief. Married Richard C. Barrett 13 Oct 1945, Medway (she was of Medway). Millis: treasurer 1948; ceramics teacher, Council on Aging 1987\u201391. Died 3 Nov 2015 (William FACT).",
     "timeline": [
       {
         "t": "Born",
@@ -1168,8 +1343,33 @@
         "status": "fact"
       },
       {
-        "t": "Parents",
-        "d": "unknown \u2014 research open",
+        "t": "Father",
+        "d": "William Holden, lived in Blackstone, MA (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Mother",
+        "d": "Agnes Corbett, born Eastport, ME (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Married",
+        "d": "13 Oct 1945, Medway, MA \u2014 Richard C. Barrett of Millis (Millis 1945 report p.31)",
+        "status": "fact"
+      },
+      {
+        "t": "Millis",
+        "d": "\u201cMrs. Richard Barrett, Treasurer\u201d 1948; ceramics for the Council on Aging 1987\u201391",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "3 Nov 2015 (William LaVaughan Winn, family record)",
+        "status": "fact"
+      },
+      {
+        "t": "Lead",
+        "d": "Carrie Berrian Holden (d. 6 Feb 1948, Millis) \u2014 HYPOTHESIS, lead only",
         "status": "need"
       }
     ],
@@ -1196,8 +1396,25 @@
         "note": "daughter Robyn Louise"
       },
       {
-        "label": "Parents \u2014 research open",
-        "status": "need"
+        "label": "William LaVaughan Winn, family record",
+        "status": "fact",
+        "note": "parents William Holden and Agnes Corbett"
+      },
+      {
+        "label": "William LaVaughan Winn, family record",
+        "status": "fact",
+        "note": "died 3 Nov 2015"
+      },
+      {
+        "label": "Millis 1945 annual town report, marriages p.31",
+        "status": "fact",
+        "href": "https://archive.org/details/annual-town-report-1945"
+      },
+      {
+        "label": "Millis 1948 annual town report",
+        "status": "fact",
+        "href": "https://archive.org/details/complete-1948-annual-town-report",
+        "note": "Treasurer; Carrie Berrian Holden p.49"
       }
     ]
   },
@@ -1209,7 +1426,7 @@
     "rel": "Family overview for Robyn Louise Barrett\u2019s Barrett and Holden lines.",
     "bio_or_step": "need",
     "blurb": "Overview of Robyn\u2019s Barrett and Holden lines, with sources from Crystal\u2019s batch.",
-    "narrative": "Overview of Robyn\u2019s Barrett and Holden lines: Richard Clinton Barrett & Elizabeth Jane Holden; Royden Y. & Lillian (Garland) Barrett; Henry Waldo Barrett (HYPOTHESIS). Holden parents not found.",
+    "narrative": "Overview of Robyn\u2019s Barrett and Holden lines: Richard Clinton Barrett & Elizabeth Jane Holden; Royden Y. & Lillian (Garland) Barrett; Henry Waldo Barrett (HYPOTHESIS). Holden parents William Holden & Agnes Corbett (William FACT).",
     "timeline": [],
     "sources": [
       {
@@ -1238,7 +1455,12 @@
         "href": "https://archive.org/details/norwoodannualrep1900norw"
       },
       {
-        "label": "Holden line \u2014 research open",
+        "label": "William LaVaughan Winn, family record",
+        "status": "fact",
+        "note": "Holden parents"
+      },
+      {
+        "label": "Holden and Corbett lines \u2014 further research open",
         "status": "need"
       }
     ]
@@ -1517,6 +1739,478 @@
         "label": "Norwood 1904\u20131907 volume, tax list",
         "status": "fact",
         "href": "https://archive.org/details/norwoodannualrep1904norw"
+      }
+    ]
+  },
+  {
+    "id": "andrew-solon-simpson",
+    "name": "Andrew Solon Simpson",
+    "short_name": "Andrew Solon Simpson",
+    "lifespan": "19 Nov 1857 \u2013 17 Jan 1940",
+    "rel": "HYPOTHESIS (strong): father of Giles Rexford Simpson. Husband of Kate McMahon (1st) and Minnie (Mary I.) Parker (2nd).",
+    "bio_or_step": "bio",
+    "blurb": "Probable father of Giles (1900 household). Asbury. Father William Simpson (funeral record).",
+    "narrative": "b. 19 Nov 1857, d. 17 Jan 1940, Asbury (Burgess & Peters FH record, FACT; Asbury transcription reverses the dates). Father William Simpson (FACT, name only). m. 2nd Minnie Parker, licence #328 25 Dec 1891, married 27 Dec 1891 (FACT). Giles in his 1900 household = HYPOTHESIS (strong).",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "19 Nov 1857 (Burgess & Peters)",
+        "status": "fact"
+      },
+      {
+        "t": "Father",
+        "d": "William Simpson (name only)",
+        "status": "fact"
+      },
+      {
+        "t": "Wife 1",
+        "d": "Kate McMahon (Sallie Crook funeral record)",
+        "status": "fact"
+      },
+      {
+        "t": "Wife 2",
+        "d": "Minnie (Mary I.) Parker, licence #328 25 Dec 1891, m. 27 Dec 1891",
+        "status": "fact"
+      },
+      {
+        "t": "Son Giles",
+        "d": "1900 census index household \u2014 HYPOTHESIS (strong)",
+        "status": "need"
+      },
+      {
+        "t": "Died",
+        "d": "17 Jan 1940; Asbury Cemetery",
+        "status": "fact"
+      },
+      {
+        "t": "Asbury transcription",
+        "d": "dates reversed (17 Jan 1940 \u2013 19 Nov 1957) \u2014 transcription slip",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Burgess & Peters Funeral Home 1939\u201345",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1939-1945-burgess-peters-funeral-home/"
+      },
+      {
+        "label": "Marriages 1886\u20131893 (brides O\u2013Y)",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/01/31/marriages-1886-1893-bride-surnames-starting-with-o-y/"
+      },
+      {
+        "label": "1951\u201360 funeral home records",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1951-1960-funeral-home-records/"
+      },
+      {
+        "label": "1961\u201370 funeral home records",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1961-1970-funeral-home-records/"
+      },
+      {
+        "label": "1971\u201380 funeral home records (Sallie Crook)",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1971-1980-funeral-home-records-ripley-tn/"
+      },
+      {
+        "label": "Asbury Cemetery transcription",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/lauderdale/cemeteries/asbury.txt"
+      },
+      {
+        "label": "1900/1910 census indexes",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/7602?name=Andrew_Simpson&residence=_tennessee-usa_45"
+      },
+      {
+        "label": "Crystal\u2019s maternal research report (27 Sep 2026)",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "kate-mcmahon-simpson",
+    "name": "Kate McMahon Simpson",
+    "short_name": "Kate McMahon",
+    "lifespan": "d. 1889? \u00b7 identity unproven",
+    "rel": "HYPOTHESIS: mother of Giles Rexford Simpson. First wife of Andrew Solon Simpson.",
+    "bio_or_step": "bio",
+    "blurb": "Probable mother of Giles. Named mother in Sallie Crook\u2019s funeral record.",
+    "narrative": "\u201cKate McMAHON\u201d named as mother in Sallie Simpson Crook\u2019s 1971 funeral record (FACT). Mother of Giles = HYPOTHESIS. Identity with Martha C. Simpson (12 Apr 1850 \u2013 3 Oct 1889, Asbury) = unproven. Marriage and parents NOT FOUND.",
+    "timeline": [
+      {
+        "t": "Name",
+        "d": "Kate McMahon (Sallie Crook funeral record)",
+        "status": "fact"
+      },
+      {
+        "t": "Mother of Giles",
+        "d": "HYPOTHESIS",
+        "status": "need"
+      },
+      {
+        "t": "Possibly Martha C. Simpson",
+        "d": "12 Apr 1850 \u2013 3 Oct 1889, Asbury \u2014 unproven",
+        "status": "need"
+      },
+      {
+        "t": "Marriage, parents",
+        "d": "NOT FOUND",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "1971\u201380 funeral home records (Sallie Crook)",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1971-1980-funeral-home-records-ripley-tn/"
+      },
+      {
+        "label": "Asbury Cemetery transcription",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/lauderdale/cemeteries/asbury.txt"
+      },
+      {
+        "label": "Crystal\u2019s maternal research report (27 Sep 2026)",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "james-samuel-waits",
+    "name": "James Samuel \u201cJ. S.\u201d Waits",
+    "short_name": "James Samuel Waits",
+    "lifespan": "c. 1830/31 \u2013 after 1900",
+    "rel": "Father of James Clayborn Waits (FaG). Husband of Almenia Earhart.",
+    "bio_or_step": "bio",
+    "blurb": "J. C.\u2019s father (FaG). Newberry Co., SC 1850\u20131870; next door to J. C. in 1900. Death/burial not found.",
+    "narrative": "Census J S Wates/Waits, Samuel Waits (FACT index). b. c.1830\u201331 SC. Newberry Co. 1850, 1860, 1869, 1870; Lauderdale 1900 next to J. C. (HYPOTHESIS strong). Died after June 1900; death and burial NOT FOUND (FaG per William: 1910, Maplewood). Probable daughters Josie Waits Gaines (funeral record names father Samuel Waits) and Love Waits Ray. Parents Mark & Mahala Waits = research lead only.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "c. 1830\u201331, South Carolina (census indexes)",
+        "status": "fact"
+      },
+      {
+        "t": "1850",
+        "d": "Newberry Co., SC, after Mark & Mahala Wates",
+        "status": "fact"
+      },
+      {
+        "t": "1860, 1870",
+        "d": "Newberry Co., SC",
+        "status": "fact"
+      },
+      {
+        "t": "1869",
+        "d": "SC state census, Newberry Twp 9",
+        "status": "fact"
+      },
+      {
+        "t": "1900",
+        "d": "Lauderdale Co., TN, next to son J. C. \u2014 HYPOTHESIS (strong)",
+        "status": "need"
+      },
+      {
+        "t": "Died",
+        "d": "after June 1900; date, place, burial NOT FOUND",
+        "status": "need"
+      },
+      {
+        "t": "Probable daughters",
+        "d": "Josie Waits Gaines 1873\u20131968 (record names father Samuel Waits); Love L. Waits Ray",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "1850 census index, Newberry SC",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/8054?name=_Wates&name_x=_1&residence=_south+carolina-usa_43"
+      },
+      {
+        "label": "1860 census index, Newberry SC",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/7667?name=_Waits&name_x=_1&residence=_newberry-south+carolina-usa_2427"
+      },
+      {
+        "label": "1869 SC state census, Newberry Twp 9",
+        "status": "fact",
+        "href": "https://www.genealogytrails.com/scar/newberry/territorial_census/1869nbytwp9.htm"
+      },
+      {
+        "label": "1870 census index, Newberry SC",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/7163?name=_Waits&name_x=_1&residence=_newberry-south+carolina-usa_2427"
+      },
+      {
+        "label": "1900 census index, Lauderdale TN",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/7602?name=_Waits&name_x=_1&residence=_tennessee-usa_45&keyword=Lauderdale"
+      },
+      {
+        "label": "Annals of Newberry (1892), p. 429",
+        "status": "fact",
+        "href": "https://archive.org/details/annalsofnewberry01onea"
+      },
+      {
+        "label": "1961\u201370 funeral home records (Josie Gaines)",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1961-1970-funeral-home-records/"
+      },
+      {
+        "label": "Jan 1968 obituaries",
+        "status": "fact",
+        "href": "https://www.tngenweb.org/lauderdale-old/obits/jan1968obits.htm"
+      },
+      {
+        "label": "Crystal\u2019s maternal research report (27 Sep 2026)",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "almenia-earhart-waits",
+    "name": "Almenia \u201cAlmena\u201d (Earhart) Waits",
+    "short_name": "Almenia Earhart Waits",
+    "lifespan": "c. 1831/32 \u2013 after 1900",
+    "rel": "Mother of James Clayborn Waits (FaG). Wife of James Samuel Waits.",
+    "bio_or_step": "bio",
+    "blurb": "J. C.\u2019s mother (FaG). 1850 Earheart household, Lexington Co., SC. Death/burial not found.",
+    "narrative": "Almcnia Earheart (1850), Almena (1860), Almma (1870), A E (1900) \u2014 FACT index. b. c.1831\u201332 SC. Died after June 1900; death and burial NOT FOUND (FaG per William: 1908, Maplewood). Parents Jacob & Leah Earheart = research lead only (Claiborn B. W. Earheart name link; WikiTree Hughes-28896 unverified).",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "c. 1831\u201332, South Carolina (census indexes)",
+        "status": "fact"
+      },
+      {
+        "t": "1850",
+        "d": "Lexington Co., SC, in Jacob & Leah Earheart\u2019s household run \u2014 HYPOTHESIS (strong)",
+        "status": "need"
+      },
+      {
+        "t": "Husband",
+        "d": "James Samuel Waits (1860, 1870, 1900)",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "after June 1900; date, place, burial NOT FOUND",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "1850 census index, Lexington SC",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/8054?name=_Earheart&name_x=_1&residence=_south+carolina-usa_43"
+      },
+      {
+        "label": "1860 census index, Lexington SC",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/7667?name=_Earhart&name_x=_1&residence=_south+carolina-usa_43"
+      },
+      {
+        "label": "1971\u201380 funeral home records (Mary Almenuia Williams)",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1971-1980-funeral-home-records-ripley-tn/"
+      },
+      {
+        "label": "WikiTree Hughes-28896 (not opened)",
+        "status": "need",
+        "href": "https://www.wikitree.com/wiki/Hughes-28896"
+      },
+      {
+        "label": "Crystal\u2019s maternal research report (27 Sep 2026)",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "mack-milburn",
+    "name": "Mack Milburn",
+    "short_name": "Mack Milburn",
+    "lifespan": "c. 1839 \u2013 1 Feb 1914?",
+    "rel": "HYPOTHESIS (strong): father of Rhoda Milburn Waits. Husband of Mary Owens.",
+    "bio_or_step": "bio",
+    "blurb": "Probable father of Rhoda. Named father in Belle Milburn Parham\u2019s funeral record.",
+    "narrative": "Belle Milburn Parham\u2019s funeral record: \u201cf. Mack MILBURN, m. Mary OWENS\u201d (FACT). 1900 census: Love Waits indexed after Mack & Mary\u2019s household. Mack Milborn death indexed Lauderdale 1 Feb 1914, TSLA vol. 33 rec. 69 (same man = HYPOTHESIS).",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "c. 1839 (1900 census index)",
+        "status": "fact"
+      },
+      {
+        "t": "Wife",
+        "d": "Mary Owens (Belle\u2019s funeral record)",
+        "status": "fact"
+      },
+      {
+        "t": "1900",
+        "d": "Love Waits (8) indexed right after the household",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "1 Feb 1914? TSLA vol. 33 rec. 69 \u2014 identity HYPOTHESIS",
+        "status": "need"
+      },
+      {
+        "t": "Daughter Rhoda",
+        "d": "HYPOTHESIS (strong)",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "1951\u201360 funeral home records (Belle Milburn Parham)",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1951-1960-funeral-home-records/"
+      },
+      {
+        "label": "1900 census index (Milburn)",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/7602?name=_Milburn&name_x=_1&residence=_tennessee-usa_45&keyword=Lauderdale"
+      },
+      {
+        "label": "TSLA death index",
+        "status": "fact",
+        "href": "https://tslaindexes.tnsos.gov/node/167674"
+      },
+      {
+        "label": "Marriages 1886\u20131893 (brides G\u2013N)",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/01/31/marriages-1886-1893-bride-surnames-starting-with-g-n/"
+      },
+      {
+        "label": "Crystal\u2019s maternal research report (27 Sep 2026)",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "mary-owens-milburn",
+    "name": "Mary (Owens) Milburn",
+    "short_name": "Mary Owens Milburn",
+    "lifespan": "c. 1843 \u2013 ?",
+    "rel": "HYPOTHESIS (strong): mother of Rhoda Milburn Waits. Wife of Mack Milburn.",
+    "bio_or_step": "bio",
+    "blurb": "Probable mother of Rhoda. Maiden name Owens per Belle\u2019s funeral record.",
+    "narrative": "b. c.1843 (1900 index, spouse Mack). Maiden name Owens per Belle Milburn Parham\u2019s funeral record (FACT). Death, burial, parents NOT FOUND.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "c. 1843 (1900 census index)",
+        "status": "fact"
+      },
+      {
+        "t": "Maiden name",
+        "d": "Owens (Belle\u2019s funeral record)",
+        "status": "fact"
+      },
+      {
+        "t": "Daughter Rhoda",
+        "d": "HYPOTHESIS (strong)",
+        "status": "need"
+      },
+      {
+        "t": "Death, burial, parents",
+        "d": "NOT FOUND",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "1951\u201360 funeral home records (Belle Milburn Parham)",
+        "status": "fact",
+        "href": "https://tngenweb.org/lauderdale/2022/02/01/1951-1960-funeral-home-records/"
+      },
+      {
+        "label": "1900 census index (Milburn)",
+        "status": "fact",
+        "href": "https://www.ancestry.com/search/collections/7602?name=_Milburn&name_x=_1&residence=_tennessee-usa_45&keyword=Lauderdale"
+      },
+      {
+        "label": "Crystal\u2019s maternal research report (27 Sep 2026)",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "william-holden",
+    "name": "William Holden",
+    "short_name": "William Holden",
+    "lifespan": "lived in Blackstone, MA",
+    "rel": "Father of Elizabeth Jane (Holden) Barrett. Husband of Agnes Corbett.",
+    "bio_or_step": "bio",
+    "blurb": "Elizabeth\u2019s father (William FACT). Lived in Blackstone, MA.",
+    "narrative": "William Holden, who lived in Blackstone, Massachusetts; husband of Agnes Corbett; father of Elizabeth Jane (Holden) Barrett (William FACT). No dates given.",
+    "timeline": [
+      {
+        "t": "Residence",
+        "d": "Blackstone, Massachusetts (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Wife",
+        "d": "Agnes Corbett (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Child",
+        "d": "Elizabeth Jane (Holden) Barrett (William)",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "William LaVaughan Winn, family record",
+        "status": "fact"
+      },
+      {
+        "label": "Further research open",
+        "status": "need"
+      }
+    ]
+  },
+  {
+    "id": "agnes-corbett-holden",
+    "name": "Agnes (Corbett) Holden",
+    "short_name": "Agnes Corbett Holden",
+    "lifespan": "born Eastport, ME",
+    "rel": "Mother of Elizabeth Jane (Holden) Barrett. Wife of William Holden.",
+    "bio_or_step": "bio",
+    "blurb": "Elizabeth\u2019s mother (William FACT). Born Eastport, ME.",
+    "narrative": "Agnes Corbett, born in Eastport, Maine; wife of William Holden; mother of Elizabeth Jane (Holden) Barrett (William FACT). No dates given.",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "Eastport, Maine (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Husband",
+        "d": "William Holden (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Child",
+        "d": "Elizabeth Jane (Holden) Barrett (William)",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "William LaVaughan Winn, family record",
+        "status": "fact"
+      },
+      {
+        "label": "Further research open",
+        "status": "need"
       }
     ]
   }

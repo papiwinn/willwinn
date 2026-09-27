@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Andrew Solon Simpson – Family genealogy</title>
+    <style>
+      :root { --accent: #e94560; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: system-ui, -apple-system, sans-serif;
+        color: white;
+        padding: 40px 20px 60px;
+      }
+      .container { max-width: 920px; margin: 0 auto; }
+      h1 { font-size: 2rem; margin: 0 0 8px; font-weight: 700; }
+      h2 { font-size: 1.25rem; margin: 28px 0 12px; color: var(--accent); }
+      h3 { font-size: 1.05rem; margin: 0 0 8px; }
+      .subtitle { color: var(--accent); font-size: 1.05rem; margin-bottom: 16px; }
+      .intro { opacity: 0.88; line-height: 1.55; margin: 0 0 28px; max-width: 40rem; }
+      a { color: var(--accent); }
+      a:hover { color: #ff6b6b; }
+      .card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 18px 18px 16px;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 999px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+      }
+      .tag.fact { background: rgba(46, 204, 113, 0.18); border: 1px solid rgba(46, 204, 113, 0.45); color: #a8e6c1; }
+      .tag.need { background: rgba(233, 69, 96, 0.18); border: 1px solid rgba(233, 69, 96, 0.45); color: #ffb3c0; }
+      .household {
+        display: grid;
+        gap: 12px;
+        margin: 0 0 8px;
+      }
+      .household .parents, .household .kids {
+        display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch;
+      }
+      .person-chip {
+        flex: 1 1 160px;
+        background: rgba(0,0,0,0.22);
+        border: 1px solid rgba(255,255,255,0.14);
+        border-radius: 10px;
+        padding: 12px 14px;
+        text-decoration: none;
+        color: inherit;
+      }
+      .person-chip:hover { border-color: var(--accent); }
+      .person-chip .role { font-size: 0.75rem; color: var(--accent); margin-bottom: 4px; }
+      .person-chip .name { font-weight: 650; }
+      .person-chip .meta { font-size: 0.82rem; opacity: 0.7; margin-top: 4px; }
+      .connector {
+        text-align: center; opacity: 0.55; font-size: 0.85rem; margin: 4px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 14px;
+      }
+      .feature-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 16px;
+        min-height: 120px;
+      }
+      .feature-card:hover { border-color: var(--accent); }
+      .feature-card .lifespan { font-size: 0.85rem; opacity: 0.7; margin: 4px 0 10px; }
+      .feature-card p { font-size: 0.9rem; opacity: 0.85; margin: 0; line-height: 1.45; }
+      .strip {
+        display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;
+      }
+      .strip a.btn {
+        display: inline-block;
+        padding: 12px 18px;
+        background: var(--accent);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      .strip a.btn.secondary {
+        background: transparent;
+        border: 2px solid var(--accent);
+      }
+      .strip a.btn:hover { background: #ff6b6b; color: white; }
+      .strip a.btn.secondary:hover { background: rgba(233,69,96,0.15); }
+      .note { font-size: 0.88rem; opacity: 0.75; margin-top: 12px; line-height: 1.45; }
+      .photo-ph {
+        width: 100%;
+        max-width: 280px;
+        aspect-ratio: 4/5;
+        background: rgba(0,0,0,0.35);
+        border: 1px dashed rgba(255,255,255,0.25);
+        border-radius: 10px;
+        display: flex; align-items: center; justify-content: center;
+        color: rgba(255,255,255,0.45);
+        font-size: 0.9rem;
+        margin: 0 0 18px;
+      }
+      .timeline { margin: 0; padding-left: 1.2rem; }
+      .timeline li { margin: 0 0 8px; line-height: 1.45; }
+      .sources { margin: 0; padding-left: 1.2rem; }
+      .sources li { margin: 0 0 8px; line-height: 1.45; opacity: 0.9; }
+      .back { display: inline-block; margin-bottom: 22px; color: var(--accent); text-decoration: none; font-weight: 500; }
+      .back:hover { text-decoration: underline; }
+      .status-row { margin: 0 0 14px; }
+      footer.colophon {
+        margin-top: 40px;
+        font-size: 0.82rem;
+        opacity: 0.55;
+      }
+
+    
+      .portrait {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 0 18px;
+      }
+      .portrait img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(0,0,0,0.35);
+      }
+
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
+      .hyp-banner {
+        margin: 0 0 20px; padding: 14px 16px; border-radius: 10px;
+        border: 2px dashed rgba(233,69,96,.75); background: rgba(233,69,96,.12);
+        line-height: 1.5;
+      }
+      .hyp-banner strong.big { display: block; font-size: 1.05rem; color: #ffb3c0; margin-bottom: 4px; }
+    </style>
+  </head>
+                <body>
+    <div class="container">
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="../">← Genealogy hub</a> <a class="tree-btn" href="../tree.html">🌳 Back to tree</a></nav>
+      <div class="hyp-banner"><strong class="big"><span class="tag need">HYPOTHESIS (strong)</span> Probable father of Giles Rexford Simpson — not proven</strong>
+        In the 1900 census Giles (b. 1889) is indexed in consecutive records with Andrew’s household, but the relationship field is hidden in the free index. No record read says Giles was Andrew’s son. Giles’s 1944 death certificate would settle it.</div>
+      <h1>Andrew Solon Simpson</h1>
+      <div class="subtitle">19 Nov 1857 – 17 Jan 1940 · Asbury Cemetery, Lauderdale Co., TN</div>
+      <div class="status-row"><span class="tag fact">FACT</span> dates &amp; burial · <span class="tag need">HYPOTHESIS (strong)</span> father of Giles</div>
+      <div class="photo-ph">Photo placeholder</div>
+      <p class="intro"><strong>Relation:</strong> <span class="tag need">HYPOTHESIS (strong)</span> Probable father of <a href="giles-rexford-simpson.html">Giles Rexford Simpson</a>, William’s maternal grandfather. Of the Asbury community, Lauderdale County, Tennessee.</p>
+      <p class="intro"><a href="giles-rexford-simpson.html">→ Giles Rexford Simpson</a> · <a href="kate-mcmahon-simpson.html">→ Kate McMahon (1st wife)</a> · <a href="lovy-waits-simpson.html">→ Lovy Waits Simpson</a></p>
+      <h2>Timeline</h2>
+      <ul class="timeline">
+          <li><span class="tag fact">FACT</span> <strong>Born:</strong> 19 November 1857 (Burgess &amp; Peters Funeral Home record). <span class="tag fact">FACT (index)</span> 1900 and 1910 census indexes: b. 1857. Birthplace hidden in the index; <span class="tag need">HYPOTHESIS</span> South Carolina possible (neighbour John E. Simpson, b. 1859, was SC-born)</li>
+          <li><span class="tag fact">FACT</span> <strong>Father:</strong> William Simpson — name only (“f. William Simpson”, Burgess &amp; Peters record). Vitals, spouse and origin <span class="tag need">NOT FOUND</span></li>
+          <li><span class="tag fact">FACT</span> <strong>Wife 1:</strong> <a href="kate-mcmahon-simpson.html">Kate McMahon</a> — named as mother in daughter Sallie Crook’s funeral record. <span class="tag need">HYPOTHESIS</span> that Kate was Giles’s mother. Marriage record <span class="tag need">NOT FOUND</span> (before 1886)</li>
+          <li><span class="tag fact">FACT</span> <strong>Wife 2:</strong> Minnie Parker = “Mary I.” / “Mary Ind” Simpson (16 Feb 1872 – 19 Oct 1957, Asbury). Lauderdale Co. licence #328, 25 Dec 1891; married 27 Dec 1891. Son John Sanford’s funeral record: “f. Andrew S. SIMPSON, m. Minnie PARKER”</li>
+          <li><span class="tag fact">FACT</span> <strong>Residence:</strong> “lives near Asbury” (1930 Enterprise)</li>
+          <li><span class="tag fact">FACT</span> <strong>Died:</strong> 17 January 1940 (Burgess &amp; Peters)</li>
+          <li><span class="tag fact">FACT</span> <strong>Burial:</strong> Asbury Cemetery, Lauderdale Co. <span class="tag need">CONFLICT</span> The Asbury transcription shows “Andrew S.” with the dates reversed (“17 January 1940 – 19 November 1957”) — a transcription slip; the funeral record gives b. 19 Nov 1857, d. 17 Jan 1940</li>
+      </ul>
+      <h2>Children</h2>
+      <ul class="timeline">
+          <li><span class="tag fact">FACT</span> Sallie Simpson Crook (4 Aug 1882 – 7 Jan 1971; m. W. F. “Willie” Crook) — funeral record names f. Andrew S. Simpson, m. Kate McMahon</li>
+          <li><span class="tag need">HYPOTHESIS</span> William (b. ~1884) — census index</li>
+          <li><span class="tag need">HYPOTHESIS (strong)</span> <strong><a href="giles-rexford-simpson.html">Giles Rexford Simpson</a></strong> (22 Jun 1889 – 9 Apr 1944) — 1900 census index</li>
+          <li><span class="tag need">HYPOTHESIS</span> Grover (b. ~1893, d. 1912) — census index</li>
+          <li><span class="tag need">HYPOTHESIS</span> Richard A. (20 May 1894 – 5 Feb 1984; in Memphis 1925) — census index</li>
+          <li><span class="tag need">HYPOTHESIS</span> Elmer Lee “Elma” (3 Nov 1899 – 17 Oct 1956) — census index</li>
+          <li><span class="tag need">HYPOTHESIS</span> Odie L. (b. ~1902) and R. Dee (b. ~1902) — census index</li>
+          <li><span class="tag need">HYPOTHESIS</span> Lola (b. ~1905) — census index</li>
+          <li><span class="tag fact">FACT</span> John Sanford (13 Dec 1909 – 19 Jan 1963) — funeral record names f. Andrew S. Simpson, m. Minnie Parker</li>
+      </ul>
+      <p class="note">Children born before Dec 1891 are presumed Kate’s; later children Minnie’s (<span class="tag need">HYPOTHESIS</span>).</p>
+      <h2>Research leads</h2>
+      <ul class="timeline">
+          <li><span class="tag need">HYPOTHESIS</span> John E. Simpson (b. 1859; d. 17 Mar 1951, Asbury), indexed nearby in 1910 — possibly a brother</li>
+          <li><span class="tag need">HYPOTHESIS</span> Thos. Simpson (22 Apr 1822 – 17 Feb 1899, Asbury), with Margarett in the 1870 Lauderdale index — relationship unknown</li>
+          <li><span class="tag need">need-more</span> Andrew’s 1940 death certificate (will name both parents); 1860/1870 census for Andrew as a child; 1880 census (Andrew with Kate, Sallie and baby William)</li>
+      </ul>
+      <h2>Sources &amp; references</h2>
+      <ul class="sources">
+          <li><span class="tag fact">FACT</span> Burgess &amp; Peters Funeral Home 1939–45 — b. 19 Nov 1857, d. 17 Jan 1940; f. William Simpson — <a href="https://tngenweb.org/lauderdale/2022/02/01/1939-1945-burgess-peters-funeral-home/">https://tngenweb.org/lauderdale/2022/02/01/1939-1945-burgess-peters-funeral-home/</a></li>
+          <li><span class="tag fact">FACT</span> Marriages 1886–1893 (brides O–Y) — licence #328, 25 Dec 1891; married 27 Dec 1891 — <a href="https://tngenweb.org/lauderdale/2022/01/31/marriages-1886-1893-bride-surnames-starting-with-o-y/">https://tngenweb.org/lauderdale/2022/01/31/marriages-1886-1893-bride-surnames-starting-with-o-y/</a></li>
+          <li><span class="tag fact">FACT</span> 1951–60 funeral home records — Mary I. Simpson, 85 yrs, d. 10/19/1957, Asbury — <a href="https://tngenweb.org/lauderdale/2022/02/01/1951-1960-funeral-home-records/">https://tngenweb.org/lauderdale/2022/02/01/1951-1960-funeral-home-records/</a></li>
+          <li><span class="tag fact">FACT</span> 1961–70 funeral home records — John Sanford Simpson — <a href="https://tngenweb.org/lauderdale/2022/02/01/1961-1970-funeral-home-records/">https://tngenweb.org/lauderdale/2022/02/01/1961-1970-funeral-home-records/</a></li>
+          <li><span class="tag fact">FACT</span> 1971–80 funeral home records — Sallie Crook (parents Andrew S. Simpson &amp; Kate McMahon) — <a href="https://tngenweb.org/lauderdale/2022/02/01/1971-1980-funeral-home-records-ripley-tn/">https://tngenweb.org/lauderdale/2022/02/01/1971-1980-funeral-home-records-ripley-tn/</a></li>
+          <li><span class="tag fact">FACT</span> 1930 Lauderdale County Enterprise — “lives near Asbury” — <a href="https://tngenweb.org/lauderdale/2022/02/04/1930-lauderdale-county-enterprise/">https://tngenweb.org/lauderdale/2022/02/04/1930-lauderdale-county-enterprise/</a></li>
+          <li><span class="tag fact">FACT</span> 1926 Enterprise excerpts, part 7 (1925 items) — <a href="https://tngenweb.org/lauderdale/2022/02/04/1926-lauderdale-county-enterprise-excerpts-part-7/">https://tngenweb.org/lauderdale/2022/02/04/1926-lauderdale-county-enterprise-excerpts-part-7/</a></li>
+          <li><span class="tag fact">FACT</span> Asbury Cemetery transcription (USGWArchives, read via web.archive.org) — <a href="http://files.usgwarchives.net/tn/lauderdale/cemeteries/asbury.txt">http://files.usgwarchives.net/tn/lauderdale/cemeteries/asbury.txt</a></li>
+          <li><span class="tag fact">FACT (index)</span> 1900/1910 census indexes (colls. 7602/7884) — <a href="https://www.ancestry.com/search/collections/7602?name=Andrew_Simpson&residence=_tennessee-usa_45">https://www.ancestry.com/search/collections/7602?name=Andrew_Simpson&residence=_tennessee-usa_45</a></li>
+          <li><span class="tag fact">FACT</span> Crystal’s maternal research report (27 Sep 2026)</li>
+      </ul>
+      <footer class="colophon">Unlisted genealogy · FACT = William or a record Crystal read · HYPOTHESIS / NOT FOUND = still open</footer>
+    </div>
+  
+<script src="../../corrections/config.js"></script>
+<script src="../corrections-widget.js"></script>
+<script src="../contributions-display.js"></script>
+</body>
+</html>

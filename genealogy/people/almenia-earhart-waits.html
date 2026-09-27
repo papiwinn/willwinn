@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Almenia Earhart Waits – Family genealogy</title>
+    <style>
+      :root { --accent: #e94560; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: system-ui, -apple-system, sans-serif;
+        color: white;
+        padding: 40px 20px 60px;
+      }
+      .container { max-width: 920px; margin: 0 auto; }
+      h1 { font-size: 2rem; margin: 0 0 8px; font-weight: 700; }
+      h2 { font-size: 1.25rem; margin: 28px 0 12px; color: var(--accent); }
+      h3 { font-size: 1.05rem; margin: 0 0 8px; }
+      .subtitle { color: var(--accent); font-size: 1.05rem; margin-bottom: 16px; }
+      .intro { opacity: 0.88; line-height: 1.55; margin: 0 0 28px; max-width: 40rem; }
+      a { color: var(--accent); }
+      a:hover { color: #ff6b6b; }
+      .card {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 18px 18px 16px;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 999px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+      }
+      .tag.fact { background: rgba(46, 204, 113, 0.18); border: 1px solid rgba(46, 204, 113, 0.45); color: #a8e6c1; }
+      .tag.need { background: rgba(233, 69, 96, 0.18); border: 1px solid rgba(233, 69, 96, 0.45); color: #ffb3c0; }
+      .household {
+        display: grid;
+        gap: 12px;
+        margin: 0 0 8px;
+      }
+      .household .parents, .household .kids {
+        display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch;
+      }
+      .person-chip {
+        flex: 1 1 160px;
+        background: rgba(0,0,0,0.22);
+        border: 1px solid rgba(255,255,255,0.14);
+        border-radius: 10px;
+        padding: 12px 14px;
+        text-decoration: none;
+        color: inherit;
+      }
+      .person-chip:hover { border-color: var(--accent); }
+      .person-chip .role { font-size: 0.75rem; color: var(--accent); margin-bottom: 4px; }
+      .person-chip .name { font-weight: 650; }
+      .person-chip .meta { font-size: 0.82rem; opacity: 0.7; margin-top: 4px; }
+      .connector {
+        text-align: center; opacity: 0.55; font-size: 0.85rem; margin: 4px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 14px;
+      }
+      .feature-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 10px;
+        padding: 16px;
+        min-height: 120px;
+      }
+      .feature-card:hover { border-color: var(--accent); }
+      .feature-card .lifespan { font-size: 0.85rem; opacity: 0.7; margin: 4px 0 10px; }
+      .feature-card p { font-size: 0.9rem; opacity: 0.85; margin: 0; line-height: 1.45; }
+      .strip {
+        display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;
+      }
+      .strip a.btn {
+        display: inline-block;
+        padding: 12px 18px;
+        background: var(--accent);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      .strip a.btn.secondary {
+        background: transparent;
+        border: 2px solid var(--accent);
+      }
+      .strip a.btn:hover { background: #ff6b6b; color: white; }
+      .strip a.btn.secondary:hover { background: rgba(233,69,96,0.15); }
+      .note { font-size: 0.88rem; opacity: 0.75; margin-top: 12px; line-height: 1.45; }
+      .photo-ph {
+        width: 100%;
+        max-width: 280px;
+        aspect-ratio: 4/5;
+        background: rgba(0,0,0,0.35);
+        border: 1px dashed rgba(255,255,255,0.25);
+        border-radius: 10px;
+        display: flex; align-items: center; justify-content: center;
+        color: rgba(255,255,255,0.45);
+        font-size: 0.9rem;
+        margin: 0 0 18px;
+      }
+      .timeline { margin: 0; padding-left: 1.2rem; }
+      .timeline li { margin: 0 0 8px; line-height: 1.45; }
+      .sources { margin: 0; padding-left: 1.2rem; }
+      .sources li { margin: 0 0 8px; line-height: 1.45; opacity: 0.9; }
+      .back { display: inline-block; margin-bottom: 22px; color: var(--accent); text-decoration: none; font-weight: 500; }
+      .back:hover { text-decoration: underline; }
+      .status-row { margin: 0 0 14px; }
+      footer.colophon {
+        margin-top: 40px;
+        font-size: 0.82rem;
+        opacity: 0.55;
+      }
+
+    
+      .portrait {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 0 18px;
+      }
+      .portrait img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(0,0,0,0.35);
+      }
+
+    
+      /* Top navigation: hub link + Back to tree button */
+      .page-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: 0 0 22px; }
+      .page-nav .back { margin-bottom: 0; }
+      .tree-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 8px 14px; border-radius: 8px;
+        background: var(--accent); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 0.95rem;
+        box-shadow: 0 3px 12px rgba(233,69,96,.35);
+      }
+      .tree-btn:hover { background: #ff6b6b; color: #fff; }
+    </style>
+  </head>
+                <body>
+    <div class="container">
+      <nav class="page-nav" aria-label="Genealogy navigation"><a class="back" href="../">← Genealogy hub</a> <a class="tree-btn" href="../tree.html">🌳 Back to tree</a></nav>
+      <h1>Almenia “Almena” (Earhart) Waits</h1>
+      <div class="subtitle">c. 1831/32 – after 1900 · Lexington / Newberry Co., SC → Lauderdale Co., TN</div>
+      <div class="status-row"><span class="tag fact">FACT</span> mother of J. C. Waits per Find a Grave (via William) · <span class="tag need">HYPOTHESIS (strong)</span> Earhart maiden name / 1850 household</div>
+      <div class="photo-ph">Photo placeholder</div>
+      <p class="intro"><strong>Relation:</strong> Mother of <a href="james-clayborn-waits.html">James Clayborn Waits</a> (linked on J. C.’s Find a Grave memorial #200803433); wife of <a href="james-samuel-waits.html">James Samuel Waits</a>. William’s 2nd-great-grandmother.</p>
+      <p class="intro">Name forms (<span class="tag fact">FACT (index)</span>): “Almcnia Earheart” (1850 index — a mis-transcription of Almenia); “Almena Waits” (1860); “Almma Waits” (1870); “A E Waits” (1900). Her granddaughter was named <a href="mary-almenuia-williams.html">Mary Almenia</a> Waits (b. 1899) (<span class="tag fact">FACT</span>, funeral record).</p>
+      <p class="intro"><a href="james-samuel-waits.html">→ James Samuel Waits</a> · <a href="james-clayborn-waits.html">→ James Clayborn Waits</a> · <a href="mary-almenuia-williams.html">→ Mary Almenia Williams (granddaughter)</a></p>
+      <h2>Timeline</h2>
+      <ul class="timeline">
+          <li><span class="tag fact">FACT (index)</span> <strong>Born:</strong> about 1831–1832, South Carolina — 1850 abt 1831; 1860 abt 1832; 1870 abt 1832; 1900 b. 1832</li>
+          <li><span class="tag need">HYPOTHESIS (strong)</span> <strong>1850:</strong> Lexington Co., SC (next to Newberry, in the Dutch Fork) — “Almcnia Earheart” (b. ~1831) indexed (record 5818762) in the run of Earhearts headed by Jacob and Leah (records 5818757–5818764). The maiden name Earhart is from Find a Grave; this record supports it</li>
+          <li><span class="tag fact">FACT</span> <strong>Husband:</strong> <a href="james-samuel-waits.html">James Samuel Waits</a> — his wife in 1860, 1870 and 1900. Marriage (c. 1850–56, SC) <span class="tag need">NOT FOUND</span>; SC had no civil marriage records then</li>
+          <li><span class="tag fact">FACT (index)</span> <strong>1860, 1870:</strong> Newberry Co., SC; <strong>1900:</strong> Lauderdale Co., TN, next to son J. C. (<span class="tag need">HYPOTHESIS (strong)</span>)</li>
+          <li><span class="tag fact">FACT</span> <strong>Died:</strong> after June 1900. Date, place <span class="tag need">NOT FOUND</span></li>
+          <li><span class="tag need">NOT FOUND</span> <strong>Burial.</strong> <span class="tag need">CONFLICT</span> J. C.’s Find a Grave memorial (per William) links her as Almenia Earhart Waits, 1831–1908, Maplewood; Crystal could not open it and found no record of the death or burial</li>
+      </ul>
+      <h2>Children</h2>
+      <p class="note">See <a href="james-samuel-waits.html">James Samuel Waits’s page</a>: Ellen, <a href="james-clayborn-waits.html">James Clayborn</a>, Martha, Love L. Waits Ray, Josie Waits Gaines (all <span class="tag need">HYPOTHESIS</span> except James Clayborn and Josie’s named father).</p>
+      <h2>Research leads (not on the tree)</h2>
+      <p class="note">These stay <strong>Unknown</strong> on the tree until a record states the relationship.</p>
+      <ul class="timeline">
+          <li><span class="tag need">HYPOTHESIS (strong)</span> <strong>Parents — Jacob Earhart / Earheart / Arehart (c. 1777 – after 1860) and Leah (c. 1794 – ?)</strong>, Lexington Co., SC. <span class="tag fact">FACT (index)</span> Indexed in 1850 (Jacob b. ~1777, Leah b. ~1794) with Gemima (b. ~1820), Joier P. (b. ~1826), Rispah (b. ~1828), <strong>Claiborn B. W.</strong> (b. ~1830), Almenia and Oliver W. (b. ~1838); and in 1860 as “Arehart” (Jacob b. ~1778, Leah b. ~1800, with Jemima, Henry J., Joyce, Rizpa and C. B. W.) — Almenia no longer there, consistent with her marriage</li>
+          <li><span class="tag need">HYPOTHESIS</span> <strong>The Clayborn name:</strong> her probable brother <strong>Claiborn B. W. Earheart</strong> would explain her son’s name, James <strong>Clayborn</strong> Waits — naming-pattern support only</li>
+          <li><span class="tag need">UNVERIFIED</span> A WikiTree search snippet identifies Leah as <strong>Leah Hughes (1794–1850)</strong>, WikiTree Hughes-28896, wife of Jacob Earhart (b. 1777). The page could not be opened; its “d. 1850” conflicts with a Leah in the 1860 index</li>
+          <li><span class="tag need">need-more</span> Lexington Co. probate (many records burned 1865); St. John’s / St. Michael’s Lutheran records; Bethel Baptist or Newberry College Lutheran archives</li>
+      </ul>
+      <h2>Sources &amp; references</h2>
+      <ul class="sources">
+          <li><span class="tag fact">FACT</span> Find a Grave #200803433 James Clayborn Waits (parent links, per William; not opened by Crystal) — <a href="https://www.findagrave.com/memorial/200803433/james_clayborn-waits">https://www.findagrave.com/memorial/200803433/james_clayborn-waits</a></li>
+          <li><span class="tag fact">FACT (index)</span> 1850 census index, Lexington SC (coll. 8054) — <a href="https://www.ancestry.com/search/collections/8054?name=_Earheart&name_x=_1&residence=_south+carolina-usa_43">https://www.ancestry.com/search/collections/8054?name=_Earheart&name_x=_1&residence=_south+carolina-usa_43</a></li>
+          <li><span class="tag fact">FACT (index)</span> 1860 census index, Lexington SC (coll. 7667) — <a href="https://www.ancestry.com/search/collections/7667?name=_Earhart&name_x=_1&residence=_south+carolina-usa_43">https://www.ancestry.com/search/collections/7667?name=_Earhart&name_x=_1&residence=_south+carolina-usa_43</a></li>
+          <li><span class="tag fact">FACT (index)</span> Waits entries 1860/1870 Newberry — <a href="https://www.ancestry.com/search/collections/7667?name=_Waits&name_x=_1&residence=_newberry-south+carolina-usa_2427">https://www.ancestry.com/search/collections/7667?name=_Waits&name_x=_1&residence=_newberry-south+carolina-usa_2427</a> · <a href="https://www.ancestry.com/search/collections/7163?name=_Waits&name_x=_1&residence=_newberry-south+carolina-usa_2427">https://www.ancestry.com/search/collections/7163?name=_Waits&name_x=_1&residence=_newberry-south+carolina-usa_2427</a></li>
+          <li><span class="tag fact">FACT</span> 1869 SC state census, Newberry Twp 9 — <a href="https://www.genealogytrails.com/scar/newberry/territorial_census/1869nbytwp9.htm">https://www.genealogytrails.com/scar/newberry/territorial_census/1869nbytwp9.htm</a></li>
+          <li><span class="tag fact">FACT (index)</span> 1900 census index, Lauderdale TN — <a href="https://www.ancestry.com/search/collections/7602?name=_Waits&name_x=_1&residence=_tennessee-usa_45&keyword=Lauderdale">https://www.ancestry.com/search/collections/7602?name=_Waits&name_x=_1&residence=_tennessee-usa_45&keyword=Lauderdale</a></li>
+          <li><span class="tag fact">FACT</span> 1971–80 funeral home records (Mary Almenuia Williams) — <a href="https://tngenweb.org/lauderdale/2022/02/01/1971-1980-funeral-home-records-ripley-tn/">https://tngenweb.org/lauderdale/2022/02/01/1971-1980-funeral-home-records-ripley-tn/</a></li>
+          <li><span class="tag need">UNVERIFIED</span> WikiTree Hughes-28896 (not opened) — <a href="https://www.wikitree.com/wiki/Hughes-28896">https://www.wikitree.com/wiki/Hughes-28896</a></li>
+          <li><span class="tag fact">FACT</span> Crystal’s maternal research report (27 Sep 2026)</li>
+      </ul>
+      <footer class="colophon">Unlisted genealogy · FACT = William or a record Crystal read · HYPOTHESIS / NOT FOUND = still open</footer>
+    </div>
+  
+<script src="../../corrections/config.js"></script>
+<script src="../corrections-widget.js"></script>
+<script src="../contributions-display.js"></script>
+</body>
+</html>

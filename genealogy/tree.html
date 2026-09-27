@@ -340,8 +340,9 @@
       <ul class="tree-notes">
         <li>William’s father’s line: Winn → McBride. William’s mother’s line: Simpson → Waits / Milburn.</li>
         <li><strong>Gabie Pilkington Waits</strong> was James Clayborn Waits’s second wife and Lovy’s stepmother, not her mother — she is linked beside James, not placed in the line.</li>
-        <li>James Samuel Waits and Almenia Earhart Waits don’t have their own pages yet; they are cited on <a href="people/james-clayborn-waits.html">James Clayborn Waits’s page</a> (Find a Grave #200803433 parent links).</li>
-        <li>Robyn’s parents, <a href="people/richard-clinton-barrett.html">Richard Clinton Barrett</a> and <a href="people/elizabeth-jane-holden.html">Elizabeth Jane Holden</a>, are FACT from William; Elizabeth’s Eastport, Maine birthplace is a hypothesis. Richard’s parents Royden Y. and Lillian Barrett are named on his 1923 Norwood birth record. <a href="people/henry-waldo-barrett.html">Henry Waldo Barrett</a> is shown dashed as a <strong>hypothesis</strong> for Royden’s father — see the <a href="people/barrett-family.html">Barrett family overview</a>.</li>
+        <li><a href="people/james-samuel-waits.html">James Samuel Waits</a> and <a href="people/almenia-earhart-waits.html">Almenia Earhart Waits</a> are James Clayborn Waits’s parents per his Find a Grave memorial (#200803433). Their possible parents (Mark &amp; Mahala Waits; Jacob &amp; Leah Earheart) are listed as <strong>research leads</strong> on their pages and stay Unknown here.</li>
+        <li>Dashed boxes on the mother’s side are <strong>hypotheses</strong> from Crystal’s maternal batch: <a href="people/andrew-solon-simpson.html">Andrew Solon Simpson</a> and <a href="people/kate-mcmahon-simpson.html">Kate McMahon</a> as Giles’s parents, and <a href="people/mack-milburn.html">Mack Milburn</a> and <a href="people/mary-owens-milburn.html">Mary (Owens) Milburn</a> as Rhoda’s parents. William Simpson is named as Andrew’s father in Andrew’s funeral record.</li>
+        <li>Robyn’s parents, <a href="people/richard-clinton-barrett.html">Richard Clinton Barrett</a> and <a href="people/elizabeth-jane-holden.html">Elizabeth Jane Holden</a>, are FACT from William; Elizabeth’s parents, <a href="people/william-holden.html">William Holden</a> and <a href="people/agnes-corbett-holden.html">Agnes Corbett</a>, are FACT from William; her own Eastport, Maine birthplace is a hypothesis (her mother was born there). Richard’s parents Royden Y. and Lillian Barrett are named on his 1923 Norwood birth record. <a href="people/henry-waldo-barrett.html">Henry Waldo Barrett</a> is shown dashed as a <strong>hypothesis</strong> for Royden’s father — see the <a href="people/barrett-family.html">Barrett family overview</a>.</li>
       </ul>
       <footer class="colophon">Unlisted genealogy · tree data lives in the <code>TREE</code> block inside <code>genealogy/tree.html</code></footer>
     </div>
@@ -400,7 +401,20 @@
           dates: "13 Feb 1924 – 2017", status: "fact",
           father: {
             slug: "giles-rexford-simpson", name: "Giles Rexford Simpson",
-            dates: "22 Jun 1889/1899 – 9 Apr 1944", status: "fact"
+            dates: "22 Jun 1889 – 9 Apr 1944", status: "fact",
+            father: {
+              slug: "andrew-solon-simpson", name: "Andrew Solon Simpson",
+              dates: "19 Nov 1857 – 17 Jan 1940", status: "hypothesis",
+              father: {
+                slug: null, name: "William Simpson", dates: "name only (Andrew’s funeral record)", status: "fact",
+                cite: "andrew-solon-simpson", citeLabel: "no page yet", citeText: "cited on Andrew’s page"
+              }
+              /* Andrew's mother unknown — research open */
+            },
+            mother: {
+              slug: "kate-mcmahon-simpson", name: "Kate McMahon",
+              dates: "d. 1889? · identity unproven", status: "hypothesis"
+            }
           },
           mother: {
             slug: "lovy-waits-simpson", name: "Carrie Love “Lovy” Waits Simpson",
@@ -410,17 +424,27 @@
               dates: "Apr 1864 – 20 Dec 1944", status: "fact",
               notes: [{ slug: "gabie-pilkington-waits", text: "2nd wife: Gabie Pilkington Waits (stepmother, not Lovy’s mother)" }],
               father: {
-                slug: null, name: "James Samuel Waits", dates: "1830 – 1910", status: "fact",
-                cite: "james-clayborn-waits", citeLabel: "no page yet"
+                slug: "james-samuel-waits", name: "James Samuel Waits",
+                dates: "c. 1830 – after 1900 (FaG: 1910)", status: "fact"
+                /* parents unknown on the tree — Mark & Mahala Waits are research leads on his page */
               },
               mother: {
-                slug: null, name: "Almenia (Earhart) Waits", dates: "1831 – 1908", status: "fact",
-                cite: "james-clayborn-waits", citeLabel: "no page yet"
+                slug: "almenia-earhart-waits", name: "Almenia (Earhart) Waits",
+                dates: "c. 1831 – after 1900 (FaG: 1908)", status: "fact"
+                /* parents unknown on the tree — Jacob & Leah Earheart are research leads on her page */
               }
             },
             mother: {
-              slug: "rhoda-milburn-waits", name: "Rhoda / Phobe (Milburn) Waits",
-              dates: "13 May 1873 – 14 May 1908", status: "fact"
+              slug: "rhoda-milburn-waits", name: "Rhoda (Milburn) Waits",
+              dates: "c. 1873 – 14 May 1908", status: "fact",
+              father: {
+                slug: "mack-milburn", name: "Mack Milburn",
+                dates: "c. 1839 – 1 Feb 1914?", status: "hypothesis"
+              },
+              mother: {
+                slug: "mary-owens-milburn", name: "Mary (Owens) Milburn",
+                dates: "c. 1843 – ?", status: "hypothesis"
+              }
             }
           }
         }
@@ -431,7 +455,7 @@
         notes: [{ slug: "barrett-family", text: "Barrett family overview — research in progress" }],
         father: {
           slug: "richard-clinton-barrett", name: "Richard Clinton Barrett",
-          dates: "b. 26 Jan 1923 · Islington or Norwood, MA", status: "fact",
+          dates: "26 Jan 1923 – 29 Apr 1996", status: "fact",
           father: {
             slug: "royden-young-barrett", name: "Royden Young “Roy Y.” Barrett",
             dates: "c. 1877 – 12 May 1939 · Millis, MA", status: "fact",
@@ -449,8 +473,16 @@
         },
         mother: {
           slug: "elizabeth-jane-holden", name: "Elizabeth Jane “Betty” Holden",
-          dates: "b. 2 Aug 1923 · birthplace unconfirmed", status: "fact"
-          /* Eastport, Maine birthplace is a HYPOTHESIS; parents unknown — research open */
+          dates: "2 Aug 1923 – 3 Nov 2015", status: "fact",
+          /* Eastport, Maine birthplace is a HYPOTHESIS */
+          father: {
+            slug: "william-holden", name: "William Holden",
+            dates: "lived in Blackstone, MA", status: "fact"
+          },
+          mother: {
+            slug: "agnes-corbett-holden", name: "Agnes (Corbett) Holden",
+            dates: "b. Eastport, ME", status: "fact"
+          }
         }
       }
     };
@@ -517,7 +549,7 @@
           parts.push(a);
         });
         if (!p.slug && p.cite) {
-          var c = el("a", null, "↳ cited on James C. Waits’s page");
+          var c = el("a", null, "↳ " + (p.citeText || "cited on James C. Waits’s page"));
           c.href = "people/" + p.cite + ".html";
           parts.push(c);
         }
