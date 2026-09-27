@@ -2385,10 +2385,10 @@
     "id": "william-lavaughan-winn-jr",
     "name": "William LaVaughan Winn Jr.",
     "short_name": "William LaVaughan Winn Jr.",
-    "lifespan": "b. 6 May 1985 \u00b7 Union City, TN \u00b7 m. 4 Oct 2020",
+    "lifespan": "b. 6 May 1985 \u00b7 Union City, TN \u00b7 m. 4 Oct 2020 \u00b7 Sterling, MA",
     "rel": "Child of William LaVaughan Winn and Robyn Louise Barrett.",
     "bio_or_step": "need",
-    "blurb": "b. 6 May 1985 \u00b7 Union City, TN \u00b7 m. 4 Oct 2020",
+    "blurb": "b. 6 May 1985 \u00b7 Union City, TN \u00b7 m. 4 Oct 2020, Sterling, MA, to Kathleen Rose McGuire",
     "narrative": "",
     "timeline": [
       {
@@ -2398,7 +2398,7 @@
       },
       {
         "t": "Married",
-        "d": "4 Oct 2020",
+        "d": "4 Oct 2020, Sterling, MA, to Kathleen Rose McGuire",
         "status": "fact"
       },
       {
@@ -2415,7 +2415,7 @@
       {
         "label": "William LaVaughan Winn, verified family submission, 27 Sep 2026",
         "status": "fact",
-        "note": "submitted by William L Winn"
+        "note": "submitted by William L Winn; marriage date, place and spouse"
       }
     ]
   },
@@ -2423,10 +2423,10 @@
     "id": "nathan-lee-winn",
     "name": "Nathan Lee Winn",
     "short_name": "Nathan Lee Winn",
-    "lifespan": "b. 10 Jul 1987 \u00b7 Jackson, TN \u00b7 m. 22 Jan 2010",
+    "lifespan": "b. 10 Jul 1987 \u00b7 Jackson, TN \u00b7 m. 22 Jan 2010 \u00b7 Las Vegas, NV",
     "rel": "Child of William LaVaughan Winn and Robyn Louise Barrett.",
     "bio_or_step": "need",
-    "blurb": "b. 10 Jul 1987 \u00b7 Jackson, TN \u00b7 m. 22 Jan 2010",
+    "blurb": "b. 10 Jul 1987 \u00b7 Jackson, TN \u00b7 m. 22 Jan 2010, Las Vegas, NV, to Justine Winn",
     "narrative": "",
     "timeline": [
       {
@@ -2436,7 +2436,7 @@
       },
       {
         "t": "Married",
-        "d": "22 Jan 2010, to Justine Winn",
+        "d": "22 Jan 2010, Las Vegas, NV, to Justine Winn",
         "status": "fact"
       },
       {
@@ -2453,7 +2453,7 @@
       {
         "label": "William LaVaughan Winn, verified family submission, 27 Sep 2026",
         "status": "fact",
-        "note": "submitted by Justine Winn"
+        "note": "submitted by Justine Winn; marriage date, place and spouse"
       }
     ]
   },
