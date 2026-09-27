@@ -1386,7 +1386,7 @@
       },
       {
         "t": "Siblings",
-        "d": "Bonny Jane Barrett; Gayle Elizabeth Barrett; Richard Clinton Barrett Jr.",
+        "d": "Katherine A. Barrett (oldest sister); Bonny Jane Barrett; Gayle Elizabeth Barrett; Richard Clinton Barrett Jr. (oldest brother); Peter Barrett; Paul Barrett; Mark Barrett (William, family record, 27 Sep 2026)",
         "status": "fact"
       }
     ],
@@ -1411,6 +1411,11 @@
         "label": "Crystal\u2019s Barrett/Holden research report (27 Sep 2026)",
         "status": "fact",
         "note": "siblings (Millis birth lists)"
+      },
+      {
+        "label": "William LaVaughan Winn, family record (27 Sep 2026)",
+        "status": "fact",
+        "note": "siblings Katherine A., Bonny Jane, Gayle Elizabeth; Richard Clinton Jr., Peter, Paul, Mark"
       }
     ]
   },
@@ -1455,13 +1460,18 @@
         "status": "fact"
       },
       {
+        "t": "1950 census",
+        "d": "Millis-Clicquot, Norfolk Co., MA \u2014 age 27, fireman at the State Hospital; mother born Nova Scotia",
+        "status": "fact"
+      },
+      {
         "t": "Millis",
         "d": "HS football 1939, 1941; Water Commissioner 1956; Superintendent of Streets 1 Nov 1960, later Public Works, resigned 25 Aug 1976; Fire Dept Captain 1961\u201368; town office to 1998",
         "status": "fact"
       },
       {
         "t": "Children",
-        "d": "Robyn Louise Barrett; Bonny Jane Barrett; Gayle Elizabeth Barrett; Richard Clinton Barrett Jr.",
+        "d": "Robyn Louise Barrett; Katherine A. Barrett (oldest sister); Bonny Jane Barrett; Gayle Elizabeth Barrett; Richard Clinton Barrett Jr. (oldest brother); Peter Barrett; Paul Barrett; Mark Barrett (William, family record, 27 Sep 2026)",
         "status": "fact"
       },
       {
@@ -1513,6 +1523,17 @@
         "label": "Millis annual town reports (archive.org complete-YYYY-annual-town-report series)",
         "status": "fact",
         "note": "careers 1939\u20131998 (Crystal)"
+      },
+      {
+        "label": "William LaVaughan Winn, family record (27 Sep 2026)",
+        "status": "fact",
+        "note": "children: Katherine A. (oldest sister), Bonny Jane, Gayle Elizabeth, Robyn Louise; Richard Clinton Jr. (oldest brother), Peter, Paul, Mark"
+      },
+      {
+        "label": "1950 US census, Millis-Clicquot, Norfolk Co., MA (FamilySearch)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:6F3W-9XL1",
+        "note": "Richard C, 27, fireman at the State Hospital, mother b. Nova Scotia; wife Elizabeth J, 26, b. Massachusetts; daughters Katherine A and Bonny J"
       }
     ]
   },
@@ -1533,7 +1554,7 @@
       },
       {
         "t": "Birthplace",
-        "d": "NOT CONFIRMED \u2014 Eastport, ME or Blackstone, MA",
+        "d": "NOT CONFIRMED \u2014 Eastport, ME or Blackstone, MA; 1950 census says Massachusetts (supports Blackstone)",
         "status": "need"
       },
       {
@@ -1548,7 +1569,7 @@
       },
       {
         "t": "Children",
-        "d": "Robyn Louise Barrett; Bonny Jane Barrett; Gayle Elizabeth Barrett; Richard Clinton Barrett Jr.",
+        "d": "Robyn Louise Barrett; Katherine A. Barrett (oldest sister); Bonny Jane Barrett; Gayle Elizabeth Barrett; Richard Clinton Barrett Jr. (oldest brother); Peter Barrett; Paul Barrett; Mark Barrett (William, family record, 27 Sep 2026)",
         "status": "fact"
       },
       {
@@ -1564,6 +1585,11 @@
       {
         "t": "Married",
         "d": "13 Oct 1945, Medway, MA \u2014 Richard C. Barrett of Millis (Millis 1945 report p.31)",
+        "status": "fact"
+      },
+      {
+        "t": "1950 census",
+        "d": "Millis-Clicquot, Norfolk Co., MA \u2014 age 26, born Massachusetts",
         "status": "fact"
       },
       {
@@ -1630,6 +1656,17 @@
         "status": "fact",
         "href": "https://archive.org/details/complete-2015-annual-town-report",
         "note": "Elizabeth J. Barrett, Nov. 3, 92; MA State Library copy https://archives.lib.state.ma.us/handle/2452/432967"
+      },
+      {
+        "label": "William LaVaughan Winn, family record (27 Sep 2026)",
+        "status": "fact",
+        "note": "children: Katherine A. (oldest sister), Bonny Jane, Gayle Elizabeth, Robyn Louise; Richard Clinton Jr. (oldest brother), Peter, Paul, Mark"
+      },
+      {
+        "label": "1950 US census, Millis-Clicquot, Norfolk Co., MA (FamilySearch)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:6F3W-9XL1",
+        "note": "Richard C, 27, fireman at the State Hospital, mother b. Nova Scotia; wife Elizabeth J, 26, b. Massachusetts; daughters Katherine A and Bonny J"
       }
     ]
   },
@@ -1878,6 +1915,11 @@
         "t": "Parents",
         "d": "not found; Frank W. Garland possibly a brother (HYPOTHESIS)",
         "status": "need"
+      },
+      {
+        "t": "Birthplace (census evidence)",
+        "d": "1950 US census records Richard\u2019s mother as born in Nova Scotia \u2014 not yet confirmed",
+        "status": "need"
       }
     ],
     "sources": [
@@ -1895,6 +1937,12 @@
         "label": "Norwood 1904\u20131907 volume, 1905 births p.68",
         "status": "fact",
         "href": "https://archive.org/details/norwoodannualrep1904norw"
+      },
+      {
+        "label": "1950 US census, Millis-Clicquot, Norfolk Co., MA (FamilySearch)",
+        "status": "need",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:6F3W-9XL1",
+        "note": "Richard\u2019s mother born Nova Scotia (census evidence)"
       }
     ]
   },
