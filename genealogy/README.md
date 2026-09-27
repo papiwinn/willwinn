@@ -32,6 +32,7 @@ Visual pedigree chart: Robyn’s ancestors open to the left, William’s to the 
 - **Data lives in one place:** the `var TREE = { ... }` block near the bottom of `tree.html`.
 - Each person is `{ slug, name, dates, status: "fact" | "hypothesis", father: {...}, mother: {...} }`.
   `slug` links to `people/<slug>.html` and shows `images/<slug>.jpg` as a thumbnail if it exists.
+- `TREE.children` is the row of William &amp; Robyn’s children drawn below the couple.
 - A known person with no `father`/`mother` is drawn automatically with dashed **Unknown — research open** boxes.
 - **To add an ancestor:** create their `people/<slug>.html` page, then add a `father: { ... }` or `mother: { ... }`
   object under their child in `TREE`. Use `status: "hypothesis"` for unproven links.

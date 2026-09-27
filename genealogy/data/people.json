@@ -711,7 +711,7 @@
     "name": "William LaVaughan Winn",
     "short_name": "William LaVaughan Winn",
     "lifespan": "b. 28 Mar 1957 \u00b7 Ripley, TN (living)",
-    "rel": "Child of Austin Hunley Winn and Mary Oletta Littleheart Simpson Winn. Husband of Robyn Louise Barrett (m. 20 Aug 1983).",
+    "rel": "Child of Austin Hunley Winn and Mary Oletta Littleheart Simpson Winn. Husband of Robyn Louise Barrett (m. 20 Aug 1983, Millis, MA).",
     "bio_or_step": "need",
     "blurb": "Youngest child of Austin \u00d7 Oletta; site owner.",
     "narrative": "Youngest child of Austin \u00d7 Oletta; site owner.",
@@ -723,7 +723,12 @@
       },
       {
         "t": "Married",
-        "d": "Robyn Louise Barrett, 20 Aug 1983 (William)",
+        "d": "Robyn Louise Barrett, 20 Aug 1983, Millis, MA (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Children",
+        "d": "William LaVaughan Winn Jr.; Nathan Lee Winn; Jonathan Lucas Winn (adopted)",
         "status": "fact"
       }
     ],
@@ -736,7 +741,12 @@
       {
         "label": "William (family knowledge)",
         "status": "fact",
-        "note": "birth 28 Mar 1957 Ripley, TN; marriage to Robyn Louise Barrett 20 Aug 1983"
+        "note": "birth 28 Mar 1957 Ripley, TN; marriage to Robyn Louise Barrett 20 Aug 1983, Millis, MA"
+      },
+      {
+        "label": "William LaVaughan Winn, family record",
+        "status": "fact",
+        "note": "children"
       }
     ]
   },
@@ -991,10 +1001,10 @@
     "name": "Robyn Louise Barrett",
     "short_name": "Robyn Louise Barrett",
     "lifespan": "b. 27 Aug 1958 \u00b7 Natick, MA",
-    "rel": "Wife of William LaVaughan Winn (m. 20 Aug 1983). Daughter of Richard Clinton Barrett and Elizabeth Jane Holden.",
+    "rel": "Wife of William LaVaughan Winn (m. 20 Aug 1983, Millis, MA). Daughter of Richard Clinton Barrett and Elizabeth Jane Holden.",
     "bio_or_step": "need",
-    "blurb": "William\u2019s wife; married 20 Aug 1983 (William FACT). Daughter of Richard Clinton Barrett & Elizabeth Jane Holden.",
-    "narrative": "Robyn Louise Barrett, born 27 Aug 1958 in Natick, Massachusetts; married William LaVaughan Winn on 20 Aug 1983 (William FACT). Parents Richard Clinton Barrett and Elizabeth Jane Holden (William FACT).",
+    "blurb": "William\u2019s wife; married 20 Aug 1983, Millis, MA (William FACT). Daughter of Richard Clinton Barrett & Elizabeth Jane Holden.",
+    "narrative": "Robyn Louise Barrett, born 27 Aug 1958 in Natick, Massachusetts; married William LaVaughan Winn on 20 Aug 1983, Millis, MA (William FACT). Parents Richard Clinton Barrett and Elizabeth Jane Holden (William FACT).",
     "timeline": [
       {
         "t": "Born",
@@ -1013,7 +1023,12 @@
       },
       {
         "t": "Married",
-        "d": "William LaVaughan Winn, 20 Aug 1983 (William)",
+        "d": "William LaVaughan Winn, 20 Aug 1983, Millis, MA (William)",
+        "status": "fact"
+      },
+      {
+        "t": "Children",
+        "d": "William LaVaughan Winn Jr.; Nathan Lee Winn; Jonathan Lucas Winn (adopted)",
         "status": "fact"
       }
     ],
@@ -1027,6 +1042,11 @@
         "label": "Sources pending \u2014 research open",
         "status": "need",
         "note": "Crystal to send sources"
+      },
+      {
+        "label": "William LaVaughan Winn, family record",
+        "status": "fact",
+        "note": "children"
       }
     ]
   },
@@ -1143,6 +1163,90 @@
         "label": "Sources pending \u2014 research open",
         "status": "need",
         "note": "Crystal to send sources"
+      }
+    ]
+  },
+  {
+    "id": "william-lavaughan-winn-jr",
+    "name": "William LaVaughan Winn Jr.",
+    "short_name": "William LaVaughan Winn Jr.",
+    "lifespan": "b. 6 May 1985 \u00b7 Union City, TN",
+    "rel": "Child of William LaVaughan Winn and Robyn Louise Barrett.",
+    "bio_or_step": "need",
+    "blurb": "b. 6 May 1985 \u00b7 Union City, TN",
+    "narrative": "",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "6 May 1985, Union City, TN",
+        "status": "fact"
+      },
+      {
+        "t": "Parents",
+        "d": "William LaVaughan Winn; Robyn Louise Barrett",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "William LaVaughan Winn, family record",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "nathan-lee-winn",
+    "name": "Nathan Lee Winn",
+    "short_name": "Nathan Lee Winn",
+    "lifespan": "b. 10 Jul 1987 \u00b7 Jackson, TN",
+    "rel": "Child of William LaVaughan Winn and Robyn Louise Barrett.",
+    "bio_or_step": "need",
+    "blurb": "b. 10 Jul 1987 \u00b7 Jackson, TN",
+    "narrative": "",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "10 Jul 1987, Jackson, TN",
+        "status": "fact"
+      },
+      {
+        "t": "Parents",
+        "d": "William LaVaughan Winn; Robyn Louise Barrett",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "William LaVaughan Winn, family record",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "jonathan-lucas-winn",
+    "name": "Jonathan Lucas Winn",
+    "short_name": "Jonathan Lucas Winn",
+    "lifespan": "b. 8 Jan 2009 \u00b7 adopted",
+    "rel": "Child of William LaVaughan Winn and Robyn Louise Barrett.",
+    "bio_or_step": "need",
+    "blurb": "b. 8 Jan 2009 \u00b7 adopted",
+    "narrative": "",
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "8 Jan 2009 (adopted)",
+        "status": "fact"
+      },
+      {
+        "t": "Parents",
+        "d": "William LaVaughan Winn; Robyn Louise Barrett",
+        "status": "fact"
+      }
+    ],
+    "sources": [
+      {
+        "label": "William LaVaughan Winn, family record",
+        "status": "fact"
       }
     ]
   }

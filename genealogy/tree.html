@@ -267,6 +267,27 @@
       .sib:hover { border-color: var(--accent); }
       .sib img { width: 22px; height: 27px; object-fit: cover; border-radius: 4px; }
 
+      .below.above { top: auto; bottom: 100%; margin: 0 0 6px; }
+
+      /* Children row below the couple (absolutely placed so it doesn't shift connectors) */
+      .kids {
+        position: absolute; left: 50%; top: calc(50% + 58px); transform: translateX(-50%);
+        display: flex; flex-direction: column; align-items: center; z-index: 1;
+      }
+      .kids .drop { width: 0; height: 22px; border-left: 2px solid rgba(233,69,96,0.6); }
+      .kids .lbl { font-size: 0.66rem; text-transform: uppercase; letter-spacing: .05em; color: #ffb3c0; margin: 0 0 4px; opacity: 0.85; }
+      .kids-row { display: flex; gap: 12px; position: relative; padding-top: 14px; }
+      .kids-row::before {
+        content: ""; position: absolute; top: 0; left: 80px; right: 80px;
+        border-top: 2px solid rgba(233,69,96,0.6);
+      }
+      .kids-row .kid { position: relative; }
+      .kids-row .kid::before {
+        content: ""; position: absolute; top: -14px; left: 50%; height: 14px;
+        border-left: 2px solid rgba(233,69,96,0.6);
+      }
+      .kids-row .box { width: 160px; text-align: left; }
+
       /* Marriage link between the two roots */
       .couple-link {
         flex: 0 0 auto; margin: 0 10px; text-align: center; font-size: 0.74rem; line-height: 1.25;
@@ -290,6 +311,8 @@
         .box .dt { font-size: 0.7rem; }
         .parents > .node { padding-top: 3px; padding-bottom: 3px; }
         .couple-link { width: 60px; margin: 0 8px; }
+        .kids-row .box { width: 140px; }
+        .kids-row::before { left: 70px; right: 70px; }
       }
       .tree-notes li { margin: 0 0 8px; line-height: 1.45; }
     </style>
@@ -335,7 +358,13 @@
        - unknown: true + label -> a labelled Unknown placeholder box.
        ===================================================================== */
     var TREE = {
-      marriage: "m. 20 Aug 1983",
+      marriage: "m. 20 Aug 1983 · Millis, MA",
+      /* William & Robyn's children — drawn as a row below the couple */
+      children: [
+        { slug: "william-lavaughan-winn-jr", name: "William LaVaughan Winn Jr.", dates: "b. 6 May 1985 · Union City, TN", role: "Son", status: "fact" },
+        { slug: "nathan-lee-winn", name: "Nathan Lee Winn", dates: "b. 10 Jul 1987 · Jackson, TN", role: "Son", status: "fact" },
+        { slug: "jonathan-lucas-winn", name: "Jonathan Lucas Winn", dates: "b. 8 Jan 2009 · adopted", role: "Son (adopted)", status: "fact" }
+      ],
       husband: {
         slug: "william-lavaughan-winn", name: "William LaVaughan Winn",
         dates: "b. 28 Mar 1957 · Ripley, TN", status: "fact",
@@ -466,7 +495,7 @@
         if (p.slug) addThumb(box, p.slug);
         return box;
       }
-      function makeBelow(p) {
+      function makeBelow(p, above) {
         var parts = [];
         (p.notes || []).forEach(function (n) {
           var a = el("a", null, "↳ " + n.text);
@@ -495,7 +524,7 @@
           parts.push(s);
         }
         if (!parts.length) return null;
-        var d = el("div", "below");
+        var d = el("div", "below" + (above ? " above" : ""));
         parts.forEach(function (x, i) {
           if (i && x.tagName === "A") d.appendChild(el("br"));
           d.appendChild(x);
@@ -508,7 +537,7 @@
         var role = roleLabel(depth, sex, rootRole);
         self.appendChild(makeBox(p, role, depth === 0));
         if (p && !p.unknown) {
-          var below = makeBelow(p);
+          var below = makeBelow(p, depth === 0);
           if (below) self.appendChild(below);
         }
         node.appendChild(self);
@@ -526,6 +555,19 @@
       var link = el("div", "couple-link");
       link.appendChild(el("span", "rings", "⚭"));
       link.appendChild(document.createTextNode(TREE.marriage));
+      if (TREE.children && TREE.children.length) {
+        var kids = el("div", "kids");
+        kids.appendChild(el("div", "drop"));
+        kids.appendChild(el("div", "lbl", "Children"));
+        var row = el("div", "kids-row");
+        TREE.children.forEach(function (c) {
+          var k = el("div", "kid");
+          k.appendChild(makeBox(c, c.role || "Child", false));
+          row.appendChild(k);
+        });
+        kids.appendChild(row);
+        link.appendChild(kids);
+      }
       root.appendChild(link);
       root.appendChild(build(TREE.husband, 0, "m", false, "Husband · site owner"));
 
