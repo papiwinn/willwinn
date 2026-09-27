@@ -607,6 +607,11 @@
         "t": "Parents",
         "d": "Carrie Love Waits Simpson; Giles Rexford Simpson",
         "status": "fact"
+      },
+      {
+        "t": "Burial",
+        "d": "Ripley Cemetery, Ripley, Lauderdale Co., TN \u2014 double stone with Austin (no death date on her side; 2017 per FaG child link)",
+        "status": "fact"
       }
     ],
     "sources": [
@@ -620,6 +625,12 @@
         "status": "fact",
         "href": "https://www.findagrave.com/memorial/55032391/carrie_love-simpson",
         "note": "Child Oletta Simpson Winn 1924\u20132017"
+      },
+      {
+        "label": "Ripley Cemetery transcription (USGenWeb Archives)",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/lauderdale/cemeteries/ripley.txt",
+        "note": "archived: https://web.archive.org/web/2025id_/http://files.usgwarchives.net/tn/lauderdale/cemeteries/ripley.txt"
       }
     ]
   },
@@ -647,6 +658,21 @@
         "t": "WWII",
         "d": "Letters and manuscript on willwinn.xyz",
         "status": "fact"
+      },
+      {
+        "t": "Burial",
+        "d": "Ripley Cemetery, Ripley, Lauderdale Co., TN \u2014 double stone with Oletta S. Winn",
+        "status": "fact"
+      },
+      {
+        "t": "1930",
+        "d": "\u201cLittle Austin WINN, while rolling a rock\u2026\u201d (Enterprise, Cherry column)",
+        "status": "fact"
+      },
+      {
+        "t": "Family land 1926",
+        "d": "W.H. Winn et ux et al to T.F. Woodruff, 25 15/100 acres, 10th district, $2920",
+        "status": "fact"
       }
     ],
     "sources": [
@@ -660,6 +686,22 @@
         "status": "fact",
         "href": "../letters/",
         "note": ""
+      },
+      {
+        "label": "Ripley Cemetery transcription (USGenWeb Archives)",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/lauderdale/cemeteries/ripley.txt",
+        "note": "archived: https://web.archive.org/web/2025id_/http://files.usgwarchives.net/tn/lauderdale/cemeteries/ripley.txt"
+      },
+      {
+        "label": "Lauderdale County Enterprise 1930 abstracts",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/lauderdale/newspapers/ent-1930.txt"
+      },
+      {
+        "label": "Lauderdale County Enterprise 1926 deed transfers",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/lauderdale/newspapers/ent-1926-1.txt"
       }
     ]
   },
@@ -742,6 +784,26 @@
         "t": "Died",
         "d": "March 1943",
         "status": "fact"
+      },
+      {
+        "t": "Siblings",
+        "d": "Susan (Winn) Kinney (m. G. D. Kinney of Memphis; sons Alec, Harvey; buried Munford Cemetery, Covington); W. P. Winn of Cherry; Mrs. Casper Wiseman of Osceola, Ark.; Miss Willie Winn of Memphis; half-sister Mrs. S. T. Leatherwood of West Point, Miss.; half-brother J. H. Pitt of Little Rock, Ark. (Covington Leader, 31 Mar 1932)",
+        "status": "fact"
+      },
+      {
+        "t": "Brother W. P. = \u201cUncle Bill\u201d",
+        "d": "HYPOTHESIS (strong)",
+        "status": "need"
+      },
+      {
+        "t": "Land 1926",
+        "d": "W.H. Winn et ux et al to T.F. Woodruff, 25 15/100 acres in 10th district, $2920",
+        "status": "fact"
+      },
+      {
+        "t": "Parents",
+        "d": "NOT FOUND \u2014 mother had Winn and Pitt children; lead: Simon Peter Driver (HYPOTHESIS)",
+        "status": "need"
       }
     ],
     "sources": [
@@ -749,6 +811,33 @@
         "label": "Letters 194301\u2013194303",
         "status": "fact",
         "note": "willwinn.xyz archive"
+      },
+      {
+        "label": "Covington Leader 31 Mar 1932 (Susan Winn Kinney)",
+        "status": "fact",
+        "href": "https://www.tngenweb.org/tipton/newspapers/leader4.html"
+      },
+      {
+        "label": "Covington Leader 31 Mar 1932 (USGenWeb)",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/tipton/newspapers/covingtonmar24-31.txt"
+      },
+      {
+        "label": "Lauderdale County Enterprise 1926 deed transfers",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/lauderdale/newspapers/ent-1926-1.txt"
+      },
+      {
+        "label": "Lauderdale 1930 death certificates (Simon Peter Driver, no. 6259)",
+        "status": "need",
+        "href": "http://files.usgwarchives.net/tn/lauderdale/vitals/deaths/1930-death.txt",
+        "note": "research lead"
+      },
+      {
+        "label": "Fort Pillow photo page (Simon Peter Driver)",
+        "status": "need",
+        "href": "https://www.civilwaralbum.com/misc/ftpillow3.htm",
+        "note": "research lead"
       }
     ]
   },
@@ -759,13 +848,33 @@
     "lifespan": "d. March 1943",
     "bio_or_step": "need",
     "rel": "Father of Austin Hunley Winn.",
-    "blurb": "Austin\u2019s father (William FACT). Children: Austin and Mary Frances (Winn) Peyton. Letter Mr. W. H. Winn, Henning.",
+    "blurb": "Austin\u2019s father (William FACT). Children: Austin and Mary Frances (Winn) Peyton. Siblings named in the 1932 obituary of Susan Winn Kinney.",
     "narrative": "Willis Hunley Winn; d. Mar 1943; spouse Fannie; children Austin and Mary Frances Peyton (William). John/Joan/Jim child claim retracted.",
     "timeline": [
       {
         "t": "Died",
         "d": "March 1943",
         "status": "fact"
+      },
+      {
+        "t": "Siblings",
+        "d": "Susan (Winn) Kinney (m. G. D. Kinney of Memphis; sons Alec, Harvey; buried Munford Cemetery, Covington); W. P. Winn of Cherry; Mrs. Casper Wiseman of Osceola, Ark.; Miss Willie Winn of Memphis; half-sister Mrs. S. T. Leatherwood of West Point, Miss.; half-brother J. H. Pitt of Little Rock, Ark. (Covington Leader, 31 Mar 1932)",
+        "status": "fact"
+      },
+      {
+        "t": "Brother W. P. = \u201cUncle Bill\u201d",
+        "d": "HYPOTHESIS (strong)",
+        "status": "need"
+      },
+      {
+        "t": "Land 1926",
+        "d": "W.H. Winn et ux et al to T.F. Woodruff, 25 15/100 acres in 10th district, $2920",
+        "status": "fact"
+      },
+      {
+        "t": "Parents",
+        "d": "NOT FOUND \u2014 mother had Winn and Pitt children; lead: Simon Peter Driver (HYPOTHESIS)",
+        "status": "need"
       }
     ],
     "sources": [
@@ -776,6 +885,33 @@
       {
         "label": "Letters 194301\u2013194303",
         "status": "fact"
+      },
+      {
+        "label": "Covington Leader 31 Mar 1932 (Susan Winn Kinney)",
+        "status": "fact",
+        "href": "https://www.tngenweb.org/tipton/newspapers/leader4.html"
+      },
+      {
+        "label": "Covington Leader 31 Mar 1932 (USGenWeb)",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/tipton/newspapers/covingtonmar24-31.txt"
+      },
+      {
+        "label": "Lauderdale County Enterprise 1926 deed transfers",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/lauderdale/newspapers/ent-1926-1.txt"
+      },
+      {
+        "label": "Lauderdale 1930 death certificates (Simon Peter Driver, no. 6259)",
+        "status": "need",
+        "href": "http://files.usgwarchives.net/tn/lauderdale/vitals/deaths/1930-death.txt",
+        "note": "research lead"
+      },
+      {
+        "label": "Fort Pillow photo page (Simon Peter Driver)",
+        "status": "need",
+        "href": "https://www.civilwaralbum.com/misc/ftpillow3.htm",
+        "note": "research lead"
       }
     ]
   },
@@ -788,11 +924,22 @@
     "rel": "Mother of Austin Hunley Winn.",
     "blurb": "Fannie Lee McBride Winn; b. 1894 Tipton. Children: Austin and Mary Frances (Winn) Peyton (William).",
     "narrative": "Parents locked FACT (William): James Peter McBride and Molly Fulce. FaG Mary Ann = same as Molly unless disproven.",
-    "timeline": [],
+    "timeline": [
+      {
+        "t": "Possible sibling",
+        "d": "W. C. McBride (1882\u20131960), Walton Cemetery \u2014 HYPOTHESIS",
+        "status": "need"
+      }
+    ],
     "sources": [
       {
         "label": "William",
         "status": "fact"
+      },
+      {
+        "label": "Walton Cemetery, Burlison (Genealogy Trails)",
+        "status": "fact",
+        "href": "http://genealogytrails.com/tenn/tipton/cemetery_waltonA-J.html"
       }
     ]
   },
@@ -932,16 +1079,52 @@
     "id": "james-peter-mcbride",
     "name": "James Peter McBride",
     "short_name": "James Peter (JP) McBride",
-    "lifespan": "dates open",
+    "lifespan": "1860 \u2013 1948",
     "rel": "Father of Fannie Lee McBride Winn and Melvin Eugene McBride.",
     "bio_or_step": "need",
-    "blurb": "JP McBride. FACT (William) father of Fannie and Melvin; wife Molly Fulce.",
+    "blurb": "JP McBride (1860\u20131948), Walton Cemetery, Burlison. FACT (William) father of Fannie and Melvin; wife Molly Fulce.",
     "narrative": "William FACT. Spouse Molly Fulce; FaG Mary Ann treated as same as Molly.",
-    "timeline": [],
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "1860 (gravestone)",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "1948 (gravestone); Leader index 22 Jan 1948",
+        "status": "fact"
+      },
+      {
+        "t": "Burial",
+        "d": "Walton Cemetery, Burlison, Tipton Co. \u2014 \u201cMcBride, J P 1860-1948\u201d",
+        "status": "fact"
+      },
+      {
+        "t": "Research lead",
+        "d": "Possible mother Catherine Bringle McBride (1830\u20131915, Walton); Peter Bringle \u00d7 Nancy Verble \u2014 HYPOTHESIS",
+        "status": "need"
+      }
+    ],
     "sources": [
       {
         "label": "William",
         "status": "fact"
+      },
+      {
+        "label": "Walton Cemetery, Burlison (Genealogy Trails)",
+        "status": "fact",
+        "href": "http://genealogytrails.com/tenn/tipton/cemetery_waltonA-J.html"
+      },
+      {
+        "label": "Goodspeed 1887 Tipton biographies",
+        "status": "fact",
+        "href": "http://files.usgwarchives.net/tn/tipton/bios/a-f.txt"
+      },
+      {
+        "label": "WikiTree Bringle-20 (secondary)",
+        "status": "need",
+        "href": "https://www.wikitree.com/wiki/Bringle-20"
       }
     ]
   },
@@ -949,16 +1132,37 @@
     "id": "molly-fulce-mcbride",
     "name": "Molly Fulce McBride",
     "short_name": "Molly Fulce McBride",
-    "lifespan": "dates open",
+    "lifespan": "1861 \u2013 1937",
     "rel": "Mother of Fannie Lee McBride Winn and Melvin Eugene McBride. n\u00e9e Fulce.",
     "bio_or_step": "need",
-    "blurb": "Molly Fulce. FACT (William) mother of Fannie and Melvin; aka Mary Ann (FaG).",
+    "blurb": "Molly Fulce (1861\u20131937), Walton Cemetery, Burlison. FACT (William) mother of Fannie and Melvin; aka Mary Ann.",
     "narrative": "William FACT. Spouse James Peter McBride. FaG Mary Ann Fulce McBride = same person unless disproven.",
-    "timeline": [],
+    "timeline": [
+      {
+        "t": "Born",
+        "d": "1861 (gravestone)",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "1937 (gravestone); Leader index 28 Jan 1937",
+        "status": "fact"
+      },
+      {
+        "t": "Burial",
+        "d": "Walton Cemetery, Burlison, Tipton Co. \u2014 \u201cMcBride, Mary Ann 1861-1937\u201d",
+        "status": "fact"
+      }
+    ],
     "sources": [
       {
         "label": "William",
         "status": "fact"
+      },
+      {
+        "label": "Walton Cemetery, Burlison (Genealogy Trails)",
+        "status": "fact",
+        "href": "http://genealogytrails.com/tenn/tipton/cemetery_waltonA-J.html"
       }
     ]
   },
