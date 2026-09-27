@@ -1544,12 +1544,12 @@
     "lifespan": "2 Aug 1923 \u00b7 Milford, MA \u2013 3 Nov 2015 \u00b7 Millis, MA",
     "rel": "Mother of Robyn Louise Barrett. Wife of Richard Clinton Barrett.",
     "bio_or_step": "need",
-    "blurb": "Robyn\u2019s mother (William FACT). Died 3 Nov 2015, Millis, MA, aged 92. Born 2 Aug 1923, Milford, MA (William FACT). Parents William M. Holden & Agnes Corbett (William FACT).",
-    "narrative": "Elizabeth Jane \u201cBetty\u201d Holden, born 2 Aug 1923, Milford, Worcester Co., MA (William FACT; 1950 census: born Massachusetts). Mother of Robyn Louise Barrett; wife of Richard Clinton Barrett. Parents William M. Holden (lived in Blackstone, MA) and Agnes Corbett (born Eastport, ME) \u2014 FACT (William). Married Richard C. Barrett 13 Oct 1945, Medway (she was of Medway). Millis: treasurer 1948; ceramics teacher, Council on Aging 1987\u201391. Died 3 Nov 2015, Millis, MA, aged 92 (William FACT; Millis 2015 report). Burial and obituary not found.",
+    "blurb": "Robyn\u2019s mother (William FACT). Died 3 Nov 2015, Millis, MA, aged 92. Born 2 Aug 1923, Milford, MA (FACT: 1923 Milford town report; William). Parents William Martin Holden & Agnes C. Corbett (William FACT).",
+    "narrative": "Elizabeth Jane \u201cBetty\u201d Holden, born 2 Aug 1923, Milford, Worcester Co., MA (William FACT; 1950 census: born Massachusetts). Mother of Robyn Louise Barrett; wife of Richard Clinton Barrett. Parents William Martin Holden (born and lived in Blackstone, MA) and Agnes Corbett (born Eastport, ME) \u2014 FACT (William). Married Richard C. Barrett 13 Oct 1945, Medway (she was of Medway). Millis: treasurer 1948; ceramics teacher, Council on Aging 1987\u201391. Died 3 Nov 2015, Millis, MA, aged 92 (William FACT; Millis 2015 report). Burial and obituary not found.",
     "timeline": [
       {
         "t": "Born",
-        "d": "2 Aug 1923 (MA State Vital Records 1638-1927; William); Milford, Worcester Co., MA (William; supported by 1950 census, born Massachusetts)",
+        "d": "2 Aug 1923, Milford, Worcester Co., MA (Milford 1923 town report, births p. 287; MA State Vital Records 1638-1927; William)",
         "status": "fact"
       },
       {
@@ -1569,13 +1569,23 @@
       },
       {
         "t": "Father",
-        "d": "William M. Holden, lived in Blackstone, MA (William; MA State Vital Records 1638-1927)",
+        "d": "William Martin Holden, born and lived in Blackstone, MA (William; Milford 1923 birth entry; MA State Vital Records)",
         "status": "fact"
       },
       {
         "t": "Mother",
-        "d": "Agnes Corbett, born Eastport, ME (William)",
+        "d": "Agnes Corbett, born Eastport, ME (William; Milford 1923 birth entry; MA State Vital Records lists \u201cAgnes Corbett Holden\u201d)",
         "status": "fact"
+      },
+      {
+        "t": "Brother",
+        "d": "William Martin Holden Jr. (1950 census household) \u2014 possibly living, name only",
+        "status": "fact"
+      },
+      {
+        "t": "Possible sister",
+        "d": "Barbara J. (Holden) LaCasse \u2014 HYPOTHESIS, possibly living, name only",
+        "status": "need"
       },
       {
         "t": "Married",
@@ -1673,7 +1683,24 @@
         "label": "Massachusetts, State Vital Records, 1638-1927 (FamilySearch)",
         "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:6ZMG-8Y7Q",
-        "note": "Elizabeth Jane Holden, 2 Aug 1923, father William M Holden"
+        "note": "Elizabeth Jane Holden, 2 Aug 1923; father William M Holden; mother Agnes Corbett Holden"
+      },
+      {
+        "label": "Milford Annual Town Report 1923, births for August, p. 287",
+        "status": "fact",
+        "href": "https://archive.org/details/annualreportoft1923milf_0",
+        "note": "2 | Elizabeth Jane Holden | William M. and Agnes Corbett | Blackstone | Eastport, Me."
+      },
+      {
+        "label": "1950 US census, Hopedale, MA (ED 14-201, sheet 75)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:6F36-BXCS",
+        "note": "brother William M. Jr. in parents\u2019 household"
+      },
+      {
+        "label": "Crystal\u2019s Holden batch 2 (27 Sep 2026)",
+        "status": "need",
+        "note": "Barbara J. (Holden) LaCasse as possible sister (HYPOTHESIS)"
       }
     ]
   },
@@ -2412,17 +2439,22 @@
   },
   {
     "id": "william-holden",
-    "name": "William M. Holden",
+    "name": "William Martin Holden",
     "short_name": "William M. Holden",
-    "lifespan": "lived in Blackstone, MA",
-    "rel": "Father of Elizabeth Jane (Holden) Barrett. Husband of Agnes Corbett.",
+    "lifespan": "c. 1870 \u00b7 Blackstone, MA \u2013 28 Apr 1951 \u00b7 Hopedale, MA",
+    "rel": "Father of Elizabeth Jane (Holden) Barrett. Husband of Agnes C. Corbett.",
     "bio_or_step": "bio",
-    "blurb": "Elizabeth\u2019s father (William FACT). Lived in Blackstone, MA.",
-    "narrative": "William M. Holden, who lived in Blackstone, Massachusetts; husband of Agnes Corbett; father of Elizabeth Jane (Holden) Barrett (William FACT). Name \u201cWilliam M Holden\u201d in the MA State Vital Records 1638-1927 entry for Elizabeth (2 Aug 1923). No dates given.",
+    "blurb": "Elizabeth\u2019s father (William FACT). Born Blackstone, MA c. 1870 (date estimated); married Agnes C. Corbett 6 Nov 1918; died 28 Apr 1951, Hopedale, MA.",
+    "narrative": "William Martin Holden (1918 marriage record, FACT), \u201cWilliam M.\u201d on Elizabeth\u2019s 1923 birth records. Born in Blackstone, MA (FACT: 1951 death entry; Elizabeth\u2019s Milford birth entry), about 21 Sep 1870 (HYPOTHESIS, calculated from age at death 80y 7m 7d). Lived in Blackstone (William). Married Agnes C. Corbett 6 Nov 1918, Massachusetts. Censuses 1920, 1930, 1940 with Agnes. In Millis the year before 1950; 1950 census: farmer, 41 Mill St., Hopedale, aged 80, with wife Agnes and son William M. Jr. Died 28 Apr 1951, Hopedale, aged 80y 7m 7d (Hopedale town report). Parents NOT FOUND.",
     "timeline": [
       {
+        "t": "Born",
+        "d": "c. 21 Sep 1870 (HYPOTHESIS, from age at death); birthplace Blackstone, MA (FACT: 1951 death entry; 1923 Milford birth entry)",
+        "status": "need"
+      },
+      {
         "t": "Name",
-        "d": "William M. Holden (MA State Vital Records 1638-1927; William)",
+        "d": "William Martin Holden (1918 marriage record; William)",
         "status": "fact"
       },
       {
@@ -2431,18 +2463,38 @@
         "status": "fact"
       },
       {
-        "t": "Wife",
-        "d": "Agnes Corbett (William)",
+        "t": "Married",
+        "d": "Agnes C. Corbett, 6 Nov 1918, Massachusetts (MA State Vital Records 1638-1927)",
+        "status": "fact"
+      },
+      {
+        "t": "Censuses",
+        "d": "1920, 1930, 1940 with wife Agnes (FamilySearch)",
         "status": "fact"
       },
       {
         "t": "Child",
-        "d": "Elizabeth Jane (Holden) Barrett (William)",
+        "d": "Elizabeth Jane Holden, b. 2 Aug 1923, Milford, MA (named father on her birth record)",
         "status": "fact"
       },
       {
+        "t": "1950 census",
+        "d": "Hopedale, MA \u2014 farmer, 41 Mill St., aged 80, born Mass.; wife Agnes (63, born Maine); son William M. Jr.",
+        "status": "fact"
+      },
+      {
+        "t": "Died",
+        "d": "28 Apr 1951, Hopedale, MA, aged 80y 7m 7d (Hopedale town report p. 34)",
+        "status": "fact"
+      },
+      {
+        "t": "Parents",
+        "d": "NOT FOUND \u2014 1951 death certificate and 1918 marriage record should name them",
+        "status": "need"
+      },
+      {
         "t": "Research lead",
-        "d": "Carrie Berrian Holden (d. 6 Feb 1948, Millis, aged 80) \u2014 right age for his mother; HYPOTHESIS, unproven",
+        "d": "Carrie Berrian Holden (d. 6 Feb 1948, Millis, aged 80; b. c. Aug 1867) \u2014 too close in age to be his mother; possible relative, unproven",
         "status": "need"
       }
     ],
@@ -2452,10 +2504,60 @@
         "status": "fact"
       },
       {
-        "label": "Massachusetts, State Vital Records, 1638-1927 (FamilySearch)",
+        "label": "Massachusetts, State Vital Records, 1638-1927 (marriage)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:QLKG-DJRM",
+        "note": "William Martin Holden \u00d7 Agnes C. Corbett, 6 Nov 1918"
+      },
+      {
+        "label": "Massachusetts, State Vital Records, 1638-1927 (birth of Elizabeth)",
         "status": "fact",
         "href": "https://www.familysearch.org/ark:/61903/1:1:6ZMG-8Y7Q",
-        "note": "father of Elizabeth Jane Holden, 2 Aug 1923"
+        "note": "father William M Holden, 2 Aug 1923"
+      },
+      {
+        "label": "Milford Annual Town Report 1923, births p. 287",
+        "status": "fact",
+        "href": "https://archive.org/details/annualreportoft1923milf_0",
+        "note": "William M. and Agnes Corbett | Blackstone | Eastport, Me."
+      },
+      {
+        "label": "1920 US census",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:MX15-G2L"
+      },
+      {
+        "label": "1930 US census",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:XQ57-P6X"
+      },
+      {
+        "label": "1940 US census",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:K4NC-CMG"
+      },
+      {
+        "label": "1950 US census, Hopedale, ED 14-201, sheet 75 (image)",
+        "status": "fact",
+        "href": "https://1950census.archives.gov/iiif/2/1950census%2F43290879-Massachusetts%2F43290879-Massachusetts-157694%2F43290879-Massachusetts-157694-0024.jpg/full/full/0/default.jpg",
+        "note": "12 May 1950"
+      },
+      {
+        "label": "1950 US census (FamilySearch index)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:6F36-BXCS"
+      },
+      {
+        "label": "Town of Hopedale list of residents 1950",
+        "status": "fact",
+        "href": "https://archive.org/details/townofhopedaleli1950town",
+        "note": "family in Millis the year before"
+      },
+      {
+        "label": "Hopedale Annual Town Report (deaths registered 1951), p. 34",
+        "status": "fact",
+        "href": "https://archive.org/details/annualreportoft1952unse_3",
+        "note": "April 28, William Holden, 80y 7m 7d, born Blackstone, Mass."
       },
       {
         "label": "Millis 1948 annual town report, deaths p.49",
@@ -2465,7 +2567,8 @@
       },
       {
         "label": "Further research open",
-        "status": "need"
+        "status": "need",
+        "note": "1951 death certificate; 1918 marriage record (parents)"
       }
     ]
   },
@@ -2473,39 +2576,54 @@
     "id": "agnes-corbett-holden",
     "name": "Agnes C. Corbett (Holden)",
     "short_name": "Agnes Corbett Holden",
-    "lifespan": "born Eastport, Washington Co., ME \u00b7 21 Jul 1886 \u2013 8 Feb 1979 (hyp.)",
-    "rel": "Mother of Elizabeth Jane (Holden) Barrett. Wife of William M. Holden.",
+    "lifespan": "21 Jul 1886 \u00b7 Eastport, ME \u2013 8 Feb 1979 \u00b7 Natick (per FS tree)",
+    "rel": "Mother of Elizabeth Jane (Holden) Barrett. Wife of William Martin Holden.",
     "bio_or_step": "bio",
-    "blurb": "Elizabeth\u2019s mother (William FACT). Born Eastport, ME. Dates 21 Jul 1886 \u2013 8 Feb 1979, Natick, MA: HYPOTHESIS (FamilySearch Family Tree).",
-    "narrative": "Agnes Corbett, born in Eastport, Maine; wife of William M. Holden; mother of Elizabeth Jane (Holden) Barrett (William FACT). Dates HYPOTHESIS per FamilySearch Family Tree 9QW1-LTK (user-editable): born 21 Jul 1886, Eastport; died 8 Feb 1979, Natick, Middlesex Co., MA.",
+    "blurb": "Elizabeth\u2019s mother (William FACT). Born 21 Jul 1886, Eastport, ME; died 8 Feb 1979, last residence Medway, MA (FACT). Place of death Natick per FS tree (HYPOTHESIS). Parents Joseph E. & Addie J. Corbett (HYPOTHESIS).",
+    "narrative": "Agnes C. Corbett, born 21 Jul 1886, Eastport, Washington Co., Maine (FACT: Maine birth index; SSDI; Elizabeth\u2019s Milford birth entry; William). Married William Martin Holden 6 Nov 1918, Massachusetts. Censuses 1920, 1930, 1940 with William. 1950: Hopedale, aged 63, hat-factory machine operator. Died 8 Feb 1979, last residence Medway, MA 02053 (MA Death Index; SSDI); place Natick per FamilySearch Family Tree 9QW1-LTK (HYPOTHESIS). Parents: Joseph E. and Addie J. Corbett (HYPOTHESIS strong, 1900/1910 census).",
     "timeline": [
       {
-        "t": "Birthplace",
-        "d": "Eastport, Washington Co., Maine (William)",
+        "t": "Born",
+        "d": "21 Jul 1886, Eastport, Washington Co., Maine (Maine birth index; SSDI; Milford 1923 birth entry; William)",
         "status": "fact"
       },
       {
-        "t": "Born",
-        "d": "21 Jul 1886, Eastport, Washington Co., Maine (FamilySearch Family Tree 9QW1-LTK)",
-        "status": "need"
+        "t": "Married",
+        "d": "William Martin Holden, 6 Nov 1918, Massachusetts (MA State Vital Records 1638-1927)",
+        "status": "fact"
       },
       {
-        "t": "Husband",
-        "d": "William M. Holden (William)",
+        "t": "Censuses",
+        "d": "1920, 1930, 1940 with husband William M. Holden (FamilySearch)",
         "status": "fact"
       },
       {
         "t": "Child",
-        "d": "Elizabeth Jane (Holden) Barrett (William)",
+        "d": "Elizabeth Jane Holden, b. 2 Aug 1923, Milford, MA",
+        "status": "fact"
+      },
+      {
+        "t": "1950 census",
+        "d": "Hopedale, MA \u2014 aged 63, born Maine, hat-factory machine operator",
         "status": "fact"
       },
       {
         "t": "Died",
-        "d": "8 Feb 1979, Natick, Middlesex Co., MA (FamilySearch Family Tree 9QW1-LTK)",
+        "d": "8 Feb 1979, last residence Medway, MA 02053 (MA Death Index; SSDI)",
+        "status": "fact"
+      },
+      {
+        "t": "Place of death",
+        "d": "Natick (per FS tree) \u2014 HYPOTHESIS",
         "status": "need"
       },
       {
-        "t": "Parents, burial",
+        "t": "Parents",
+        "d": "Joseph E. Corbett & Addie J. Corbett \u2014 HYPOTHESIS (strong), 1900 & 1910 census",
+        "status": "need"
+      },
+      {
+        "t": "Burial",
         "d": "NOT FOUND",
         "status": "need"
       }
@@ -2513,17 +2631,177 @@
     "sources": [
       {
         "label": "William LaVaughan Winn, family record",
-        "status": "fact"
+        "status": "fact",
+        "note": "born Eastport, ME"
+      },
+      {
+        "label": "Maine, Births and Christenings, 1739-1900",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:F4H3-Y83",
+        "note": "21 Jul 1886, Eastport"
+      },
+      {
+        "label": "Massachusetts, State Vital Records, 1638-1927 (marriage)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:QLKG-DJRM",
+        "note": "6 Nov 1918"
+      },
+      {
+        "label": "Massachusetts, State Vital Records, 1638-1927 (birth of Elizabeth)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:6ZMG-8Y7Q",
+        "note": "mother Agnes Corbett Holden"
+      },
+      {
+        "label": "Milford Annual Town Report 1923, births p. 287",
+        "status": "fact",
+        "href": "https://archive.org/details/annualreportoft1923milf_0"
+      },
+      {
+        "label": "1920 US census",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:MX15-G2L"
+      },
+      {
+        "label": "1930 US census",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:XQ57-P6X"
+      },
+      {
+        "label": "1940 US census",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:K4NC-CMG"
+      },
+      {
+        "label": "1950 US census, Hopedale (FamilySearch index)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:6F36-BXCS",
+        "note": "aged 63, hat-factory machine operator"
+      },
+      {
+        "label": "Massachusetts, Death Index, 1970-2003",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:VZ5J-VBN",
+        "note": "8 Feb 1979, Medway 02053"
+      },
+      {
+        "label": "Social Security Death Index",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:JB2W-1P8"
       },
       {
         "label": "FamilySearch Family Tree, profile 9QW1-LTK (user-editable)",
         "status": "need",
         "href": "https://www.familysearch.org/tree/person/details/9QW1-LTK",
-        "note": "HYPOTHESIS: b. 21 Jul 1886, Eastport; d. 8 Feb 1979, Natick"
+        "note": "place of death Natick (HYPOTHESIS)"
       },
       {
-        "label": "Further research open",
+        "label": "1900 US census (Joseph E & Addie J Corbett)",
+        "status": "need",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:MMG3-JCF",
+        "note": "possible parents"
+      },
+      {
+        "label": "1910 US census (Joseph & Addy Cabilt)",
+        "status": "need",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:MR3K-5XK",
+        "note": "possible parents"
+      }
+    ]
+  },
+  {
+    "id": "joseph-e-corbett",
+    "name": "Joseph E. Corbett",
+    "short_name": "Joseph E. Corbett",
+    "lifespan": "1900 census \u00b7 dates not found",
+    "rel": "HYPOTHESIS (strong): father of Agnes C. Corbett (Holden). Spouse Addie J. Corbett.",
+    "bio_or_step": "bio",
+    "blurb": "Possible father of Agnes \u2014 1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d.",
+    "narrative": "1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d; 1910 census indexes the same couple as \u201cJoseph & Addy Cabilt\u201d. HYPOTHESIS until a record shows Agnes as their daughter. Birth, death, burial, parents NOT FOUND.",
+    "timeline": [
+      {
+        "t": "1900 census",
+        "d": "Joseph E Corbett and Addie J Corbett household",
+        "status": "fact"
+      },
+      {
+        "t": "1910 census",
+        "d": "indexed as \u201cJoseph & Addy Cabilt\u201d",
+        "status": "fact"
+      },
+      {
+        "t": "Daughter Agnes",
+        "d": "HYPOTHESIS (strong)",
         "status": "need"
+      },
+      {
+        "t": "Birth, death, burial, parents",
+        "d": "NOT FOUND",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "1900 US census (FamilySearch)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:MMG3-JCF"
+      },
+      {
+        "label": "1910 US census (FamilySearch)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:MR3K-5XK"
+      },
+      {
+        "label": "Crystal\u2019s Holden/Corbett batch (27 Sep 2026)",
+        "status": "fact"
+      }
+    ]
+  },
+  {
+    "id": "addie-j-corbett",
+    "name": "Addie J. Corbett",
+    "short_name": "Addie J. Corbett",
+    "lifespan": "1900 census \u00b7 dates not found",
+    "rel": "HYPOTHESIS (strong): mother of Agnes C. Corbett (Holden). Spouse Joseph E. Corbett.",
+    "bio_or_step": "bio",
+    "blurb": "Possible mother of Agnes \u2014 1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d.",
+    "narrative": "1900 census household \u201cJoseph E Corbett and Addie J Corbett\u201d; 1910 census indexes the same couple as \u201cJoseph & Addy Cabilt\u201d. HYPOTHESIS until a record shows Agnes as their daughter. Birth, death, burial, parents NOT FOUND.",
+    "timeline": [
+      {
+        "t": "1900 census",
+        "d": "Joseph E Corbett and Addie J Corbett household",
+        "status": "fact"
+      },
+      {
+        "t": "1910 census",
+        "d": "indexed as \u201cJoseph & Addy Cabilt\u201d",
+        "status": "fact"
+      },
+      {
+        "t": "Daughter Agnes",
+        "d": "HYPOTHESIS (strong)",
+        "status": "need"
+      },
+      {
+        "t": "Birth, death, burial, parents",
+        "d": "NOT FOUND",
+        "status": "need"
+      }
+    ],
+    "sources": [
+      {
+        "label": "1900 US census (FamilySearch)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:MMG3-JCF"
+      },
+      {
+        "label": "1910 US census (FamilySearch)",
+        "status": "fact",
+        "href": "https://www.familysearch.org/ark:/61903/1:1:MR3K-5XK"
+      },
+      {
+        "label": "Crystal\u2019s Holden/Corbett batch (27 Sep 2026)",
+        "status": "fact"
       }
     ]
   }
