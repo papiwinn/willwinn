@@ -2041,26 +2041,16 @@
     "id": "richard-clinton-barrett",
     "name": "Richard Clinton Barrett",
     "short_name": "Richard Clinton Barrett",
-    "lifespan": "26 Jan 1923 \u2013 29 Apr 1996",
+    "lifespan": "26 Jan 1923 \u00b7 Norwood, MA \u2013 29 Apr 1996",
     "rel": "Father of Robyn Louise Barrett. Husband of Elizabeth Jane Holden. Son of Royden Y. and Lillian Barrett.",
     "bio_or_step": "need",
-    "blurb": "Robyn\u2019s father (William FACT). Parents Royden Y. & Lillian Barrett (1923 birth record). Married Elizabeth 13 Oct 1945, Medway; Millis Public Works and Fire Department.",
-    "narrative": "Richard Clinton Barrett, born 26 Jan 1923, Islington (Westwood), Massachusetts (William FACT); birth registered in Norwood (1923 report) \u2014 discrepancy unresolved. Parents Royden Y. and Lillian. Married Elizabeth J. Holden 13 Oct 1945, Medway (Millis 1945 report). Millis Water Commissioner 1956; Superintendent of Streets 1960, later Public Works head until 1976; Fire Department Captain 1961\u201368. Died 29 Apr 1996 (William FACT).",
+    "blurb": "Robyn\u2019s father (William FACT). Born 26 Jan 1923, Norwood, MA. Parents Royden Y. & Lillian Barrett (1923 birth record). Married Elizabeth 13 Oct 1945, Medway; Millis Public Works and Fire Department.",
+    "narrative": "Richard Clinton Barrett, born 26 Jan 1923, Norwood, Massachusetts (FACT). William LaVaughan Winn confirmed Norwood on 4 Oct 2026; the Norwood 1923 annual report, births p.26, reads \u201cJan. 26, Richard Clinton Barrett, Royden Y. and Lillian.\u201d Parents Royden Y. and Lillian. Married Elizabeth J. Holden 13 Oct 1945, Medway (Millis 1945 report). Millis Water Commissioner 1956; Superintendent of Streets 1960, later Public Works head until 1976; Fire Department Captain 1961\u201368. Died 29 Apr 1996 (William FACT).",
     "timeline": [
       {
         "t": "Born",
-        "d": "26 Jan 1923, Islington (Westwood), Massachusetts (William)",
+        "d": "26 Jan 1923, Norwood, Massachusetts (William LaVaughan Winn, 4 Oct 2026; Norwood 1923 town report, births p.26)",
         "status": "fact"
-      },
-      {
-        "t": "Birth registered",
-        "d": "Norwood 1923: \u201cJan. 26, Richard Clinton Barrett, Royden Y. and Lillian.\u201d",
-        "status": "fact"
-      },
-      {
-        "t": "Birthplace discrepancy",
-        "d": "Islington (Westwood) per William vs. Norwood registration \u2014 unresolved",
-        "status": "need"
       },
       {
         "t": "Parents",
@@ -2105,9 +2095,9 @@
     ],
     "sources": [
       {
-        "label": "William (family knowledge)",
+        "label": "William LaVaughan Winn, 4 Oct 2026",
         "status": "fact",
-        "note": "name, birth date and place, daughter Robyn"
+        "note": "name; born 26 Jan 1923, Norwood, MA; daughter Robyn"
       },
       {
         "label": "Norwood 1923 annual report, births p.26",
