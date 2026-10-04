@@ -110,6 +110,15 @@
       .plaque-fields li { margin: 4px 0; }
       a.ext { color: #e94560; }
       a.ext:hover { text-decoration: underline; }
+      /* Links inside “In the letters” had no color of their own, so the
+         browser default blue (#0000EE) sat on the navy card at about 1.5:1.
+         #ffb3c1 is about 6:1 to 8:1 on that card. Scoped to these links only. */
+      .from-letters a, .from-letters a:visited {
+        color: #ffb3c1;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+      .from-letters a:hover { color: #ffe4ea; }
       .note {
         margin-top: 10px !important;
         font-size: 0.9rem !important;
@@ -919,8 +928,9 @@ No independent Tennessee roster / obituary match found under Waits Sampson with 
         <div class="researched">
           <h3>Researched note</h3>
           <div class="res-body">
-Co-pilot on Austin’s July 1945 new crew (19th Bomb Group); Austin noted Smith had fewer missions than most of the enlisted men. Distinct from Sgt. Smith (Marfa) and from Kate Smith. Common surname; no independent bio claimed.
-<p class="note">Not independently verified beyond the letters.</p>
+<p>The letters name him K. G. Smith, co-pilot on Austin’s new July 1945 crew, with fewer missions than most of the enlisted men, and the crew photograph reads “Kent Smith C.P.” He is distinct from Sgt. Smith at Marfa and from Kate Smith. Public records add the name and the group, not the crew.</p>
+<p>The 20th Air Force association’s 19th Bomb Group file lists Kent G. Smith as a 1st lieutenant. The page title also places him with the 93rd Bomb Squadron. It records a Distinguished Flying Cross dated 2 October 1945, General Order 81, and says the file is incomplete. It does not name a crew, an airplane, or a duty. No newspaper account, Missing Air Crew Report, or Find a Grave memorial was found that identifies the co-pilot on Austin’s July crew, so that identification stays with the letters.</p>
+<p>Sources: <a class="ext" href="https://www.20af.org/smith-kent-s1108-19bg.cfm">20af.org — Kent G. Smith, 19th Bomb Group</a>; <a class="ext" href="https://www.20af.org/19th-bomb-group.cfm?ln=s">20af.org — 19th Bomb Group roster (S)</a>.</p>
 </div>
         </div>
       </article>
