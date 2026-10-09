@@ -116,5 +116,20 @@
       }
     ],
     "portraits": []
+  },
+  "mary-evelyn-austin-winn": {
+    "vitals": [],
+    "portraits": [
+      {
+        "id": "28e1c392-5518-4f6c-95b1-75d492e123a9",
+        "src": "images/mary-evelyn-austin-winn/gallery/20261009203129-888f5b89.jpg",
+        "name": "Dad",
+        "email": "papiwinn@gmail.com",
+        "note": "Mary Austin Pitt and baby Johni who had died",
+        "uid": "888f5b89-7070-4624-a5b9-5bcaaac872de",
+        "submitted_at": "2026-10-09T20:31:29.135Z",
+        "became_primary": true
+      }
+    ]
   }
 }
